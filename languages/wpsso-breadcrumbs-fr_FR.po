@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Breadcrumbs Markup 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
 "POT-Creation-Date: 2018-02-09 13:14-0600\n"
-"PO-Revision-Date: 2018-02-09 13:16-0600\n"
+"PO-Revision-Date: 2018-02-09 13:18-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -28,7 +28,7 @@ msgstr "Extension WPSSO Core pour ajouter le balisage Schema BreadcrumbList en f
 #: lib/submenu/bc-general.php:32
 msgctxt "metabox title"
 msgid "Breadcrumbs Markup Settings"
-msgstr "Réglages pour balisage de Breadcrumbs"
+msgstr "Réglages de balisage Breadcrumbs"
 
 #: lib/submenu/bc-general.php:59
 msgctxt "option label"
