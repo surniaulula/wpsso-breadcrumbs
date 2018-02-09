@@ -1,5 +1,5 @@
-=== WPSSO Breadcrumbs ===
-Plugin Name: WPSSO Breadcrumbs
+=== WPSSO Breadcrumbs Markup in Schema JSON-LD for Google / SEO ===
+Plugin Name: WPSSO Breadcrumbs Markup
 Plugin Slug: wpsso-breadcrumbs
 Text Domain: wpsso-breadcrumbs
 Domain Path: /languages
@@ -25,7 +25,7 @@ WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for G
 
 Simply activate / deactivate the WPSSO Breadcrumbs Markup plugin to enable / disable the addition of Schema BreadcrumbList markup in your webpages.
 
-**WPSSO Breadcrumbs is *incredibly fast* and coded for performance:**
+**WPSSO Breadcrumbs Markup is *incredibly fast* and coded for performance:**
 
 WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light.
 
@@ -37,7 +37,7 @@ WPSSO Breadcrumbs Markup (aka WPSSO BC) is the newest extension for the WPSSO Co
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Breadcrumbs (aka WPSSO BC) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
+WPSSO Breadcrumbs Markup (aka WPSSO BC) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
 
 == Installation ==
 
