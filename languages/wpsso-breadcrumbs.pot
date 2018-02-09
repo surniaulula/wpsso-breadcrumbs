@@ -27,7 +27,7 @@ msgstr ""
 
 #: lib/submenu/bc-general.php:32
 msgctxt "metabox title"
-msgid "Breadcrumbs Settings"
+msgid "Breadcrumbs Markup Settings"
 msgstr ""
 
 #: lib/submenu/bc-general.php:59

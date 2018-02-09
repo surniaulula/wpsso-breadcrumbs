@@ -19,7 +19,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'version' => '1.0.0',		// Plugin version.
 					'opt_version' => '2',		// Increment when changing default option values.
 					'short' => 'WPSSO BC',		// Short plugin name.
-					'name' => 'WPSSO Breadcrumbs',
+					'name' => 'WPSSO Breadcrumbs Markup',
 					'desc' => 'WPSSO Core extension to add JSON-LD formatted Schema Breadcrumb markup for Google / SEO.',
 					'slug' => 'wpsso-breadcrumbs',
 					'base' => 'wpsso-breadcrumbs/wpsso-breadcrumbs.php',
