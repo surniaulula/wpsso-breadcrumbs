@@ -1,8 +1,8 @@
-# Copyright (C) 2018 WPSSO Breadcrumbs
-# This file is distributed under the same license as the WPSSO Breadcrumbs package.
+# Copyright (C) 2018 WPSSO Breadcrumbs Markup
+# This file is distributed under the same license as the WPSSO Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Breadcrumbs 1.0.0\n"
+"Project-Id-Version: WPSSO Breadcrumbs Markup 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2018-MO-DA HO:MI+ZONE\n"
@@ -62,7 +62,7 @@ msgid ""
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "WPSSO Breadcrumbs"
+msgid "WPSSO Breadcrumbs Markup"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
