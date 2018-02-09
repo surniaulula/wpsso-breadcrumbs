@@ -21,8 +21,8 @@ msgstr ""
 #: lib/config-gettext-extract.php:4
 msgctxt "plugin description"
 msgid ""
-"WPSSO Core extension to add JSON-LD formatted Schema Breadcrumb markup for "
-"Google / SEO."
+"WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup "
+"for Google / SEO."
 msgstr ""
 
 #: lib/submenu/bc-general.php:32
@@ -71,8 +71,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"WPSSO Core extension to add JSON-LD formatted Schema Breadcrumb markup for "
-"Google / SEO."
+"WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup "
+"for Google / SEO."
 msgstr ""
 
 #. Author of the plugin/theme
