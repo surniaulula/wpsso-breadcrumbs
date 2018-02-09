@@ -13,6 +13,8 @@
 
 <h2>Description</h2>
 
+<p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png"></p>
+
 <p><strong>Add Schema BreadcrumbList markup to posts, pages, and custom post types.</strong></p>
 
 <p><strong>Select between using ancestors (parents, grand-parents, etc.) or categories for breadcrumbs.</strong></p>

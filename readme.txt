@@ -17,6 +17,8 @@ WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for G
 
 == Description ==
 
+<img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png">
+
 **Add Schema BreadcrumbList markup to posts, pages, and custom post types.**
 
 **Select between using ancestors (parents, grand-parents, etc.) or categories for breadcrumbs.**
