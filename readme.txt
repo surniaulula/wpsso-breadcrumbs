@@ -1,4 +1,4 @@
-=== WPSSO Breadcrumbs Markup in Schema JSON-LD for Google / SEO ===
+=== WPSSO Breadcrumbs Markup in Schema JSON-LD for Google / SEO (No Setup Required) ===
 Plugin Name: WPSSO Breadcrumbs Markup
 Plugin Slug: wpsso-breadcrumbs
 Text Domain: wpsso-breadcrumbs

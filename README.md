@@ -1,4 +1,4 @@
-<h1>WPSSO Breadcrumbs Markup in Schema JSON-LD for Google / SEO</h1>
+<h1>WPSSO Breadcrumbs Markup in Schema JSON-LD for Google / SEO (No Setup Required)</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Breadcrumbs Markup</td></tr>
