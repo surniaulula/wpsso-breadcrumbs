@@ -21,7 +21,7 @@ WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for G
 
 **Select between using ancestors (parents, grand-parents, etc.) or categories.**
 
-**No need to use any PHP code, functions, or modify any templates:**
+**No complicated code, functions to call, or templates to modify:**
 
 Simply activate / deactivate the WPSSO Breadcrumbs Markup plugin to enable / disable the addition of Schema BreadcrumbList markup in your webpages.
 

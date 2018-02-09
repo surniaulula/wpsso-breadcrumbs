@@ -17,7 +17,7 @@
 
 <p><strong>Select between using ancestors (parents, grand-parents, etc.) or categories.</strong></p>
 
-<p><strong>No need to use any PHP code, functions, or modify any templates:</strong></p>
+<p><strong>No complicated code, functions to call, or templates to modify:</strong></p>
 
 <p>Simply activate / deactivate the WPSSO Breadcrumbs Markup plugin to enable / disable the addition of Schema BreadcrumbList markup in your webpages.</p>
 
