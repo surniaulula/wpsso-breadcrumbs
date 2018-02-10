@@ -60,6 +60,8 @@ WPSSO Breadcrumbs Markup (aka WPSSO BC) is an extension for the WPSSO Core plugi
 
 == Screenshots ==
 
+01. WPSSO BC settings page includes options to select the kind of breadcrumbs for each post type (media, post, page, and custom post types).
+
 == Changelog ==
 
 <h3>Version Numbering</h3>
