@@ -66,8 +66,9 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			/**
 			 * Clear all properties inherited by previous filters except for the 'url' property.
 			 */
-			$json_data = array( 'url' => $json_data['url'] );
+			$json_data    = array( 'url' => $json_data['url'] );
 			$scripts_data = array();
+			$scripts_max  = SucomUtil::get_const( 'WPSSO_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 5 );
 
 			if ( $mod['is_post'] ) {
 
@@ -110,8 +111,10 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 					case 'categories':
 
 						$post_ids = array( $mod['id'] );
+						$post_terms = wp_get_post_terms( $mod['id'], 'category' );
+						$scripts_num = 0;
 
-						foreach ( wp_get_post_terms( $mod['id'], 'category' ) as $term ) {
+						foreach ( $post_terms as $term ) {
 
 							$mods = array();
 							$term_ids = get_ancestors( $term->term_id, 'category', 'taxonomy' );
@@ -138,6 +141,12 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							// multiple breadcrumbs list - merge $json_data and save to $scripts_data array
 							$scripts_data[] = WpssoSchema::return_data_from_filter( $json_data, $term_data, $is_main );
+
+							$scripts_num++;
+
+							if ( $scripts_num >= $scripts_max ) {	// default max is 5
+								break;
+							}
 						}
 					
 						break;
