@@ -19,15 +19,15 @@ WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for G
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png">
 
-**Add Schema BreadcrumbList markup to posts, pages, and custom post types.**
-
-**Select between using ancestors (parents, grand-parents, etc.) or categories for breadcrumbs.**
-
-**Uses Google's preferred JSON-LD format for Schema markup.**
-
 **No theme templates or function files to modify!**
 
 Simply activate / deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.
+
+**Uses Google's preferred JSON-LD format for Schema markup.**
+
+**Add Schema BreadcrumbList markup to posts, pages, and custom post types.**
+
+**Select between using ancestors (page parents, grand-parents, etc.) or categories for breadcrumbs.**
 
 **WPSSO Breadcrumbs Markup is *incredibly fast* and coded for performance:**
 
