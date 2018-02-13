@@ -82,6 +82,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.0.1-dev.4 (2018/02/13)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* Fixed an unknown option key error for new custom post type names.
+* *Developer Notes*
+	* None
+
 **Version 1.0.0 (2018/02/09)**
 
 * *New Features*
@@ -94,6 +105,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None
 
 == Upgrade Notice ==
+
+= 1.0.1-dev.4 =
+
+(2018/02/13) Fixed an unknown option key error for new custom post type names.
 
 = 1.0.0 =
 
