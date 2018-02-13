@@ -1,4 +1,4 @@
-=== WPSSO Breadcrumbs Markup using Schema JSON-LD for Google and Search Engine Optimization (SEO) ===
+=== WPSSO Breadcrumbs Markup using Schema JSON-LD for Search Engine Optimization (SEO) and Google ===
 Plugin Name: WPSSO Breadcrumbs Markup
 Plugin Slug: wpsso-breadcrumbs
 Text Domain: wpsso-breadcrumbs
@@ -13,7 +13,7 @@ Requires At Least: 3.8
 Tested Up To: 4.9.4
 Stable Tag: 1.0.0
 
-WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).
+WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Search Engine Optimization (SEO) and Google.
 
 == Description ==
 
@@ -28,6 +28,8 @@ Simply activate / deactivate the plugin to enable / disable the addition of Sche
 **Adds Schema BreadcrumbList markup to posts, pages, and custom post types.**
 
 **Select between using ancestors (page parents, grand-parents, etc.) or categories for breadcrumbs.**
+
+**Offers the most comprehensive Schema BreadcrumbsList markup of any plugin.**
 
 **WPSSO Breadcrumbs Markup is *incredibly fast* and coded for performance:**
 
