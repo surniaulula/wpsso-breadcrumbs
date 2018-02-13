@@ -75,7 +75,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				$opt_key = 'bc_list_for_ptn_'.$mod['post_type'];
 
 				$opt_val = isset( $this->p->options[$opt_key] ) ?	// Just in case.
-					$this->p->options[$opt_key] : 'categories';	// Default for post types is 'categories'
+					$this->p->options[$opt_key] : 'categories';	// Default for post type is 'categories'
 
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( $opt_key.' = '.$opt_val );
