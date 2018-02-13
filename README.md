@@ -15,17 +15,17 @@
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png"></p>
 
-<p><strong>No function files or theme templates to modify!</strong></p>
+<p><strong>Uses Google's preferred Schema JSON-LD format.</strong></p>
 
-<p>Simply activate / deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.</p>
-
-<p><strong>WPSSO Breadcrumbs Markup uses Google's preferred Schema JSON-LD format.</strong></p>
+<p><strong>Most comprehensive Schema BreadcrumbsList markup of any plugin.</strong></p>
 
 <p><strong>Adds Schema BreadcrumbList markup to posts, pages, and custom post types.</strong></p>
 
 <p><strong>Select between using ancestors (page parents, grand-parents, etc.) or categories for breadcrumbs.</strong></p>
 
-<p><strong>Offers the most comprehensive Schema BreadcrumbsList markup of any plugin.</strong></p>
+<p><strong>No theme function or template files to modify!</strong></p>
+
+<p>Simply activate / deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.</p>
 
 <p><strong>WPSSO Breadcrumbs Markup is <em>incredibly fast</em> and coded for performance:</strong></p>
 
