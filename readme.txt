@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.4
-Stable Tag: 1.0.0
+Stable Tag: 1.0.1
 
 WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Search Engine Optimization (SEO) and Google.
 
