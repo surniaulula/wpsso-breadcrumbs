@@ -84,7 +84,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.1.0-dev.2 (2018/02/19)**
+**Version 1.1.0-dev.3 (2018/02/20)**
 
 * *New Features*
 	* None
@@ -108,9 +108,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.1.0-dev.2 =
+= 1.1.0-dev.3 =
 
-(2018/02/19) Refactored the WpssoBc min_version_notice() method to use PHP's trigger_error() and include a notice to refresh plugin update information.
+(2018/02/20) Refactored the WpssoBc min_version_notice() method to use PHP's trigger_error() and include a notice to refresh plugin update information.
 
 = 1.0.1 =
 
