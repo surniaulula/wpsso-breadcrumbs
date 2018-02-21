@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO App Meta (WPSSO AM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Breadcrumbs Markup 1.0.1\n"
+"Project-Id-Version: WPSSO Breadcrumbs Markup 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2018-02-10 08:23-0600\n"
-"PO-Revision-Date: 2018-02-13 14:25-0600\n"
+"POT-Creation-Date: 2018-02-19 18:07-0600\n"
+"PO-Revision-Date: 2018-02-19 18:07-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -51,9 +51,13 @@ msgstr "%1$s nécessite %2$s version %3$s ou supérieure et a été désactivé.
 msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
 msgstr "SVP mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
 
-#: wpsso-breadcrumbs.php:207
-msgid "The %1$s extension v%2$s requires %3$s v%4$s or newer (v%5$s currently installed)."
-msgstr "L'extension %1$s v%2$s requiert l'utilisation de %3$s v%4$s ou plus récente (v%5$s est actuellement installée)."
+#: wpsso-breadcrumbs.php:206
+msgid "The %1$s version %2$s extension requires %3$s version %4$s or newer (version %5$s is currently installed)."
+msgstr "L'extension %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
+
+#: wpsso-breadcrumbs.php:209
+msgid "%s warning:"
+msgstr "Alerte %s:"
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Breadcrumbs Markup"
