@@ -1,8 +1,8 @@
-<h1>WPSSO Breadcrumbs Markup</h1><h3>Improve Search Listing Results with Schema Breadcrumbs for Search Engine Optimization (SEO) and Google</h3>
+<h1>WPSSO Breadcrumbs Markup</h1><h3>Improve Search Results with Schema Breadcrumbs for Google and Search Engine Optimization (SEO)</h3>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Breadcrumbs Markup</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Search Engine Optimization (SEO) and Google.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.0.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 4.9.4</td></tr>
@@ -15,7 +15,7 @@
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png"></p>
 
-<p><strong>Uses Google's preferred Schema JSON-LD format.</strong></p>
+<p><strong>Uses Google's preferred Schema JSON-LD format for breadcrumbs.</strong></p>
 
 <p><strong>Most comprehensive Schema BreadcrumbsList markup of any plugin.</strong></p>
 
