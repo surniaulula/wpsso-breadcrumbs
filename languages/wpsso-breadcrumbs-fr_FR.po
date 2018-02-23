@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Breadcrumbs Markup 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2018-02-23 11:58-0600\n"
-"PO-Revision-Date: 2018-02-23 11:58-0600\n"
+"POT-Creation-Date: 2018-02-23 13:58-0600\n"
+"PO-Revision-Date: 2018-02-23 13:59-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -22,8 +22,8 @@ msgstr "Breadcrumbs"
 
 #: lib/config-gettext-extract.php:4
 msgctxt "plugin description"
-msgid "WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google / SEO."
-msgstr "Extension WPSSO Core pour ajouter le balisage Schema BreadcrumbList en format JSON-LD pour Google / SEO."
+msgid "WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO)."
+msgstr "Extension WPSSO Core pour ajouter le balisage Schema BreadcrumbList en format JSON-LD pour Google l'optimisation des moteurs de recherche (SEO)."
 
 #: lib/submenu/bc-general.php:32
 msgctxt "metabox title"
@@ -68,8 +68,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-breadcrumbs/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-breadcrumbs/"
 
 #. Description of the plugin/theme
-msgid "WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google / SEO."
-msgstr "Extension WPSSO Core pour ajouter le balisage Schema BreadcrumbList en format JSON-LD pour Google / SEO."
+msgid "WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO)."
+msgstr "Extension WPSSO Core pour ajouter le balisage Schema BreadcrumbList en format JSON-LD pour Google l'optimisation des moteurs de recherche (SEO)."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
