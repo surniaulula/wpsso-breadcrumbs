@@ -61,7 +61,7 @@ msgid ""
 "%5$s is currently installed)."
 msgstr ""
 
-#: wpsso-breadcrumbs.php:209
+#: wpsso-breadcrumbs.php:216
 msgid "%s warning:"
 msgstr ""
 
