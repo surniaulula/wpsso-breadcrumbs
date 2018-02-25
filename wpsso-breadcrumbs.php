@@ -14,7 +14,7 @@
  * Requires PHP: 5.4
  * Requires At Least: 3.8
  * Tested Up To: 4.9.4
- * Version: 1.1.0
+ * Version: 1.1.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -200,7 +200,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 
 		private function min_version_notice() {
 
-			$info = WpssoAmConfig::$cf['plugin']['wpssobc'];
+			$info = WpssoBcConfig::$cf['plugin']['wpssobc'];
 			$have_version = $this->p->cf['plugin']['wpsso']['version'];
 
 			$error_msg = sprintf( __( 'The %1$s version %2$s extension requires %3$s version %4$s or newer (version %5$s is currently installed).',
