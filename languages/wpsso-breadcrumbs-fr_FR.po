@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO App Meta (WPSSO AM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Breadcrumbs Markup 1.1.0\n"
+"Project-Id-Version: WPSSO Breadcrumbs Markup 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
 "POT-Creation-Date: 2018-02-23 13:58-0600\n"
-"PO-Revision-Date: 2018-02-23 13:59-0600\n"
+"PO-Revision-Date: 2018-02-25 00:57-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
