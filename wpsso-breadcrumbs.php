@@ -202,20 +202,21 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 
 			$info = WpssoBcConfig::$cf['plugin']['wpssobc'];
 			$have_version = $this->p->cf['plugin']['wpsso']['version'];
-
 			$error_msg = sprintf( __( 'The %1$s version %2$s extension requires %3$s version %4$s or newer (version %5$s is currently installed).',
 				'wpsso-breadcrumbs' ), $info['name'], $info['version'], $info['req']['short'], $info['req']['min_version'], $have_version );
 
 			if ( is_admin() ) {
-
 				$this->p->notice->err( $error_msg );
-
 				if ( method_exists( $this->p->admin, 'get_check_for_updates_link' ) ) {
 					$this->p->notice->inf( $this->p->admin->get_check_for_updates_link() );
 				}
 			}
 
-			trigger_error( sprintf( __( '%s warning:', 'wpsso-breadcrumbs' ), $info['short'] ).' '.rtrim( $error_msg, '.' ), E_USER_WARNING );
+			if ( method_exists( 'SucomUtil', 'safe_trigger_error' ) ) {
+				// translators: %s is the short plugin name
+				$error_prefix = sprintf( __( '%s warning:', 'wpsso-breadcrumbs' ), $info['short'] );
+				SucomUtil::safe_trigger_error( $error_prefix.' '.rtrim( $error_msg, '.' ), E_USER_WARNING );
+			}
 		}
 	}
 

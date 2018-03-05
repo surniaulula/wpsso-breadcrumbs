@@ -55,13 +55,14 @@ msgstr ""
 msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
 msgstr ""
 
-#: wpsso-breadcrumbs.php:206
+#: wpsso-breadcrumbs.php:205
 msgid ""
 "The %1$s version %2$s extension requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
 msgstr ""
 
-#: wpsso-breadcrumbs.php:218
+#. translators: %s is the short plugin name
+#: wpsso-breadcrumbs.php:217
 msgid "%s warning:"
 msgstr ""
 
