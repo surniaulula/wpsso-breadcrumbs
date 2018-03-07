@@ -1,4 +1,4 @@
-=== WPSSO Breadcrumbs Markup - Improve Search Results with Schema Breadcrumbs for Google + Search Engine Optimization (SEO) ===
+=== WPSSO Breadcrumbs Markup - Schema Breadcrumbs for Google + Search Engine Optimization (SEO) ===
 Plugin Name: WPSSO Breadcrumbs Markup
 Plugin Slug: wpsso-breadcrumbs
 Text Domain: wpsso-breadcrumbs
