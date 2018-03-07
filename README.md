@@ -1,4 +1,4 @@
-<h1>WPSSO Breadcrumbs Markup</h1><h3>Improve Search Results with Schema Breadcrumbs for Google and Search Engine Optimization (SEO)</h3>
+<h1>WPSSO Breadcrumbs Markup</h1><h3>Improve Search Results with Schema Breadcrumbs for Google + Search Engine Optimization (SEO)</h3>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Breadcrumbs Markup</td></tr>
