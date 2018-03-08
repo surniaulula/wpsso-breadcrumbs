@@ -1,7 +1,7 @@
-<h1>WPSSO Breadcrumbs Markup</h1><h3>Schema Breadcrumbs for Google + Search Engine Optimization (SEO)</h3>
+<h1>WPSSO Schema Breadcrumbs Markup</h1>
 
 <table>
-<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Breadcrumbs Markup</td></tr>
+<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema Breadcrumbs Markup</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.1.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
@@ -15,31 +15,25 @@
 
 <p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png"></p>
 
-<p><strong>Uses Google's preferred Schema JSON-LD format for breadcrumbs.</strong></p>
+<p><strong>WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).</strong></p>
 
-<p><strong>Most comprehensive Schema BreadcrumbsList markup of any plugin.</strong></p>
+<p>Uses Google's preferred Schema JSON-LD format for breadcrumbs.</p>
 
-<p><strong>Adds Schema BreadcrumbList markup to posts, pages, and custom post types.</strong></p>
+<p>Most comprehensive Schema BreadcrumbsList markup of any plugin.</p>
 
-<p><strong>Select between using ancestors (page parents, grand-parents, etc.) or categories for breadcrumbs.</strong></p>
+<p>Adds Schema BreadcrumbList markup to posts, pages, and custom post types.</p>
 
-<p><strong>No theme function or template files to modify!</strong></p>
+<p>Select between using ancestors (page parents, grand-parents, etc.) or categories for breadcrumbs.</p>
 
 <p>Simply activate / deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.</p>
 
-<p><strong>WPSSO Breadcrumbs Markup is <em>incredibly fast</em> and coded for performance:</strong></p>
+<p>No theme function or template files to modify!</p>
 
-<p>WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light.</p>
-
-<p>WPSSO Core and its extensions are fully tested and compatible with PHP v7.x (PHP v5.4 or better required).</p>
-
-<p><strong>New Extension for the WPSSO Core Plugin:</strong></p>
-
-<p>WPSSO Breadcrumbs Markup (aka WPSSO BC) is the newest extension for the WPSSO Core plugin. You can expect many more features in future versions, including breadcrumbs markup for archive type pages (dates, tags, categories, and custom terms / taxonomies).</p>
+<p>WPSSO Schema Breadcrumbs Markup is <em>incredibly fast</em> and coded for performance &mdash; WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light. WPSSO Core and its extensions are also fully tested and compatible with PHP v7.x (PHP v5.4 or better required).</p>
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-<p>WPSSO Breadcrumbs Markup (aka WPSSO BC) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.</p>
+<p>WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.</p>
 
 
 <h2>Installation</h2>
