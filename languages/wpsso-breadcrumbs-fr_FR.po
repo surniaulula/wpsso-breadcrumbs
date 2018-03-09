@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Breadcrumbs Markup 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2018-02-23 13:58-0600\n"
-"PO-Revision-Date: 2018-02-25 00:57-0600\n"
+"POT-Creation-Date: 2018-03-09 12:19-0600\n"
+"PO-Revision-Date: 2018-03-09 12:21-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -27,8 +27,8 @@ msgstr "Extension WPSSO Core pour ajouter le balisage Schema BreadcrumbList en f
 
 #: lib/submenu/bc-general.php:32
 msgctxt "metabox title"
-msgid "Breadcrumbs Markup Settings"
-msgstr "Réglages de balisage Breadcrumbs"
+msgid "Breadcrumbs Settings"
+msgstr "Réglages breadcrumbs"
 
 #: lib/submenu/bc-general.php:59
 msgctxt "option label"
@@ -51,17 +51,18 @@ msgstr "%1$s nécessite %2$s version %3$s ou supérieure et a été désactivé.
 msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
 msgstr "SVP mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
 
-#: wpsso-breadcrumbs.php:206
+#: wpsso-breadcrumbs.php:205
 msgid "The %1$s version %2$s extension requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'extension %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
 
-#: wpsso-breadcrumbs.php:209
+#. translators: %s is the short plugin name
+#: wpsso-breadcrumbs.php:217
 msgid "%s warning:"
 msgstr "Alerte %s:"
 
 #. Plugin Name of the plugin/theme
-msgid "WPSSO Breadcrumbs Markup"
-msgstr "WPSSO Breadcrumbs Markup"
+msgid "WPSSO Schema Breadcrumbs Markup"
+msgstr "WPSSO Schema Breadcrumbs Markup"
 
 #. Plugin URI of the plugin/theme
 msgid "https://wpsso.com/extend/plugins/wpsso-breadcrumbs/"
