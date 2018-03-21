@@ -13,13 +13,13 @@ Requires At Least: 3.8
 Tested Up To: 4.9.4
 Stable Tag: 1.1.1
 
-WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).
+WPSSO Core add-on to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).
 
 == Description ==
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png">
 
-**WPSSO Core extension to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).**
+**WPSSO Core add-on to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).**
 
 Uses Google's preferred Schema JSON-LD format for breadcrumbs.
 
@@ -33,18 +33,18 @@ Simply activate / deactivate the plugin to enable / disable the addition of Sche
 
 No theme function or template files to modify!
 
-WPSSO Schema Breadcrumbs Markup is *incredibly fast* and coded for performance &mdash; WPSSO Core and its extensions make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light. WPSSO Core and its extensions are also fully tested and compatible with PHP v7.x (PHP v5.4 or better required).
+WPSSO Schema Breadcrumbs Markup is *incredibly fast* and coded for performance &mdash; WPSSO Core and its add-ons make full use of all available caching techniques (persistent / non-persistent object and disk caching), and load only the PHP library files and object classes they need, keeping their code small, fast, and light. WPSSO Core and its add-ons are also fully tested and compatible with PHP v7.x (PHP v5.4 or better required).
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an extension for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
+WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
 
 == Installation ==
 
 <h3>Install and Uninstall</h3>
 
-* [Install the WPSSO BC Extension](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/install-the-plugin/)
-* [Uninstall the WPSSO BC Extension](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/uninstall-the-plugin/)
+* [Install the WPSSO BC Add-on](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/install-the-plugin/)
+* [Uninstall the WPSSO BC Add-on](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/uninstall-the-plugin/)
 
 == Frequently Asked Questions ==
 
@@ -78,6 +78,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.1.2-dev.2 (2018/03/21)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 1.1.1 (2018/02/24)**
 
 * *New Features*
@@ -89,18 +100,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* Refactored the WpssoBc `min_version_notice()` method to use PHP's `trigger_error()` and include a notice to refresh plugin update information.
 
-**Version 1.0.1 (2018/02/17)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* Fixed an "unknown option key" error for new custom post type names.
-* *Developer Notes*
-	* None
-
 == Upgrade Notice ==
+
+= 1.1.2-dev.2 =
+
+(2018/03/21) Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
 
 = 1.1.1 =
 
