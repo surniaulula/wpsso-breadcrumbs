@@ -16,11 +16,11 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version' => '1.1.2-b.1',		// Plugin version.
+					'version' => '1.1.2-rc.1',		// Plugin version.
 					'opt_version' => '2',		// Increment when changing default option values.
 					'short' => 'WPSSO BC',		// Short plugin name.
 					'name' => 'WPSSO Schema Breadcrumbs Markup',
-					'desc' => 'WPSSO Core add-on to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).',
+					'desc' => 'WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).',
 					'slug' => 'wpsso-breadcrumbs',
 					'base' => 'wpsso-breadcrumbs/wpsso-breadcrumbs.php',
 					'update_auth' => '',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'req' => array(
 						'short' => 'WPSSO Core',
 						'name' => 'WPSSO Core',
-						'min_version' => '3.56.2-b.1',
+						'min_version' => '3.56.2-rc.1',
 					),
 					'img' => array(
 						'icons' => array(
