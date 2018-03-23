@@ -13,13 +13,13 @@ Requires At Least: 3.8
 Tested Up To: 4.9.4
 Stable Tag: 1.1.1
 
-WPSSO Core add-on to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).
+WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).
 
 == Description ==
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png">
 
-**WPSSO Core add-on to add JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).**
+**WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).**
 
 Uses Google's preferred Schema JSON-LD format for breadcrumbs.
 
@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.1.2-b.1 (2018/03/22)**
+**Version 1.1.2-rc.1 (2018/03/23)**
 
 * *New Features*
 	* None
@@ -102,9 +102,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.1.2-b.1 =
+= 1.1.2-rc.1 =
 
-(2018/03/22) Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
+(2018/03/23) Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
 
 = 1.1.1 =
 
