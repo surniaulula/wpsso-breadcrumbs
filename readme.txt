@@ -19,7 +19,7 @@ WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for 
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png">
 
-**WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).**
+**A WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).**
 
 Uses Google's preferred Schema JSON-LD format for breadcrumbs.
 
