@@ -30,7 +30,7 @@ msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
 msgstr ""
 
-#: lib/submenu/bc-general.php:59
+#: lib/submenu/bc-general.php:64
 msgctxt "option label"
 msgid "Breadcrumbs for Post Types"
 msgstr ""

@@ -34,15 +34,20 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 		}
 
 		public function show_metabox_breadcrumbs() {
+
 			$metabox_id = 'bc';
-			$key = 'general';
-			$this->p->util->do_table_rows( apply_filters( $this->p->cf['lca'].'_'.$metabox_id.'_'.$key.'_rows', 
-				$this->get_table_rows( $metabox_id, $key ), $this->form, false ), 'metabox-'.$metabox_id.'-'.$key );
+			$tab_key = 'general';
+
+			$this->p->util->do_table_rows( apply_filters( $this->p->cf['lca'].'_'.$metabox_id.'_'.$tab_key.'_rows', 
+				$this->get_table_rows( $metabox_id, $tab_key ), $this->form, false ), 'metabox-'.$metabox_id.'-'.$tab_key );
 		}
 
-		protected function get_table_rows( $metabox_id, $key ) {
+		protected function get_table_rows( $metabox_id, $tab_key ) {
+
 			$table_rows = array();
-			switch ( $metabox_id.'-'.$key ) {
+
+			switch ( $metabox_id.'-'.$tab_key ) {
+
 				case 'bc-general':
 
 					$bc_list_for_posts = $this->p->cf['form']['breadcrumbs_for_posts'];
@@ -61,8 +66,8 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 
 					break;
 			}
+
 			return $table_rows;
 		}
 	}
 }
-
