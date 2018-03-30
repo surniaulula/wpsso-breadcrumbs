@@ -14,8 +14,9 @@ if ( ! class_exists( 'WpssoBcRegister' ) ) {
 	class WpssoBcRegister {
 
 		public function __construct() {
+
 			register_activation_hook( WPSSOBC_FILEPATH, array( &$this, 'network_activate' ) );
-			//register_deactivation_hook( WPSSOBC_FILEPATH, array( &$this, 'network_deactivate' ) );	// nothing to do
+			//register_deactivation_hook( WPSSOBC_FILEPATH, array( &$this, 'network_deactivate' ) );	// Deactivation method not required.
 
 			if ( is_multisite() ) {
 				add_action( 'wpmu_new_blog', array( &$this, 'wpmu_new_blog' ), 10, 6 );
@@ -23,15 +24,18 @@ if ( ! class_exists( 'WpssoBcRegister' ) ) {
 			}
 		}
 
-		// fires immediately after a new site is created
+		/**
+		 * Fires immediately after a new site is created.
+		 */
 		public function wpmu_new_blog( $blog_id, $user_id, $domain, $path, $site_id, $meta ) {
 			switch_to_blog( $blog_id );
 			$this->activate_plugin();
 			restore_current_blog();
 		}
 
-		// fires immediately after a site is activated
-		// (not called when users and sites are created by a Super Admin)
+		/**
+		 * Fires immediately after a site is activated (not called when users and sites are created by a Super Admin).
+		 */
 		public function wpmu_activate_blog( $blog_id, $user_id, $password, $signup_title, $meta ) {
 			switch_to_blog( $blog_id );
 			$this->activate_plugin();
@@ -46,11 +50,15 @@ if ( ! class_exists( 'WpssoBcRegister' ) ) {
 			self::do_multisite( $sitewide, array( &$this, 'deactivate_plugin' ) );
 		}
 
-		// uninstall.php defines constants before calling network_uninstall()
+		/**
+		 * uninstall.php defines constants before calling network_uninstall().
+		 */
 		public static function network_uninstall() {
 			$sitewide = true;
 
-			// uninstall from the individual blogs first
+			/**
+			 * Uninstall from the individual blogs first.
+			 */
 			self::do_multisite( $sitewide, array( __CLASS__, 'uninstall_plugin' ) );
 		}
 
@@ -86,4 +94,3 @@ if ( ! class_exists( 'WpssoBcRegister' ) ) {
 		}
 	}
 }
-
