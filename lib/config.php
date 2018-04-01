@@ -57,9 +57,11 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		}
 
 		public static function set_constants( $plugin_filepath ) { 
+
 			if ( defined( 'WPSSOBC_VERSION' ) ) {			// execute and define constants only once
 				return;
 			}
+
 			define( 'WPSSOBC_VERSION', self::$cf['plugin']['wpssobc']['version'] );						
 			define( 'WPSSOBC_FILEPATH', $plugin_filepath );						
 			define( 'WPSSOBC_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
