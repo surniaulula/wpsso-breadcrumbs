@@ -78,6 +78,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.1.3-dev.1 (2018/04/01)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Renamed the WpssoUtil do_table_rows() method to do_metabox_table() for the Gutenberg changes in WPSSO v3.57.0.
+
 **Version 1.1.2 (2018/03/24)**
 
 * *New Features*
@@ -101,6 +112,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Refactored the WpssoBc `min_version_notice()` method to use PHP's `trigger_error()` and include a notice to refresh plugin update information.
 
 == Upgrade Notice ==
+
+= 1.1.3-dev.1 =
+
+(2018/04/01) Renamed the WpssoUtil do_table_rows() method to do_metabox_table() for the Gutenberg changes in WPSSO v3.57.0.
 
 = 1.1.2 =
 
