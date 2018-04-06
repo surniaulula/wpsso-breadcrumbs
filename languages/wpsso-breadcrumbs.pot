@@ -61,11 +61,6 @@ msgid ""
 "%5$s is currently installed)."
 msgstr ""
 
-#. translators: %s is the short plugin name
-#: wpsso-breadcrumbs.php:227
-msgid "%s warning:"
-msgstr ""
-
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Schema Breadcrumbs Markup"
 msgstr ""
