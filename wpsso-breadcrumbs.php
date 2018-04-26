@@ -103,7 +103,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 					require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
 				}
 
-				deactivate_plugins( $info['base'], true );	// $silent = true
+				deactivate_plugins( $info['base'], true );	// $silent is true
 
 				wp_die( '<p>' . sprintf( $die_msg, $info['name'], $info['req']['name'], $info['req']['short'], $info['short'] ) . '</p>' );
 
@@ -132,8 +132,8 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 					if ( ! function_exists( 'deactivate_plugins' ) ) {
 						require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
 					}
-					$plugin_data = get_plugin_data( __FILE__, false );	// $markup = false
-					deactivate_plugins( $plugin, true );	// $silent = true
+					$plugin_data = get_plugin_data( __FILE__, false );	// $markup is false
+					deactivate_plugins( $plugin, true );	// $silent is true
 					wp_die( 
 						'<p>' . sprintf( __( '%1$s requires %2$s version %3$s or higher and has been deactivated.',
 							'wpsso-breadcrumbs' ), $plugin_data['Name'], 'WordPress', self::$wp_min_version ) . '</p>' . 
