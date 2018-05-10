@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Breadcrumbs Markup 1.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2018-03-24 09:00-0400\n"
-"PO-Revision-Date: 2018-03-24 09:56-0400\n"
+"POT-Creation-Date: 2018-05-10 10:34-0600\n"
+"PO-Revision-Date: 2018-05-10 10:34-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -25,40 +25,35 @@ msgctxt "plugin description"
 msgid "WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO)."
 msgstr "Extension d'ajout WPSSO Core pour fournir le balisage Schema BreadcrumbList en format JSON-LD pour Google et l'optimisation de recherche (SEO)."
 
-#: lib/submenu/bc-general.php:32
+#: lib/submenu/bc-general.php:34
 msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
 msgstr "Réglages breadcrumbs"
 
-#: lib/submenu/bc-general.php:59
+#: lib/submenu/bc-general.php:66
 msgctxt "option label"
 msgid "Breadcrumbs for Post Types"
 msgstr "Type d'articles pour Breadcrumbs"
 
-#: wpsso-breadcrumbs.php:91
+#: wpsso-breadcrumbs.php:97
 msgid "%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."
 msgstr "%1$s est un ajout pour l'extension %2$s &mdash; SVP installer et activer l'extension %3$s avant d'activer %4$s."
 
-#: wpsso-breadcrumbs.php:92
+#: wpsso-breadcrumbs.php:98
 msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension %3$s ou <a href=\"%4$s\">désactiver l'ajout %5$s</a>."
 
-#: wpsso-breadcrumbs.php:134
+#: wpsso-breadcrumbs.php:138
 msgid "%1$s requires %2$s version %3$s or higher and has been deactivated."
 msgstr "%1$s nécessite %2$s version %3$s ou supérieure et a été désactivé."
 
-#: wpsso-breadcrumbs.php:136
+#: wpsso-breadcrumbs.php:140
 msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
 msgstr "SVP mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
 
-#: wpsso-breadcrumbs.php:205
+#: wpsso-breadcrumbs.php:215
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
-
-#. translators: %s is the short plugin name
-#: wpsso-breadcrumbs.php:217
-msgid "%s warning:"
-msgstr "Alerte %s:"
 
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Schema Breadcrumbs Markup"
