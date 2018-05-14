@@ -31,8 +31,6 @@ Select between using ancestors (page parents, grand-parents, etc.) or categories
 
 Simply activate / deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.
 
-<div style="clear:both"></div>
-
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
 WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the WPSSO Core plugin.
@@ -85,33 +83,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed some WpssoUtil methods for Gutenberg changes in WPSSO v3.57.0.
-
-**Version 1.1.2 (2018/03/24)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* Renamed plugin "Extensions" to "Add-ons" to avoid confusion and improve / simplify translations.
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* None
-
-**Version 1.1.1 (2018/02/24)**
-
-* *New Features*
-	* None
-* *Improvements*
-	* None
-* *Bugfixes*
-	* None
-* *Developer Notes*
-	* Refactored the WpssoBc `min_version_notice()` method to use PHP's `trigger_error()` and include a notice to refresh plugin update information.
+	* Renamed some WpssoUtil methods for Gutenberg related changes in WPSSO v3.57.0.
 
 == Upgrade Notice ==
 
 = 1.1.3 =
 
-(2018/04/05) Renamed some WpssoUtil methods for Gutenberg changes in WPSSO v3.57.0.
+(2018/04/05) Renamed some WpssoUtil methods for Gutenberg related changes in WPSSO v3.57.0.
 

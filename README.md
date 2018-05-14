@@ -27,8 +27,6 @@
 
 <p>Simply activate / deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.</p>
 
-<div style="clear:both"></div>
-
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
 <p>WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the WPSSO Core plugin.</p>
