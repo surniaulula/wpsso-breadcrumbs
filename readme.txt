@@ -35,7 +35,7 @@ Simply activate / deactivate the plugin to enable / disable the addition of Sche
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the WPSSO Core plugin. The Free add-on works with either the Free or Pro versions of WPSSO Core.
+WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the WPSSO Core plugin.
 
 == Installation ==
 
