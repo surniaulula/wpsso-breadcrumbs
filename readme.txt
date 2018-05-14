@@ -19,23 +19,23 @@ WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for 
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png">
 
-**A WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).**
+Adds Schema BreadcrumbList markup to posts, pages, and custom post types.
 
 Uses Google's preferred Schema JSON-LD format for breadcrumbs.
 
-Adds Schema BreadcrumbList markup to posts, pages, and custom post types.
+Most comprehensive Schema BreadcrumbsList markup of any plugin.
 
 Select between using ancestors (page parents, grand-parents, etc.) or categories for breadcrumbs.
 
-Most comprehensive Schema BreadcrumbsList markup of any plugin.
+**No theme template or function files to modify:**
 
 Simply activate / deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.
 
-No theme function or template files to modify!
+<div style="clear:both"></div>
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the WPSSO Core plugin &mdash; which creates complete &amp; accurate meta tags and Schema markup from your existing content for social sharing, Social Media Optimization (SMO), Search Engine Optimization (SEO), Google Rich Cards, Pinterest Rich Pins, etc.
+WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the WPSSO Core plugin. The Free add-on works with either the Free or Pro versions of WPSSO Core.
 
 == Installation ==
 
