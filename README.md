@@ -1,4 +1,4 @@
-<h1>WPSSO Schema Breadcrumbs Markup</h1><h3>Easy and Most Complete BreadcrumbsList Markup</h3>
+<h1>WPSSO Schema Breadcrumbs Markup</h1><h3>Super Fast, Easy and Complete BreadcrumbsList Markup</h3>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema Breadcrumbs Markup</td></tr>
