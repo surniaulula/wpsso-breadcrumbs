@@ -1,4 +1,4 @@
-=== WPSSO Schema Breadcrumbs Markup ===
+=== WPSSO Schema Breadcrumbs Markup - Easy and Most Complete BreadcrumbsList Markup ===
 Plugin Name: WPSSO Schema Breadcrumbs Markup
 Plugin Slug: wpsso-breadcrumbs
 Text Domain: wpsso-breadcrumbs
@@ -19,13 +19,13 @@ WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for 
 
 <img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png">
 
-Adds Schema BreadcrumbList markup to posts, pages, and custom post types.
-
-Uses Google's preferred Schema JSON-LD format for breadcrumbs.
-
 Most comprehensive Schema BreadcrumbsList markup of any plugin.
 
-Select between using ancestors (page parents, grand-parents, etc.) or categories for breadcrumbs.
+Adds Schema BreadcrumbList markup to posts, pages, and custom post types.
+
+Use Google's preferred Schema JSON-LD format for your breadcrumbs markup.
+
+Select between using ancestors or categories for your breadcrumbs.
 
 **No theme template or function files to modify:**
 
