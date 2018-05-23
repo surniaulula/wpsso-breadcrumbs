@@ -17,7 +17,7 @@
 
 <p>Most comprehensive Schema BreadcrumbsList markup of any plugin.</p>
 
-<p>Adds Schema BreadcrumbList markup to posts, pages, and custom post types.</p>
+<p>Add Schema BreadcrumbList markup to posts, pages, and custom post types.</p>
 
 <p>Use Google's preferred Schema JSON-LD format for your breadcrumbs markup.</p>
 
