@@ -27,7 +27,7 @@ Use Google's preferred Schema JSON-LD format for your breadcrumbs markup.
 
 Select between using ancestors or categories for your breadcrumbs.
 
-**No theme template or function files to modify:**
+<h3>No templates to modify or update!<h3>
 
 Simply activate / deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.
 
