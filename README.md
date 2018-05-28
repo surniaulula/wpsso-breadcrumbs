@@ -23,13 +23,7 @@
 
 <p>Select between using ancestors or categories for your breadcrumbs.</p>
 
-<p>&lt;</p>
-
-<p>h3>No templates to modify or update!</p>
-
-<p>&lt;</p>
-
-<p>h3></p>
+<h3>No templates to modify or update!</h3>
 
 <p>Simply activate / deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.</p>
 
