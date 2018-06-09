@@ -14,7 +14,7 @@
  * Requires PHP: 5.4
  * Requires At Least: 3.8
  * Tested Up To: 4.9.6
- * Version: 1.1.3
+ * Version: 1.1.4
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -48,7 +48,6 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 		private $have_req_min = true;	// Have minimum wpsso version.
 
 		private static $instance;
-		private static $wp_min_version = 4.7;
 
 		public function __construct() {
 
@@ -61,7 +60,6 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 
 			if ( is_admin() ) {
 				add_action( 'admin_init', array( __CLASS__, 'required_check' ) );
-				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );	// Requires wp v4.7 or better.
 			}
 
 			add_filter( 'wpsso_get_config', array( &$this, 'wpsso_get_config' ), 10, 2 );	// Checks core version and merges config array.
@@ -123,27 +121,6 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 			}
 		}
 
-		public static function check_wp_version() {
-			global $wp_version;
-			if ( version_compare( $wp_version, self::$wp_min_version, '<' ) ) {
-				$plugin = plugin_basename( __FILE__ );
-				if ( is_plugin_active( $plugin ) ) {
-					self::wpsso_init_textdomain();
-					if ( ! function_exists( 'deactivate_plugins' ) ) {
-						require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
-					}
-					$plugin_data = get_plugin_data( __FILE__, false );	// $markup is false
-					deactivate_plugins( $plugin, true );	// $silent is true
-					wp_die( 
-						'<p>' . sprintf( __( '%1$s requires %2$s version %3$s or higher and has been deactivated.',
-							'wpsso-breadcrumbs' ), $plugin_data['Name'], 'WordPress', self::$wp_min_version ) . '</p>' . 
-						'<p>' . sprintf( __( 'Please upgrade %1$s before trying to re-activate the %2$s plugin.',
-							'wpsso-breadcrumbs' ), 'WordPress', $plugin_data['Name'] ) . '</p>'
-					);
-				}
-			}
-		}
-
 		public static function wpsso_init_textdomain() {
 			load_plugin_textdomain( 'wpsso-breadcrumbs', false, 'wpsso-breadcrumbs/languages/' );
 		}
@@ -175,11 +152,11 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 			}
 
 			if ( ! $this->have_req_min ) {
-				$this->p->avail['p_ext']['ul'] = false;	// Signal that this extension / add-on is not available.
+				$this->p->avail['p_ext']['bc'] = false;	// Signal that this extension / add-on is not available.
 				return;
 			}
 
-			$this->p->avail['p_ext']['ul'] = true;	// Signal that this extension / add-on is available.
+			$this->p->avail['p_ext']['bc'] = true;	// Signal that this extension / add-on is available.
 		}
 
 		public function wpsso_init_objects() {

@@ -67,6 +67,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			}
 
 			global $wpsso_paged;
+
 			$wpsso_paged = 1;
 
 			foreach ( $mods as $mod ) {
