@@ -74,20 +74,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.1.3 (2018/04/05)**
+**Version 1.1.4 (2018/06/09)**
 
 * *New Features*
 	* None
 * *Improvements*
-	* None
+	* Removed minimum WP version check (not required).
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Renamed some WpssoUtil methods for Gutenberg related changes in WPSSO v3.57.0.
+	* None
 
 == Upgrade Notice ==
 
-= 1.1.3 =
+= 1.1.4 =
 
-(2018/04/05) Renamed some WpssoUtil methods for Gutenberg related changes in WPSSO v3.57.0.
+(2018/06/09) Removed minimum WP version check (not required).
 
