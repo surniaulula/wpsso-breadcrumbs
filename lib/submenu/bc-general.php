@@ -32,7 +32,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 		protected function add_meta_boxes() {
 			add_meta_box( $this->pagehook.'_breadcrumbs', 
 				_x( 'Breadcrumbs Settings', 'metabox title', 'wpsso-breadcrumbs' ),
-					array( &$this, 'show_metabox_breadcrumbs' ), $this->pagehook, 'normal' );
+					array( $this, 'show_metabox_breadcrumbs' ), $this->pagehook, 'normal' );
 		}
 
 		public function show_metabox_breadcrumbs() {
