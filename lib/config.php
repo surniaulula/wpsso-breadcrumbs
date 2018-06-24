@@ -58,7 +58,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 
 		public static function set_constants( $plugin_filepath ) { 
 
-			if ( defined( 'WPSSOBC_VERSION' ) ) {			// execute and define constants only once
+			if ( defined( 'WPSSOBC_VERSION' ) ) {	// Define constants only once.
 				return;
 			}
 
