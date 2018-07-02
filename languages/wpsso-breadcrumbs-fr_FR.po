@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2018-05-10 10:34-0600\n"
-"PO-Revision-Date: 2018-06-12 16:31-0600\n"
+"POT-Creation-Date: 2018-07-02 12:32-0600\n"
+"PO-Revision-Date: 2018-07-02 12:32-0600\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -43,15 +43,7 @@ msgstr "%1$s est un ajout pour l'extension %2$s &mdash; SVP installer et activer
 msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension %3$s ou <a href=\"%4$s\">désactiver l'ajout %5$s</a>."
 
-#: wpsso-breadcrumbs.php:138
-msgid "%1$s requires %2$s version %3$s or higher and has been deactivated."
-msgstr "%1$s nécessite %2$s version %3$s ou supérieure et a été désactivé."
-
-#: wpsso-breadcrumbs.php:140
-msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
-msgstr "SVP mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
-
-#: wpsso-breadcrumbs.php:215
+#: wpsso-breadcrumbs.php:194
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
 
@@ -74,3 +66,9 @@ msgstr "JS Morisset"
 #. Author URI of the plugin/theme
 msgid "https://wpsso.com/"
 msgstr "https://wpsso.com/"
+
+#~ msgid "%1$s requires %2$s version %3$s or higher and has been deactivated."
+#~ msgstr "%1$s nécessite %2$s version %3$s ou supérieure et a été désactivé."
+
+#~ msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
+#~ msgstr "SVP mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
