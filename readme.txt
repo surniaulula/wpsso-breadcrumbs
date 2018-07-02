@@ -44,14 +44,6 @@ WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the [WPSSO Core 
 
 == Frequently Asked Questions ==
 
-<h3 class="top">Frequently Asked Questions</h3>
-
-* None
-
-== Other Notes ==
-
-<h3 class="top">Additional Documentation</h3>
-
 == Screenshots ==
 
 01. WPSSO BC settings page includes options to select the kind of breadcrumbs for each post type (media, post, page, and custom post types).
