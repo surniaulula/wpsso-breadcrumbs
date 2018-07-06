@@ -19,7 +19,7 @@ WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for 
 
 <p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png"></p>
 
-Most comprehensive Schema BreadcrumbsList markup of any plugin.
+Most comprehensive Schema BreadcrumbsList markup of any plugin!
 
 Add Schema BreadcrumbList markup to posts, pages, and custom post types.
 
