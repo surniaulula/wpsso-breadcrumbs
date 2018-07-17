@@ -69,13 +69,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 **Version 1.1.4 (2018/06/09)**
 
 * *New Features*
-	* None
+	* None.
 * *Improvements*
 	* Removed minimum WP version check (not required).
 * *Bugfixes*
-	* None
+	* None.
 * *Developer Notes*
-	* None
+	* None.
 
 == Upgrade Notice ==
 
