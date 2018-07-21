@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO App Meta (WPSSO AM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.1.2\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2018-07-02 12:32-0600\n"
-"PO-Revision-Date: 2018-07-02 12:32-0600\n"
+"POT-Creation-Date: 2018-07-21 08:38-0400\n"
+"PO-Revision-Date: 2018-07-21 08:38-0400\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -66,9 +66,3 @@ msgstr "JS Morisset"
 #. Author URI of the plugin/theme
 msgid "https://wpsso.com/"
 msgstr "https://wpsso.com/"
-
-#~ msgid "%1$s requires %2$s version %3$s or higher and has been deactivated."
-#~ msgstr "%1$s nécessite %2$s version %3$s ou supérieure et a été désactivé."
-
-#~ msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
-#~ msgstr "SVP mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
