@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.7
-Stable Tag: 1.1.4
+Stable Tag: 1.2.0
 
 WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).
 
@@ -77,24 +77,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* None.
 
-**Version 1.1.4 (2018/06/09)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Removed minimum WP version check (not required).
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
 == Upgrade Notice ==
 
 = 1.2.0 =
 
 (2018/07/22) Maintenance release.
-
-= 1.1.4 =
-
-(2018/06/09) Removed minimum WP version check (not required).
 
