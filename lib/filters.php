@@ -19,8 +19,8 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			'opt' => array(				// options
 				'defaults' => array(
 					'bc_list_for_ptn_attachment' => 'none',
-					'bc_list_for_ptn_page' => 'ancestors',
-					'bc_list_for_ptn_post' => 'categories',
+					'bc_list_for_ptn_page'       => 'ancestors',
+					'bc_list_for_ptn_post'       => 'categories',
 				),
 			),
 		);
@@ -33,8 +33,8 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			}
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'get_defaults' => 1,
-				'json_array_schema_page_type_ids' => 2,
+				'get_defaults'                              => 1,
+				'json_array_schema_page_type_ids'           => 2,
 				'json_data_https_schema_org_breadcrumblist' => 5,
 			) );
 		}
