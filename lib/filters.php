@@ -40,13 +40,16 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		}
 
 		public function filter_get_defaults( $def_opts ) {
+
 			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
+
 			/**
 			 * Add options using a key prefix array and post type names.
 			 */
 			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array(
 				'bc_list_for_ptn' => 'categories',	// breacrumb list for post type name
 			) );
+
 			return $def_opts;
 		}
 
@@ -74,8 +77,10 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				$opt_key = 'bc_list_for_ptn_'.$mod['post_type'];
 
-				$opt_val = isset( $this->p->options[$opt_key] ) ?	// Just in case.
-					$this->p->options[$opt_key] : 'categories';	// Default for post type is 'categories'
+				/**
+				 * The default for any undefined post type is 'categories'.
+				 */
+				$opt_val = isset( $this->p->options[$opt_key] ) ? $this->p->options[$opt_key] : 'categories';
 
 				if ( $this->p->debug->enabled ) {
 					$this->p->debug->log( $opt_key.' = '.$opt_val );
@@ -83,15 +88,13 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				switch ( $opt_val ) {
 
-					case 'none':		// nothing to do
+					case 'none':		// Nothing to do.
 
-						$json_data = array();
+						return array();	// Stop here.
 
-						break;
-
-					case 'ancestors':	// get post/page parents, grand-parents, etc.
+					case 'ancestors':	// Get post/page parents, grand-parents, etc.
 				
-						$mods = array();
+						$mods     = array();
 						$post_ids = get_post_ancestors( $mod['id'] ); 
 						
 						if ( is_array( $post_ids ) ) {
@@ -101,25 +104,40 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$post_ids = array( $mod['id'] );
 						}
 
+						if ( $this->p->debug->enabled ) {
+							$this->p->debug->log_arr( '$post_ids', $post_ids );
+						}
+
 						foreach ( $post_ids as $mod_id ) {
 							$mods[] = $this->p->m['util']['post']->get_mod( $mod_id );
 						}
 
-						// single breadcrumbs list - change $json_data directly
 						WpssoBcBreadcrumb::add_mods_data( $json_data, $mods, $page_type_id );
 
-						break;
+						return $json_data;	// Stop here.
 
 					case 'categories':
 
-						$post_ids = array( $mod['id'] );
-						$post_terms = wp_get_post_terms( $mod['id'], 'category' );
+						$tax_slug = 'category';
+
+						if ( $mod['post_type'] === 'product' ) {
+							if ( ! empty( $this->p->avail['ecom']['woocommerce'] ) ) {
+								$tax_slug = 'product_cat';
+							}
+						}
+
+						$post_terms  = wp_get_post_terms( $mod['id'], $tax_slug );
 						$scripts_num = 0;
+
+						if ( $this->p->debug->enabled ) {
+							$this->p->debug->log( 'taxonomy slug = ' . $tax_slug );
+							$this->p->debug->log_arr( '$post_terms', $post_terms );
+						}
 
 						foreach ( $post_terms as $term ) {
 
-							$mods = array();
-							$term_ids = get_ancestors( $term->term_id, 'category', 'taxonomy' );
+							$mods     = array();
+							$term_ids = get_ancestors( $term->term_id, $tax_slug, 'taxonomy' );
 
 							if ( is_array( $term_ids ) ) {
 								$term_ids   = array_reverse( $term_ids );
@@ -132,31 +150,42 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 								$mods[] = $this->p->m['util']['term']->get_mod( $mod_id );
 							}
 
-							foreach ( $post_ids as $mod_id ) {
-								$mods[] = $this->p->m['util']['post']->get_mod( $mod_id );
-							}
+							$mods[] = $this->p->m['util']['post']->get_mod( $mod['id'] );
 
-							// create a unique @id for the breadcrumbs of each term
+							/**
+							 * Create a unique @id for the breadcrumbs of each term.
+							 */
 							$term_data = array( '@id' => rtrim( $json_data['url'], '/' ).'#id/'.$page_type_id.'/'.$term->slug );
 
 							WpssoBcBreadcrumb::add_mods_data( $term_data, $mods, $page_type_id );
 
-							// multiple breadcrumbs list - merge $json_data and save to $scripts_data array
+							/**
+							 * Multiple breadcrumbs list - merge $json_data and save to $scripts_data array.
+							 */
 							$scripts_data[] = WpssoSchema::return_data_from_filter( $json_data, $term_data, $is_main );
 
 							$scripts_num++;
 
-							if ( $scripts_num >= $scripts_max ) {	// default max is 5
+							if ( $scripts_num >= $scripts_max ) {	// Default max is 5.
 								break;
 							}
 						}
-					
-						break;
+
+						/**
+						 * If the post does not have any categories, then add itself as the only item.
+						 */
+						if ( empty( $scripts_data ) ) {
+
+							$mods = array( $this->p->m['util']['post']->get_mod( $mod['id'] ) );
+
+							WpssoBcBreadcrumb::add_mods_data( $json_data, $mods, $page_type_id );
+						
+							return $json_data;
+						}
+						
+						return $scripts_data;
 				}
 			}
-
-			return empty( $scripts_data ) ? $json_data : $scripts_data;
 		}
 	}
 }
-

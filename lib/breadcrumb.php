@@ -30,6 +30,10 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 			$wpsso =& Wpsso::get_instance();
 
+			if ( $wpsso->debug->enabled ) {
+				$wpsso->debug->mark();
+			}
+
 			$items_count = isset( $json_data['itemListElement'] ) ? count( $json_data['itemListElement'] ) : 0;
 
 			/**
@@ -107,4 +111,3 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 		}
 	}
 }
-
