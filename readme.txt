@@ -71,9 +71,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *New Features*
 	* None.
 * *Improvements*
-	* None.
+	* Schema Breadcrumbs markup is no longer added to a static home page / post.
 * *Bugfixes*
-	* Skipped adding breadcrumbs to a static home page / post.
+	* A Schema "@id" property for Google is now included in each breadcrumb item.
 * *Developer Notes*
 	* None.
 
@@ -92,7 +92,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 1.3.1-dev.5 =
 
-(2018/08/23) Skipped adding breadcrumbs to a static home page / post.
+(2018/08/23) Schema Breadcrumbs markup is no longer added to a static home page / post. A Schema "@id" property for Google is now included in each breadcrumb item.
 
 = 1.3.0 =
 
