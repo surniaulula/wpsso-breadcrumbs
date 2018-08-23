@@ -73,7 +73,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Improvements*
 	* None.
 * *Bugfixes*
-	* Skipped adding breadcrumbs to a static home page since Google gives an error for a Schema WebSite type in the breadcrumbs item list.
+	* Skipped adding breadcrumbs to a static home page / post.
 * *Developer Notes*
 	* None.
 
@@ -92,7 +92,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 1.3.1-dev.5 =
 
-(2018/08/23) Skipped adding breadcrumbs to a static home page since Google gives an error for a Schema WebSite type in the breadcrumbs item list.
+(2018/08/23) Skipped adding breadcrumbs to a static home page / post.
 
 = 1.3.0 =
 
