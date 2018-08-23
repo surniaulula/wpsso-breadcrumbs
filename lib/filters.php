@@ -126,7 +126,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$mods[] = $this->p->m['util']['post']->get_mod( $mod_id );
 						}
 
-						WpssoBcBreadcrumb::add_mods_data( $json_data, $mods, $page_type_id );
+						WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
 
 						return $json_data;	// Stop here.
 
@@ -169,9 +169,11 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							/**
 							 * Create a unique @id for the breadcrumbs of each term.
 							 */
-							$term_data = array( '@id' => rtrim( $json_data['url'], '/' ).'#id/'.$page_type_id.'/'.$term->slug );
+							$term_data = array(
+								'@id' => $json_data['url'] . '#id/' . $page_type_id . '/' . $term->slug
+							);
 
-							WpssoBcBreadcrumb::add_mods_data( $term_data, $mods, $page_type_id );
+							WpssoBcBreadcrumb::add_itemlist_data( $term_data, $mods, $page_type_id );
 
 							/**
 							 * Multiple breadcrumbs list - merge $json_data and save to $scripts_data array.
@@ -192,7 +194,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							$mods = array( $this->p->m['util']['post']->get_mod( $mod['id'] ) );
 
-							WpssoBcBreadcrumb::add_mods_data( $json_data, $mods, $page_type_id );
+							WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
 						
 							return $json_data;
 						}

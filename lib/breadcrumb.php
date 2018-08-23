@@ -24,7 +24,10 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			}
 		}
 
-		public static function add_mods_data( array &$json_data, array $mods, $page_type_id ) {
+		/**
+		 * The $mods array may include both term and post mods.
+		 */
+		public static function add_itemlist_data( array &$json_data, array $mods, $page_type_id ) {
 
 			static $added_page_type_ids = array();
 
@@ -34,7 +37,8 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$items_count = isset( $json_data['itemListElement'] ) ? count( $json_data['itemListElement'] ) : 0;
+			$prop_name   = 'itemListElement';
+			$items_count = isset( $json_data[$prop_name] ) ? count( $json_data[$prop_name] ) : 0;
 
 			/**
 			 * Sanity checks.
@@ -61,7 +65,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			 */
 			if ( isset( $added_page_type_ids[$page_type_id] ) ) {
 				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'exiting early: preventing recursion of page_type_id '.$page_type_id );
+					$wpsso->debug->log( 'exiting early: preventing recursion of page_type_id ' . $page_type_id );
 				}
 				return $items_count;
 			} else {
@@ -85,12 +89,12 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$wpsso->debug->log( 'getting single mod data for '.$mod['name'].' id '.$mod['id'] );
 				}
 
-				$mod_data = WpssoSchema::get_single_mod_data( $mod, false, $page_type_id );	// $mt_og is false.
+				$mod_data = WpssoSchema::get_single_mod_data( $mod, false, $page_type_id );     // $mt_og is false.
 
 				if ( empty( $mod_data ) ) {	// Prevent null assignment.
 
 					if ( $wpsso->debug->enabled ) {
-						$wpsso->debug->log( 'single mod data for '.$mod['name'].' id '.$mod['id'].' is empty' );
+						$wpsso->debug->log( 'single mod data for ' . $mod['name'] . ' id ' . $mod['id'] . ' is empty' );
 					}
 
 					continue;	// Get the next mod.
@@ -103,7 +107,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					'item'     => $mod_data,
 				) );
 
-				$json_data['itemListElement'][] = $list_item;
+				$json_data[$prop_name][] = $list_item;
 			}
 
 			unset( $wpsso_paged );
