@@ -66,6 +66,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.3.1-dev.4 (2018/08/23)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* Skipped adding breadcrumbs to a static home page since Google gives an error for a Schema WebSite type in the breadcrumbs item list.
+* *Developer Notes*
+	* None.
+
 **Version 1.3.0 (2018/08/21)**
 
 * *New Features*
@@ -78,6 +89,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 
 == Upgrade Notice ==
+
+= 1.3.1-dev.4 =
+
+(2018/08/23) Skipped adding breadcrumbs to a static home page since Google gives an error for a Schema WebSite type in the breadcrumbs item list.
 
 = 1.3.0 =
 
