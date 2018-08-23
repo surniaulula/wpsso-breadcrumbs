@@ -148,16 +148,16 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$this->p->debug->log_arr( '$post_terms', $post_terms );
 						}
 
-						foreach ( $post_terms as $term ) {
+						foreach ( $post_terms as $post_term ) {
 
 							$mods     = array();
-							$term_ids = get_ancestors( $term->term_id, $tax_slug, 'taxonomy' );
+							$term_ids = get_ancestors( $post_term->term_id, $tax_slug, 'taxonomy' );
 
 							if ( is_array( $term_ids ) ) {
 								$term_ids   = array_reverse( $term_ids );
-								$term_ids[] = $term->term_id;
+								$term_ids[] = $post_term->term_id;	// Add parent term last.
 							} else {
-								$term_ids = array( $term->term_id );
+								$term_ids = array( $post_term->term_id );
 							}
 
 							foreach ( $term_ids as $mod_id ) {
@@ -167,10 +167,10 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$mods[] = $this->p->m['util']['post']->get_mod( $mod['id'] );
 
 							/**
-							 * Create a unique @id for the breadcrumbs of each term.
+							 * Create a unique @id for the breadcrumbs of each top-level post term.
 							 */
 							$term_data = array(
-								'@id' => $json_data['url'] . '#id/' . $page_type_id . '/' . $term->slug
+								'@id' => $json_data['url'] . '#id/' . $page_type_id . '/' . $post_term->slug,
 							);
 
 							WpssoBcBreadcrumb::add_itemlist_data( $term_data, $mods, $page_type_id );
