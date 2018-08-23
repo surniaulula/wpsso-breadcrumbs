@@ -76,6 +76,17 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			if ( $mod['is_post'] ) {
 
+				$opt_key = 'bc_list_for_ptn_'.$mod['post_type'];
+
+				/**
+				 * The default for any undefined post type is 'categories'.
+				 */
+				$opt_val = isset( $this->p->options[$opt_key] ) ? $this->p->options[$opt_key] : 'categories';
+
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( $opt_key.' is '.$opt_val );
+				}
+
 				/**
 				 * Breacrumbs are not required for the home page. The Google testing tool also gives
 				 * an error if an item in the breadcrumbs list is a Schema WebSite type.
@@ -87,17 +98,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 					}
 
 					return array();	// Stop here.
-				}
-
-				$opt_key = 'bc_list_for_ptn_'.$mod['post_type'];
-
-				/**
-				 * The default for any undefined post type is 'categories'.
-				 */
-				$opt_val = isset( $this->p->options[$opt_key] ) ? $this->p->options[$opt_key] : 'categories';
-
-				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( $opt_key.' = '.$opt_val );
 				}
 
 				switch ( $opt_val ) {
