@@ -64,6 +64,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
+				$this->p->debug->log( 'page_type_id is ' . $page_type_id);
 			}
 
 			/**
@@ -74,6 +75,19 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			$scripts_max  = SucomUtil::get_const( 'WPSSO_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 5 );
 
 			if ( $mod['is_post'] ) {
+
+				/**
+				 * Breacrumbs are not required for the home page. The Google testing tool also gives
+				 * an error if an item in the breadcrumbs list is a Schema WebSite type.
+				 */
+				if ( $mod['is_home'] ) {
+				
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'exiting early: breadcrumbs not required for home page' );
+					}
+
+					return array();	// Stop here.
+				}
 
 				$opt_key = 'bc_list_for_ptn_'.$mod['post_type'];
 

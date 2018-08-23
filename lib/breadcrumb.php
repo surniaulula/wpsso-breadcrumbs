@@ -40,14 +40,19 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			 * Sanity checks.
 			 */
 			if ( empty( $mods ) ) {
+
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: mods is empty' );
 				}
+
 				return $items_count;
+
 			} elseif ( empty( $page_type_id ) ) {
+
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: page_type_id is empty' );
 				}
+
 				return $items_count;
 			}
 
@@ -80,18 +85,22 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$wpsso->debug->log( 'getting single mod data for '.$mod['name'].' id '.$mod['id'] );
 				}
 
-				$mod_data = WpssoSchema::get_single_mod_data( $mod, false, $page_type_id );	// $mt_og = false
+				$mod_data = WpssoSchema::get_single_mod_data( $mod, false, $page_type_id );	// $mt_og is false.
 
-				if ( empty( $mod_data ) ) {	// prevent null assignment
-					$wpsso->debug->log( 'single mod data for '.$mod['name'].' id '.$mod['id'].' is empty' );
-					continue;	// get the next mod
+				if ( empty( $mod_data ) ) {	// Prevent null assignment.
+
+					if ( $wpsso->debug->enabled ) {
+						$wpsso->debug->log( 'single mod data for '.$mod['name'].' id '.$mod['id'].' is empty' );
+					}
+
+					continue;	// Get the next mod.
 				}
 
 				$items_count++;
 
 				$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 					'position' => $items_count,
-					'item' => $mod_data,
+					'item'     => $mod_data,
 				) );
 
 				$json_data['itemListElement'][] = $list_item;
