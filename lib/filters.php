@@ -108,19 +108,22 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 					case 'ancestors':	// Get post/page parents, grand-parents, etc.
 				
-						$mods     = array();
 						$post_ids = get_post_ancestors( $mod['id'] ); 
-						
-						if ( is_array( $post_ids ) ) {
-							$post_ids   = array_reverse( $post_ids );
-							$post_ids[] = $mod['id'];
-						} else {
-							$post_ids = array( $mod['id'] );
+
+						if ( empty( $post_ids ) || ! is_array( $post_ids ) ) {
+							if ( $this->p->debug->enabled ) {
+								$this->p->debug->log_arr( 'no ancestors for ' . $mod['name'] . ' id ' . $mod['id'] );
+							}
+							return array();	// Stop here.
 						}
+
+						$post_ids = array_reverse( $post_ids );
 
 						if ( $this->p->debug->enabled ) {
 							$this->p->debug->log_arr( '$post_ids', $post_ids );
 						}
+
+						$mods = array();
 
 						foreach ( $post_ids as $mod_id ) {
 							$mods[] = $this->p->m['util']['post']->get_mod( $mod_id );
@@ -140,38 +143,46 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							}
 						}
 
+						if ( $this->p->debug->enabled ) {
+							$this->p->debug->log( 'taxonomy slug is ' . $tax_slug );
+						}
+
 						$post_terms  = wp_get_post_terms( $mod['id'], $tax_slug );
-						$scripts_num = 0;
+
+						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {
+							if ( $this->p->debug->enabled ) {
+								$this->p->debug->log_arr( 'no categories for ' . $mod['name'] . ' id ' . $mod['id'] );
+							}
+							return array();	// Stop here.
+						}
 
 						if ( $this->p->debug->enabled ) {
-							$this->p->debug->log( 'taxonomy slug = ' . $tax_slug );
 							$this->p->debug->log_arr( '$post_terms', $post_terms );
 						}
 
+						$scripts_num = 0;
+
 						foreach ( $post_terms as $post_term ) {
 
-							$mods     = array();
 							$term_ids = get_ancestors( $post_term->term_id, $tax_slug, 'taxonomy' );
 
-							if ( is_array( $term_ids ) ) {
+							if ( empty( $term_ids ) || ! is_array( $term_ids ) ) {
+								$term_ids = array( $post_term->term_id );	// Just do the parent.
+							} else {
 								$term_ids   = array_reverse( $term_ids );
 								$term_ids[] = $post_term->term_id;	// Add parent term last.
-							} else {
-								$term_ids = array( $post_term->term_id );
 							}
+
+							$mods = array();
 
 							foreach ( $term_ids as $mod_id ) {
 								$mods[] = $this->p->m['util']['term']->get_mod( $mod_id );
 							}
 
-							$mods[] = $this->p->m['util']['post']->get_mod( $mod['id'] );
-
 							/**
 							 * Create a unique @id for the breadcrumbs of each top-level post term.
 							 */
-							$term_data = array(
-								'@id' => $json_data['url'] . '#id/' . $page_type_id . '/' . $post_term->slug,
-							);
+							$term_data = array( '@id' => $json_data['url'] . '#id/' . $page_type_id . '/' . $post_term->slug );
 
 							WpssoBcBreadcrumb::add_itemlist_data( $term_data, $mods, $page_type_id );
 
@@ -187,18 +198,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							}
 						}
 
-						/**
-						 * If the post does not have any categories, then add itself as the only item.
-						 */
-						if ( empty( $scripts_data ) ) {
-
-							$mods = array( $this->p->m['util']['post']->get_mod( $mod['id'] ) );
-
-							WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
-						
-							return $json_data;
-						}
-						
 						return $scripts_data;
 				}
 			}
