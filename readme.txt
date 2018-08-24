@@ -66,14 +66,15 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.3.1-rc.1 (2018/08/24)**
+**Version 1.4.0-rc.1 (2018/08/24)**
 
 * *New Features*
 	* None.
 * *Improvements*
+	* Removed the current webpage Schema markup from the breadcrumbs list.
 	* Schema Breadcrumbs markup is no longer added to a static home page / post.
 * *Bugfixes*
-	* A Schema "@id" property for Google is now included in each breadcrumb item.
+	* A Schema "@id" property is now included in each breadcrumb item.
 * *Developer Notes*
 	* None.
 
@@ -90,9 +91,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.3.1-rc.1 =
+= 1.4.0-rc.1 =
 
-(2018/08/24) Schema Breadcrumbs markup is no longer added to a static home page / post. A Schema "@id" property for Google is now included in each breadcrumb item.
+(2018/08/24) Removed the current webpage Schema markup from the breadcrumbs list. Schema Breadcrumbs markup is no longer added to a static home page / post. A Schema "@id" property is now included in each breadcrumb item.
 
 = 1.3.0 =
 
