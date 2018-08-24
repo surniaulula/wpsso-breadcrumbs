@@ -66,7 +66,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.4.0-rc.1 (2018/08/24)**
+**Version 1.4.0 (2018/08/25)**
 
 * *New Features*
 	* None.
@@ -91,11 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.4.0-rc.1 =
+= 1.4.0 =
 
-(2018/08/24) Removed the current webpage Schema markup from the breadcrumbs list. Schema Breadcrumbs markup is no longer added to a static home page / post. A Schema "@id" property is now included in each breadcrumb item.
-
-= 1.3.0 =
-
-(2018/08/21) Updated the taxonomy slug from 'category' to 'product_cat' for WooCommerce products.
+(2018/08/25) Removed the current webpage Schema markup from the breadcrumbs list. Schema Breadcrumbs markup is no longer added to a static home page / post. A Schema "@id" property is now included in each breadcrumb item.
 
