@@ -112,7 +112,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 						if ( empty( $post_ids ) || ! is_array( $post_ids ) ) {
 							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log_arr( 'no ancestors for ' . $mod['name'] . ' id ' . $mod['id'] );
+								$this->p->debug->log( 'no ancestors for ' . $mod['name'] . ' id ' . $mod['id'] );
 							}
 							return array();	// Stop here.
 						}
