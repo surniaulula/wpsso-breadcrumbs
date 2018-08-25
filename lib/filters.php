@@ -64,15 +64,22 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
-				$this->p->debug->log( 'page_type_id is ' . $page_type_id);
+				$this->p->debug->log( 'page_type_id is ' . $page_type_id );
 			}
 
-			/**
-			 * Clear all properties inherited by previous filters except for the 'url' property.
-			 */
-			$json_data    = array( 'url' => $json_data['url'] );
-			$scripts_data = array();
-			$scripts_max  = SucomUtil::get_const( 'WPSSO_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 5 );
+			if ( empty( $json_data['url'] ) ) {
+				if ( ! empty( $mt_og['og:url'] ) ) {
+					$json_data = array( 'url' => $mt_og['og:url'] );
+				} else {
+					if ( $this->p->debug->enabled ) {
+						$this->p->debug->log( 'exiting early: url not found for json data' );
+					}
+					return array();	// Stop here.
+				}
+			}
+
+			$bcl_data = array();
+			$bcl_max  = SucomUtil::get_const( 'WPSSO_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 5 );
 
 			if ( $mod['is_post'] ) {
 
@@ -160,7 +167,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$this->p->debug->log_arr( '$post_terms', $post_terms );
 						}
 
-						$scripts_num = 0;
+						$bcl_num = 0;
 
 						foreach ( $post_terms as $post_term ) {
 
@@ -187,18 +194,18 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							WpssoBcBreadcrumb::add_itemlist_data( $term_data, $mods, $page_type_id );
 
 							/**
-							 * Multiple breadcrumbs list - merge $json_data and save to $scripts_data array.
+							 * Multiple breadcrumbs list - merge $json_data and save to $bcl_data array.
 							 */
-							$scripts_data[] = WpssoSchema::return_data_from_filter( $json_data, $term_data, $is_main );
+							$bcl_data[] = WpssoSchema::return_data_from_filter( $json_data, $term_data, $is_main );
 
-							$scripts_num++;
+							$bcl_num++;
 
-							if ( $scripts_num >= $scripts_max ) {	// Default max is 5.
+							if ( $bcl_num >= $bcl_max ) {	// Default max is 5.
 								break;
 							}
 						}
 
-						return $scripts_data;
+						return $bcl_data;
 				}
 			}
 		}
