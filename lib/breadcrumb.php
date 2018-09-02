@@ -17,6 +17,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 		private static $cache_exp_secs = null;
 
 		public function __construct( &$plugin ) {
+
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {

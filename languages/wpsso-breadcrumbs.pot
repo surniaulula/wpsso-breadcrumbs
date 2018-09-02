@@ -25,12 +25,12 @@ msgid ""
 "for Google and Search Engine Optimization (SEO)."
 msgstr ""
 
-#: lib/submenu/bc-general.php:34
+#: lib/submenu/bc-general.php:35
 msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
 msgstr ""
 
-#: lib/submenu/bc-general.php:66
+#: lib/submenu/bc-general.php:67
 msgctxt "option label"
 msgid "Breadcrumbs for Post Types"
 msgstr ""
