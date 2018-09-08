@@ -64,13 +64,13 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			/**
 			 * Prevent recursion - i.e. breadcrumb.list in breadcrumb.list, etc.
 			 */
-			if ( isset( $added_page_type_ids[$page_type_id] ) ) {
+			if ( isset( $added_page_type_ids[ $page_type_id ] ) ) {
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: preventing recursion of page_type_id ' . $page_type_id );
 				}
 				return $items_count;
 			} else {
-				$added_page_type_ids[$page_type_id] = true;
+				$added_page_type_ids[ $page_type_id ] = true;
 			}
 
 			/**

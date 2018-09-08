@@ -84,8 +84,8 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				}
 			}
 
-			$bcl_data = array();
-			$bcl_max  = SucomUtil::get_const( 'WPSSO_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 5 );
+			$bclist_max  = SucomUtil::get_const( 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 5 );
+			$bclist_data = array();
 
 			if ( $mod['is_post'] ) {
 
@@ -173,7 +173,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$this->p->debug->log_arr( '$post_terms', $post_terms );
 						}
 
-						$bcl_num = 0;
+						$bclist_num = 0;
 
 						foreach ( $post_terms as $post_term ) {
 
@@ -200,18 +200,18 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							WpssoBcBreadcrumb::add_itemlist_data( $term_data, $mods, $page_type_id );
 
 							/**
-							 * Multiple breadcrumbs list - merge $json_data and save to $bcl_data array.
+							 * Multiple breadcrumbs list - merge $json_data and save to $bclist_data array.
 							 */
-							$bcl_data[] = WpssoSchema::return_data_from_filter( $json_data, $term_data, $is_main );
+							$bclist_data[] = WpssoSchema::return_data_from_filter( $json_data, $term_data, $is_main );
 
-							$bcl_num++;
+							$bclist_num++;
 
-							if ( $bcl_num >= $bcl_max ) {	// Default max is 5.
+							if ( $bclist_num >= $bclist_max ) {	// Default max is 5.
 								break;
 							}
 						}
 
-						return $bcl_data;
+						return $bclist_data;
 				}
 			}
 		}
