@@ -108,7 +108,3 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 (2018/09/09) Minor update for code style and changes in WPSSO v4.12.0.
 
-= 1.4.0 =
-
-(2018/08/25) Removed the current webpage Schema markup from the breadcrumbs list. Schema Breadcrumbs markup is no longer added to a static home page / post. A Schema "@id" property is now included in each breadcrumb item.
-
