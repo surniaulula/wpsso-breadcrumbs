@@ -68,9 +68,13 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				$this->p->debug->log( 'page_type_id is ' . $page_type_id );
 			}
 
+			if ( is_array( $json_data ) ) {
+				$json_data = SucomUtil::preg_grep_keys( '/^(@.*|url)$/', $json_data );
+			}
+
 			if ( empty( $json_data ) ) {
 				$page_type_url = $this->p->schema->get_schema_type_url( $page_type_id );
-				$json_data = WpssoSchema::get_schema_type_context( $page_type_url );
+				$json_data     = WpssoSchema::get_schema_type_context( $page_type_url );
 			}
 
 			if ( empty( $json_data['url'] ) ) {
