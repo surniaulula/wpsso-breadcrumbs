@@ -88,7 +88,8 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				}
 			}
 
-			$bclist_max  = SucomUtil::get_const( 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 5 );
+			$bclist_max = SucomUtil::get_const( 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 10 );
+
 			$bclist_data = array();
 
 			if ( $mod['is_post'] ) {

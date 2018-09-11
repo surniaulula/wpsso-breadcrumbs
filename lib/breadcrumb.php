@@ -65,10 +65,13 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			 * Prevent recursion - i.e. breadcrumb.list in breadcrumb.list, etc.
 			 */
 			if ( isset( $added_page_type_ids[ $page_type_id ] ) ) {
+
 				if ( $wpsso->debug->enabled ) {
 					$wpsso->debug->log( 'exiting early: preventing recursion of page_type_id ' . $page_type_id );
 				}
+
 				return $items_count;
+
 			} else {
 				$added_page_type_ids[ $page_type_id ] = true;
 			}
@@ -80,39 +83,33 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$wpsso->debug->mark( 'adding mods data' );	// begin timer
 			}
 
-			global $wpsso_paged;
-
-			$wpsso_paged = 1;
-
 			foreach ( $mods as $mod ) {
-
-				if ( $wpsso->debug->enabled ) {
-					$wpsso->debug->log( 'getting single mod data for '.$mod['name'].' id '.$mod['id'] );
-				}
-
-				$mod_data = WpssoSchema::get_single_mod_data( $mod, false, $page_type_id );     // $mt_og is false.
-
-				if ( empty( $mod_data ) ) {	// Prevent null assignment.
-
-					if ( $wpsso->debug->enabled ) {
-						$wpsso->debug->log( 'single mod data for ' . $mod['name'] . ' id ' . $mod['id'] . ' is empty' );
-					}
-
-					continue;	// Get the next mod.
-				}
 
 				$items_count++;
 
+				$schema_name = $wpsso->page->get_title(
+					$max_len   = 0,
+					$dots      = '',
+					$mod,
+					$r_cache   = true,
+					$add_htags = false,
+					$do_encode = true,
+					$md_idx    = 'schema_title',
+					$sep       = false
+				);
+
+				$schema_item_url = $wpsso->util->get_canonical_url( $mod );
+
 				$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 					'position' => $items_count,
-					'item'     => $mod_data,
+					'name' => $schema_name,
+					'item' => $schema_item_url,
 				) );
 
-				$json_data[$prop_name][] = $list_item;
+				$json_data[ $prop_name ][] = $list_item;
 			}
 
-			unset( $wpsso_paged );
-			unset( $added_page_type_ids[$page_type_id] );
+			unset( $added_page_type_ids[ $page_type_id ] );
 
 			/**
 			 * End timer.
