@@ -92,7 +92,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$dots      = '',
 					$mod,
 					$r_cache   = true,
-					$add_htags = false,
+					$add_ht    = false,
 					$do_encode = true,
 					$md_idx    = 'schema_title',
 					$sep       = false
