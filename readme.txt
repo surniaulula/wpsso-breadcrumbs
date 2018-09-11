@@ -68,6 +68,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 1.4.2-dev.2 (2018/09/11)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* Removed inherited Schema properties from the webpage ("name", "description", "sameAs", etc.) from the Breadcrumbs markup.
+* *Developer Notes*
+	* None.
+
 **Version 1.4.1 (2018/09/09)**
 
 * *New Features*
@@ -103,6 +114,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 
 == Upgrade Notice ==
+
+= 1.4.2-dev.2 =
+
+(2018/09/11) Removed inherited Schema properties from the webpage ("name", "description", "sameAs", etc.) from the Breadcrumbs markup.
 
 = 1.4.1 =
 
