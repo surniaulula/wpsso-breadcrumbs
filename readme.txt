@@ -68,14 +68,14 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.4.2-dev.2 (2018/09/11)**
+**Version 1.4.2-dev.3 (2018/09/11)**
 
 * *New Features*
 	* None.
 * *Improvements*
 	* None.
 * *Bugfixes*
-	* Removed inherited Schema properties from the webpage ("name", "description", "sameAs", etc.) from the Breadcrumbs markup.
+	* Simplified the Breadcrumbs markup by adding item URLs instead of their complete Schema markup.
 * *Developer Notes*
 	* None.
 
@@ -115,9 +115,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.4.2-dev.2 =
+= 1.4.2-dev.3 =
 
-(2018/09/11) Removed inherited Schema properties from the webpage ("name", "description", "sameAs", etc.) from the Breadcrumbs markup.
+(2018/09/11) Simplified the Breadcrumbs markup by adding item URLs instead of their complete Schema markup.
 
 = 1.4.1 =
 
