@@ -88,14 +88,14 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$items_count++;
 
 				$schema_name = $wpsso->page->get_title(
-					$max_len   = 0,
-					$dots      = '',
+					$max_len      = 0,
+					$dots         = '',
 					$mod,
-					$r_cache   = true,
-					$add_ht    = false,
-					$do_encode = true,
-					$md_idx    = 'schema_title',
-					$sep       = false
+					$read_cache   = true,
+					$add_hashtags = false,
+					$do_encode    = true,
+					$md_idx       = 'schema_title',
+					$sep          = false
 				);
 
 				$schema_item_url = $wpsso->util->get_canonical_url( $mod );
