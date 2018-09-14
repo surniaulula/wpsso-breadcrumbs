@@ -26,7 +26,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 		}
 
 		/**
-		 * The $mods array may include both term and post mods.
+		 * The $mods array may include both post and term mods.
 		 */
 		public static function add_itemlist_data( array &$json_data, array $mods, $page_type_id ) {
 
@@ -38,8 +38,8 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$prop_name   = 'itemListElement';
-			$items_count = isset( $json_data[$prop_name] ) ? count( $json_data[$prop_name] ) : 0;
+			$prop_name  = 'itemListElement';
+			$item_count = isset( $json_data[ $prop_name ] ) ? count( $json_data[ $prop_name ] ) : 0;
 
 			/**
 			 * Sanity checks.
@@ -50,7 +50,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$wpsso->debug->log( 'exiting early: mods is empty' );
 				}
 
-				return $items_count;
+				return $item_count;
 
 			} elseif ( empty( $page_type_id ) ) {
 
@@ -58,7 +58,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$wpsso->debug->log( 'exiting early: page_type_id is empty' );
 				}
 
-				return $items_count;
+				return $item_count;
 			}
 
 			/**
@@ -70,7 +70,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$wpsso->debug->log( 'exiting early: preventing recursion of page_type_id ' . $page_type_id );
 				}
 
-				return $items_count;
+				return $item_count;
 
 			} else {
 				$added_page_type_ids[ $page_type_id ] = true;
@@ -83,11 +83,32 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$wpsso->debug->mark( 'adding mods data' );	// begin timer
 			}
 
+			/**
+			 * Add the home page.
+			 */
+			$home_url  = SucomUtil::get_site_url( $wpsso->options );
+			$home_name = SucomUtil::get_site_name( $wpsso->options );
+
+			$item_count++;
+
+			$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
+				'position' => $item_count,
+				'name'     => $home_name,
+				'item'     => WpssoSchema::get_schema_type_context( 'https://schema.org/WebSite', array(
+					'url' => $home_url,
+				) ),
+			) );
+
+			$json_data[ $prop_name ][] = $list_item;
+
+			/**
+			 * Add each post parent or term.
+			 */
 			foreach ( $mods as $mod ) {
 
-				$items_count++;
+				$item_count++;
 
-				$schema_name = $wpsso->page->get_title(
+				$item_name = $wpsso->page->get_title(
 					$max_len      = 0,
 					$dots         = '',
 					$mod,
@@ -98,12 +119,14 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$sep          = false
 				);
 
-				$schema_item_url = $wpsso->util->get_canonical_url( $mod );
+				$item_url = $wpsso->util->get_canonical_url( $mod );
 
 				$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
-					'position' => $items_count,
-					'name' => $schema_name,
-					'item' => $schema_item_url,
+					'position' => $item_count,
+					'name'     => $item_name,
+					'item'     => WpssoSchema::get_schema_type_context( 'https://schema.org/WebPage', array(
+						'url' => $item_url,
+					) ),
 				) );
 
 				$json_data[ $prop_name ][] = $list_item;
@@ -118,7 +141,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$wpsso->debug->mark( 'adding mods data' );	// end timer
 			}
 
-			return $items_count;
+			return $item_count;
 		}
 	}
 }

@@ -31,7 +31,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 		 * Called by the extended WpssoAdmin class.
 		 */
 		protected function add_meta_boxes() {
-			add_meta_box( $this->pagehook.'_breadcrumbs', 
+			add_meta_box( $this->pagehook . '_breadcrumbs', 
 				_x( 'Breadcrumbs Settings', 'metabox title', 'wpsso-breadcrumbs' ),
 					array( $this, 'show_metabox_breadcrumbs' ), $this->pagehook, 'normal' );
 		}
@@ -41,15 +41,15 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 			$metabox_id = 'bc';
 			$tab_key = 'general';
 
-			$this->p->util->do_metabox_table( apply_filters( $this->p->cf['lca'].'_'.$metabox_id.'_'.$tab_key.'_rows', 
-				$this->get_table_rows( $metabox_id, $tab_key ), $this->form, false ), 'metabox-'.$metabox_id.'-'.$tab_key );
+			$this->p->util->do_metabox_table( apply_filters( $this->p->cf['lca'] . '_' . $metabox_id . '_' . $tab_key . '_rows', 
+				$this->get_table_rows( $metabox_id, $tab_key ), $this->form, false ), 'metabox-' . $metabox_id . '-' . $tab_key );
 		}
 
 		protected function get_table_rows( $metabox_id, $tab_key ) {
 
 			$table_rows = array();
 
-			switch ( $metabox_id.'-'.$tab_key ) {
+			switch ( $metabox_id . '-' . $tab_key ) {
 
 				case 'bc-general':
 
@@ -60,12 +60,13 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					$bc_select_for_terms = '';
 
 					foreach ( $this->p->util->get_post_types( 'objects' ) as $pt ) {
-						$bc_select_for_posts .= '<p>'.$this->form->get_select( 'bc_list_for_ptn_'.$pt->name, $bc_list_for_posts ).
-							' '.$pt->label.( empty( $pt->description ) ? '' : ' ('.$pt->description.')' ).'</p>';
+						$bc_select_for_posts .= '<p>' . $this->form->get_select( 'bc_list_for_ptn_' . $pt->name, $bc_list_for_posts ) . ' ' .
+							$pt->label . ( empty( $pt->description ) ? '' : ' (' . $pt->description . ')' ) . '</p>';
 					}
 
-					$table_rows[] = $this->form->get_th_html( _x( 'Breadcrumbs for Post Types',
-						'option label', 'wpsso-breadcrumbs' ), null, 'bc_list_for_ptn' ).'<td>'.$bc_select_for_posts.'</td>';
+					$table_rows[] = '' . 
+					$this->form->get_th_html( _x( 'Breadcrumbs for Post Types', 'option label', 'wpsso-breadcrumbs' ), null, 'bc_list_for_ptn' ) .
+					'<td>' . $bc_select_for_posts . '</td>';
 
 					break;
 			}
