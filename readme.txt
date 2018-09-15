@@ -68,12 +68,14 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.4.2-dev.6 (2018/09/14)**
+**Version 1.5.0-dev.7 (2018/09/14)**
 
 * *New Features*
 	* None.
 * *Improvements*
 	* Added the site home page as the first element in the breadcrumbs.
+	* Added the current webpage as the last element in the breadcrumbs.
+	* Added a new "Home Page Name" option in the SSO &gt; Breadcrumbs settings page.
 * *Bugfixes*
 	* Simplified the BreadcrumbList markup by adding item URLs as Schema WebPage instead of their complete Schema markup.
 * *Developer Notes*
@@ -115,7 +117,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.4.2-dev.6 =
+= 1.5.0-dev.7 =
 
 (2018/09/14) Added the site home page as the first element in the breadcrumbs. Simplified the BreadcrumbList markup by adding item URLs as Schema WebPage instead of their complete Schema markup.
 
