@@ -68,7 +68,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.5.0-dev.7 (2018/09/14)**
+**Version 1.5.0-dev.7 (2018/09/15)**
 
 * *New Features*
 	* None.
@@ -119,7 +119,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 1.5.0-dev.7 =
 
-(2018/09/14) Added the site home page as the first element in the breadcrumbs. Simplified the BreadcrumbList markup by adding item URLs as Schema WebPage instead of their complete Schema markup.
+(2018/09/15) Added the site home page as the first element in the breadcrumbs. Simplified the BreadcrumbList markup by adding item URLs as Schema WebPage instead of their complete Schema markup.
 
 = 1.4.1 =
 
