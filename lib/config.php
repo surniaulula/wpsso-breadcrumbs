@@ -16,8 +16,8 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '1.4.2-dev.6',	// Plugin version.
-					'opt_version' => '2',		// Increment when changing default option values.
+					'version'     => '1.5.0-dev.7',	// Plugin version.
+					'opt_version' => '3',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
 					'desc'        => 'WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.12.1-dev.6',
+						'min_version' => '4.12.1-dev.7',
 					),
 					'img' => array(
 						'icons' => array(
@@ -46,6 +46,14 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 						'pro' => array(
 						),
 					),
+				),
+			),
+			'opt' => array(				// options
+				'defaults' => array(
+					'bc_list_for_ptn_attachment' => 'none',
+					'bc_list_for_ptn_page'       => 'ancestors',
+					'bc_list_for_ptn_post'       => 'categories',
+					'bc_home_name'               => 'Home',
 				),
 			),
 		);

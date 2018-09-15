@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.4.2-dev.6\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.5.0-dev.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2018-MO-DA HO:MI+ZONE\n"
@@ -25,6 +25,14 @@ msgid ""
 "for Google and Search Engine Optimization (SEO)."
 msgstr ""
 
+#: lib/filters.php:290
+msgid "Select the source of breadcrumbs for each public post type."
+msgstr ""
+
+#: lib/filters.php:296
+msgid "The breadcrumbs home page name."
+msgstr ""
+
 #: lib/submenu/bc-general.php:35
 msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
@@ -33,6 +41,11 @@ msgstr ""
 #: lib/submenu/bc-general.php:68
 msgctxt "option label"
 msgid "Breadcrumbs for Post Types"
+msgstr ""
+
+#: lib/submenu/bc-general.php:72
+msgctxt "option label"
+msgid "Home Page Name"
 msgstr ""
 
 #: wpsso-breadcrumbs.php:97

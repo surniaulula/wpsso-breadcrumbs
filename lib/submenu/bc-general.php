@@ -64,9 +64,14 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 							$pt->label . ( empty( $pt->description ) ? '' : ' (' . $pt->description . ')' ) . '</p>';
 					}
 
-					$table_rows[] = '' . 
+					$table_rows['bc_list_for_ptn'] = '' . 
 					$this->form->get_th_html( _x( 'Breadcrumbs for Post Types', 'option label', 'wpsso-breadcrumbs' ), null, 'bc_list_for_ptn' ) .
 					'<td>' . $bc_select_for_posts . '</td>';
+
+					$table_rows['bc_home_name'] = '' . 
+					$this->form->get_th_html( _x( 'Home Page Name', 'option label', 'wpsso-breadcrumbs' ), '', 'bc_home_name',
+						array( 'is_locale' => true ) ) . 
+					'<td>' . $this->form->get_input( SucomUtil::get_key_locale( 'bc_home_name', $this->p->options ), 'long_name' ) . '</td>';
 
 					break;
 			}

@@ -15,16 +15,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 		protected $p;
 
-		public static $cf = array(
-			'opt' => array(				// options
-				'defaults' => array(
-					'bc_list_for_ptn_attachment' => 'none',
-					'bc_list_for_ptn_page'       => 'ancestors',
-					'bc_list_for_ptn_post'       => 'categories',
-				),
-			),
-		);
-
 		public function __construct( &$plugin ) {
 
 			$this->p =& $plugin;
@@ -38,11 +28,16 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				'json_array_schema_page_type_ids'           => 2,
 				'json_data_https_schema_org_breadcrumblist' => 5,
 			) );
+
+			if ( is_admin() ) {
+				$this->p->util->add_plugin_filters( $this, array( 
+					'option_type'      => 2,
+					'messages_tooltip' => 2,
+				) );
+			}
 		}
 
 		public function filter_get_defaults( $def_opts ) {
-
-			$def_opts = array_merge( $def_opts, self::$cf['opt']['defaults'] );
 
 			/**
 			 * Add options using a key prefix array and post type names.
@@ -129,13 +124,26 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						$post_ids = get_post_ancestors( $mod['id'] ); 
 
 						if ( empty( $post_ids ) || ! is_array( $post_ids ) ) {
+
 							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log( 'no ancestors for ' . $mod['name'] . ' id ' . $mod['id'] );
+								$this->p->debug->log( 'no ancestors found for ' . $mod['name'] . ' id ' . $mod['id'] );
 							}
-							return array();	// Stop here.
+
+							/**
+							 * Add the current webpage.
+							 */
+							$post_ids = array( $mod['id'] );
+
+						} else {
+
+							$post_ids = array_reverse( $post_ids );
+
+							/**
+							 * Add the current webpage.
+							 */
+							$post_ids[] = $mod['id'];
 						}
 
-						$post_ids = array_reverse( $post_ids );
 
 						if ( $this->p->debug->enabled ) {
 							$this->p->debug->log_arr( '$post_ids', $post_ids );
@@ -168,10 +176,21 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						$post_terms  = wp_get_post_terms( $mod['id'], $tax_slug );
 
 						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {
+
 							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log_arr( 'no categories for ' . $mod['name'] . ' id ' . $mod['id'] );
+								$this->p->debug->log_arr( 'no categories found for ' . $mod['name'] . ' id ' . $mod['id'] );
 							}
-							return array();	// Stop here.
+
+							$mods = array();
+
+							/**
+							 * Add the current webpage.
+							 */
+							$mods[] = $this->p->m['util']['post']->get_mod( $mod['id'] );
+
+							WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
+
+							return $json_data;	// Stop here.
 						}
 
 						if ( $this->p->debug->enabled ) {
@@ -193,9 +212,17 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							$mods = array();
 
+							/**
+							 * Add each post term.
+							 */
 							foreach ( $term_ids as $mod_id ) {
 								$mods[] = $this->p->m['util']['term']->get_mod( $mod_id );
 							}
+
+							/**
+							 * Add the current webpage.
+							 */
+							$mods[] = $this->p->m['util']['post']->get_mod( $mod['id'] );
 
 							/**
 							 * Create a unique @id for the breadcrumbs of each top-level post term.
@@ -219,6 +246,59 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						return $bclist_data;
 				}
 			}
+		}
+
+		public function filter_option_type( $type, $base_key ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( ! empty( $type ) ) {
+				return $type;
+			} elseif ( strpos( $base_key, 'bc_' ) !== 0 ) {
+				return $type;
+			}
+
+			switch ( $base_key ) {
+
+				case 'bc_home_name':
+				case ( strpos( $base_key, 'bc_list_for_' ) === 0 ? true : false ):
+
+					return 'not_blank';
+
+					break;
+			}
+
+			return $type;
+		}
+
+		public function filter_messages_tooltip( $text, $idx ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( strpos( $idx, 'tooltip-bc_' ) !== 0 ) {
+				return $text;
+			}
+
+			switch ( $idx ) {
+
+				case 'tooltip-bc_list_for_ptn':
+
+					$text = __( 'Select the source of breadcrumbs for each public post type.', 'wpsso-breadcrumbs' );
+
+					break;
+
+				case 'tooltip-bc_home_name':
+
+					$text = __( 'The breadcrumbs home page name.', 'wpsso-breadcrumbs' );
+
+					break;
+			}
+
+			return $text;
 		}
 	}
 }
