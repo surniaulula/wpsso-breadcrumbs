@@ -293,7 +293,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				case 'tooltip-bc_home_name':
 
-					$text = __( 'The breadcrumbs home page name.', 'wpsso-breadcrumbs' );
+					$text = __( 'The home page name in the breadcrumbs markup.', 'wpsso-breadcrumbs' );
 
 					break;
 			}
