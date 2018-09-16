@@ -68,7 +68,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.5.0-rc.1 (2018/09/15)**
+**Version 1.5.0 (2018/09/16)**
 
 * *New Features*
 	* None.
@@ -81,47 +81,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Developer Notes*
 	* None.
 
-**Version 1.4.1 (2018/09/09)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* None.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* Minor update for code style and changes in WPSSO v4.12.0.
-
-**Version 1.4.0 (2018/08/25)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Removed the current webpage Schema markup from the breadcrumbs list.
-	* Schema Breadcrumbs markup is no longer added to a static home page / post.
-* *Bugfixes*
-	* A Schema "@id" property is now included in each breadcrumb item.
-* *Developer Notes*
-	* None.
-
-**Version 1.3.0 (2018/08/21)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Updated the taxonomy slug from 'category' to 'product_cat' for WooCommerce products.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
 == Upgrade Notice ==
 
-= 1.5.0-rc.1 =
+= 1.5.0 =
 
-(2018/09/15) Added the site home page as the first element in the breadcrumbs. Simplified the BreadcrumbList markup by adding item URLs as Schema WebPage instead of their complete Schema markup.
-
-= 1.4.1 =
-
-(2018/09/09) Minor update for code style and changes in WPSSO v4.12.0.
+(2018/09/16) Added the site home page as the first element in the breadcrumbs. Simplified the BreadcrumbList markup by adding item URLs as Schema WebPage instead of their complete Schema markup.
 
