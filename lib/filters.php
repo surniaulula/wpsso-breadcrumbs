@@ -178,7 +178,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {
 
 							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log_arr( 'no categories found for ' . $mod['name'] . ' id ' . $mod['id'] );
+								$this->p->debug->log( 'no categories found for ' . $mod['name'] . ' id ' . $mod['id'] );
 							}
 
 							$mods = array();
