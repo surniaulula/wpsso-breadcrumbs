@@ -68,7 +68,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.6.0-dev.4 (2018/10/02)**
+**Version 1.6.0-dev.6 (2018/10/03)**
 
 * *New Features*
 	* None.
@@ -94,9 +94,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.6.0-dev.4 =
+= 1.6.0-dev.6 =
 
-(2018/10/02) Added a filter to disable the default Schema BreadcrumbList markup from WooCommerce.
+(2018/10/03) Added a filter to disable the default Schema BreadcrumbList markup from WooCommerce.
 
 = 1.5.0 =
 
