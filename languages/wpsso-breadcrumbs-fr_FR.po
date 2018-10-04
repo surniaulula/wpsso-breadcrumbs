@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO App Meta (WPSSO AM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.4.1\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2018-09-15 20:55-0600\n"
-"PO-Revision-Date: 2018-09-15 21:09-0600\n"
+"POT-Creation-Date: 2018-10-04 08:21-0700\n"
+"PO-Revision-Date: 2018-10-04 08:21-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -25,11 +25,11 @@ msgctxt "plugin description"
 msgid "WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO)."
 msgstr "Extension d'ajout WPSSO Core pour fournir le balisage Schéma BreadcrumbList en format JSON-LD pour Google et l'optimisation de recherche (SEO)."
 
-#: lib/filters.php:290
+#: lib/filters.php:297
 msgid "Select the source of breadcrumbs for each public post type."
 msgstr "Sélectionnez la source du fil d'Ariane pour chaque type d'article public."
 
-#: lib/filters.php:296
+#: lib/filters.php:303
 msgid "The home page name in the breadcrumbs markup."
 msgstr "Le nom de la page d'accueil dans le balisage du fil d'Ariane."
 

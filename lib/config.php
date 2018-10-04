@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '1.6.0-dev.6',	// Plugin version.
+					'version'     => '1.6.0',	// Plugin version.
 					'opt_version' => '3',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '4.15.0-dev.6',
+						'min_version' => '4.15.0',
 					),
 					'img' => array(
 						'icons' => array(
@@ -59,9 +59,11 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		);
 
 		public static function get_version( $add_slug = false ) {
-			$ext = 'wpssobc';
+
+			$ext  = 'wpssobc';
 			$info =& self::$cf['plugin'][$ext];
-			return $add_slug ? $info['slug'].'-'.$info['version'] : $info['version'];
+
+			return $add_slug ? $info['slug'] . '-' . $info['version'] : $info['version'];
 		}
 
 		public static function set_constants( $plugin_filepath ) { 
@@ -80,25 +82,31 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 
 		public static function require_libs( $plugin_filepath ) {
 
-			require_once WPSSOBC_PLUGINDIR.'lib/register.php';
-			require_once WPSSOBC_PLUGINDIR.'lib/filters.php';
-			require_once WPSSOBC_PLUGINDIR.'lib/breadcrumb.php';
+			require_once WPSSOBC_PLUGINDIR . 'lib/register.php';
+			require_once WPSSOBC_PLUGINDIR . 'lib/filters.php';
+			require_once WPSSOBC_PLUGINDIR . 'lib/breadcrumb.php';
 
 			add_filter( 'wpssobc_load_lib', array( 'WpssoBcConfig', 'load_lib' ), 10, 3 );
 		}
 
 		public static function load_lib( $ret = false, $filespec = '', $classname = '' ) {
+
 			if ( false === $ret && ! empty( $filespec ) ) {
-				$filepath = WPSSOBC_PLUGINDIR.'lib/'.$filespec.'.php';
+
+				$filepath = WPSSOBC_PLUGINDIR . 'lib/' . $filespec . '.php';
+
 				if ( file_exists( $filepath ) ) {
+
 					require_once $filepath;
+
 					if ( empty( $classname ) ) {
-						return SucomUtil::sanitize_classname( 'wpssobc'.$filespec, false );	// $underscore = false
+						return SucomUtil::sanitize_classname( 'wpssobc' . $filespec, $allow_underscore = false );
 					} else {
 						return $classname;
 					}
 				}
 			}
+
 			return $ret;
 		}
 	}
