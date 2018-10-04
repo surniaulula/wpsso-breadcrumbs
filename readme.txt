@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.4
 Requires At Least: 3.8
 Tested Up To: 4.9.8
-Stable Tag: 1.5.0
+Stable Tag: 1.6.0
 
 WPSSO Core add-on to provide JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).
 
@@ -68,7 +68,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.6.0-dev.6 (2018/10/03)**
+**Version 1.6.0 (2018/10/04)**
 
 * *New Features*
 	* None.
@@ -94,11 +94,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.6.0-dev.6 =
+= 1.6.0 =
 
-(2018/10/03) Added a filter to disable the default Schema BreadcrumbList markup from WooCommerce.
-
-= 1.5.0 =
-
-(2018/09/16) Added the site home page as the first element in the breadcrumbs. Simplified the BreadcrumbList markup by adding item URLs as Schema WebPage instead of their complete Schema markup.
+(2018/10/04) Added a filter to disable the default Schema BreadcrumbList markup from WooCommerce.
 
