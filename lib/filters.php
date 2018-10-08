@@ -39,7 +39,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			/**
 			 * Disable addition of Schema BreadcrumbList JSON-LD markup by the WooCommerce WC_Structured_Data class (since v3.0.0).
 			 */
-			if ( $this->p->avail['ecom']['woocommerce'] ) {
+			if ( ! empty( $this->p->avail['ecom']['woocommerce'] ) ) {
 				add_filter( 'woocommerce_structured_data_breadcrumblist', '__return_empty_array' );
 			}
 		}
