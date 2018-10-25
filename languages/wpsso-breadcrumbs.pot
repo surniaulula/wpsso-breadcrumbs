@@ -33,17 +33,17 @@ msgstr ""
 msgid "The home page name in the breadcrumbs markup."
 msgstr ""
 
-#: lib/submenu/bc-general.php:35
+#: lib/submenu/bc-general.php:36
 msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
 msgstr ""
 
-#: lib/submenu/bc-general.php:68
+#: lib/submenu/bc-general.php:72
 msgctxt "option label"
 msgid "Breadcrumbs for Post Types"
 msgstr ""
 
-#: lib/submenu/bc-general.php:72
+#: lib/submenu/bc-general.php:76
 msgctxt "option label"
 msgid "Home Page Name"
 msgstr ""
