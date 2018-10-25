@@ -38,12 +38,12 @@ msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
 msgstr ""
 
-#: lib/submenu/bc-general.php:72
+#: lib/submenu/bc-general.php:78
 msgctxt "option label"
 msgid "Breadcrumbs for Post Types"
 msgstr ""
 
-#: lib/submenu/bc-general.php:76
+#: lib/submenu/bc-general.php:82
 msgctxt "option label"
 msgid "Home Page Name"
 msgstr ""
