@@ -101,17 +101,17 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				/**
 				 * The default for any undefined post type is 'categories'.
 				 */
-				$opt_val = isset( $this->p->options[$opt_key] ) ? $this->p->options[$opt_key] : 'categories';
+				$opt_val = isset( $this->p->options[ $opt_key ] ) ? $this->p->options[ $opt_key ] : 'categories';
 
 				if ( $this->p->debug->enabled ) {
-					$this->p->debug->log( $opt_key.' is '.$opt_val );
+					$this->p->debug->log( $opt_key . ' is ' . $opt_val );
 				}
 
 				/**
 				 * Breacrumbs are not required for the home page. The Google testing tool also gives
 				 * an error if an item in the breadcrumbs list is a Schema WebSite type.
 				 */
-				if ( $mod['is_home'] ) {
+				if ( $mod[ 'is_home' ] ) {
 				
 					if ( $this->p->debug->enabled ) {
 						$this->p->debug->log( 'exiting early: breadcrumbs not required for home page' );
@@ -280,17 +280,17 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			return $type;
 		}
 
-		public function filter_messages_tooltip( $text, $idx ) {
+		public function filter_messages_tooltip( $text, $msg_key ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
 			}
 
-			if ( strpos( $idx, 'tooltip-bc_' ) !== 0 ) {
+			if ( strpos( $msg_key, 'tooltip-bc_' ) !== 0 ) {
 				return $text;
 			}
 
-			switch ( $idx ) {
+			switch ( $msg_key ) {
 
 				case 'tooltip-bc_list_for_ptn':
 
