@@ -35,12 +35,16 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 	class WpssoBc {
 
 		/**
-		 * Class Object Variables
+		 * Wpsso plugin class object variable.
 		 */
 		public $p;		// Wpsso
-		public $reg;		// WpssoBcRegister
-		public $filters;	// WpssoBcFilters
+
+		/**
+		 * Library class object variables.
+		 */
 		public $breadcrumb;	// WpssoBcBreadcrumb
+		public $filters;	// WpssoBcFilters
+		public $reg;		// WpssoBcRegister
 
 		/**
 		 * Reference Variables (config, options, modules, etc.).
@@ -171,8 +175,8 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 				return;	// stop here
 			}
 
-			$this->filters = new WpssoBcFilters( $this->p );
 			$this->breadcrumb = new WpssoBcBreadcrumb( $this->p );
+			$this->filters    = new WpssoBcFilters( $this->p );
 		}
 
 		public function wpsso_init_plugin() {
