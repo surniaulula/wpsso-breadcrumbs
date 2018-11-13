@@ -128,18 +128,18 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 					case 'ancestors':	// Get post/page parents, grand-parents, etc.
 				
-						$post_ids = get_post_ancestors( $mod['id'] ); 
+						$post_ids = get_post_ancestors( $mod[ 'id' ] ); 
 
 						if ( empty( $post_ids ) || ! is_array( $post_ids ) ) {
 
 							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log( 'no ancestors found for ' . $mod['name'] . ' id ' . $mod['id'] );
+								$this->p->debug->log( 'no ancestors found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 							}
 
 							/**
 							 * Add the current webpage.
 							 */
-							$post_ids = array( $mod['id'] );
+							$post_ids = array( $mod[ 'id' ] );
 
 						} else {
 
@@ -148,7 +148,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							/**
 							 * Add the current webpage.
 							 */
-							$post_ids[] = $mod['id'];
+							$post_ids[] = $mod[ 'id' ];
 						}
 
 
@@ -180,12 +180,12 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$this->p->debug->log( 'taxonomy slug is ' . $tax_slug );
 						}
 
-						$post_terms  = wp_get_post_terms( $mod['id'], $tax_slug );
+						$post_terms  = wp_get_post_terms( $mod[ 'id' ], $tax_slug );
 
 						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {
 
 							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log( 'no categories found for ' . $mod['name'] . ' id ' . $mod['id'] );
+								$this->p->debug->log( 'no categories found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 							}
 
 							$mods = array();
@@ -193,7 +193,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							/**
 							 * Add the current webpage.
 							 */
-							$mods[] = $this->p->m['util']['post']->get_mod( $mod['id'] );
+							$mods[] = $this->p->m['util']['post']->get_mod( $mod[ 'id' ] );
 
 							WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
 
@@ -229,7 +229,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							/**
 							 * Add the current webpage.
 							 */
-							$mods[] = $this->p->m['util']['post']->get_mod( $mod['id'] );
+							$mods[] = $this->p->m['util']['post']->get_mod( $mod[ 'id' ] );
 
 							/**
 							 * Create a unique @id for the breadcrumbs of each top-level post term.

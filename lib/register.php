@@ -97,7 +97,7 @@ if ( ! class_exists( 'WpssoBcRegister' ) ) {
 
 		private function activate_plugin() {
 
-			$version = WpssoBcConfig::$cf['plugin']['wpssobc']['version'];	// only our config
+			$version = WpssoBcConfig::$cf[ 'plugin' ]['wpssobc'][ 'version' ];	// only our config
 
 			if ( class_exists( 'WpssoUtil' ) ) {
 				WpssoUtil::save_all_times( 'wpssobc', $version );
