@@ -79,7 +79,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				$json_data     = WpssoSchema::get_schema_type_context( $page_type_url );
 			}
 
-			if ( empty( $json_data['url'] ) ) {
+			if ( empty( $json_data[ 'url' ] ) ) {
 				if ( ! empty( $mt_og['og:url'] ) ) {
 					$json_data = array( 'url' => $mt_og['og:url'] );
 				} else {
@@ -94,9 +94,9 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			$bclist_data = array();
 
-			if ( $mod['is_post'] ) {
+			if ( $mod[ 'is_post' ] ) {
 
-				$opt_key = 'bc_list_for_ptn_'.$mod['post_type'];
+				$opt_key = 'bc_list_for_ptn_'.$mod[ 'post_type' ];
 
 				/**
 				 * The default for any undefined post type is 'categories'.
@@ -170,7 +170,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 						$tax_slug = 'category';
 
-						if ( $mod['post_type'] === 'product' ) {
+						if ( $mod[ 'post_type' ] === 'product' ) {
 							if ( ! empty( $this->p->avail['ecom']['woocommerce'] ) ) {
 								$tax_slug = 'product_cat';
 							}
@@ -234,7 +234,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							/**
 							 * Create a unique @id for the breadcrumbs of each top-level post term.
 							 */
-							$term_data = array( '@id' => $json_data['url'] . '#id/' . $page_type_id . '/' . $post_term->slug );
+							$term_data = array( '@id' => $json_data[ 'url' ] . '#id/' . $page_type_id . '/' . $post_term->slug );
 
 							WpssoBcBreadcrumb::add_itemlist_data( $term_data, $mods, $page_type_id );
 
