@@ -97,22 +97,39 @@ if ( ! class_exists( 'WpssoBcRegister' ) ) {
 
 		private function activate_plugin() {
 
-			$version = WpssoBcConfig::$cf[ 'plugin' ][ 'wpssobc' ][ 'version' ];	// only our config
+			if ( class_exists( 'Wpsso' ) ) {
 
-			if ( class_exists( 'WpssoUtil' ) ) {
-				WpssoUtil::save_all_times( 'wpssobc', $version );
+				if ( class_exists( 'WpssoUtil' ) ) {	// Just in case.
+
+					$version = WpssoBcConfig::$cf[ 'plugin' ][ 'wpssobc' ][ 'version' ];
+
+					WpssoUtil::save_all_times( 'wpssobc', $version );
+				}
+
+				$wpsso =& Wpsso::get_instance();
+
+				$clear_other = empty( $wpsso->options['plugin_clear_on_activate'] ) ? false : true;
+
+				$wpsso->util->schedule_clear_all_cache( $user_id = get_current_user_id(), $clear_other );
+
 			} else {
-				WpssoBc::required_notice( true );			// $deactivate = true
+				WpssoBc::required_notice( $deactivate = true );
 			}
 		}
 
 		private function deactivate_plugin() {
-			// nothing to do
+
+			if ( class_exists( 'Wpsso' ) ) {
+
+				$wpsso =& Wpsso::get_instance();
+
+				$clear_other = empty( $wpsso->options['plugin_clear_on_deactivate'] ) ? false : true;
+
+				$wpsso->util->schedule_clear_all_cache( $user_id = get_current_user_id(), $clear_other );
+			}
 		}
 
-		// uninstall.php defines constants before calling network_uninstall()
 		private static function uninstall_plugin() {
-			// nothing to do
 		}
 	}
 }
