@@ -2,7 +2,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema Breadcrumbs Markup</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core add-on offers Schema BreadcrumbList markup using JSON-LD for Google Rich Cards and SEO.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core add-on offers Schema BreadcrumbList markup using the preferred JSON-LD format for Google Rich Cards and SEO.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.6.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.0</td></tr>
@@ -19,7 +19,7 @@
 
 <p>Adds Schema BreadcrumbList markup to posts, pages, and custom post types.</p>
 
-<p>Uses Google's preferred Schema JSON-LD format for your breadcrumbs markup.</p>
+<p>Uses <a href="https://developers.google.com/search/docs/data-types/breadcrumb">Google's preferred Schema JSON-LD format for your breadcrumbs markup</a>.</p>
 
 <p>Select between using ancestors or categories for your breadcrumbs.</p>
 
