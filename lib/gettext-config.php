@@ -4,4 +4,4 @@
  * Extract of translatable text strings from the static config array.
  */
 _x( 'Breadcrumbs', 'lib file description', 'wpsso-breadcrumbs' );
-_x( 'WPSSO Core add-on offers JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).', 'plugin description', 'wpsso-breadcrumbs' );
+_x( 'WPSSO Core add-on offers Schema BreadcrumbList markup using JSON-LD for Google Rich Cards and SEO.', 'plugin description', 'wpsso-breadcrumbs' );

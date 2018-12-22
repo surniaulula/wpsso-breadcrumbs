@@ -29,8 +29,8 @@ msgstr ""
 #: lib/gettext-config.php:7
 msgctxt "plugin description"
 msgid ""
-"WPSSO Core add-on offers JSON-LD formatted Schema BreadcrumbList markup for "
-"Google and Search Engine Optimization (SEO)."
+"WPSSO Core add-on offers Schema BreadcrumbList markup using JSON-LD for "
+"Google Rich Cards and SEO."
 msgstr ""
 
 #: lib/submenu/bc-general.php:36
@@ -76,8 +76,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"WPSSO Core add-on offers JSON-LD formatted Schema BreadcrumbList markup for "
-"Google and Search Engine Optimization (SEO)."
+"WPSSO Core add-on offers Schema BreadcrumbList markup using JSON-LD for "
+"Google Rich Cards and SEO."
 msgstr ""
 
 #. Author of the plugin/theme

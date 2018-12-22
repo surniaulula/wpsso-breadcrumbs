@@ -10,7 +10,7 @@
  * Author URI: https://wpsso.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: WPSSO Core add-on offers JSON-LD formatted Schema BreadcrumbList markup for Google and Search Engine Optimization (SEO).
+ * Description: WPSSO Core add-on offers Schema BreadcrumbList markup using JSON-LD for Google Rich Cards and SEO.
  * Requires PHP: 5.4
  * Requires At Least: 3.8
  * Tested Up To: 5.0
