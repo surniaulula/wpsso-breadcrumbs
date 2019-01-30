@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WPSSO Schema Breadcrumbs Markup
+ * Plugin Name: WPSSO Schema Breadcrumbs Markup [Add-on]
  * Plugin Slug: wpsso-breadcrumbs
  * Text Domain: wpsso-breadcrumbs
  * Domain Path: /languages
