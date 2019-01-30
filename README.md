@@ -1,7 +1,7 @@
 <h1>WPSSO Schema Breadcrumbs Markup</h1><h3>Super Fast and Complete BreadcrumbsList Markup</h3>
 
 <table>
-<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema Breadcrumbs Markup [Add-on]</td></tr>
+<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema Breadcrumbs Markup</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core add-on offers Schema BreadcrumbList markup using the preferred JSON-LD format for Google Rich Cards and SEO.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.6.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
