@@ -31,7 +31,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 						'name'        => 'WPSSO Core',
 						'min_version' => '4.25.2',
 					),
-					'img' => array(
+					'assets' => array(
 						'icons' => array(
 							'low'  => 'images/icon-128x128.png',
 							'high' => 'images/icon-256x256.png',
