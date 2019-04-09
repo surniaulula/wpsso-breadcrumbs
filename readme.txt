@@ -67,44 +67,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.6.1 (2019/01/31)**
+**Version 1.6.2 (2019/04/09)**
 
 * *New Features*
 	* None.
 * *Improvements*
-	* Maintenance release for WPSSO Core v4.22.0.
+	* None.
 * *Bugfixes*
 	* None.
 * *Developer Notes*
-	* Updated the required minimum PHP version from 5.4 to 5.5.
-
-**Version 1.6.0 (2018/10/04)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Added a filter to disable the default Schema BreadcrumbList markup from WooCommerce.
-* *Bugfixes*
-	* None.
-* *Developer Notes*
-	* None.
-
-**Version 1.5.0 (2018/09/16)**
-
-* *New Features*
-	* None.
-* *Improvements*
-	* Added the site home page as the first element in the breadcrumbs.
-	* Added the current webpage as the last element in the breadcrumbs.
-	* Added a new "Home Page Name" option in the SSO &gt; Breadcrumbs settings page.
-* *Bugfixes*
-	* Simplified the BreadcrumbList markup by adding item URLs as Schema WebPage instead of their complete Schema markup.
-* *Developer Notes*
-	* None.
+	* Maintenance release for WPSSO Core v4.27.2 config array updates.
 
 == Upgrade Notice ==
 
-= 1.6.1 =
+= 1.6.2 =
 
-(2019/01/31) Maintenance release for WPSSO Core v4.22.0.
+(2019/04/09) Maintenance release for WPSSO Core v4.27.2 config array updates.
 
