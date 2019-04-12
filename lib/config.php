@@ -38,12 +38,12 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 						),
 					),
 					'lib' => array(
-						'submenu' => array(	// Note that submenu elements must have unique keys.
-							'bc-general' => 'Breadcrumbs',
-						),
 						'gpl' => array(
 						),
 						'pro' => array(
+						),
+						'submenu' => array(	// Note that submenu elements must have unique keys.
+							'bc-general' => 'Breadcrumbs',
 						),
 					),
 				),
