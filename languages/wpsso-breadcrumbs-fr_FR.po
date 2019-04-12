@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the WPSSO App Meta (WPSSO AM) package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.6.0\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.6.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2018-12-22 10:37-0600\n"
-"PO-Revision-Date: 2018-12-22 10:37-0600\n"
+"POT-Creation-Date: 2019-04-12 11:39-0700\n"
+"PO-Revision-Date: 2019-04-12 11:39-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,11 +15,11 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/filters.php:297
+#: lib/filters.php:302
 msgid "Select the source of breadcrumbs for each public post type."
 msgstr "Sélectionnez la source du fil d'Ariane pour chaque type d'article public."
 
-#: lib/filters.php:303
+#: lib/filters.php:308
 msgid "The home page name in the breadcrumbs markup."
 msgstr "Le nom de la page d'accueil dans le balisage du fil d'Ariane."
 
@@ -48,15 +48,15 @@ msgctxt "option label"
 msgid "Home Page Name"
 msgstr "Nom de la page d'accueil"
 
-#: wpsso-breadcrumbs.php:101
+#: wpsso-breadcrumbs.php:100
 msgid "%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s."
 msgstr "%1$s est un ajout pour l'extension %2$s &mdash; SVP installer et activer l'extension %3$s avant d'activer %4$s."
 
-#: wpsso-breadcrumbs.php:102
+#: wpsso-breadcrumbs.php:101
 msgid "The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
 msgstr "L'ajout %1$s requiert l'extension %2$s &mdash; installer et activer l'extension %3$s ou <a href=\"%4$s\">désactiver l'ajout %5$s</a>."
 
-#: wpsso-breadcrumbs.php:198
+#: wpsso-breadcrumbs.php:197
 msgid "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version %5$s is currently installed)."
 msgstr "L'ajout %1$s version %2$s requiert %3$s version %4$s ou plus récente (version %5$s est actuellement installée)."
 

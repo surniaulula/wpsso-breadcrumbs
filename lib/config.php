@@ -42,7 +42,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 						),
 						'pro' => array(
 						),
-						'submenu' => array(	// Note that submenu elements must have unique keys.
+						'submenu' => array(
 							'bc-general' => 'Breadcrumbs',
 						),
 					),
