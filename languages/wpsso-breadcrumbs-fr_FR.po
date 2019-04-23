@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema Breadcrumbs Markup 1.6.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2019-04-19 13:30-0700\n"
-"PO-Revision-Date: 2019-04-19 13:32-0700\n"
+"POT-Creation-Date: 2019-04-23 15:34-0700\n"
+"PO-Revision-Date: 2019-04-23 15:34-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -30,8 +30,8 @@ msgstr "Fil d'Ariane"
 
 #: lib/gettext-config.php:7
 msgctxt "plugin description"
-msgid "WPSSO Core add-on offers Schema BreadcrumbList markup using Google's preferred JSON-LD format for Rich Results and SEO."
-msgstr "Ajout WPSSO Core pour fournir le balisage Schéma BreadcrumbList utilisant le format JSON-LD préféré de Google pour les résultats riches et SEO."
+msgid "WPSSO Core add-on offers Schema BreadcrumbList markup using Google's preferred JSON-LD format for Rich Results SEO."
+msgstr "Ajout WPSSO Core pour fournir le balisage Schéma BreadcrumbList en format JSON-LD préféré par Google pour les résultats riches."
 
 #: lib/submenu/bc-general.php:36
 msgctxt "metabox title"
@@ -69,8 +69,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-breadcrumbs/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-breadcrumbs/"
 
 #. Description of the plugin/theme
-msgid "WPSSO Core add-on offers Schema BreadcrumbList markup using Google's preferred JSON-LD format for Rich Results and SEO."
-msgstr "Ajout WPSSO Core pour fournir le balisage Schéma BreadcrumbList utilisant le format JSON-LD préféré de Google pour les résultats riches et SEO."
+msgid "WPSSO Core add-on offers Schema BreadcrumbList markup using Google's preferred JSON-LD format for Rich Results SEO."
+msgstr "Ajout WPSSO Core pour fournir le balisage Schéma BreadcrumbList en format JSON-LD préféré par Google pour les résultats riches."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
