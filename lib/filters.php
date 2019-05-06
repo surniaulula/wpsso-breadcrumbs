@@ -164,7 +164,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						$mods = array();
 
 						foreach ( $post_ids as $mod_id ) {
-							$mods[] = $this->p->m[ 'util' ][ 'post' ]->get_mod( $mod_id );
+							$mods[] = $this->p->post->get_mod( $mod_id );
 						}
 
 						WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
@@ -198,7 +198,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							/**
 							 * Add the current webpage.
 							 */
-							$mods[] = $this->p->m[ 'util' ][ 'post' ]->get_mod( $mod[ 'id' ] );
+							$mods[] = $this->p->post->get_mod( $mod[ 'id' ] );
 
 							WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
 
@@ -228,13 +228,13 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							 * Add each post term.
 							 */
 							foreach ( $term_ids as $mod_id ) {
-								$mods[] = $this->p->m[ 'util' ][ 'term' ]->get_mod( $mod_id );
+								$mods[] = $this->p->term->get_mod( $mod_id );
 							}
 
 							/**
 							 * Add the current webpage.
 							 */
-							$mods[] = $this->p->m[ 'util' ][ 'post' ]->get_mod( $mod[ 'id' ] );
+							$mods[] = $this->p->post->get_mod( $mod[ 'id' ] );
 
 							/**
 							 * Create a unique @id for the breadcrumbs of each top-level post term.
