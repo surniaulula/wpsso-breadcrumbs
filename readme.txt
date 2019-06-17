@@ -32,7 +32,7 @@ Simply activate / deactivate the plugin to enable / disable the addition of Sche
 
 <h3>WPSSO Core Plugin Prerequisite</h3>
 
-WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) (Free or Pro version).
+WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/).
 
 The WPSSO BC add-on includes the Schema markup of ancestors and categories - for the best and most complete markup, consider pairing the WPSSO BC add-on with the [WPSSO Schema JSON-LD Markup](https://wordpress.org/plugins/wpsso-schema-json-ld/) (aka WPSSO JSON) add-on.
 
@@ -67,6 +67,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.0.0-dev.1 (2019/06/17)**
+
+* *New Features*
+	* None.
+* *Improvements*
+	* None.
+* *Bugfixes*
+	* None.
+* *Developer Notes*
+	* Maintenance release for WPSSO Core v5.0.0.
+
 **Version 1.7.0 (2019/05/20)**
 
 * *New Features*
@@ -79,6 +90,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Update for code changes in WPSSO Core v4.31.0.
 
 == Upgrade Notice ==
+
+= 2.0.0-dev.1 =
+
+(2019/06/17) Maintenance release for WPSSO Core v5.0.0.
 
 = 1.7.0 =
 
