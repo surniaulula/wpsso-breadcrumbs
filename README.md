@@ -3,7 +3,7 @@
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>WPSSO Schema Breadcrumbs Markup</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>WPSSO Core add-on offers Schema BreadcrumbList markup using Google&#039;s preferred JSON-LD format for Rich Results SEO.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.7.0</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>2.0.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires At Least</th><td>WordPress 3.8</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To</th><td>WordPress 5.2.1</td></tr>
 <tr><th align="right" valign="top" nowrap>Contributors</th><td>jsmoriss</td></tr>
