@@ -98,6 +98,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 			$info = WpssoBcConfig::$cf[ 'plugin' ][ 'wpssobc' ];
 
 			$die_msg = __( '%1$s is an add-on for the %2$s plugin &mdash; please install and activate the %3$s plugin before activating %4$s.', 'wpsso-breadcrumbs' );
+
 			$error_msg = __( 'The %1$s add-on requires the %2$s plugin &mdash; install and activate the %3$s plugin or <a href="%4$s">deactivate the %5$s add-on</a>.', 'wpsso-breadcrumbs' );
 
 			if ( true === $deactivate ) {
