@@ -37,7 +37,8 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$wpsso->debug->mark();
 			}
 
-			$prop_name  = 'itemListElement';
+			$prop_name = 'itemListElement';
+
 			$item_count = isset( $json_data[ $prop_name ] ) ? count( $json_data[ $prop_name ] ) : 0;
 
 			/**
@@ -93,9 +94,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 				'position' => $item_count,
 				'name'     => $home_name,
-				'item'     => WpssoSchema::get_schema_type_context( 'https://schema.org/WebSite', array(
-					'@id' => $home_url,
-				) ),
+				'item'     => $home_url,
 			) );
 
 			$json_data[ $prop_name ][] = $list_item;
@@ -115,9 +114,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 					'position' => $item_count,
 					'name'     => $item_name,
-					'item'     => WpssoSchema::get_schema_type_context( 'https://schema.org/WebPage', array(
-						'@id' => $item_url,
-					) ),
+					'item'     => $item_url,
 				) );
 
 				$json_data[ $prop_name ][] = $list_item;
