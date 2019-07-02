@@ -67,7 +67,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.0-dev.4 (2019/07/02)**
+**Version 2.1.0-dev.5 (2019/07/02)**
 
 * *New Features*
 	* None.
@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.1.0-dev.4 =
+= 2.1.0-dev.5 =
 
 (2019/07/02) Updated the "item" property value from a Schema WebSite / WebPage type to a URL.
 
