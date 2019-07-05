@@ -67,7 +67,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.0-b.2 (2019/07/04)**
+**Version 2.1.0-rc.1 (2019/07/05)**
 
 * *New Features*
 	* None.
@@ -91,9 +91,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.1.0-b.2 =
+= 2.1.0-rc.1 =
 
-(2019/07/04) Updated the "item" property value from a Schema WebSite / WebPage type to a URL.
+(2019/07/05) Updated the "item" property value from a Schema WebSite / WebPage type to a URL.
 
 = 2.0.0 =
 
