@@ -67,7 +67,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.0-rc.2 (2019/07/05)**
+**Version 2.1.0 (2019/07/06)**
 
 * *New Features*
 	* None.
@@ -91,11 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.1.0-rc.2 =
+= 2.1.0 =
 
-(2019/07/05) Updated the "item" property value from a Schema WebSite / WebPage type to a URL.
-
-= 2.0.0 =
-
-(2019/06/24) Maintenance release for WPSSO Core v5.0.0.
+(2019/07/06) Updated the "item" property value from a Schema WebSite / WebPage type to a URL.
 
