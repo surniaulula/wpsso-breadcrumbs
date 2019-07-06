@@ -10,7 +10,7 @@ Tags: schema, breadcrumbs, hierarchy, seo, google, categories, tags, search
 Contributors: jsmoriss
 Requires At Least: 3.8
 Tested Up To: 5.2.2
-Stable Tag: 2.0.0
+Stable Tag: 2.1.0
 
 WPSSO Core add-on offers Schema BreadcrumbList markup using Google's preferred JSON-LD format for Rich Results SEO.
 
