@@ -13,7 +13,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 	class WpssoBcFilters {
 
-		protected $p;
+		private $p;
 
 		public function __construct( &$plugin ) {
 
