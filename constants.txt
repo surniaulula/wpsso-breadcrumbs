@@ -10,7 +10,7 @@ WPSSOBC_URLPATH
 WPSSOBC_VERSION
 
 /**
- * Variable constants. Define in your wp-config.php file to change the default value.
+ * Define in your wp-config.php file to change the default value.
  */
 WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX = 10
 
