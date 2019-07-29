@@ -12,7 +12,7 @@ Requires At Least: 3.8
 Tested Up To: 5.2.2
 Stable Tag: 2.1.0
 
-WPSSO Core add-on offers Schema BreadcrumbList markup using Google's preferred JSON-LD format for Rich Results SEO.
+WPSSO Core add-on offers Schema BreadcrumbList markup using Google's JSON-LD standard for better SEO Rich Results.
 
 == Description ==
 
