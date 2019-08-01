@@ -183,7 +183,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 			}
 
 			if ( ! $this->have_req_min ) {
-				return;	// stop here
+				return;	// Stop here.
 			}
 
 			$this->breadcrumb = new WpssoBcBreadcrumb( $this->p );
@@ -200,7 +200,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 
 				$this->min_version_notice();
 
-				return;	// stop here
+				return;	// Stop here.
 			}
 		}
 
