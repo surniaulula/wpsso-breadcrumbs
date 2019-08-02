@@ -1,4 +1,4 @@
-=== WPSSO Schema Breadcrumbs Markup ===
+=== Schema Breadcrumbs Markup | WPSSO Add-on ===
 Plugin Name: WPSSO Schema Breadcrumbs Markup
 Plugin Slug: wpsso-breadcrumbs
 Text Domain: wpsso-breadcrumbs
@@ -12,7 +12,7 @@ Requires At Least: 3.8
 Tested Up To: 5.2.2
 Stable Tag: 2.1.0
 
-WPSSO Core add-on offers Schema BreadcrumbList markup using Google's JSON-LD standard for better SEO Rich Results.
+Schema BreadcrumbList markup in JSON-LD for better Google SEO Rich Results.
 
 == Description ==
 
