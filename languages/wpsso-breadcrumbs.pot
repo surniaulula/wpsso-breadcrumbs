@@ -29,8 +29,7 @@ msgstr ""
 #: lib/gettext-config.php:7
 msgctxt "plugin description"
 msgid ""
-"WPSSO Core add-on offers Schema BreadcrumbList markup using Google's JSON-LD "
-"standard for better SEO Rich Results."
+"Schema BreadcrumbList markup in JSON-LD for better Google SEO Rich Results."
 msgstr ""
 
 #: lib/submenu/bc-general.php:36
