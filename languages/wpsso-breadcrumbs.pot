@@ -75,8 +75,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"WPSSO Core add-on offers Schema BreadcrumbList markup using Google's JSON-LD "
-"standard for better SEO Rich Results."
+"Schema BreadcrumbList markup in JSON-LD for better Google SEO Rich Results."
 msgstr ""
 
 #. Author of the plugin/theme
