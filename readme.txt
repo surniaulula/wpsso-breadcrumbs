@@ -67,7 +67,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.1-dev.2 (2019/08/05)**
+**Version 2.1.1-dev.3 (2019/08/06)**
 
 * **New Features**
 	* None.
@@ -91,9 +91,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.1.1-dev.2 =
+= 2.1.1-dev.3 =
 
-(2019/08/05) Minor update for "fr_FR" translations.
+(2019/08/06) Minor update for "fr_FR" translations.
 
 = 2.1.0 =
 
