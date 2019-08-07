@@ -67,7 +67,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.1.1-rc.1 (2019/08/07)**
+**Version 2.1.1 (2019/08/07)**
 
 * **New Features**
 	* None.
@@ -91,11 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.1.1-rc.1 =
+= 2.1.1 =
 
 (2019/08/07) Minor update for "fr_FR" translations.
-
-= 2.1.0 =
-
-(2019/07/06) Updated the "item" property value from a Schema WebSite / WebPage type to a URL.
 
