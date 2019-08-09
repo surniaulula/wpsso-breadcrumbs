@@ -24,10 +24,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			}
 		}
 
-		/**
-		 * The $mods array may include both post and term mods.
-		 */
-		public static function add_itemlist_data( array &$json_data, array $mods, $page_type_id ) {
+		public static function add_itemlist_data( array &$json_data, array $mods, $page_type_id ) {	// Pass by reference is OK.
 
 			static $added_page_type_ids = array();
 
