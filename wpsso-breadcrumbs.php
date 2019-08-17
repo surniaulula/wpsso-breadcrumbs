@@ -11,7 +11,7 @@
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Schema BreadcrumbList markup in JSON-LD for better Google SEO Rich Results.
- * Requires At Least: 3.8
+ * Requires At Least: 3.9
  * Tested Up To: 5.2.2
  * Version: 2.1.1
  *
