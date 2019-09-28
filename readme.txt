@@ -10,7 +10,7 @@ Tags: schema, breadcrumbs, hierarchy, seo, google, categories, tags, search
 Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.2.3
-Stable Tag: 2.1.1
+Stable Tag: 2.2.0
 
 Schema BreadcrumbList markup in JSON-LD for better Google SEO Rich Results.
 
