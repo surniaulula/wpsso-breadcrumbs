@@ -67,7 +67,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.2.0-rc.1 (TBD)**
+**Version 2.2.0 (2019/09/28)**
 
 * **New Features**
 	* None.
@@ -78,24 +78,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Updated the filters to use the new `get_id_anchor()` and `get_id_delim()` method in the WpssoSchema class.
 
-**Version 2.1.1 (2019/08/07)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Minor update for "fr_FR" translations.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
 == Upgrade Notice ==
 
-= 2.2.0-rc.1 =
+= 2.2.0 =
 
-(2019/09/27) Increased the maximum breadcrumb scripts from 10 to 20.
-
-= 2.1.1 =
-
-(2019/08/07) Minor update for "fr_FR" translations.
+(2019/09/28) Increased the maximum breadcrumb scripts from 10 to 20.
 
