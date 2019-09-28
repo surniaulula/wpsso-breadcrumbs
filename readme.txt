@@ -67,6 +67,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.2.0-b.1 (TBD)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Increased the maximum breadcrumb scripts from 10 to 20.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Updated the filters to use the new `get_id_anchor()` and `get_id_delim()` method in the WpssoSchema class.
+
 **Version 2.1.1 (2019/08/07)**
 
 * **New Features**
@@ -78,18 +89,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* None.
 
-**Version 2.1.0 (2019/07/06)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Updated the "item" property value from a Schema WebSite / WebPage type to a URL.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
 == Upgrade Notice ==
+
+= 2.2.0-b.1 =
+
+(2019/09/27) Increased the maximum breadcrumb scripts from 10 to 20.
 
 = 2.1.1 =
 
