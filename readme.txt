@@ -67,7 +67,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.2.0-b.1 (TBD)**
+**Version 2.2.0-rc.1 (TBD)**
 
 * **New Features**
 	* None.
@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.2.0-b.1 =
+= 2.2.0-rc.1 =
 
 (2019/09/27) Increased the maximum breadcrumb scripts from 10 to 20.
 
