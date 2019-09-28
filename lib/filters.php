@@ -66,8 +66,15 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		public function filter_json_data_https_schema_org_breadcrumblist( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
-				$this->p->debug->mark();
 				$this->p->debug->log( 'page_type_id is ' . $page_type_id );
+			}
+
+			static $id_anchor = null;
+			static $id_delim  = null;
+
+			if ( null === $id_anchor || null === $id_delim ) {	// Optimize and call just once.
+				$id_anchor = WpssoSchema::get_id_anchor();
+				$id_delim  = WpssoSchema::get_id_delim();
 			}
 
 			if ( is_array( $json_data ) ) {
@@ -95,13 +102,21 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				}
 			}
 
-			$bclist_max = SucomUtil::get_const( 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 10 );
+			$bclist_max = SucomUtil::get_const( 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 20 );
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->log( 'maximum breadcrumb scripts is ' . $bclist_max );
+			}
 
 			$bclist_data = array();
 
 			if ( $mod[ 'is_post' ] ) {
 
-				$opt_key = 'bc_list_for_ptn_'.$mod[ 'post_type' ];
+				if ( $this->p->debug->enabled ) {
+					$this->p->debug->log( 'getting breadcrumbs for post' );
+				}
+
+				$opt_key = 'bc_list_for_ptn_' . $mod[ 'post_type' ];
 
 				/**
 				 * The default for any undefined post type is 'categories'.
@@ -185,12 +200,12 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$this->p->debug->log( 'taxonomy slug is ' . $tax_slug );
 						}
 
-						$post_terms  = wp_get_post_terms( $mod[ 'id' ], $tax_slug );
+						$post_terms = wp_get_post_terms( $mod[ 'id' ], $tax_slug );
 
 						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {
 
 							if ( $this->p->debug->enabled ) {
-								$this->p->debug->log( 'no categories found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
+								$this->p->debug->log( 'no post terms found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 							}
 
 							$mods = array();
@@ -206,7 +221,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						}
 
 						if ( $this->p->debug->enabled ) {
-							$this->p->debug->log_arr( '$post_terms', $post_terms );
+							$this->p->debug->log( count( $post_terms ) . ' post terms found' );
 						}
 
 						$bclist_num = 0;
@@ -219,7 +234,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 								$term_ids = array( $post_term->term_id );	// Just do the parent.
 							} else {
 								$term_ids   = array_reverse( $term_ids );
-								$term_ids[] = $post_term->term_id;	// Add parent term last.
+								$term_ids[] = $post_term->term_id;		// Add parent term last.
 							}
 
 							$mods = array();
@@ -239,7 +254,9 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							/**
 							 * Create a unique @id for the breadcrumbs of each top-level post term.
 							 */
-							$term_data = array( '@id' => $json_data[ 'url' ] . '#id/' . $page_type_id . '/' . $post_term->slug );
+							$data_id = $json_data[ 'url' ] . $id_anchor . $page_type_id . $id_delim . $post_term->slug;
+
+							$term_data = array( '@id' => $data_id );
 
 							WpssoBcBreadcrumb::add_itemlist_data( $term_data, $mods, $page_type_id );
 
@@ -250,7 +267,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							$bclist_num++;
 
-							if ( $bclist_num >= $bclist_max ) {	// Default max is 5.
+							if ( $bclist_num >= $bclist_max ) {
 								break;
 							}
 						}

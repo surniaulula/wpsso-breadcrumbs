@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 2.1.1\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 2.2.0-b.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2019-MO-DA HO:MI+ZONE\n"
@@ -13,11 +13,11 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/filters.php:302
+#: lib/filters.php:319
 msgid "Select the source of breadcrumbs for each public post type."
 msgstr ""
 
-#: lib/filters.php:308
+#: lib/filters.php:325
 msgid "The home page name in the breadcrumbs markup."
 msgstr ""
 
