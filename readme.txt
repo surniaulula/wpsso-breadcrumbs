@@ -67,6 +67,17 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.2.1-dev.3 (2019/10/02)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Maintenance release for WPSSO Core v6.6.1.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+
 **Version 2.2.0 (2019/09/28)**
 
 * **New Features**
@@ -79,6 +90,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Updated the filters to use the new `get_id_anchor()` and `get_id_delim()` method in the WpssoSchema class.
 
 == Upgrade Notice ==
+
+= 2.2.1-dev.3 =
+
+(2019/10/02) Maintenance release for WPSSO Core v6.6.1.
 
 = 2.2.0 =
 
