@@ -13,7 +13,7 @@
  * Description: Schema BreadcrumbList markup in JSON-LD for better Google SEO Rich Results.
  * Requires At Least: 3.9
  * Tested Up To: 5.2.3
- * Version: 2.2.0
+ * Version: 2.2.1-dev.3
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
