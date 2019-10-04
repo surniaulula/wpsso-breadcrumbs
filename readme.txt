@@ -67,35 +67,20 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.2.1-rc.1 (2019/10/03)**
+**Version 2.2.1 (2019/10/04)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Maintenance release for WPSSO Core v6.6.1.
+	* Maintenance release for WPSSO Core v6.7.0.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
 	* None.
-
-**Version 2.2.0 (2019/09/28)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Increased the maximum breadcrumb scripts from 10 to 20.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Updated the filters to use the new `get_id_anchor()` and `get_id_delim()` method in the WpssoSchema class.
 
 == Upgrade Notice ==
 
-= 2.2.1-rc.1 =
+= 2.2.1 =
 
-(2019/10/03) Maintenance release for WPSSO Core v6.6.1.
-
-= 2.2.0 =
-
-(2019/09/28) Increased the maximum breadcrumb scripts from 10 to 20.
+(2019/10/04) Maintenance release for WPSSO Core v6.7.0.
 
