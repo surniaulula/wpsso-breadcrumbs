@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-breadcrumbs/assets/
 Tags: schema, breadcrumbs, hierarchy, seo, google, categories, tags, search
 Contributors: jsmoriss
 Requires At Least: 3.9
-Tested Up To: 5.2.4
+Tested Up To: 5.3
 Stable Tag: 2.2.1
 
 Schema BreadcrumbList markup in JSON-LD for better Google SEO Rich Results.
