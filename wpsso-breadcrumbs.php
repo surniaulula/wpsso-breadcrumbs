@@ -10,7 +10,7 @@
  * Author URI: https://wpsso.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: Schema BreadcrumbList markup in JSON-LD for better Google SEO Rich Results.
+ * Description: Schema BreadcrumbList markup in JSON-LD for better Google Rich Results with Structured Data.
  * Requires At Least: 3.9
  * Tested Up To: 5.3
  * Version: 2.2.1
