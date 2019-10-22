@@ -12,7 +12,7 @@ Requires At Least: 3.9
 Tested Up To: 5.3
 Stable Tag: 2.2.1
 
-Schema BreadcrumbList markup in JSON-LD for better Google SEO Rich Results.
+Schema BreadcrumbList markup in JSON-LD for better Google Rich Results with Structured Data.
 
 == Description ==
 
