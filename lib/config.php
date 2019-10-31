@@ -60,8 +60,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 
 		public static function get_version( $add_slug = false ) {
 
-			$ext  = 'wpssobc';
-			$info =& self::$cf[ 'plugin' ][ $ext ];
+			$info =& self::$cf[ 'plugin' ][ 'wpssobc' ];
 
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
@@ -72,12 +71,17 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 				return;
 			}
 
+			$info =& self::$cf[ 'plugin' ][ 'wpssobc' ];
+
+			/**
+			 * Define fixed constants.
+			 */
 			define( 'WPSSOBC_FILEPATH', $plugin_filepath );						
-			define( 'WPSSOBC_PLUGINBASE', self::$cf[ 'plugin' ][ 'wpssobc' ][ 'base' ] );		// wpsso-breadcrumbs/wpsso-breadcrumbs.php
+			define( 'WPSSOBC_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-breadcrumbs/wpsso-breadcrumbs.php.
 			define( 'WPSSOBC_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_filepath ) ) ) );
-			define( 'WPSSOBC_PLUGINSLUG', self::$cf[ 'plugin' ][ 'wpssobc' ][ 'slug' ] );		// wpsso-breadcrumbs
+			define( 'WPSSOBC_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-breadcrumbs.
 			define( 'WPSSOBC_URLPATH', trailingslashit( plugins_url( '', $plugin_filepath ) ) );
-			define( 'WPSSOBC_VERSION', self::$cf[ 'plugin' ][ 'wpssobc' ][ 'version' ] );						
+			define( 'WPSSOBC_VERSION', $info[ 'version' ] );						
 		}
 
 		public static function require_libs( $plugin_filepath ) {
