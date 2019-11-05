@@ -86,9 +86,9 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 
 		public static function require_libs( $plugin_filepath ) {
 
-			require_once WPSSOBC_PLUGINDIR . 'lib/register.php';
-			require_once WPSSOBC_PLUGINDIR . 'lib/filters.php';
 			require_once WPSSOBC_PLUGINDIR . 'lib/breadcrumb.php';
+			require_once WPSSOBC_PLUGINDIR . 'lib/filters.php';
+			require_once WPSSOBC_PLUGINDIR . 'lib/register.php';
 
 			add_filter( 'wpssobc_load_lib', array( 'WpssoBcConfig', 'load_lib' ), 10, 3 );
 		}
