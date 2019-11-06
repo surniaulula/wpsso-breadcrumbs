@@ -23,13 +23,13 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'desc'        => 'Schema BreadcrumbList markup in JSON-LD for better Google Rich Results with Structured Data.',
 					'slug'        => 'wpsso-breadcrumbs',
 					'base'        => 'wpsso-breadcrumbs/wpsso-breadcrumbs.php',
-					'update_auth' => '',
+					'update_auth' => '',		// No premium version.
 					'text_domain' => 'wpsso-breadcrumbs',
 					'domain_path' => '/languages',
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.11.0',
+						'min_version' => '6.11.1',
 					),
 					'assets' => array(
 						'icons' => array(
