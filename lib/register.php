@@ -103,7 +103,7 @@ if ( ! class_exists( 'WpssoBcRegister' ) ) {
 
 					$version = WpssoBcConfig::$cf[ 'plugin' ][ 'wpssobc' ][ 'version' ];
 
-					WpssoUtil::save_all_times( 'wpssobc', $version );
+					WpssoUtil::register_ext_version( 'wpssobc', $version );
 				}
 
 				$wpsso =& Wpsso::get_instance();
