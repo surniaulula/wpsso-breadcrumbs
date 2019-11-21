@@ -99,11 +99,14 @@ if ( ! class_exists( 'WpssoBcRegister' ) ) {
 
 			if ( class_exists( 'Wpsso' ) ) {
 
-				if ( class_exists( 'WpssoUtil' ) ) {	// Just in case.
+				/**
+				 * Register plugin install, activation, update times.
+				 */
+				if ( class_exists( 'WpssoUtilReg' ) ) {	// Since WPSSO v6.13.0.
 
 					$version = WpssoBcConfig::$cf[ 'plugin' ][ 'wpssobc' ][ 'version' ];
 
-					WpssoUtil::register_ext_version( 'wpssobc', $version );
+					WpssoUtilReg::update_ext_version( 'wpssobc', $version );
 				}
 
 				$wpsso =& Wpsso::get_instance();
