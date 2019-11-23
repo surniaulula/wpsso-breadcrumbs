@@ -10,7 +10,7 @@ Tags: schema, breadcrumbs, hierarchy, seo, google, categories, tags, search
 Contributors: jsmoriss
 Requires At Least: 3.9
 Tested Up To: 5.3
-Stable Tag: 2.2.1
+Stable Tag: 2.2.2
 
 Schema BreadcrumbList markup in JSON-LD for better Google Rich Results with Structured Data.
 
@@ -78,24 +78,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Developer Notes**
 	* Updated `WpssoBcRegister->activate_plugin()` for the new WpssoUtilReg class in WPSSO Core v6.13.0.
 
-**Version 2.2.1 (2019/10/04)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* Maintenance release for WPSSO Core v6.7.0.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* None.
-
 == Upgrade Notice ==
 
 = 2.2.2 =
 
 (2019/11/23) Update for the new WpssoUtilReg class in WPSSO Core v6.13.0.
-
-= 2.2.1 =
-
-(2019/10/04) Maintenance release for WPSSO Core v6.7.0.
 
