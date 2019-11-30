@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'req' => array(
 						'short'       => 'WPSSO Core',
 						'name'        => 'WPSSO Core',
-						'min_version' => '6.13.2',
+						'min_version' => '6.14.0',
 					),
 					'assets' => array(
 						'icons' => array(
@@ -48,7 +48,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					),
 				),
 			),
-			'opt' => array(				// options
+			'opt' => array(
 				'defaults' => array(
 					'bc_list_for_ptn_attachment' => 'none',
 					'bc_list_for_ptn_page'       => 'ancestors',
