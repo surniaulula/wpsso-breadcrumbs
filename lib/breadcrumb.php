@@ -77,7 +77,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			 * Begin timer.
 			 */
 			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->mark( 'adding mods data' );	// begin timer
+				$wpsso->debug->mark( 'adding mods data' );	// Begin timer.
 			}
 
 			/**
@@ -123,7 +123,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			 * End timer.
 			 */
 			if ( $wpsso->debug->enabled ) {
-				$wpsso->debug->mark( 'adding mods data' );	// end timer
+				$wpsso->debug->mark( 'adding mods data' );	// End timer.
 			}
 
 			return $item_count;
