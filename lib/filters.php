@@ -17,6 +17,17 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 		public function __construct( &$plugin ) {
 
+			/**
+			 * Just in case - prevent filters from being hooked and executed more than once.
+			 */
+			static $do_once = null;
+
+			if ( true === $do_once ) {
+				return;	// Stop here.
+			}
+
+			$do_once = true;
+
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
@@ -24,14 +35,15 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			}
 
 			$this->p->util->add_plugin_filters( $this, array( 
+				'option_type'                               => 2,
 				'get_defaults'                              => 1,
 				'json_array_schema_page_type_ids'           => 2,
 				'json_data_https_schema_org_breadcrumblist' => 5,
 			) );
 
 			if ( is_admin() ) {
+
 				$this->p->util->add_plugin_filters( $this, array( 
-					'option_type'      => 2,
 					'messages_tooltip' => 2,
 				) );
 			}
@@ -42,6 +54,31 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
 				add_filter( 'woocommerce_structured_data_breadcrumblist', '__return_empty_array' );
 			}
+		}
+
+		public function filter_option_type( $type, $base_key ) {
+
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( ! empty( $type ) ) {
+				return $type;
+			} elseif ( strpos( $base_key, 'bc_' ) !== 0 ) {
+				return $type;
+			}
+
+			switch ( $base_key ) {
+
+				case 'bc_home_name':
+				case ( strpos( $base_key, 'bc_list_for_' ) === 0 ? true : false ):
+
+					return 'not_blank';
+
+					break;
+			}
+
+			return $type;
 		}
 
 		public function filter_get_defaults( $def_opts ) {
@@ -275,31 +312,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						return $bclist_data;
 				}
 			}
-		}
-
-		public function filter_option_type( $type, $base_key ) {
-
-			if ( $this->p->debug->enabled ) {
-				$this->p->debug->mark();
-			}
-
-			if ( ! empty( $type ) ) {
-				return $type;
-			} elseif ( strpos( $base_key, 'bc_' ) !== 0 ) {
-				return $type;
-			}
-
-			switch ( $base_key ) {
-
-				case 'bc_home_name':
-				case ( strpos( $base_key, 'bc_list_for_' ) === 0 ? true : false ):
-
-					return 'not_blank';
-
-					break;
-			}
-
-			return $type;
 		}
 
 		public function filter_messages_tooltip( $text, $msg_key ) {
