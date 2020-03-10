@@ -32,6 +32,8 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 		 */
 		protected function add_meta_boxes() {
 
+			$this->maybe_show_language_notice();
+
 			$metabox_id      = 'breadcrumbs';
 			$metabox_title   = _x( 'Breadcrumbs Settings', 'metabox title', 'wpsso-breadcrumbs' );
 			$metabox_screen  = $this->pagehook;
@@ -51,10 +53,20 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 
 			$tab_key = 'general';
 
-			$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_' . $tab_key . '_rows' );
+			if ( empty( $this->p->avail[ 'p' ][ 'schema' ] ) ) {	// Since WPSSO Core v6.23.3.
 
-			$this->p->util->do_metabox_table( apply_filters( $filter_name, $this->get_table_rows( $metabox_id, $tab_key ), $this->form, false ),
-				'metabox-' . $metabox_id . '-' . $tab_key );
+				$table_rows = array();
+
+				$table_rows = $this->p->msgs->get_schema_disabled_rows( $table_rows, $col_span = 1 );
+
+			} else {
+
+				$filter_name = SucomUtil::sanitize_hookname( $this->p->lca . '_' . $metabox_id . '_' . $tab_key . '_rows' );
+
+				$table_rows = apply_filters( $filter_name, $this->get_table_rows( $metabox_id, $tab_key ), $this->form );
+			}
+
+			$this->p->util->do_metabox_table( $table_rows, 'metabox-' . $metabox_id . '-' . $tab_key );
 		}
 
 		protected function get_table_rows( $metabox_id, $tab_key ) {
