@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.0
 Tested Up To: 5.4
-Stable Tag: 2.2.2
+Stable Tag: 2.3.0
 
 Schema BreadcrumbList markup in JSON-LD for better Google Rich Results with Structured Data.
 
