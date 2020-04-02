@@ -48,13 +48,13 @@ msgctxt "option label"
 msgid "Home Page Name"
 msgstr ""
 
-#: wpsso-breadcrumbs.php:113
+#: wpsso-breadcrumbs.php:119
 msgid ""
 "The %1$s add-on requires the %2$s plugin &mdash; install and activate the "
 "plugin or <a href=\"%3$s\">deactivate this add-on</a>."
 msgstr ""
 
-#: wpsso-breadcrumbs.php:215
+#: wpsso-breadcrumbs.php:221
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
