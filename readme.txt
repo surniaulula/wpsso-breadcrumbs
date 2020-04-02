@@ -68,6 +68,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.4.0-dev.1 (2020/04/02)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Refactored WPSSO Core active and minimum version dependency checks.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.0.
+	* WPSSO Core v6.27.1.
+
 **Version 2.3.0 (2020/03/11)**
 
 * **New Features**
@@ -83,28 +98,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v4.0.
 	* WPSSO Core v6.27.1.
 
-**Version 2.2.2 (2019/11/23)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Updated `WpssoBcRegister->activate_plugin()` for the new WpssoUtilReg class in WPSSO Core v6.13.1.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.0.
-	* WPSSO Core v6.23.2.
-
 == Upgrade Notice ==
+
+= 2.4.0-dev.1 =
+
+(2020/04/02) Refactored WPSSO Core active and minimum version dependency checks.
 
 = 2.3.0 =
 
 (2020/03/11) Added support for a new WPSSO_SCHEMA_MARKUP_DISABLE constant.
-
-= 2.2.2 =
-
-(2019/11/23) Update for the new WpssoUtilReg class in WPSSO Core v6.13.1.
 
