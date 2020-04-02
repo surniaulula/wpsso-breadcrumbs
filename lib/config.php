@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '2.3.0',	// Plugin version.
+					'version'     => '2.4.0-dev.1',	// Plugin version.
 					'opt_version' => '3',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
@@ -26,17 +26,31 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'update_auth' => '',		// No premium version.
 					'text_domain' => 'wpsso-breadcrumbs',
 					'domain_path' => '/languages',
+
+					/**
+					 * Required plugin and its version.
+					 */
 					'req' => array(
-						'short'       => 'WPSSO Core',
-						'name'        => 'WPSSO Core',
-						'min_version' => '6.27.1',
+						'wpsso' => array(
+							'class'       => 'Wpsso',
+							'name'        => 'WPSSO Core',
+							'min_version' => '6.27.1',
+						),
 					),
+
+					/**
+					 * Relative paths to asset images.
+					 */
 					'assets' => array(
 						'icons' => array(
 							'low'  => 'images/icon-128x128.png',
 							'high' => 'images/icon-256x256.png',
 						),
 					),
+
+					/**
+					 * Library files loaded and instantiated by WPSSO.
+					 */
 					'lib' => array(
 						'pro' => array(
 						),
@@ -48,6 +62,10 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					),
 				),
 			),
+
+			/**
+			 * Additional add-on setting options.
+			 */
 			'opt' => array(
 				'defaults' => array(
 					'bc_list_for_ptn_attachment' => 'none',

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 2.3.0\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 2.4.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -48,13 +48,13 @@ msgctxt "option label"
 msgid "Home Page Name"
 msgstr ""
 
-#: wpsso-breadcrumbs.php:106
+#: wpsso-breadcrumbs.php:113
 msgid ""
 "The %1$s add-on requires the %2$s plugin &mdash; install and activate the "
-"%3$s plugin or <a href=\"%4$s\">deactivate the %5$s add-on</a>."
+"plugin or <a href=\"%3$s\">deactivate this add-on</a>."
 msgstr ""
 
-#: wpsso-breadcrumbs.php:203
+#: wpsso-breadcrumbs.php:215
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."
