@@ -29,7 +29,7 @@ msgstr ""
 #: lib/gettext-config.php:7
 msgctxt "plugin description"
 msgid ""
-"Schema BreadcrumbList markup in JSON-LD for better Google Rich Results with "
+"Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with "
 "Structured Data."
 msgstr ""
 
@@ -70,7 +70,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Schema BreadcrumbList markup in JSON-LD for better Google Rich Results with "
+"Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with "
 "Structured Data."
 msgstr ""
 
