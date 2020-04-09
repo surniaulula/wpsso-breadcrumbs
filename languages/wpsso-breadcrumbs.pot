@@ -38,14 +38,14 @@ msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
 msgstr ""
 
-#: lib/submenu/bc-general.php:92
-msgctxt "option label"
-msgid "Breadcrumbs for Post Types"
-msgstr ""
-
-#: lib/submenu/bc-general.php:96
+#: lib/submenu/bc-general.php:81
 msgctxt "option label"
 msgid "Home Page Name"
+msgstr ""
+
+#: lib/submenu/bc-general.php:97
+msgctxt "option label"
+msgid "Breadcrumbs for Post Types"
 msgstr ""
 
 #: wpsso-breadcrumbs.php:119

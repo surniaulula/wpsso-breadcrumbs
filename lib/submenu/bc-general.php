@@ -34,7 +34,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 
 			$this->maybe_show_language_notice();
 
-			$metabox_id      = 'breadcrumbs';
+			$metabox_id      = 'bc';
 			$metabox_title   = _x( 'Breadcrumbs Settings', 'metabox title', 'wpsso-breadcrumbs' );
 			$metabox_screen  = $this->pagehook;
 			$metabox_context = 'normal';
@@ -43,11 +43,11 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 			);
 
 			add_meta_box( $this->pagehook . '_' . $metabox_id, $metabox_title,
-				array( $this, 'show_metabox_breadcrumbs' ), $metabox_screen,
+				array( $this, 'show_metabox_bc' ), $metabox_screen,
 					$metabox_context, $metabox_prio, $callback_args );
 		}
 
-		public function show_metabox_breadcrumbs() {
+		public function show_metabox_bc() {
 
 			$metabox_id = 'bc';
 
@@ -77,6 +77,11 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 
 				case 'bc-general':
 
+					$table_rows[ 'bc_home_name' ] = '' . 
+					$this->form->get_th_html( _x( 'Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
+						$css_class = '', $css_id = 'bc_home_name', array( 'is_locale' => true ) ) . 
+					'<td>' . $this->form->get_input( SucomUtil::get_key_locale( 'bc_home_name', $this->p->options ), 'long_name' ) . '</td>';
+
 					$bc_list_for_posts = $this->p->cf[ 'form' ][ 'breadcrumbs_for_posts' ];
 					$bc_list_for_terms = $this->p->cf[ 'form' ][ 'breadcrumbs_for_terms' ];
 
@@ -89,13 +94,9 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					}
 
 					$table_rows[ 'bc_list_for_ptn' ] = '' . 
-					$this->form->get_th_html( _x( 'Breadcrumbs for Post Types', 'option label', 'wpsso-breadcrumbs' ), null, 'bc_list_for_ptn' ) .
+					$this->form->get_th_html( _x( 'Breadcrumbs for Post Types', 'option label', 'wpsso-breadcrumbs' ),
+						$css_class = '', $css_id = 'bc_list_for_ptn' ) .
 					'<td>' . $bc_select_for_posts . '</td>';
-
-					$table_rows[ 'bc_home_name' ] = '' . 
-					$this->form->get_th_html( _x( 'Home Page Name', 'option label', 'wpsso-breadcrumbs' ), '', 'bc_home_name',
-						array( 'is_locale' => true ) ) . 
-					'<td>' . $this->form->get_input( SucomUtil::get_key_locale( 'bc_home_name', $this->p->options ), 'long_name' ) . '</td>';
 
 					break;
 			}
