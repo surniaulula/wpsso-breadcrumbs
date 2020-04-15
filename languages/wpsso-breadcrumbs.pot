@@ -43,7 +43,7 @@ msgctxt "option label"
 msgid "Home Page Name"
 msgstr ""
 
-#: lib/submenu/bc-general.php:97
+#: lib/submenu/bc-general.php:98
 msgctxt "option label"
 msgid "Breadcrumbs for Post Types"
 msgstr ""
