@@ -83,11 +83,15 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 		public function filter_get_defaults( $def_opts ) {
 
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
 			/**
 			 * Add options using a key prefix array and post type names.
 			 */
-			$def_opts = $this->p->util->add_ptns_to_opts( $def_opts, array(
-				'bc_list_for_ptn' => 'categories',	// breacrumb list for post type name
+			$this->p->util->add_ptns_to_opts( $def_opts, array(
+				'bc_list_for_ptn' => 'categories',
 			) );
 
 			return $def_opts;

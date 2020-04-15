@@ -88,10 +88,10 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					$bc_select_for_posts = '';
 					$bc_select_for_terms = '';
 
-					foreach ( $this->p->util->get_post_types( 'objects' ) as $pt ) {	// Get public post types.
+					foreach ( $this->p->util->get_post_types( 'objects' ) as $obj ) {
 
-						$bc_select_for_posts .= '<p>' . $this->form->get_select( 'bc_list_for_ptn_' . $pt->name, $bc_list_for_posts ) . ' ' .
-							$pt->label . ( empty( $pt->description ) ? '' : ' (' . $pt->description . ')' ) . '</p>';
+						$bc_select_for_posts .= '<p>' . $this->form->get_select( 'bc_list_for_ptn_' . $obj->name, $bc_list_for_posts ) . ' ' .
+							$obj->label . ( empty( $obj->description ) ? '' : ' (' . $obj->description . ')' ) . '</p>';
 					}
 
 					$table_rows[ 'bc_list_for_ptn' ] = '' . 
