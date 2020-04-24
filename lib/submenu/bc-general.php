@@ -78,9 +78,9 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 				case 'bc-general':
 
 					$table_rows[ 'bc_home_name' ] = '' . 
-					$this->form->get_th_html( _x( 'Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
-						$css_class = '', $css_id = 'bc_home_name', array( 'is_locale' => true ) ) . 
-					'<td>' . $this->form->get_input( SucomUtil::get_key_locale( 'bc_home_name', $this->p->options ), 'long_name' ) . '</td>';
+					$this->form->get_th_html_locale( _x( 'Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
+						$css_class = '', $css_id = 'bc_home_name' ) . 
+					'<td>' . $this->form->get_input_locale( 'bc_home_name', $css_class = 'long_name' ) . '</td>';
 
 					$bc_list_for_posts = $this->p->cf[ 'form' ][ 'breadcrumbs_for_posts' ];
 					$bc_list_for_terms = $this->p->cf[ 'form' ][ 'breadcrumbs_for_terms' ];
@@ -90,8 +90,10 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 
 					foreach ( $this->p->util->get_post_types( 'objects' ) as $obj ) {
 
-						$bc_select_for_posts .= '<p>' . $this->form->get_select( 'bc_list_for_ptn_' . $obj->name, $bc_list_for_posts ) . ' ' .
-							$obj->label . ( empty( $obj->description ) ? '' : ' (' . $obj->description . ')' ) . '</p>';
+						$bc_select_for_posts .= '<p>';
+						$bc_select_for_posts .= $this->form->get_select( 'bc_list_for_ptn_' . $obj->name, $bc_list_for_posts ) . ' ';
+						$bc_select_for_posts .= $obj->label . ( empty( $obj->description ) ? '' : ' (' . $obj->description . ')' );
+						$bc_select_for_posts .= '</p>';
 					}
 
 					$table_rows[ 'bc_list_for_ptn' ] = '' . 
