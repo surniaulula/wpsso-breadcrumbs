@@ -48,13 +48,13 @@ msgctxt "option label"
 msgid "Breadcrumbs for Post Types"
 msgstr ""
 
-#: wpsso-breadcrumbs.php:119
+#: wpsso-breadcrumbs.php:121
 msgid ""
 "The %1$s add-on requires the %2$s plugin &mdash; install and activate the "
 "plugin or <a href=\"%3$s\">deactivate this add-on</a>."
 msgstr ""
 
-#: wpsso-breadcrumbs.php:225
+#: wpsso-breadcrumbs.php:227
 msgid ""
 "The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
 "%5$s is currently installed)."

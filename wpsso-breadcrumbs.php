@@ -101,9 +101,11 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 			foreach ( $info[ 'req' ] as $ext => $req_info ) {
 
 				if ( isset( $req_info[ 'class' ] ) ) {	// Just in case.
+
 					if ( class_exists( $req_info[ 'class' ] ) ) {
 						continue;	// Requirement satisfied.
 					}
+
 				} else continue;	// Nothing to check.
 
 				$deactivate_url = html_entity_decode( wp_nonce_url( add_query_arg( array(
