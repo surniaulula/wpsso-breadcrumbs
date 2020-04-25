@@ -40,8 +40,8 @@
 <h3 class="top">Install and Uninstall</h3>
 
 <ul>
-<li><a href="https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/install-the-plugin/">Install the WPSSO BC Add-on</a></li>
-<li><a href="https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/uninstall-the-plugin/">Uninstall the WPSSO BC Add-on</a></li>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/install-the-plugin/">Install the Schema Breadcrumbs Markup add-on</a>.</li>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/uninstall-the-plugin/">Uninstall the Schema Breadcrumbs Markup add-on</a>.</li>
 </ul>
 
 

@@ -41,8 +41,8 @@ The WPSSO BC add-on includes Schema BreadcrumbsList markup of ancestors and cate
 
 <h3 class="top">Install and Uninstall</h3>
 
-* [Install the WPSSO BC Add-on](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/install-the-plugin/)
-* [Uninstall the WPSSO BC Add-on](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/uninstall-the-plugin/)
+* [Install the Schema Breadcrumbs Markup add-on](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/install-the-plugin/).
+* [Uninstall the Schema Breadcrumbs Markup add-on](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/uninstall-the-plugin/).
 
 == Frequently Asked Questions ==
 
