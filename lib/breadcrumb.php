@@ -83,7 +83,8 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			/**
 			 * Add the home page.
 			 */
-			$home_url  = SucomUtil::get_site_url( $wpsso->options );
+			$home_url = SucomUtil::get_site_url( $wpsso->options );
+
 			$home_name = SucomUtil::get_key_value( 'bc_home_name', $wpsso->options, 'current' );
 
 			$item_count++;
