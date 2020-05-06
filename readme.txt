@@ -68,12 +68,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.6.0-dev.1 (TBD)**
+**Version 2.6.0-dev.2 (2020/05/06)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Minor improvements to the requirement checks in the main plugin class.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -81,7 +81,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.3.0.
+	* WPSSO Core v7.4.0-dev.2.
 
 **Version 2.5.0 (2020/04/25)**
 
@@ -131,9 +131,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.6.0-dev.1 =
+= 2.6.0-dev.2 =
 
-(TBD) Updated clear cache method call for WPSSO Core v7.4.0.
+(2020/05/06) Minor improvements to the requirement checks in the main plugin class.
 
 = 2.5.0 =
 
