@@ -77,7 +77,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Updated clear cache method call for WPSSO Core v7.4.0.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
@@ -133,7 +133,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 2.6.0-dev.1 =
 
-(TBD) None.
+(TBD) Updated clear cache method call for WPSSO Core v7.4.0.
 
 = 2.5.0 =
 
