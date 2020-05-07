@@ -16,7 +16,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '2.6.0-dev.2',	// Plugin version.
+					'version'     => '2.6.0-dev.3',	// Plugin version.
 					'opt_version' => '3',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
@@ -32,9 +32,11 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					 */
 					'req' => array(
 						'wpsso' => array(
-							'class'       => 'Wpsso',
-							'name'        => 'WPSSO Core',
-							'min_version' => '7.4.0-dev.2',
+							'class'         => 'Wpsso',
+							'name'          => 'WPSSO Core',
+							'home'          => 'https://wordpress.org/plugins/wpsso/',
+							'min_version'   => '7.4.0-dev.3',
+							'version_const' => 'WPSSO_VERSION',
 						),
 					),
 

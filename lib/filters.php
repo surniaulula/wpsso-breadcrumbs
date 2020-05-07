@@ -81,7 +81,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			return $type;
 		}
 
-		public function filter_get_defaults( $def_opts ) {
+		public function filter_get_defaults( $defs ) {
 
 			if ( $this->p->debug->enabled ) {
 				$this->p->debug->mark();
@@ -90,11 +90,11 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			/**
 			 * Add options using a key prefix array and post type names.
 			 */
-			$this->p->util->add_ptns_to_opts( $def_opts, array(
+			$this->p->util->add_post_type_names( $defs, array(
 				'bc_list_for_ptn' => 'categories',
 			) );
 
-			return $def_opts;
+			return $defs;
 		}
 
 		public function filter_json_array_schema_page_type_ids( $page_type_ids, $mod ) {
