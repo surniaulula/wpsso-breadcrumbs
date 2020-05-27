@@ -99,7 +99,14 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 		public function filter_json_array_schema_page_type_ids( $page_type_ids, $mod ) {
 
-			$page_type_ids[ 'breadcrumb.list' ] = true;
+			if ( $this->p->debug->enabled ) {
+				$this->p->debug->mark();
+			}
+
+			if ( $mod[ 'name' ] ) {
+
+				$page_type_ids[ 'breadcrumb.list' ] = true;
+			}
 
 			return $page_type_ids;
 		}
@@ -114,17 +121,22 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			static $id_delim  = null;
 
 			if ( null === $id_anchor || null === $id_delim ) {	// Optimize and call just once.
+
 				$id_anchor = WpssoSchema::get_id_anchor();
+
 				$id_delim  = WpssoSchema::get_id_delim();
 			}
 
 			if ( is_array( $json_data ) ) {
+
 				$json_data = SucomUtil::preg_grep_keys( '/^(@.*|url)$/', $json_data );
 			}
 
 			if ( empty( $json_data ) ) {
+
 				$page_type_url = $this->p->schema->get_schema_type_url( $page_type_id );
-				$json_data     = WpssoSchema::get_schema_type_context( $page_type_url );
+
+				$json_data = WpssoSchema::get_schema_type_context( $page_type_url );
 			}
 
 			if ( empty( $json_data[ 'url' ] ) ) {
@@ -232,7 +244,9 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						$tax_slug = 'category';
 
 						if ( $mod[ 'post_type' ] === 'product' ) {
+
 							if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
+
 								$tax_slug = 'product_cat';
 							}
 						}
