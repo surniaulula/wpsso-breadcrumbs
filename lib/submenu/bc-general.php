@@ -88,7 +88,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					$bc_select_for_posts = '';
 					$bc_select_for_terms = '';
 
-					foreach ( $this->p->util->get_post_types( 'objects' ) as $obj ) {
+					foreach ( SucomUtilWP::get_post_types( 'objects' ) as $obj ) {
 
 						$bc_select_for_posts .= '<p>';
 						$bc_select_for_posts .= $this->form->get_select( 'bc_list_for_ptn_' . $obj->name, $bc_list_for_posts ) . ' ';
