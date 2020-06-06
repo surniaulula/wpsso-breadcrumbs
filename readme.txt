@@ -131,40 +131,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v4.2.
 	* WPSSO Core v7.0.1.
 
-**Version 2.3.0 (2020/03/11)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added support for a new WPSSO_SCHEMA_MARKUP_DISABLE constant.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.0.
-	* WPSSO Core v6.27.1.
-
 == Upgrade Notice ==
 
 = 2.7.0 =
 
 (2020/06/04) Updated method calls for WPSSO Core v7.8.0.
-
-= 2.6.0 =
-
-(2020/05/09) Refactored the required plugin check to (optionally) check the class name and a version constant.
-
-= 2.5.0 =
-
-(2020/04/25) Updated multilingual option method calls for optimized methods in WPSSO Core v7.1.0.
-
-= 2.4.0 =
-
-(2020/04/06) Updated "Requires At Least" to WordPress v4.2. Refactored WPSSO Core active and minimum version dependency checks.
-
-= 2.3.0 =
-
-(2020/03/11) Added support for a new WPSSO_SCHEMA_MARKUP_DISABLE constant.
 
