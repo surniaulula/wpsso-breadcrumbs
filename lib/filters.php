@@ -74,8 +74,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				case ( strpos( $base_key, 'bc_list_for_' ) === 0 ? true : false ):
 
 					return 'not_blank';
-
-					break;
 			}
 
 			return $type;
