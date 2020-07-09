@@ -1,5 +1,3 @@
-# Copyright (C) 2015 WPSSO App Meta (WPSSO AM)
-# This file is distributed under the same license as the WPSSO App Meta (WPSSO AM) package.
 msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema Breadcrumbs Markup 2.6.0\n"
