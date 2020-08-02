@@ -68,7 +68,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.8.0-rc.1 (2020/08/02)**
+**Version 2.8.0 (2020/08/02)**
 
 * **New Features**
 	* None.
@@ -81,7 +81,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v7.15.0-rc.1.
+	* WPSSO Core v7.15.0.
 
 **Version 2.7.0 (2020/06/04)**
 
@@ -101,11 +101,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.8.0-rc.1 =
+= 2.8.0 =
 
 (2020/08/02) Tested with WordPress v5.5.
-
-= 2.7.0 =
-
-(2020/06/04) Updated method calls for WPSSO Core v7.8.0.
 
