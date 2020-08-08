@@ -68,7 +68,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.9.0-dev.7 (2020/08/07)**
+**Version 2.9.0-dev.8 (2020/08/08)**
 
 * **New Features**
 	* None.
@@ -116,9 +116,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.9.0-dev.7 =
+= 2.9.0-dev.8 =
 
-(2020/08/07) Added support for the new WpssoUtilMetabox class in WPSSO Core v7.16.0.
+(2020/08/08) Added support for the new WpssoUtilMetabox class in WPSSO Core v7.16.0.
 
 = 2.8.0 =
 
