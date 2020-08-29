@@ -68,6 +68,22 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 2.10.0-dev.1 (2020/08/29)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Added a new "WordPress Home Page Name" option (default value is "Blog").
+	* Renamed the "Home Page Name" option to "Site Home Page Name" (default value is "Home").
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Updated the `WpssoBcBreadcrumb::add_itemlist_data()` method to add the WordPress Address URL (ie. the "WordPress Home Page") to the breadcrumbs list when different to the Site Address URL (ie. the "Site Home Page").
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.2.
+	* WPSSO Core v8.0.0
+
 **Version 2.9.0 (2020/08/11)**
 
 * **New Features**
@@ -84,6 +100,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.0.0
 
 == Upgrade Notice ==
+
+= 2.10.0-dev.1 =
+
+(2020/08/29) Added a new "WordPress Home Page Name" option (default value is "Blog").
 
 = 2.9.0 =
 
