@@ -41,23 +41,11 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 			$item_count = isset( $json_data[ $prop_name ] ) ? count( $json_data[ $prop_name ] ) : 0;
 
-			/**
-			 * Sanity checks.
-			 */
-			if ( empty( $mods ) ) {
+			if ( empty( $page_type_id ) ) {
 
 				if ( $wpsso->debug->enabled ) {
 
-					$wpsso->debug->log( 'exiting early: mods is empty' );
-				}
-
-				return $item_count;
-
-			} elseif ( empty( $page_type_id ) ) {
-
-				if ( $wpsso->debug->enabled ) {
-
-					$wpsso->debug->log( 'exiting early: page_type_id is empty' );
+					$wpsso->debug->log( 'exiting early: page_type_id is empty and required' );
 				}
 
 				return $item_count;
@@ -81,16 +69,13 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			}
 
 			/**
-			 * Begin timer.
+			 * Add the site home page.
 			 */
 			if ( $wpsso->debug->enabled ) {
 
-				$wpsso->debug->mark( 'adding mods data' );	// Begin timer.
+				$wpsso->debug->log( 'adding site home' );
 			}
 
-			/**
-			 * Add the site home page.
-			 */
 			$site_url = SucomUtil::get_site_url( $wpsso->options, $mixed = 'current' );
 
 			$home_name = SucomUtil::get_key_value( $key = 'bc_home_name', $wpsso->options, $mixed = 'current' );
@@ -112,6 +97,11 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 			if ( $wp_url !== $site_url ) {
 
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'adding wordpress home' );
+				}
+
 				$wp_home_name = SucomUtil::get_key_value( $key = 'bc_wp_home_name', $wpsso->options, $mixed = 'current' );
 
 				$item_count++;
@@ -125,9 +115,24 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$json_data[ $prop_name ][] = $list_item;
 			}
 
+			if ( empty( $mods ) ) {
+
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'exiting early: mods array is empty' );
+				}
+
+				return $item_count;
+			}
+
 			/**
-			 * Add each post parent or term.
+			 * Begin timer.
 			 */
+			if ( $wpsso->debug->enabled ) {
+
+				$wpsso->debug->mark( 'adding mods data' );	// Begin timer.
+			}
+
 			foreach ( $mods as $mod ) {
 
 				$item_count++;

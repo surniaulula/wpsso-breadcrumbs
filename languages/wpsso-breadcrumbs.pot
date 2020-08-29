@@ -13,15 +13,15 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/filters.php:376
+#: lib/filters.php:389
 msgid "Select the source of breadcrumbs for each public post type."
 msgstr ""
 
-#: lib/filters.php:382
+#: lib/filters.php:395
 msgid "The site home page name in the breadcrumbs markup."
 msgstr ""
 
-#: lib/filters.php:388
+#: lib/filters.php:401
 msgid ""
 "The WordPress home page (ie. the blog page) name in the breadcrumbs markup."
 msgstr ""

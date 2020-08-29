@@ -112,10 +112,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( $mod[ 'name' ] ) {
-
-				$page_type_ids[ 'breadcrumb.list' ] = true;
-			}
+			$page_type_ids[ 'breadcrumb.list' ] = true;
 
 			return $page_type_ids;
 		}
@@ -133,7 +130,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			if ( null === $id_anchor || null === $id_delim ) {	// Optimize and call just once.
 
 				$id_anchor = WpssoSchema::get_id_anchor();
-
 				$id_delim  = WpssoSchema::get_id_delim();
 			}
 
@@ -175,6 +171,36 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			$bclist_data = array();
 
+			/**
+			 * Breacrumbs are not required for the home page.
+			 */
+			if ( $mod[ 'is_home' ] ) {
+		
+				if ( $mod[ 'is_home_posts' ] ) {
+
+					$site_url = SucomUtil::get_site_url( $this->p->options, $mixed = 'current' );
+			
+					$wp_url = get_bloginfo( $show = 'wpurl', $filter = 'raw' );
+
+					/**
+					 * Add breadcrumbs if the blog page URL is different to the home page URL.
+					 */
+					if ( $wp_url !== $site_url ) {
+							
+						WpssoBcBreadcrumb::add_itemlist_data( $json_data, array(), $page_type_id );
+
+						return $json_data;	// Stop here.
+					}
+				}
+
+				if ( $this->p->debug->enabled ) {
+
+					$this->p->debug->log( 'exiting early: breadcrumbs not required for top-level home page' );
+				}
+
+				return array();	// Stop here.
+			}
+
 			if ( $mod[ 'is_post' ] ) {
 
 				if ( $this->p->debug->enabled ) {
@@ -187,27 +213,14 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				/**
 				 * The default for any undefined post type is 'categories'.
 				 */
-				$opt_val = isset( $this->p->options[ $opt_key ] ) ? $this->p->options[ $opt_key ] : 'categories';
+				$parent_type = isset( $this->p->options[ $opt_key ] ) ? $this->p->options[ $opt_key ] : 'categories';
 
 				if ( $this->p->debug->enabled ) {
 
-					$this->p->debug->log( $opt_key . ' is ' . $opt_val );
+					$this->p->debug->log( $opt_key . ' is ' . $parent_type );
 				}
 
-				/**
-				 * Breacrumbs are not required for the home page.
-				 */
-				if ( $mod[ 'is_home' ] ) {
-				
-					if ( $this->p->debug->enabled ) {
-
-						$this->p->debug->log( 'exiting early: breadcrumbs not required for home page' );
-					}
-
-					return array();	// Stop here.
-				}
-
-				switch ( $opt_val ) {
+				switch ( $parent_type ) {
 
 					case 'none':		// Nothing to do.
 
@@ -260,7 +273,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 						$tax_slug = 'category';
 
-						if ( $mod[ 'post_type' ] === 'product' ) {
+						if ( 'product' === $mod[ 'post_type' ] ) {
 
 							if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
 
@@ -352,7 +365,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							}
 						}
 
-						return $bclist_data;
+						return $bclist_data;	// Stop here.
 				}
 			}
 		}
