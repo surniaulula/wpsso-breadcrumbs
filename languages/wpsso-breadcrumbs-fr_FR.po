@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 2.9.0\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 2.10.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2020-08-10 21:35-0700\n"
-"PO-Revision-Date: 2020-08-10 21:35-0700\n"
+"POT-Creation-Date: 2020-08-29 11:36-0700\n"
+"PO-Revision-Date: 2020-08-29 11:38-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -13,13 +13,17 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: lib/filters.php:347
+#: lib/filters.php:389
 msgid "Select the source of breadcrumbs for each public post type."
 msgstr "Sélectionnez la source du fil d'Ariane pour chaque type d'article public."
 
-#: lib/filters.php:353
-msgid "The home page name in the breadcrumbs markup."
-msgstr "Le nom de la page d'accueil dans le balisage du fil d'Ariane."
+#: lib/filters.php:395
+msgid "The site home page name in the breadcrumbs markup."
+msgstr "Le nom de la page d'accueil du site dans le balisage du fil d'Ariane."
+
+#: lib/filters.php:401
+msgid "The WordPress home page (ie. the blog page) name in the breadcrumbs markup."
+msgstr "Le nom de la page d'accueil WordPress (la page blog) dans le balisage du fil d'Ariane."
 
 #: lib/gettext-config.php:6
 msgctxt "lib file description"
@@ -38,10 +42,15 @@ msgstr "Réglages du fil d'Ariane"
 
 #: lib/submenu/bc-general.php:81
 msgctxt "option label"
-msgid "Home Page Name"
-msgstr "Nom de la page d'accueil"
+msgid "Site Home Page Name"
+msgstr "Nom de la page d'accueil du site"
 
-#: lib/submenu/bc-general.php:100
+#: lib/submenu/bc-general.php:86
+msgctxt "option label"
+msgid "WordPress Home Page Name"
+msgstr "Nom de la page d'accueil WordPress"
+
+#: lib/submenu/bc-general.php:105
 msgctxt "option label"
 msgid "Breadcrumbs for Post Types"
 msgstr "Fil d'Ariane pour types d'article"
