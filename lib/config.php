@@ -17,8 +17,8 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '2.9.0',	// Plugin version.
-					'opt_version' => '3',		// Increment when changing default option values.
+					'version'     => '2.10.0-dev.1',	// Plugin version.
+					'opt_version' => '4',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
 					'desc'        => 'Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Structured Data.',
@@ -73,6 +73,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'bc_list_for_ptn_page'       => 'ancestors',
 					'bc_list_for_ptn_post'       => 'categories',
 					'bc_home_name'               => 'Home',
+					'bc_wp_home_name'            => 'Blog',
 				),
 			),
 		);

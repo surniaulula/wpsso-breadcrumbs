@@ -78,9 +78,14 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 				case 'bc-general':
 
 					$table_rows[ 'bc_home_name' ] = '' . 
-					$this->form->get_th_html_locale( _x( 'Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
+					$this->form->get_th_html_locale( _x( 'Site Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
 						$css_class = '', $css_id = 'bc_home_name' ) . 
 					'<td>' . $this->form->get_input_locale( 'bc_home_name', $css_class = 'long_name' ) . '</td>';
+
+					$table_rows[ 'bc_wp_home_name' ] = '' . 
+					$this->form->get_th_html_locale( _x( 'WordPress Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
+						$css_class = '', $css_id = 'bc_wp_home_name' ) . 
+					'<td>' . $this->form->get_input_locale( 'bc_wp_home_name', $css_class = 'long_name' ) . '</td>';
 
 					$bc_list_for_posts = $this->p->cf[ 'form' ][ 'breadcrumbs_for_posts' ];
 					$bc_list_for_terms = $this->p->cf[ 'form' ][ 'breadcrumbs_for_terms' ];

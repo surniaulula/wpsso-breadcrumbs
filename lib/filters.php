@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -23,6 +24,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			static $do_once = null;
 
 			if ( true === $do_once ) {
+
 				return;	// Stop here.
 			}
 
@@ -31,6 +33,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -52,6 +55,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			 * Disable addition of Schema BreadcrumbList JSON-LD markup by the WooCommerce WC_Structured_Data class (since v3.0.0).
 			 */
 			if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
+
 				add_filter( 'woocommerce_structured_data_breadcrumblist', '__return_empty_array' );
 			}
 		}
@@ -59,18 +63,23 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		public function filter_option_type( $type, $base_key ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			if ( ! empty( $type ) ) {
+
 				return $type;
+
 			} elseif ( strpos( $base_key, 'bc_' ) !== 0 ) {
+
 				return $type;
 			}
 
 			switch ( $base_key ) {
 
 				case 'bc_home_name':
+				case 'bc_wp_home_name':
 				case ( strpos( $base_key, 'bc_list_for_' ) === 0 ? true : false ):
 
 					return 'not_blank';
@@ -82,6 +91,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		public function filter_get_defaults( $defs ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -98,6 +108,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		public function filter_json_array_schema_page_type_ids( $page_type_ids, $mod ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
@@ -112,6 +123,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		public function filter_json_data_https_schema_org_breadcrumblist( $json_data, $mod, $mt_og, $page_type_id, $is_main ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'page_type_id is ' . $page_type_id );
 			}
 
@@ -146,6 +158,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				} else {
 
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'exiting early: url not found for json data' );
 					}
 
@@ -156,6 +169,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			$bclist_max = SucomUtil::get_const( 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 20 );
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->log( 'maximum breadcrumb scripts is ' . $bclist_max );
 			}
 
@@ -164,6 +178,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			if ( $mod[ 'is_post' ] ) {
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( 'getting breadcrumbs for post' );
 				}
 
@@ -175,6 +190,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				$opt_val = isset( $this->p->options[ $opt_key ] ) ? $this->p->options[ $opt_key ] : 'categories';
 
 				if ( $this->p->debug->enabled ) {
+
 					$this->p->debug->log( $opt_key . ' is ' . $opt_val );
 				}
 
@@ -185,6 +201,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				if ( $mod[ 'is_home' ] ) {
 				
 					if ( $this->p->debug->enabled ) {
+
 						$this->p->debug->log( 'exiting early: breadcrumbs not required for home page' );
 					}
 
@@ -204,6 +221,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						if ( empty( $post_ids ) || ! is_array( $post_ids ) ) {
 
 							if ( $this->p->debug->enabled ) {
+
 								$this->p->debug->log( 'no ancestors found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 							}
 
@@ -224,6 +242,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 
 						if ( $this->p->debug->enabled ) {
+
 							$this->p->debug->log_arr( '$post_ids', $post_ids );
 						}
 
@@ -250,6 +269,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						}
 
 						if ( $this->p->debug->enabled ) {
+
 							$this->p->debug->log( 'taxonomy slug is ' . $tax_slug );
 						}
 
@@ -258,6 +278,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {
 
 							if ( $this->p->debug->enabled ) {
+
 								$this->p->debug->log( 'no post terms found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 							}
 
@@ -274,6 +295,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						}
 
 						if ( $this->p->debug->enabled ) {
+
 							$this->p->debug->log( count( $post_terms ) . ' post terms found' );
 						}
 
@@ -284,9 +306,13 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$term_ids = get_ancestors( $post_term->term_id, $tax_slug, 'taxonomy' );
 
 							if ( empty( $term_ids ) || ! is_array( $term_ids ) ) {
+
 								$term_ids = array( $post_term->term_id );	// Just do the parent.
+
 							} else {
-								$term_ids   = array_reverse( $term_ids );
+
+								$term_ids = array_reverse( $term_ids );
+
 								$term_ids[] = $post_term->term_id;		// Add parent term last.
 							}
 
@@ -321,6 +347,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$bclist_num++;
 
 							if ( $bclist_num >= $bclist_max ) {
+
 								break;
 							}
 						}
@@ -333,10 +360,12 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		public function filter_messages_tooltip( $text, $msg_key ) {
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 
 			if ( strpos( $msg_key, 'tooltip-bc_' ) !== 0 ) {
+
 				return $text;
 			}
 
@@ -350,7 +379,13 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				case 'tooltip-bc_home_name':
 
-					$text = __( 'The home page name in the breadcrumbs markup.', 'wpsso-breadcrumbs' );
+					$text = __( 'The site home page name in the breadcrumbs markup.', 'wpsso-breadcrumbs' );
+
+					break;
+
+				case 'tooltip-bc_wp_home_name':
+
+					$text = __( 'The WordPress home page (ie. the blog page) name in the breadcrumbs markup.', 'wpsso-breadcrumbs' );
 
 					break;
 			}

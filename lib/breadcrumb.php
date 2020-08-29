@@ -6,6 +6,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -20,6 +21,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			$this->p =& $plugin;
 
 			if ( $this->p->debug->enabled ) {
+
 				$this->p->debug->mark();
 			}
 		}
@@ -31,6 +33,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			$wpsso =& Wpsso::get_instance();
 
 			if ( $wpsso->debug->enabled ) {
+
 				$wpsso->debug->mark();
 			}
 
@@ -44,6 +47,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			if ( empty( $mods ) ) {
 
 				if ( $wpsso->debug->enabled ) {
+
 					$wpsso->debug->log( 'exiting early: mods is empty' );
 				}
 
@@ -52,6 +56,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			} elseif ( empty( $page_type_id ) ) {
 
 				if ( $wpsso->debug->enabled ) {
+
 					$wpsso->debug->log( 'exiting early: page_type_id is empty' );
 				}
 
@@ -64,6 +69,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			if ( isset( $added_page_type_ids[ $page_type_id ] ) ) {
 
 				if ( $wpsso->debug->enabled ) {
+
 					$wpsso->debug->log( 'exiting early: preventing recursion of page_type_id ' . $page_type_id );
 				}
 
@@ -77,25 +83,46 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			 * Begin timer.
 			 */
 			if ( $wpsso->debug->enabled ) {
+
 				$wpsso->debug->mark( 'adding mods data' );	// Begin timer.
 			}
 
 			/**
-			 * Add the home page.
+			 * Add the site home page.
 			 */
-			$home_url = SucomUtil::get_site_url( $wpsso->options );
+			$site_url = SucomUtil::get_site_url( $wpsso->options );
 
-			$home_name = SucomUtil::get_key_value( 'bc_home_name', $wpsso->options, 'current' );
+			$home_name = SucomUtil::get_key_value( $key = 'bc_home_name', $wpsso->options, $mixed = 'current' );
 
 			$item_count++;
 
 			$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 				'position' => $item_count,
 				'name'     => $home_name,
-				'item'     => $home_url,
+				'item'     => $site_url,
 			) );
 
 			$json_data[ $prop_name ][] = $list_item;
+
+			/**
+			 * Add the WordPress home page (ie. the blog page).
+			 */
+			$wp_url = get_bloginfo( $show = 'wpurl', $filter = 'raw' );
+
+			if ( $wp_url !== $site_url ) {
+
+				$wp_home_name = SucomUtil::get_key_value( $key = 'bc_wp_home_name', $wpsso->options, $mixed = 'current' );
+
+				$item_count++;
+
+				$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
+					'position' => $item_count,
+					'name'     => $wp_home_name,
+					'item'     => $wp_url,
+				) );
+
+				$json_data[ $prop_name ][] = $list_item;
+			}
 
 			/**
 			 * Add each post parent or term.
@@ -124,6 +151,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			 * End timer.
 			 */
 			if ( $wpsso->debug->enabled ) {
+
 				$wpsso->debug->mark( 'adding mods data' );	// End timer.
 			}
 
