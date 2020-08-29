@@ -195,8 +195,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				}
 
 				/**
-				 * Breacrumbs are not required for the home page. The Google testing tool also gives
-				 * an error if an item in the breadcrumbs list is a Schema WebSite type.
+				 * Breacrumbs are not required for the home page.
 				 */
 				if ( $mod[ 'is_home' ] ) {
 				
@@ -249,6 +248,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						$mods = array();
 
 						foreach ( $post_ids as $mod_id ) {
+
 							$mods[] = $this->p->post->get_mod( $mod_id );
 						}
 

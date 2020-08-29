@@ -76,6 +76,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				return $item_count;
 
 			} else {
+
 				$added_page_type_ids[ $page_type_id ] = true;
 			}
 
@@ -90,7 +91,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			/**
 			 * Add the site home page.
 			 */
-			$site_url = SucomUtil::get_site_url( $wpsso->options );
+			$site_url = SucomUtil::get_site_url( $wpsso->options, $mixed = 'current' );
 
 			$home_name = SucomUtil::get_key_value( $key = 'bc_home_name', $wpsso->options, $mixed = 'current' );
 
