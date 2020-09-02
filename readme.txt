@@ -68,7 +68,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.10.0-dev.3 (2020/09/01)**
+**Version 2.10.0-dev.4 (2020/09/02)**
 
 * **New Features**
 	* None.
@@ -101,9 +101,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.10.0-dev.3 =
+= 2.10.0-dev.4 =
 
-(2020/09/01) Added a new "WordPress Home Page Name" option (default value is "Blog").
+(2020/09/02) Added a new "WordPress Home Page Name" option (default value is "Blog").
 
 = 2.9.0 =
 
