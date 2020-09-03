@@ -68,7 +68,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-b.1 (2020/09/03)**
+**Version 3.0.0-b.2 (2020/09/03)**
 
 * **New Features**
 	* None.
@@ -80,13 +80,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Updated the `WpssoBcBreadcrumb::add_itemlist_data()` method to add the WordPress Address URL (ie. the "WordPress Home Page") to the breadcrumbs list when different to the Site Address URL (ie. the "Site Home Page").
 	* Added a new lib/filters-messages.php library file.
 	* Added support for terms and users in `WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist()`.
+	* Updated the `WpssoBcBreadcrumb::add_itemlist_data()` method to add the WordPress Address URL (ie. the "WordPress Home Page") to the breadcrumbs list when different to the Site Address URL (ie. the "Site Home Page").
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.2.3-b.1
+	* WPSSO Core v8.2.3-b.2
 
 **Version 2.9.0 (2020/08/11)**
 
@@ -105,7 +105,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-b.1 =
+= 3.0.0-b.2 =
 
 (2020/09/03) Added new "WordPress Home Page Name", "Breadcrumbs by Taxonomy", and "Breadcrumbs for User Profile" options.
 
