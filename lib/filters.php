@@ -398,7 +398,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							$term_ids = array_reverse( $term_ids );
 
-							$term_ids[] = $post_term->term_id;	// Add current term last.
+							$term_ids[] = $mod[ 'id' ];	// Add current term last.
 						}
 
 						foreach ( $term_ids as $mod_id ) {
