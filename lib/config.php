@@ -17,8 +17,8 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '2.10.0-dev.4',	// Plugin version.
-					'opt_version' => '4',		// Increment when changing default option values.
+					'version'     => '3.0.0-dev.5',	// Plugin version.
+					'opt_version' => '6',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
 					'desc'        => 'Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Structured Data.',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '8.0.0',
+							'min_version'   => '8.2.3-dev.5',
 						),
 					),
 
@@ -69,11 +69,15 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			 */
 			'opt' => array(
 				'defaults' => array(
-					'bc_list_for_ptn_attachment' => 'none',
-					'bc_list_for_ptn_page'       => 'ancestors',
-					'bc_list_for_ptn_post'       => 'categories',
-					'bc_home_name'               => 'Home',
-					'bc_wp_home_name'            => 'Blog',
+					'bc_list_for_ptn_attachment'    => 'ancestors',
+					'bc_list_for_ptn_page'          => 'ancestors',
+					'bc_list_for_ptn_post'          => 'categories',
+					'bc_list_for_tax_category'      => 'ancestors',
+					'bc_list_for_tax_link_category' => 'ancestors',
+					'bc_list_for_tax_post_tag'      => 'ancestors',
+					'bc_list_for_user_page'         => 'home',
+					'bc_home_name'                  => 'Home',
+					'bc_wp_home_name'               => 'Blog',
 				),
 			),
 		);

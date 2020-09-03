@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 2.10.0-dev.4\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.0.0-dev.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -13,17 +13,35 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: lib/filters.php:389
-msgid "Select the source of breadcrumbs for each public post type."
-msgstr ""
-
-#: lib/filters.php:395
+#: lib/filters-messages.php:67
 msgid "The site home page name in the breadcrumbs markup."
 msgstr ""
 
-#: lib/filters.php:401
+#: lib/filters-messages.php:73
 msgid ""
 "The WordPress home page (ie. the blog page) name in the breadcrumbs markup."
+msgstr ""
+
+#: lib/filters-messages.php:79
+msgid "Select the source of breadcrumbs for user profile pages."
+msgstr ""
+
+#: lib/filters-messages.php:85
+msgid ""
+"Select the source of breadcrumbs for each public post type (ie. posts, "
+"pages, products, and other custom post types)."
+msgstr ""
+
+#: lib/filters-messages.php:87
+msgid ""
+"The post categories selection uses the 'category' taxonomy by default, and "
+"the 'product_cat' taxonomy for WooCommerce products."
+msgstr ""
+
+#: lib/filters-messages.php:93
+msgid ""
+"Select the source of breadcrumbs for each public taxonomy (ie. categories, "
+"tags, and other custom taxonomy types)."
 msgstr ""
 
 #: lib/gettext-config.php:6
@@ -53,9 +71,24 @@ msgctxt "option label"
 msgid "WordPress Home Page Name"
 msgstr ""
 
-#: lib/submenu/bc-general.php:105
+#: lib/submenu/bc-general.php:102 lib/submenu/bc-general.php:125
+msgctxt "option comment"
+msgid "for %s"
+msgstr ""
+
+#: lib/submenu/bc-general.php:106
 msgctxt "option label"
-msgid "Breadcrumbs for Post Types"
+msgid "Breadcrumbs by Post Type"
+msgstr ""
+
+#: lib/submenu/bc-general.php:130
+msgctxt "option label"
+msgid "Breadcrumbs by Taxonomy"
+msgstr ""
+
+#: lib/submenu/bc-general.php:140
+msgctxt "option label"
+msgid "Breadcrumbs for User Profile"
 msgstr ""
 
 #: wpsso-breadcrumbs.php:272

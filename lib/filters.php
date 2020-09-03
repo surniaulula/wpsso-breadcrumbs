@@ -46,9 +46,15 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			if ( is_admin() ) {
 
-				$this->p->util->add_plugin_filters( $this, array( 
-					'messages_tooltip' => 2,
-				) );
+				/**
+				 * Instantiate the WpssoBcFiltersMessages class object.
+				 */
+				if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
+
+					require_once WPSSOBC_PLUGINDIR . 'lib/filters-messages.php';
+				}
+
+				$this->msgs = new WpssoBcFiltersMessages( $plugin );
 			}
 
 			/**
@@ -99,7 +105,11 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			 * Add options using a key prefix array and post type names.
 			 */
 			$this->p->util->add_post_type_names( $defs, array(
-				'bc_list_for_ptn' => 'categories',
+				'bc_list_for_ptn' => 'ancestors',
+			) );
+
+			$this->p->util->add_taxonomy_names( $defs, array(
+				'bc_list_for_tax' => 'ancestors',
 			) );
 
 			return $defs;
@@ -162,14 +172,14 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				}
 			}
 
-			$bclist_max = SucomUtil::get_const( 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 20 );
+			$bc_list_max = SucomUtil::get_const( 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 20 );
 
 			if ( $this->p->debug->enabled ) {
 
-				$this->p->debug->log( 'maximum breadcrumb scripts is ' . $bclist_max );
+				$this->p->debug->log( 'maximum breadcrumb scripts is ' . $bc_list_max );
 			}
 
-			$bclist_data = array();
+			$bc_list_data = array();
 
 			/**
 			 * Breacrumbs are not required for the home page.
@@ -179,8 +189,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				if ( $mod[ 'is_home_posts' ] ) {
 
 					$site_url = SucomUtil::get_site_url( $this->p->options, $mixed = 'current' );
-			
-					$wp_url = get_bloginfo( $show = 'wpurl', $filter = 'raw' );
+					$wp_url   = SucomUtil::get_wp_url( $this->p->options, $mixed = 'current' );
 
 					/**
 					 * Add breadcrumbs if the blog page URL is different to the home page URL.
@@ -201,32 +210,55 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				return array();	// Stop here.
 			}
 
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->log( 'getting breadcrumbs for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
+			}
+
 			if ( $mod[ 'is_post' ] ) {
 
-				if ( $this->p->debug->enabled ) {
-
-					$this->p->debug->log( 'getting breadcrumbs for post' );
-				}
-
 				$opt_key = 'bc_list_for_ptn_' . $mod[ 'post_type' ];
+				$def_val = 'ancestors';
 
-				/**
-				 * The default for any undefined post type is 'categories'.
-				 */
-				$parent_type = isset( $this->p->options[ $opt_key ] ) ? $this->p->options[ $opt_key ] : 'categories';
+			} elseif ( $mod[ 'is_term' ] ) {
+
+				$opt_key = 'bc_list_for_tax_' . $mod[ 'tax_slug' ];
+				$def_val = 'ancestors';
+
+			} elseif ( $mod[ 'is_user' ] ) {
+
+				$opt_key = 'bc_list_for_user_page';
+				$def_val = 'home';
+
+			} else {
 
 				if ( $this->p->debug->enabled ) {
 
-					$this->p->debug->log( $opt_key . ' is ' . $parent_type );
+					$this->p->debug->log( 'unknown module type' );
 				}
+
+				return array();	// Stop here.
+			}
+
+			$parent_type = isset( $this->p->options[ $opt_key ] ) ? $this->p->options[ $opt_key ] : $def_val;
+
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->log( 'option ' . $opt_key . ' is ' . $parent_type );
+			}
+
+			if ( 'none' === $parent_type ) {	// Nothing to do.
+
+				return array();	// Stop here.
+			}
+
+			$mods = array();
+
+			if ( $mod[ 'is_post' ] ) {
 
 				switch ( $parent_type ) {
 
-					case 'none':		// Nothing to do.
-
-						return array();	// Stop here.
-
-					case 'ancestors':	// Get post/page parents, grand-parents, etc.
+					case 'ancestors':	// Get page parents, grand-parents, etc.
 				
 						$post_ids = get_post_ancestors( $mod[ 'id' ] ); 
 
@@ -237,19 +269,13 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 								$this->p->debug->log( 'no ancestors found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 							}
 
-							/**
-							 * Add the current webpage.
-							 */
-							$post_ids = array( $mod[ 'id' ] );
+							$post_ids = array( $mod[ 'id' ] );	// Just do the current page.
 
 						} else {
 
 							$post_ids = array_reverse( $post_ids );
 
-							/**
-							 * Add the current webpage.
-							 */
-							$post_ids[] = $mod[ 'id' ];
+							$post_ids[] = $mod[ 'id' ];	// Add the current page last.
 						}
 
 
@@ -257,8 +283,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							$this->p->debug->log_arr( '$post_ids', $post_ids );
 						}
-
-						$mods = array();
 
 						foreach ( $post_ids as $mod_id ) {
 
@@ -295,12 +319,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 								$this->p->debug->log( 'no post terms found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 							}
 
-							$mods = array();
-
-							/**
-							 * Add the current webpage.
-							 */
-							$mods[] = $this->p->post->get_mod( $mod[ 'id' ] );
+							$mods[] = $this->p->post->get_mod( $mod[ 'id' ] );	// Just do the current page.
 
 							WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
 
@@ -312,15 +331,17 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$this->p->debug->log( count( $post_terms ) . ' post terms found' );
 						}
 
-						$bclist_num = 0;
+						$bc_list_num = 0;
 
 						foreach ( $post_terms as $post_term ) {
+
+							$mods = array();
 
 							$term_ids = get_ancestors( $post_term->term_id, $tax_slug, 'taxonomy' );
 
 							if ( empty( $term_ids ) || ! is_array( $term_ids ) ) {
 
-								$term_ids = array( $post_term->term_id );	// Just do the parent.
+								$term_ids = array( $post_term->term_id );	// Just do the parent term.
 
 							} else {
 
@@ -329,19 +350,12 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 								$term_ids[] = $post_term->term_id;		// Add parent term last.
 							}
 
-							$mods = array();
-
-							/**
-							 * Add each post term.
-							 */
 							foreach ( $term_ids as $mod_id ) {
+
 								$mods[] = $this->p->term->get_mod( $mod_id );
 							}
 
-							/**
-							 * Add the current webpage.
-							 */
-							$mods[] = $this->p->post->get_mod( $mod[ 'id' ] );
+							$mods[] = $this->p->post->get_mod( $mod[ 'id' ] );	// Add the current page last.
 
 							/**
 							 * Create a unique @id for the breadcrumbs of each top-level post term.
@@ -353,57 +367,65 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							WpssoBcBreadcrumb::add_itemlist_data( $term_data, $mods, $page_type_id );
 
 							/**
-							 * Multiple breadcrumbs list - merge $json_data and save to $bclist_data array.
+							 * Multiple breadcrumbs list - merge $json_data and save to $bc_list_data array.
 							 */
-							$bclist_data[] = WpssoSchema::return_data_from_filter( $json_data, $term_data, $is_main );
+							$bc_list_data[] = WpssoSchema::return_data_from_filter( $json_data, $term_data, $is_main );
 
-							$bclist_num++;
+							$bc_list_num++;
 
-							if ( $bclist_num >= $bclist_max ) {
+							if ( $bc_list_num >= $bc_list_max ) {
 
 								break;
 							}
 						}
 
-						return $bclist_data;	// Stop here.
+						return $bc_list_data;	// Stop here.
+				}
+
+			} elseif ( $mod[ 'is_term' ] ) {
+
+				switch ( $parent_type ) {
+
+					case 'ancestors':	// Get term parents, grand-parents, etc.
+
+						$term_ids = get_ancestors( $mod[ 'id' ], $mod[ 'tax_slug' ], 'taxonomy' );
+
+						if ( empty( $term_ids ) || ! is_array( $term_ids ) ) {
+
+							$term_ids = array( $mod[ 'id' ] );	// Just do the current term.
+
+						} else {
+
+							$term_ids = array_reverse( $term_ids );
+
+							$term_ids[] = $post_term->term_id;	// Add current term last.
+						}
+
+						foreach ( $term_ids as $mod_id ) {
+
+							$mods[] = $this->p->term->get_mod( $mod_id );
+						}
+
+						WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
+
+						return $json_data;	// Stop here.
+				}
+
+			} elseif ( $mod[ 'is_user' ] ) {
+
+				switch ( $parent_type ) {
+
+					case 'home':
+				
+						$mods[] = $this->p->user->get_mod( $mod[ 'id' ] );
+
+						WpssoBcBreadcrumb::add_itemlist_data( $json_data, $mods, $page_type_id );
+
+						return $json_data;	// Stop here.
 				}
 			}
-		}
 
-		public function filter_messages_tooltip( $text, $msg_key ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
-			if ( strpos( $msg_key, 'tooltip-bc_' ) !== 0 ) {
-
-				return $text;
-			}
-
-			switch ( $msg_key ) {
-
-				case 'tooltip-bc_list_for_ptn':
-
-					$text = __( 'Select the source of breadcrumbs for each public post type.', 'wpsso-breadcrumbs' );
-
-					break;
-
-				case 'tooltip-bc_home_name':
-
-					$text = __( 'The site home page name in the breadcrumbs markup.', 'wpsso-breadcrumbs' );
-
-					break;
-
-				case 'tooltip-bc_wp_home_name':
-
-					$text = __( 'The WordPress home page (ie. the blog page) name in the breadcrumbs markup.', 'wpsso-breadcrumbs' );
-
-					break;
-			}
-
-			return $text;
+			return array();	// Stop here.
 		}
 	}
 }

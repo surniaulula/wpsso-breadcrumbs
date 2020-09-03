@@ -93,7 +93,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			/**
 			 * Add the WordPress home page (ie. the blog page).
 			 */
-			$wp_url = get_bloginfo( $show = 'wpurl', $filter = 'raw' );
+			$wp_url = SucomUtil::get_wp_url( $wpsso->options, $mixed = 'current' );
 
 			if ( $wp_url !== $site_url ) {
 
