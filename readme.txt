@@ -68,21 +68,25 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 2.10.0-dev.4 (2020/09/02)**
+**Version 3.0.0-dev.5 (2020/09/03)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a new "WordPress Home Page Name" option (default value is "Blog").
 	* Renamed the "Home Page Name" option to "Site Home Page Name" (default value is "Home").
+	* Added a new "WordPress Home Page Name" option (default value is "Blog").
+	* Added a new "Breadcrumbs by Taxonomy" option.
+	* Added a new "Breadcrumbs for User Profile" option.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
 	* Updated the `WpssoBcBreadcrumb::add_itemlist_data()` method to add the WordPress Address URL (ie. the "WordPress Home Page") to the breadcrumbs list when different to the Site Address URL (ie. the "Site Home Page").
+	* Added a new lib/filters-messages.php library file.
+	* Added support for terms and users in `WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist()`.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.0.0
+	* WPSSO Core v8.2.3-dev.5
 
 **Version 2.9.0 (2020/08/11)**
 
@@ -101,9 +105,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 2.10.0-dev.4 =
+= 3.0.0-dev.5 =
 
-(2020/09/02) Added a new "WordPress Home Page Name" option (default value is "Blog").
+(2020/09/03) Added new "WordPress Home Page Name", "Breadcrumbs by Taxonomy", and "Breadcrumbs for User Profile" options.
 
 = 2.9.0 =
 
