@@ -99,7 +99,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 						$obj_label = SucomUtilWP::get_object_label( $obj );
 
 						$bc_list_select .= '<p>' . $this->form->get_select( $opt_key, $this->p->cf[ 'form' ][ 'breadcrumbs_for_posts' ],
-							$css_class = 'long_name' ) . ' ' . sprintf( _x( 'for %s', 'option comment', 'wpsso' ), $obj_label ) . '</p>';
+							$css_class = 'long_name' ) . ' ' . sprintf( _x( 'for %s', 'option comment', 'wpsso-breadcrumbs' ), $obj_label ) . '</p>';
 					}
 
 					$tr_key   = 'bc_list_for_ptn';
@@ -127,7 +127,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					}
 
 					$tr_key   = 'bc_list_for_ttn';
-					$th_label = _x( 'Breadcrumbs by Taxonomy', 'option label', 'wpsso' );
+					$th_label = _x( 'Breadcrumbs by Taxonomy', 'option label', 'wpsso-breadcrumbs' );
 
 					$table_rows[ $tr_key ] = $this->form->get_th_html( $th_label, '', $tr_key ) . '<td>' . $bc_list_select . '</td>';
 
