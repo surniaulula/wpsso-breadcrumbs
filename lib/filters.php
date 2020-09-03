@@ -15,6 +15,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 	class WpssoBcFilters {
 
 		private $p;
+		private $msgs;		// WpssoBcFiltersMessages class object.
 
 		public function __construct( &$plugin ) {
 
@@ -218,17 +219,20 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			if ( $mod[ 'is_post' ] ) {
 
 				$opt_key = 'bc_list_for_ptn_' . $mod[ 'post_type' ];
-				$def_val = 'ancestors';
+
+				$default_parent_type = 'categories';
 
 			} elseif ( $mod[ 'is_term' ] ) {
 
 				$opt_key = 'bc_list_for_tax_' . $mod[ 'tax_slug' ];
-				$def_val = 'ancestors';
+
+				$default_parent_type = 'ancestors';
 
 			} elseif ( $mod[ 'is_user' ] ) {
 
 				$opt_key = 'bc_list_for_user_page';
-				$def_val = 'home';
+
+				$default_parent_type = 'home';
 
 			} else {
 
@@ -240,7 +244,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				return array();	// Stop here.
 			}
 
-			$parent_type = isset( $this->p->options[ $opt_key ] ) ? $this->p->options[ $opt_key ] : $def_val;
+			$parent_type = isset( $this->p->options[ $opt_key ] ) ? $this->p->options[ $opt_key ] : $default_parent_type;
 
 			if ( $this->p->debug->enabled ) {
 
@@ -295,24 +299,23 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 					case 'categories':
 
-						$tax_slug = 'category';
+						if ( taxonomy_exists( $mod[ 'post_type' ] . '_category' ) ) {	// Easy Digital Download (ie. 'download_category').
 
-						if ( 'download' === $mod[ 'post_type' ] ) {	// Easy Digital Download.
+							$tax_slug = $mod[ 'post_type' ] . '_category';
+	
+						} elseif ( taxonomy_exists( $mod[ 'post_type' ] . '_cat' ) ) {	// WooCommerce (ie. 'product_cat').
 
-							if ( ! empty( $this->p->avail[ 'ecom' ][ 'edd' ] ) ) {	// Just in case.
+							$tax_slug = $mod[ 'post_type' ] . '_cat';
 
-								$tax_slug = 'download_category';
-							}
+						} else {	// WordPress default.
 
-						} elseif ( 'product' === $mod[ 'post_type' ] ) {	// WooCommerce.
-
-							if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {	// Just in case.
-
-								$tax_slug = 'product_cat';
-							}
+							$tax_slug = 'category';
 						}
 
-						
+						/**
+						 * The following filter, for example, is used by the WPSSO FAQ add-on to return
+						 * 'faq_category' for the 'question' post type.
+						 */
 						$filter_name = SucomUtil::sanitize_hookname( $this->p->lca .  '_bc_category_tax_slug' );
 
 						$tax_slug = apply_filters( $filter_name, $tax_slug, $mod );
