@@ -297,13 +297,25 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 						$tax_slug = 'category';
 
-						if ( 'product' === $mod[ 'post_type' ] ) {
+						if ( 'download' === $mod[ 'post_type' ] ) {	// Easy Digital Download.
 
-							if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
+							if ( ! empty( $this->p->avail[ 'ecom' ][ 'edd' ] ) ) {	// Just in case.
+
+								$tax_slug = 'download_category';
+							}
+
+						} elseif ( 'product' === $mod[ 'post_type' ] ) {	// WooCommerce.
+
+							if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {	// Just in case.
 
 								$tax_slug = 'product_cat';
 							}
 						}
+
+						
+						$filter_name = SucomUtil::sanitize_hookname( $this->p->lca .  '_bc_category_tax_slug' );
+
+						$tax_slug = apply_filters( $filter_name, $tax_slug, $mod );
 
 						if ( $this->p->debug->enabled ) {
 
