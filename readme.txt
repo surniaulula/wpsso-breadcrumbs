@@ -66,7 +66,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-rc.2 (2020/09/05)**
+**Version 3.0.0 (2020/09/05)**
 
 * **New Features**
 	* None.
@@ -85,30 +85,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.3.0-rc.2
-
-**Version 2.9.0 (2020/08/11)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Added support for the new WpssoUtilMetabox class in WPSSO Core v8.0.0.
-* **Requires At Least**
-	* PHP v5.6.
-	* WordPress v4.2.
-	* WPSSO Core v8.0.0
+	* WPSSO Core v8.3.0
 
 == Upgrade Notice ==
 
-= 3.0.0-rc.2 =
+= 3.0.0 =
 
 (2020/09/05) Added new "WordPress Home Page Name" and "Breadcrumbs by Taxonomy" options. Added a cleanup method for Rank Math to remove its Schema BreadcrumbList markup.
-
-= 2.9.0 =
-
-(2020/08/11) Added support for the new WpssoUtilMetabox class in WPSSO Core v8.0.0.
 
