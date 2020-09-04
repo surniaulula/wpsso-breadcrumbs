@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '3.0.0-b.2',	// Plugin version.
+					'version'     => '3.0.0-b.3',	// Plugin version.
 					'opt_version' => '7',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '8.2.3-b.2',
+							'min_version'   => '8.3.0-b.3',
 						),
 					),
 
@@ -69,6 +69,8 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			 */
 			'opt' => array(
 				'defaults' => array(
+					'bc_home_name'                      => 'Home',		// Site Home Page Name.
+					'bc_wp_home_name'                   => 'Blog',		// WordPress Home Page Name.
 					'bc_list_for_ptn_attachment'        => 'categories',
 					'bc_list_for_ptn_download'          => 'categories',	// For Easy Digital Downloads.
 					'bc_list_for_ptn_page'              => 'ancestors',
@@ -81,9 +83,6 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'bc_list_for_tax_link_category'     => 'ancestors',
 					'bc_list_for_tax_post_tag'          => 'ancestors',
 					'bc_list_for_tax_product_cat'       => 'ancestors',	// For WooCommerce etc.
-					'bc_list_for_user_page'             => 'home',
-					'bc_home_name'                      => 'Home',
-					'bc_wp_home_name'                   => 'Blog',
 				),
 			),
 		);

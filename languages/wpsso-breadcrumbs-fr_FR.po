@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
 "POT-Creation-Date: 2020-09-03 11:39-0700\n"
-"PO-Revision-Date: 2020-09-03 11:39-0700\n"
+"PO-Revision-Date: 2020-09-04 06:03-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -55,12 +55,12 @@ msgstr "Réglages du fil d'Ariane"
 #: lib/submenu/bc-general.php:81
 msgctxt "option label"
 msgid "Site Home Page Name"
-msgstr "Nom de la page d'accueil du site"
+msgstr "Nom de page d'accueil du site"
 
 #: lib/submenu/bc-general.php:86
 msgctxt "option label"
 msgid "WordPress Home Page Name"
-msgstr "Nom de la page d'accueil WordPress"
+msgstr "Nom de page d'accueil WordPress"
 
 #: lib/submenu/bc-general.php:102 lib/submenu/bc-general.php:125
 msgctxt "option comment"

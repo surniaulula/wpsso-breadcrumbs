@@ -133,18 +133,6 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 
 					unset( $bc_list_select, $taxonomies, $tr_key, $th_label );	// Just in case.
 
-					/**
-					 * Breadcrumbs List for User Profile.
-					 */
-					$tr_key   = $opt_key = 'bc_list_for_user_page';
-					$th_label = _x( 'Breadcrumbs for User Profile', 'option label', 'wpsso-breadcrumbs' );
-
-					$table_rows[ $tr_key ] = $this->form->get_th_html( $th_label, $css_class = '', $css_id = $tr_key ) . 
-						'<td>' . $this->form->get_select( $opt_key, $this->p->cf[ 'form' ][ 'breadcrumbs_for_users' ],
-							$css_class = 'long_name' ) . '</td>';
-
-					unset( $tr_key, $th_label );	// Just in case.
-
 					break;
 			}
 

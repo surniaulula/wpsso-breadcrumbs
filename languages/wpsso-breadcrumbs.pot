@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.0.0-b.2\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.0.0-b.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -84,11 +84,6 @@ msgstr ""
 #: lib/submenu/bc-general.php:130
 msgctxt "option label"
 msgid "Breadcrumbs by Taxonomy"
-msgstr ""
-
-#: lib/submenu/bc-general.php:140
-msgctxt "option label"
-msgid "Breadcrumbs for User Profile"
 msgstr ""
 
 #: wpsso-breadcrumbs.php:272
