@@ -44,7 +44,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 		 * Library class object variables.
 		 */
 		public $breadcrumb;	// WpssoBcBreadcrumb.
-		public $compat;		// WpssoBcCompat (actions and filters for compatibility).
+		public $compat;		// WpssoBcCompat (3rd party plugin and theme compatibility actions and filters).
 		public $filters;	// WpssoBcFilters.
 		public $reg;		// WpssoBcRegister.
 
@@ -162,7 +162,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 			}
 
 			$this->breadcrumb = new WpssoBcBreadcrumb( $this->p );
-			$this->compat     = new WpssoBcCompat( $this->p );	// Actions and filters for compatibility.
+			$this->compat     = new WpssoBcCompat( $this->p );	// 3rd party plugin and theme compatibility actions and filters.
 			$this->filters    = new WpssoBcFilters( $this->p );
 		}
 
