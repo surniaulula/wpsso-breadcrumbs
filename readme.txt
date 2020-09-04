@@ -66,11 +66,12 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-b.3 (2020/09/03)**
+**Version 3.0.0-rc.1 (2020/09/04)**
 
 * **New Features**
 	* None.
 * **Improvements**
+	* Added a cleanup method for Rank Math to remove its Schema BreadcrumbList markup.
 	* Renamed the "Home Page Name" option to "Site Home Page Name" (default value is "Home").
 	* Added a new "WordPress Home Page Name" option (default value is "Blog").
 	* Added a new "Breadcrumbs by Taxonomy" option.
@@ -80,10 +81,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added a new lib/filters-messages.php library file.
 	* Added support for terms, users, search results, and date archive pages in `WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist()`.
 	* Updated the `WpssoBcBreadcrumb::add_itemlist_data()` method to add the WordPress Address URL (ie. the "WordPress Home Page") to the breadcrumbs list when different to the Site Address URL (ie. the "Site Home Page").
+	* Added a lib/compat.php library file for 3rd party plugin and theme compatibility actions and filters.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.3.0-b.3
+	* WPSSO Core v8.3.0-rc.1
 
 **Version 2.9.0 (2020/08/11)**
 
@@ -102,9 +104,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-b.3 =
+= 3.0.0-rc.1 =
 
-(2020/09/03) Added new "WordPress Home Page Name" and "Breadcrumbs by Taxonomy" options.
+(2020/09/04) Added new "WordPress Home Page Name" and "Breadcrumbs by Taxonomy" options. Added a cleanup method for Rank Math to remove its Schema BreadcrumbList markup.
 
 = 2.9.0 =
 
