@@ -14,7 +14,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.2
  * Tested Up To: 5.5
- * Version: 3.0.0-b.3
+ * Version: 3.0.0-rc.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -38,14 +38,15 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 		/**
 		 * Wpsso plugin class object variable.
 		 */
-		public $p;		// Wpsso
+		public $p;		// Wpsso.
 
 		/**
 		 * Library class object variables.
 		 */
-		public $breadcrumb;	// WpssoBcBreadcrumb
-		public $filters;	// WpssoBcFilters
-		public $reg;		// WpssoBcRegister
+		public $breadcrumb;	// WpssoBcBreadcrumb.
+		public $compat;		// WpssoBcCompat (actions and filters for compatibility).
+		public $filters;	// WpssoBcFilters.
+		public $reg;		// WpssoBcRegister.
 
 		/**
 		 * Reference Variables (config, options, modules, etc.).
@@ -161,6 +162,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 			}
 
 			$this->breadcrumb = new WpssoBcBreadcrumb( $this->p );
+			$this->compat     = new WpssoBcCompat( $this->p );	// Actions and filters for compatibility.
 			$this->filters    = new WpssoBcFilters( $this->p );
 		}
 

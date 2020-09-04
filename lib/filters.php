@@ -19,9 +19,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 		public function __construct( &$plugin ) {
 
-			/**
-			 * Just in case - prevent filters from being hooked and executed more than once.
-			 */
 			static $do_once = null;
 
 			if ( true === $do_once ) {
@@ -56,14 +53,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				}
 
 				$this->msgs = new WpssoBcFiltersMessages( $plugin );
-			}
-
-			/**
-			 * Disable addition of Schema BreadcrumbList JSON-LD markup by the WooCommerce WC_Structured_Data class (since v3.0.0).
-			 */
-			if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
-
-				add_filter( 'woocommerce_structured_data_breadcrumblist', '__return_empty_array' );
 			}
 		}
 
