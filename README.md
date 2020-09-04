@@ -18,11 +18,11 @@
 
 <p><strong>Most comprehensive Schema BreadcrumbsList markup of any plugin!</strong></p>
 
-<p>Adds Schema BreadcrumbList markup to posts, pages, and custom post types.</p>
+<p>Add Schema BreadcrumbList markup in JSON-LD format to posts, pages, custom post types, categories, tags, custom taxonomies, search results, and date archive pages.</p>
+
+<p>Select between using ancestors (aka parents) or categories for the breadcrumbs markup of posts, pages, and custom post types.</p>
 
 <p>Uses <a href="https://developers.google.com/search/docs/data-types/breadcrumb">Google's preferred Schema JSON-LD format for your breadcrumbs markup</a>.</p>
-
-<p>Select between using ancestors or categories for your breadcrumbs.</p>
 
 <h3>No templates to modify or update!</h3>
 
@@ -31,8 +31,6 @@
 <h3>WPSSO Core Plugin Required</h3>
 
 <p>WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a>.</p>
-
-<p>The WPSSO BC add-on includes Schema BreadcrumbsList markup of ancestors and categories - for the best and most complete Schema markup for your content, consider pairing the WPSSO BC add-on with the <a href="https://wordpress.org/plugins/wpsso-schema-json-ld/">WPSSO Schema JSON-LD Markup</a> (aka WPSSO JSON) add-on.</p>
 
 
 <h2>Installation</h2>

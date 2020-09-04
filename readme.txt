@@ -21,11 +21,11 @@ Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Stru
 
 **Most comprehensive Schema BreadcrumbsList markup of any plugin!**
 
-Adds Schema BreadcrumbList markup to posts, pages, and custom post types.
+Add Schema BreadcrumbList markup in JSON-LD format to posts, pages, custom post types, categories, tags, custom taxonomies, search results, and date archive pages.
+
+Select between using ancestors (aka parents) or categories for the breadcrumbs markup of posts, pages, and custom post types.
 
 Uses [Google's preferred Schema JSON-LD format for your breadcrumbs markup](https://developers.google.com/search/docs/data-types/breadcrumb).
-
-Select between using ancestors or categories for your breadcrumbs.
 
 <h3>No templates to modify or update!</h3>
 
@@ -34,8 +34,6 @@ Simply activate / deactivate the plugin to enable / disable the addition of Sche
 <h3>WPSSO Core Plugin Required</h3>
 
 WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/).
-
-The WPSSO BC add-on includes Schema BreadcrumbsList markup of ancestors and categories - for the best and most complete Schema markup for your content, consider pairing the WPSSO BC add-on with the [WPSSO Schema JSON-LD Markup](https://wordpress.org/plugins/wpsso-schema-json-ld/) (aka WPSSO JSON) add-on.
 
 == Installation ==
 
@@ -68,7 +66,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-b.2 (2020/09/03)**
+**Version 3.0.0-b.3 (2020/09/03)**
 
 * **New Features**
 	* None.
@@ -76,17 +74,16 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Renamed the "Home Page Name" option to "Site Home Page Name" (default value is "Home").
 	* Added a new "WordPress Home Page Name" option (default value is "Blog").
 	* Added a new "Breadcrumbs by Taxonomy" option.
-	* Added a new "Breadcrumbs for User Profile" option.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
 	* Added a new lib/filters-messages.php library file.
-	* Added support for terms and users in `WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist()`.
+	* Added support for terms, users, search results, and date archive pages in `WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist()`.
 	* Updated the `WpssoBcBreadcrumb::add_itemlist_data()` method to add the WordPress Address URL (ie. the "WordPress Home Page") to the breadcrumbs list when different to the Site Address URL (ie. the "Site Home Page").
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
-	* WPSSO Core v8.2.3-b.2
+	* WPSSO Core v8.3.0-b.3
 
 **Version 2.9.0 (2020/08/11)**
 
@@ -105,9 +102,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-b.2 =
+= 3.0.0-b.3 =
 
-(2020/09/03) Added new "WordPress Home Page Name", "Breadcrumbs by Taxonomy", and "Breadcrumbs for User Profile" options.
+(2020/09/03) Added new "WordPress Home Page Name" and "Breadcrumbs by Taxonomy" options.
 
 = 2.9.0 =
 
