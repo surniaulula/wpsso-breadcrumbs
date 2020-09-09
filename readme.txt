@@ -71,7 +71,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a cleanup method for Rank Math to remove its Schema BreadcrumbList markup.
+	* Added Schema cleanup for Rank Math to remove its Schema BreadcrumbList markup.
 	* Renamed the "Home Page Name" option to "Site Home Page Name" (default value is "Home").
 	* Added a new "WordPress Home Page Name" option (default value is "Blog").
 	* Added a new "Breadcrumbs by Taxonomy" option.
@@ -91,5 +91,5 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.0.0 =
 
-(2020/09/05) Added new "WordPress Home Page Name" and "Breadcrumbs by Taxonomy" options. Added a cleanup method for Rank Math to remove its Schema BreadcrumbList markup.
+(2020/09/05) Added new "WordPress Home Page Name" and "Breadcrumbs by Taxonomy" options. Added Schema cleanup for Rank Math.
 
