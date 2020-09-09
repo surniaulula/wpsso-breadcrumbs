@@ -37,10 +37,14 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 				$this->p->debug->mark();
 			}
 
-			if ( ! is_admin() ) {
+			if ( is_admin() ) {
+
+				// Nothing to do.
+
+			} else {
 
 				/**
-				 * Remove the Rank Math Schema BreadcrumbList markup.
+				 * Rank Math.
 				 */
 				if ( ! empty( $this->p->avail[ 'seo' ][ 'rankmath' ] ) ) {
 	
@@ -48,18 +52,18 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 				}
 	
 				/**
-				 * Disable Schema BreadcrumbList JSON-LD markup from the WooCommerce WC_Structured_Data class (since v3.0.0).
+				 * WooCommerce.
 				 */
 				if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
 	
+					/**
+					 * Disable Schema BreadcrumbList JSON-LD markup from the WooCommerce WC_Structured_Data class (since v3.0.0).
+					 */
 					add_filter( 'woocommerce_structured_data_breadcrumblist', '__return_empty_array' );
 				}
 			}
 		}
 
-		/**
-		 * Remove the Rank Math Schema BreadcrumbList markup.
-		 */
 		public function cleanup_rankmath_json_ld( $data ) {
 
 			if ( $this->p->debug->enabled ) {
@@ -67,6 +71,9 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 				$this->p->debug->mark();
 			}
 
+			/**
+			 * Remove the Rank Math Schema BreadcrumbList markup.
+			 */
 			if ( isset( $data[ 'BreadcrumbList' ] ) ) {
 
 				unset( $data[ 'BreadcrumbList' ] );
