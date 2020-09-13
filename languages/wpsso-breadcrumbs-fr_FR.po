@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2020-09-04 12:39-0700\n"
-"PO-Revision-Date: 2020-09-04 12:39-0700\n"
+"POT-Creation-Date: 2020-09-13 12:21-0700\n"
+"PO-Revision-Date: 2020-09-13 12:21-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -12,6 +12,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: gettext/gettext-config.php:6 lib/gettext-config.php:6
+msgctxt "lib file description"
+msgid "Breadcrumbs"
+msgstr "Fil d'Ariane"
+
+#: gettext/gettext-config.php:7 lib/gettext-config.php:7
+msgctxt "plugin description"
+msgid "Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Structured Data."
+msgstr "Balisage de Schéma BreadcrumbList en format JSON-LD pour de meilleurs résultats riche de Google avec données structurées."
 
 #: lib/filters-messages.php:64
 msgid "The site home page name in the breadcrumbs markup."
@@ -36,16 +46,6 @@ msgstr "La sélection des catégories d'articles utilise la taxonomie 'category'
 #: lib/filters-messages.php:90
 msgid "Select the source of breadcrumbs for each public taxonomy (ie. categories, tags, and other custom taxonomies)."
 msgstr "Sélectionnez la source du fil d'Ariane pour chaque taxonomie publique (c.-à-d. catégories, étiquettes, et autres taxonomies personnalisée)."
-
-#: lib/gettext-config.php:6
-msgctxt "lib file description"
-msgid "Breadcrumbs"
-msgstr "Fil d'Ariane"
-
-#: lib/gettext-config.php:7
-msgctxt "plugin description"
-msgid "Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Structured Data."
-msgstr "Balisage de Schéma BreadcrumbList en format JSON-LD pour de meilleurs résultats riche de Google avec données structurées."
 
 #: lib/submenu/bc-general.php:38
 msgctxt "metabox title"
