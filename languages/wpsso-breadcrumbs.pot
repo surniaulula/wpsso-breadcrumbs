@@ -13,12 +13,12 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: gettext/gettext-config.php:6 lib/gettext-config.php:6
+#: gettext/gettext-lib-config.php:6
 msgctxt "lib file description"
 msgid "Breadcrumbs"
 msgstr ""
 
-#: gettext/gettext-config.php:7 lib/gettext-config.php:7
+#: gettext/gettext-lib-config.php:7
 msgctxt "plugin description"
 msgid ""
 "Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with "
