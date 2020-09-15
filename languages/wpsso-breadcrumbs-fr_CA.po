@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.0.0\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2020-09-14 11:15-0700\n"
-"PO-Revision-Date: 2020-09-15 09:01-0700\n"
+"POT-Creation-Date: 2020-09-15 10:49-0700\n"
+"PO-Revision-Date: 2020-09-15 10:49-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -19,6 +19,12 @@ msgid "Breadcrumbs"
 msgstr "Fil d'Ariane"
 
 #: gettext/gettext-lib-config.php:7
+#, fuzzy
+msgctxt "plugin name"
+msgid "WPSSO Schema Breadcrumbs Markup"
+msgstr "WPSSO balisage de Schéma fil d'Ariane"
+
+#: gettext/gettext-lib-config.php:8
 msgctxt "plugin description"
 msgid "Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Structured Data."
 msgstr "Balisage de Schéma BreadcrumbList en format JSON-LD pour de meilleurs résultats riche de Google avec données structurées."
