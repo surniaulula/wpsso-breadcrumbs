@@ -19,6 +19,11 @@ msgid "Breadcrumbs"
 msgstr ""
 
 #: gettext/gettext-lib-config.php:7
+msgctxt "plugin name"
+msgid "WPSSO Schema Breadcrumbs Markup"
+msgstr ""
+
+#: gettext/gettext-lib-config.php:8
 msgctxt "plugin description"
 msgid ""
 "Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with "
