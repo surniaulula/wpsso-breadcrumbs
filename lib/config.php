@@ -148,4 +148,3 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		}
 	}
 }
-
