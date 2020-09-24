@@ -121,12 +121,12 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				 * Begin timer.
 				 */
 				if ( $wpsso->debug->enabled ) {
-	
+
 					$wpsso->debug->mark( 'adding mods data' );	// Begin timer.
 				}
-	
+
 				foreach ( $mods as $mod ) {
-	
+
 					$item_count++;
 
 					/**
@@ -134,25 +134,25 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					 */
 					$item_name = $wpsso->page->get_title( $max_len = 0, $dots = '', $mod, $read_cache = true,
 						$add_hashtags = false, $do_encode = true, $md_key = 'schema_title', $sep = false );
-	
+
 					$item_url = $wpsso->util->get_canonical_url( $mod );
-	
+
 					$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 						'position' => $item_count,
 						'name'     => $item_name,
 						'item'     => $item_url,
 					) );
-	
+
 					$json_data[ $prop_name ][] = $list_item;
 				}
-	
+
 				unset( $added_page_type_ids[ $page_type_id ] );
-	
+
 				/**
 				 * End timer.
 				 */
 				if ( $wpsso->debug->enabled ) {
-	
+
 					$wpsso->debug->mark( 'adding mods data' );	// End timer.
 				}
 			}

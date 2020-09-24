@@ -177,7 +177,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			 * Breacrumbs are not required for the home page.
 			 */
 			if ( $mod[ 'is_home' ] ) {
-		
+
 				if ( $mod[ 'is_home_posts' ] ) {
 
 					$site_url = SucomUtil::get_site_url( $this->p->options, $mixed = 'current' );
@@ -187,7 +187,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 					 * Add breadcrumbs if the blog page URL is different to the home page URL.
 					 */
 					if ( $wp_url !== $site_url ) {
-					
+
 						$item_mods = array();	// Return only the home page and blog page breadcrumbs.
 					}
 				}
@@ -207,7 +207,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						break;
 
 					case 'ancestors':	// Get page parents, grand-parents, etc.
-				
+
 						$post_ids = get_post_ancestors( $mod[ 'id' ] ); 
 
 						if ( empty( $post_ids ) || ! is_array( $post_ids ) ) {
@@ -246,7 +246,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						if ( taxonomy_exists( $mod[ 'post_type' ] . '_category' ) ) {	// Easy Digital Download (ie. 'download_category').
 
 							$tax_slug = $mod[ 'post_type' ] . '_category';
-	
+
 						} elseif ( taxonomy_exists( $mod[ 'post_type' ] . '_cat' ) ) {	// WooCommerce (ie. 'product_cat').
 
 							$tax_slug = $mod[ 'post_type' ] . '_cat';
@@ -343,7 +343,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 						return $bc_list_data;	// Return the multi-dimensional array.
 					}
-	
+
 			} elseif ( $mod[ 'is_term' ] ) {
 
 				$opt_key = 'bc_list_for_tax_' . $mod[ 'tax_slug' ];

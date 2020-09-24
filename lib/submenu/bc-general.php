@@ -117,10 +117,10 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					$taxonomies     = SucomUtilWP::get_taxonomies( 'objects' );
 
 					foreach ( $taxonomies as $obj ) {
-				
+
 						$opt_key   = 'bc_list_for_tax_' . $obj->name;
 						$obj_label = SucomUtilWP::get_object_label( $obj );
-				
+
 						$bc_list_select .= '<p>' . $this->form->get_select( $opt_key, $this->p->cf[ 'form' ][ 'breadcrumbs_for_terms' ],
 							$css_class = 'long_name' ) . ' ' . sprintf( _x( 'for %s', 'option comment', 'wpsso-breadcrumbs' ),
 								$obj_label ) . '</p>' . "\n";

@@ -47,15 +47,15 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 				 * Rank Math.
 				 */
 				if ( ! empty( $this->p->avail[ 'seo' ][ 'rankmath' ] ) ) {
-	
+
 					add_filter( 'rank_math/json_ld', array( $this, 'cleanup_rankmath_json_ld' ), PHP_INT_MAX );
 				}
-	
+
 				/**
 				 * WooCommerce.
 				 */
 				if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
-	
+
 					/**
 					 * Disable Schema BreadcrumbList JSON-LD markup from the WooCommerce WC_Structured_Data class (since v3.0.0).
 					 */
