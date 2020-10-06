@@ -40,21 +40,11 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 
 	class WpssoBc extends WpssoAddOn {
 
-		/**
-		 * Library class object variables.
-		 */
 		public $breadcrumb;	// WpssoBcBreadcrumb class.
 		public $compat;		// WpssoBcCompat class.
 		public $filters;	// WpssoBcFilters class.
-		public $reg;		// WpssoBcRegister class.
 
-		/**
-		 * Reference Variables (config, options, modules, etc.).
-		 */
 		protected $p;
-		protected $ext   = 'wpssobc';
-		protected $p_ext = 'bc';
-		protected $cf    = array();
 
 		private static $instance = null;
 
