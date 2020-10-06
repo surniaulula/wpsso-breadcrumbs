@@ -94,7 +94,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			return $add_slug ? $info[ 'slug' ] . '-' . $info[ 'version' ] : $info[ 'version' ];
 		}
 
-		public static function set_constants( $plugin_file_path ) { 
+		public static function set_constants( $plugin_file ) { 
 
 			if ( defined( 'WPSSOBC_VERSION' ) ) {	// Define constants only once.
 
@@ -106,15 +106,15 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			/**
 			 * Define fixed constants.
 			 */
-			define( 'WPSSOBC_FILEPATH', $plugin_file_path );						
+			define( 'WPSSOBC_FILEPATH', $plugin_file );						
 			define( 'WPSSOBC_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-breadcrumbs/wpsso-breadcrumbs.php.
-			define( 'WPSSOBC_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file_path ) ) ) );
+			define( 'WPSSOBC_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file ) ) ) );
 			define( 'WPSSOBC_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-breadcrumbs.
-			define( 'WPSSOBC_URLPATH', trailingslashit( plugins_url( '', $plugin_file_path ) ) );
+			define( 'WPSSOBC_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
 			define( 'WPSSOBC_VERSION', $info[ 'version' ] );						
 		}
 
-		public static function require_libs( $plugin_file_path ) {
+		public static function require_libs( $plugin_file ) {
 
 			require_once WPSSOBC_PLUGINDIR . 'lib/breadcrumb.php';
 			require_once WPSSOBC_PLUGINDIR . 'lib/compat.php';	// 3rd party plugin and theme compatibility actions and filters.
