@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.0.1\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.1.0-dev.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -28,6 +28,18 @@ msgctxt "plugin description"
 msgid ""
 "Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with "
 "Structured Data."
+msgstr ""
+
+#: lib/abstracts/com/add-on.php:155
+msgid ""
+"The %1$s add-on requires the %2$s plugin &mdash; please activate the missing "
+"plugin."
+msgstr ""
+
+#: lib/abstracts/com/add-on.php:169
+msgid ""
+"The %1$s add-on requires %2$s version %3$s or newer (version %4$s is "
+"currently installed)."
 msgstr ""
 
 #: lib/filters-messages.php:64
@@ -89,18 +101,6 @@ msgstr ""
 #: lib/submenu/bc-general.php:130
 msgctxt "option label"
 msgid "Breadcrumbs by Taxonomy"
-msgstr ""
-
-#: wpsso-breadcrumbs.php:274
-msgid ""
-"The %1$s version %2$s add-on requires the %3$s plugin &mdash; please "
-"activate the missing plugin."
-msgstr ""
-
-#: wpsso-breadcrumbs.php:287
-msgid ""
-"The %1$s version %2$s add-on requires %3$s version %4$s or newer (version "
-"%5$s is currently installed)."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
