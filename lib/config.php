@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'opt_version' => '7',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
-					'desc'        => 'Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Structured Data.',
+					'desc'        => 'Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results.',
 					'slug'        => 'wpsso-breadcrumbs',
 					'base'        => 'wpsso-breadcrumbs/wpsso-breadcrumbs.php',
 					'update_auth' => '',		// No premium version.
