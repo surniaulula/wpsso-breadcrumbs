@@ -63,21 +63,12 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 			return self::$instance;
 		}
 
-		public function init_textdomain( $debug_enabled = false ) {
+		public function init_textdomain() {
 
-			static $local_cache = null;
-
-			if ( null === $local_cache || $debug_enabled ) {
-
-				$local_cache = 'wpsso-breadcrumbs';
-
-				load_plugin_textdomain( 'wpsso-breadcrumbs', false, 'wpsso-breadcrumbs/languages/' );
-			}
-
-			return $local_cache;
+			load_plugin_textdomain( 'wpsso-breadcrumbs', false, 'wpsso-breadcrumbs/languages/' );
 		}
 
-		public function init_objects() {
+		public function init_objects( $is_admin, $doing_ajax, $doing_cron ) {
 
 			$this->p =& Wpsso::get_instance();
 
