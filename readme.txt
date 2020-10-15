@@ -13,7 +13,7 @@ Requires At Least: 4.4
 Tested Up To: 5.5.1
 Stable Tag: 3.0.1
 
-Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Structured Data.
+Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results.
 
 == Description ==
 
@@ -34,6 +34,8 @@ Simply activate / deactivate the plugin to enable / disable the addition of Sche
 <h3>WPSSO Core Plugin Required</h3>
 
 WPSSO Schema Breadcrumbs Markup (aka WPSSO BC) is an add-on for the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/).
+
+WPSSO Core and its add-ons make sure your content looks great on social sites and in search results, no matter how your URLs are crawled, shared, re-shared, posted, or embedded.
 
 == Installation ==
 
