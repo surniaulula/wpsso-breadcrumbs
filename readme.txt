@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.4
 Tested Up To: 5.5.1
-Stable Tag: 3.0.1
+Stable Tag: 3.1.0
 
 Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results.
 
@@ -125,8 +125,4 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 = 3.1.0 =
 
 (2020/10/17) Refactored the add-on class to extend a new WpssoAddOn abstract class.
-
-= 3.0.1 =
-
-(2020/09/15) Updated the French plugin translations.
 
