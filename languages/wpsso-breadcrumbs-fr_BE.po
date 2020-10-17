@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.1.0\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2020-10-07 16:21-0700\n"
-"PO-Revision-Date: 2020-10-07 16:22-0700\n"
+"POT-Creation-Date: 2020-10-17 11:37-0700\n"
+"PO-Revision-Date: 2020-10-17 11:37-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:157
+#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:161
 msgid "The %1$s add-on requires the %2$s plugin &mdash; please activate the missing plugin."
 msgstr "L'ajout %1$s nécessite l'extension %2$s &mdash; veuillez activer l'extension manquante."
 
-#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:171
+#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:179
 msgid "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed)."
 msgstr "L'ajout %1$s nécessite %2$s version %3$s ou plus récente (la version %4$s est actuellement installée)."
 
@@ -33,8 +33,8 @@ msgstr "WPSSO balisage de Schéma fil d'Ariane"
 
 #: gettext/gettext-lib-config.php:8
 msgctxt "plugin description"
-msgid "Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Structured Data."
-msgstr "Balisage de Schéma BreadcrumbList en format JSON-LD pour de meilleurs résultats riche de Google avec données structurées."
+msgid "Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results."
+msgstr "Balisage de Schéma BreadcrumbList avec des données structurées JSON-LD pour de meilleurs résultats enrichis Google."
 
 #: lib/filters-messages.php:64
 msgid "The site home page name in the breadcrumbs markup."
@@ -99,8 +99,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-breadcrumbs/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-breadcrumbs/"
 
 #. Description of the plugin/theme
-msgid "Schema BreadcrumbList Markup in JSON-LD for Better Google Rich Results with Structured Data."
-msgstr "Balisage de Schéma BreadcrumbList en format JSON-LD pour de meilleurs résultats riche de Google avec données structurées."
+msgid "Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results."
+msgstr "Balisage de Schéma BreadcrumbList avec des données structurées JSON-LD pour de meilleurs résultats enrichis Google."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
