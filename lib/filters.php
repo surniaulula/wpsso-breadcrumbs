@@ -208,7 +208,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 					case 'ancestors':	// Get page parents, grand-parents, etc.
 
-						$post_ids = get_post_ancestors( $mod[ 'id' ] ); 
+						$post_ids = get_post_ancestors( $mod[ 'id' ] );
 
 						if ( empty( $post_ids ) || ! is_array( $post_ids ) ) {
 

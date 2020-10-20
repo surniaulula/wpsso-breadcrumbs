@@ -106,12 +106,12 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			/**
 			 * Define fixed constants.
 			 */
-			define( 'WPSSOBC_FILEPATH', $plugin_file );						
+			define( 'WPSSOBC_FILEPATH', $plugin_file );
 			define( 'WPSSOBC_PLUGINBASE', $info[ 'base' ] );	// Example: wpsso-breadcrumbs/wpsso-breadcrumbs.php.
 			define( 'WPSSOBC_PLUGINDIR', trailingslashit( realpath( dirname( $plugin_file ) ) ) );
 			define( 'WPSSOBC_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-breadcrumbs.
 			define( 'WPSSOBC_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
-			define( 'WPSSOBC_VERSION', $info[ 'version' ] );						
+			define( 'WPSSOBC_VERSION', $info[ 'version' ] );
 		}
 
 		public static function require_libs( $plugin_file ) {
