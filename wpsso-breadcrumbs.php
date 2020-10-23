@@ -40,13 +40,13 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 
 	class WpssoBc extends WpssoAddOn {
 
-		public $breadcrumb;	// WpssoBcBreadcrumb class.
-		public $compat;		// WpssoBcCompat class.
-		public $filters;	// WpssoBcFilters class.
+		public $breadcrumb;	// WpssoBcBreadcrumb class object.
+		public $compat;		// WpssoBcCompat class object.
+		public $filters;	// WpssoBcFilters class object.
 
-		protected $p;
+		protected $p;	// Wpsso class object.
 
-		private static $instance = null;
+		private static $instance = null;	// WpssoBc class object.
 
 		public function __construct() {
 

@@ -14,8 +14,8 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 	class WpssoBcFilters {
 
-		private $p;
-		private $msgs;		// WpssoBcFiltersMessages class object.
+		private $p;	// Wpsso class object.
+		private $msgs;	// WpssoBcFiltersMessages class object.
 
 		public function __construct( &$plugin ) {
 

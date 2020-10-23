@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 	 */
 	class WpssoBcCompat {
 
-		private $p;
+		private $p;	// Wpsso class object.
 
 		public function __construct( &$plugin ) {
 
