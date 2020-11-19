@@ -1,4 +1,4 @@
-=== Schema Breadcrumbs Markup | WPSSO Add-on ===
+=== WPSSO Schema Breadcrumbs Markup ===
 Plugin Name: WPSSO Schema Breadcrumbs Markup
 Plugin Slug: wpsso-breadcrumbs
 Text Domain: wpsso-breadcrumbs
