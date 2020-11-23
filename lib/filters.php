@@ -260,7 +260,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						 * The following filter, for example, is used by the WPSSO FAQ add-on to return
 						 * 'faq_category' for the 'question' post type.
 						 */
-						$filter_name = SucomUtil::sanitize_hookname( $this->p->lca .  '_bc_category_tax_slug' );
+						$filter_name = SucomUtil::sanitize_hookname( 'wpsso_bc_category_tax_slug' );
 
 						$tax_slug = apply_filters( $filter_name, $tax_slug, $mod );
 
