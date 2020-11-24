@@ -59,7 +59,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 
 				$table_rows = array();	// Older versions forced a reference argument.
 
-				$table_rows = $this->p->msgs->get_schema_disabled_rows( $table_rows, $col_span = 1 );
+				$table_rows = $this->p->msgs->get_schema_disabled_rows( $table_rows );
 
 			} else {
 
