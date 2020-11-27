@@ -44,13 +44,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			if ( is_admin() ) {
 
-				/**
-				 * Instantiate the WpssoBcFiltersMessages class object.
-				 */
-				if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
-
-					require_once WPSSOBC_PLUGINDIR . 'lib/filters-messages.php';
-				}
+				require_once WPSSOBC_PLUGINDIR . 'lib/filters-messages.php';
 
 				$this->msgs = new WpssoBcFiltersMessages( $plugin );
 			}
