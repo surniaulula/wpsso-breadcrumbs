@@ -15,33 +15,22 @@ if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
 	class WpssoBcFiltersMessages {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoBc class object.
 
 		/**
 		 * Instantiated by WpssoBcFilters->__construct().
 		 */
-		public function __construct( &$plugin ) {
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
+			$this->a =& $addon;
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
-			if ( is_admin() ) {
-
-				$this->p->util->add_plugin_filters( $this, array( 
-					'messages_tooltip'      => 2,
-				) );
-			}
+			$this->p->util->add_plugin_filters( $this, array( 
+				'messages_tooltip' => 2,
+			) );
 		}
 
 		public function filter_messages_tooltip( $text, $msg_key ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			if ( strpos( $msg_key, 'tooltip-bc_' ) !== 0 ) {
 

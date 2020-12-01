@@ -18,8 +18,12 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 	class WpssoBcCompat {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoBc class object.
 
-		public function __construct( &$plugin ) {
+		/**
+		 * Instantiated by WpssoBc->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			static $do_once = null;
 
@@ -31,17 +35,9 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 			$do_once = true;
 
 			$this->p =& $plugin;
+			$this->a =& $addon;
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
-			if ( is_admin() ) {
-
-				// Nothing to do.
-
-			} else {
+			if ( ! is_admin() ) {
 
 				/**
 				 * Rank Math.
@@ -65,11 +61,6 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 		}
 
 		public function cleanup_rankmath_json_ld( $data ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			/**
 			 * Remove the Rank Math Schema BreadcrumbList markup.

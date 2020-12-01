@@ -15,9 +15,13 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 	class WpssoBcFilters {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoBc class object.
 		private $msgs;	// WpssoBcFiltersMessages class object.
 
-		public function __construct( &$plugin ) {
+		/**
+		 * Instantiated by WpssoBc->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			static $do_once = null;
 
@@ -29,11 +33,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			$do_once = true;
 
 			$this->p =& $plugin;
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
+			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array( 
 				'option_type'                               => 2,
@@ -46,16 +46,11 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				require_once WPSSOBC_PLUGINDIR . 'lib/filters-messages.php';
 
-				$this->msgs = new WpssoBcFiltersMessages( $plugin );
+				$this->msgs = new WpssoBcFiltersMessages( $plugin, $addon );
 			}
 		}
 
 		public function filter_option_type( $type, $base_key ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			if ( ! empty( $type ) ) {
 
@@ -80,11 +75,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 		public function filter_get_defaults( $defs ) {
 
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
-
 			/**
 			 * Add options using a key prefix array and post type names.
 			 */
@@ -100,11 +90,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		}
 
 		public function filter_json_array_schema_page_type_ids( $page_type_ids, $mod ) {
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
 
 			$page_type_ids[ 'breadcrumb.list' ] = true;
 

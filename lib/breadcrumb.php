@@ -15,15 +15,15 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 	class WpssoBcBreadcrumb {
 
 		private $p;	// Wpsso class object.
+		private $a;	// WpssoBc class object.
 
-		public function __construct( &$plugin ) {
+		/**
+		 * Instantiated by WpssoBc->init_objects().
+		 */
+		public function __construct( &$plugin, &$addon ) {
 
 			$this->p =& $plugin;
-
-			if ( $this->p->debug->enabled ) {
-
-				$this->p->debug->mark();
-			}
+			$this->a =& $addon;
 		}
 
 		public static function add_itemlist_data( array &$json_data, array $mods, $page_type_id ) {	// Pass by reference is OK.
@@ -31,11 +31,6 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			static $added_page_type_ids = array();
 
 			$wpsso =& Wpsso::get_instance();
-
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->mark();
-			}
 
 			$prop_name = 'itemListElement';
 

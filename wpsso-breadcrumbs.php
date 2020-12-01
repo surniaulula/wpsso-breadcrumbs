@@ -14,7 +14,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.4
  * Tested Up To: 5.6
- * Version: 3.1.1
+ * Version: 3.2.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -85,9 +85,9 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 				return;	// Stop here.
 			}
 
-			$this->breadcrumb = new WpssoBcBreadcrumb( $this->p );
-			$this->compat     = new WpssoBcCompat( $this->p );	// 3rd party plugin and theme compatibility actions and filters.
-			$this->filters    = new WpssoBcFilters( $this->p );
+			$this->breadcrumb = new WpssoBcBreadcrumb( $this->p , $this);
+			$this->compat     = new WpssoBcCompat( $this->p, $this );	// 3rd party plugin and theme compatibility actions and filters.
+			$this->filters    = new WpssoBcFilters( $this->p, $this );
 		}
 	}
 

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.1.1\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -42,32 +42,32 @@ msgid ""
 "Rich Results."
 msgstr ""
 
-#: lib/filters-messages.php:55
+#: lib/filters-messages.php:44
 msgid "The site home page name in the breadcrumbs markup."
 msgstr ""
 
-#: lib/filters-messages.php:61
+#: lib/filters-messages.php:50
 msgid ""
 "The WordPress home page (ie. the blog page) name in the breadcrumbs markup."
 msgstr ""
 
-#: lib/filters-messages.php:67
+#: lib/filters-messages.php:56
 msgid "Select the source of breadcrumbs for user profile pages."
 msgstr ""
 
-#: lib/filters-messages.php:73
+#: lib/filters-messages.php:62
 msgid ""
 "Select the source of breadcrumbs for each public post type (ie. posts, "
 "pages, products, and other custom post types)."
 msgstr ""
 
-#: lib/filters-messages.php:75
+#: lib/filters-messages.php:64
 msgid ""
 "The post categories selection uses the 'category' taxonomy by default, and "
 "the 'product_cat' taxonomy for WooCommerce products."
 msgstr ""
 
-#: lib/filters-messages.php:81
+#: lib/filters-messages.php:70
 msgid ""
 "Select the source of breadcrumbs for each public taxonomy (ie. categories, "
 "tags, and other custom taxonomies)."
