@@ -248,7 +248,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$this->p->debug->log( 'taxonomy slug is ' . $tax_slug );
 						}
 
-						$post_terms = wp_get_post_terms( $mod[ 'id' ], $tax_slug );
+						$post_terms = wp_get_post_terms( $mod[ 'id' ], $tax_slug );	// Returns WP_Error if $tax_slug does not exist.
 
 						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {
 
@@ -274,21 +274,21 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 						$bc_list_data = array();
 
-						foreach ( $post_terms as $post_term ) {
+						foreach ( $post_terms as $term_obj ) {
 
 							$bc_list_mods = array();
 
-							$term_ids = get_ancestors( $post_term->term_id, $tax_slug, 'taxonomy' );
+							$term_ids = get_ancestors( $term_obj->term_id, $tax_slug, 'taxonomy' );
 
 							if ( empty( $term_ids ) || ! is_array( $term_ids ) ) {
 
-								$term_ids = array( $post_term->term_id );	// Just do the parent term.
+								$term_ids = array( $term_obj->term_id );	// Just do the parent term.
 
 							} else {
 
 							$term_ids = array_reverse( $term_ids );
 
-								$term_ids[] = $post_term->term_id;		// Add parent term last.
+								$term_ids[] = $term_obj->term_id;		// Add parent term last.
 							}
 
 							foreach ( $term_ids as $mod_id ) {
@@ -301,7 +301,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							/**
 							 * Create a unique @id for the breadcrumbs of each top-level post term.
 							 */
-							$data_id = $json_data[ 'url' ] . $id_anchor . $page_type_id . $id_delim . $post_term->slug;
+							$data_id = $json_data[ 'url' ] . $id_anchor . $page_type_id . $id_delim . $term_obj->slug;
 
 							$term_data = array( '@id' => $data_id );
 
