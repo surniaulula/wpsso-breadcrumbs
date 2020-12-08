@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.1.1\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2020-10-17 11:37-0700\n"
-"PO-Revision-Date: 2020-10-17 11:37-0700\n"
+"POT-Creation-Date: 2020-12-08 06:27-0800\n"
+"PO-Revision-Date: 2020-12-08 06:27-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -13,11 +13,11 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:161
+#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:178
 msgid "The %1$s add-on requires the %2$s plugin &mdash; please activate the missing plugin."
 msgstr "L'ajout %1$s nécessite l'extension %2$s &mdash; veuillez activer l'extension manquante."
 
-#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:179
+#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:196
 msgid "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed)."
 msgstr "L'ajout %1$s nécessite %2$s version %3$s ou plus récente (la version %4$s est actuellement installée)."
 
@@ -36,56 +36,56 @@ msgctxt "plugin description"
 msgid "Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results."
 msgstr "Balisage de Schéma BreadcrumbList avec des données structurées JSON-LD pour de meilleurs résultats enrichis Google."
 
-#: lib/filters-messages.php:64
+#: lib/filters-messages.php:44
 msgid "The site home page name in the breadcrumbs markup."
 msgstr "Le nom de la page d'accueil du site dans le balisage du fil d'Ariane."
 
-#: lib/filters-messages.php:70
+#: lib/filters-messages.php:50
 msgid "The WordPress home page (ie. the blog page) name in the breadcrumbs markup."
 msgstr "Le nom de la page d'accueil WordPress (la page blog) dans le balisage du fil d'Ariane."
 
-#: lib/filters-messages.php:76
+#: lib/filters-messages.php:56
 msgid "Select the source of breadcrumbs for user profile pages."
 msgstr "Sélectionnez la source du fil d'Ariane pour les pages de profil utilisateur."
 
-#: lib/filters-messages.php:82
+#: lib/filters-messages.php:62
 msgid "Select the source of breadcrumbs for each public post type (ie. posts, pages, products, and other custom post types)."
 msgstr "Sélectionnez la source du fil d'Ariane pour chaque type d'article public (c.-à-d. articles, pages, produits, et autres types d'articles personnalisés)."
 
-#: lib/filters-messages.php:84
+#: lib/filters-messages.php:64
 msgid "The post categories selection uses the 'category' taxonomy by default, and the 'product_cat' taxonomy for WooCommerce products."
 msgstr "La sélection des catégories d'articles utilise la taxonomie 'category' par défaut et la taxonomie 'product_cat' pour les produits WooCommerce."
 
-#: lib/filters-messages.php:90
+#: lib/filters-messages.php:70
 msgid "Select the source of breadcrumbs for each public taxonomy (ie. categories, tags, and other custom taxonomies)."
 msgstr "Sélectionnez la source du fil d'Ariane pour chaque taxonomie publique (c.-à-d. catégories, étiquettes, et autres taxonomies personnalisée)."
 
-#: lib/submenu/bc-general.php:38
+#: lib/submenu/bc-general.php:40
 msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
 msgstr "Réglages du fil d'Ariane"
 
-#: lib/submenu/bc-general.php:81
+#: lib/submenu/bc-general.php:83
 msgctxt "option label"
 msgid "Site Home Page Name"
 msgstr "Nom de page d'accueil du site"
 
-#: lib/submenu/bc-general.php:86
+#: lib/submenu/bc-general.php:88
 msgctxt "option label"
 msgid "WordPress Home Page Name"
 msgstr "Nom de page d'accueil WordPress"
 
-#: lib/submenu/bc-general.php:102 lib/submenu/bc-general.php:125
+#: lib/submenu/bc-general.php:104 lib/submenu/bc-general.php:127
 msgctxt "option comment"
 msgid "for %s"
 msgstr "pour %s"
 
-#: lib/submenu/bc-general.php:106
+#: lib/submenu/bc-general.php:108
 msgctxt "option label"
 msgid "Breadcrumbs by Post Type"
 msgstr "Fil d'Ariane par types d'article"
 
-#: lib/submenu/bc-general.php:130
+#: lib/submenu/bc-general.php:132
 msgctxt "option label"
 msgid "Breadcrumbs by Taxonomy"
 msgstr "Fil d'Ariane par taxonomie"
