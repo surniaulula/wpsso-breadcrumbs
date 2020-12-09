@@ -366,39 +366,37 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				$item_mods = array( $mod );
 
-			} elseif ( is_search() ) {
+			} elseif ( $mod[ 'is_search' ] ) {
 
-				$item_mods = array( array_merge( $mod, array( 'is_search' => true ) ) );
+				$item_mods = array( $mod );
 
-			} elseif ( SucomUtil::is_archive_page() ) {
+			} elseif ( $mod[ 'is_archive' ] ) {
 
-				$mod[ 'is_archive' ] = true;
+				if ( $mod[ 'is_month' ] ) {
+					
+					/**
+					 * Add year and month.
+					 */
+					$item_mods = array (
+						array_merge( $mod, array( 'is_year' => true ) ),
+						$mod,
+					);
 
-				if ( is_date() ) {
+				} elseif ( $mod[ 'is_day' ] ) {
 
-					$mod[ 'is_date' ] = true;
+					/**
+					 * Add year, month, and day.
+					 */
+					$item_mods = array (
+						array_merge( $mod, array( 'is_year'  => true ) ),
+						array_merge( $mod, array( 'is_month' => true ) ),
+						$mod,
+					);
 
-					if ( is_year() ) {
-
-						$item_mods = array ( array_merge( $mod, array( 'is_year' => true ) ) );
-
-					} elseif ( is_month() ) {
-
-						$item_mods = array (
-							array_merge( $mod, array( 'is_year' => true ) ),
-							array_merge( $mod, array( 'is_month' => true ) ),
-						);
-
-					} elseif ( is_day() ) {
-
-						$item_mods = array (
-							array_merge( $mod, array( 'is_year' => true ) ),
-							array_merge( $mod, array( 'is_month' => true ) ),
-							array_merge( $mod, array( 'is_day' => true ) ),
-						);
-					}
+				} else {
+				
+					$item_mods = array( $mod );
 				}
-
 			}
 
 			/**

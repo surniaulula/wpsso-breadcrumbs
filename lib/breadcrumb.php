@@ -58,10 +58,9 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 				return $item_count;
 
-			} else {
-
-				$added_page_type_ids[ $page_type_id ] = true;
 			}
+
+			$added_page_type_ids[ $page_type_id ] = true;
 
 			/**
 			 * Add the site home page.
