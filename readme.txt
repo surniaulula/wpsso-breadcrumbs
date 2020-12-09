@@ -68,6 +68,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.3.0-dev.1 (2020/12/09)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added support for new `$mod` array elements in WPSSO Core v8.17.0.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.5.
+	* WPSSO Core v8.17.0-dev.1.
+
 **Version 3.2.0 (2020/12/01)**
 
 * **New Features**
@@ -136,6 +151,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.4.1.
 
 == Upgrade Notice ==
+
+= 3.3.0-dev.1 =
+
+(2020/12/09) Added support for new `$mod` array elements in WPSSO Core v8.17.0.
 
 = 3.2.0 =
 
