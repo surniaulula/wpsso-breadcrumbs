@@ -373,7 +373,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			} elseif ( $mod[ 'is_archive' ] ) {
 
 				if ( $mod[ 'is_month' ] ) {
-					
+
 					/**
 					 * Add year and month.
 					 */
@@ -394,7 +394,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 					);
 
 				} else {
-				
+
 					$item_mods = array( $mod );
 				}
 			}
