@@ -16,6 +16,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoBc class object.
+		private $edit;	// WpssoBcFiltersEdit class object.
 		private $msgs;	// WpssoBcFiltersMessages class object.
 
 		/**
@@ -43,6 +44,10 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			) );
 
 			if ( is_admin() ) {
+
+				require_once WPSSOBC_PLUGINDIR . 'lib/filters-edit.php';
+
+				$this->edit = new WpssoBcFiltersEdit( $plugin, $addon );
 
 				require_once WPSSOBC_PLUGINDIR . 'lib/filters-messages.php';
 
@@ -148,8 +153,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				$this->p->debug->log( 'maximum breadcrumb scripts is ' . $bc_list_max );
 			}
 
-			$item_mods = false;	// Do not return breadcrumbs by default.
-
+			$item_mods  = false;	// Do not return breadcrumbs by default.
 			$item_count = 0;
 
 			/**
@@ -160,7 +164,8 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				if ( $mod[ 'is_home_posts' ] ) {
 
 					$site_url = SucomUtil::get_site_url( $this->p->options, $mixed = 'current' );
-					$wp_url   = SucomUtil::get_wp_url( $this->p->options, $mixed = 'current' );
+
+					$wp_url = SucomUtil::get_wp_url( $this->p->options, $mixed = 'current' );
 
 					/**
 					 * Add breadcrumbs if the blog page URL is different to the home page URL.
@@ -175,9 +180,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				$opt_key = 'bc_list_for_ptn_' . $mod[ 'post_type' ];
 
-				$def_parent_type = 'categories';
-
-				$parent_type = empty( $this->p->options[ $opt_key ] ) ? $def_parent_type : $this->p->options[ $opt_key ];
+				$parent_type = empty( $this->p->options[ $opt_key ] ) ? 'categories' : $this->p->options[ $opt_key ];
 
 				switch ( $parent_type ) {
 
@@ -220,42 +223,16 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 						break;
 
-					case 'categories':
-
-						if ( taxonomy_exists( $mod[ 'post_type' ] . '_category' ) ) {	// Easy Digital Download (ie. 'download_category').
-
-							$tax_slug = $mod[ 'post_type' ] . '_category';
-
-						} elseif ( taxonomy_exists( $mod[ 'post_type' ] . '_cat' ) ) {	// WooCommerce (ie. 'product_cat').
-
-							$tax_slug = $mod[ 'post_type' ] . '_cat';
-
-						} else {	// WordPress default.
-
-							$tax_slug = 'category';
-						}
+					case 'categories':	// Get post categories (ie. primary taxonomy terms).
 
 						/**
-						 * The following filter, for example, is used by the WPSSO FAQ add-on to return
-						 * 'faq_category' for the 'question' post type.
+						 * Returns an associative array of term IDs and their names or objects.
+						 *
+						 * The primary or default term ID will be included as the first array element.
 						 */
-						$filter_name = SucomUtil::sanitize_hookname( 'wpsso_bc_category_tax_slug' );
+						$post_terms = $this->p->post->get_primary_terms( $mod, $tax_slug = 'category', $output = 'objects' );
 
-						$tax_slug = apply_filters( $filter_name, $tax_slug, $mod );
-
-						if ( $this->p->debug->enabled ) {
-
-							$this->p->debug->log( 'taxonomy slug is ' . $tax_slug );
-						}
-
-						$post_terms = wp_get_post_terms( $mod[ 'id' ], $tax_slug );	// Returns WP_Error if $tax_slug does not exist.
-
-						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {
-
-							if ( $this->p->debug->enabled ) {
-
-								$this->p->debug->log( 'no post terms found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
-							}
+						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {	// No terms or taxonomy does not exist.
 
 							$item_mods = array( $this->p->post->get_mod( $mod[ 'id' ] ) );	// Just do the current page.
 
@@ -263,22 +240,21 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						}
 
 						/**
-						 * Create one or more breadcrumb lists and return the multi-dimensional array.
+						 * The 'wpsso_primary_tax_slug' filter is hooked by the EDD and WooCommerce integration modules.
 						 */
-						if ( $this->p->debug->enabled ) {
+						$primary_tax_slug = apply_filters( 'wpsso_primary_tax_slug', $tax_slug = 'category', $mod );
 
-							$this->p->debug->log( count( $post_terms ) . ' post terms found' );
-						}
-
-						$bc_list_num = 0;
-
+						/**
+						 * Create a Schema BreadcrumbList item list for each category.
+						 */
+						$bc_list_num  = 0;
 						$bc_list_data = array();
 
 						foreach ( $post_terms as $term_obj ) {
 
 							$bc_list_mods = array();
 
-							$term_ids = get_ancestors( $term_obj->term_id, $tax_slug, 'taxonomy' );
+							$term_ids = get_ancestors( $term_obj->term_id, $primary_tax_slug, 'taxonomy' );
 
 							if ( empty( $term_ids ) || ! is_array( $term_ids ) ) {
 
@@ -286,7 +262,10 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							} else {
 
-							$term_ids = array_reverse( $term_ids );
+								/**
+								 * Add the ancestors in reverse order.
+								 */
+								$term_ids = array_reverse( $term_ids );
 
 								$term_ids[] = $term_obj->term_id;		// Add parent term last.
 							}
@@ -300,11 +279,11 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							/**
 							 * Create a unique @id for the breadcrumbs of each top-level post term.
+							 *
+							 * Example "@id": "/2013/03/15/tiled-gallery/#sso/breadcrumb.list/post-format-gallery".
 							 */
-							$data_id = $json_data[ 'url' ] . $id_anchor . $page_type_id . $id_delim . $term_obj->slug;
-
-							$term_data = array( '@id' => $data_id );
-
+							$data_id    = $json_data[ 'url' ] . $id_anchor . $page_type_id . $id_delim . $term_obj->slug;
+							$term_data  = array( '@id' => $data_id );
 							$item_count = WpssoBcBreadcrumb::add_itemlist_data( $term_data, $bc_list_mods, $page_type_id );
 
 							/**
@@ -327,9 +306,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				$opt_key = 'bc_list_for_tax_' . $mod[ 'tax_slug' ];
 
-				$def_parent_type = 'ancestors';
-
-				$parent_type = empty( $this->p->options[ $opt_key ] ) ? $def_parent_type : $this->p->options[ $opt_key ];
+				$parent_type = empty( $this->p->options[ $opt_key ] ) ? 'ancestors' : $this->p->options[ $opt_key ];
 
 				switch ( $parent_type ) {
 

@@ -32,8 +32,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 			$wpsso =& Wpsso::get_instance();
 
-			$prop_name = 'itemListElement';
-
+			$prop_name  = 'itemListElement';
 			$item_count = isset( $json_data[ $prop_name ] ) ? count( $json_data[ $prop_name ] ) : 0;
 
 			if ( empty( $page_type_id ) ) {
@@ -70,8 +69,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$wpsso->debug->log( 'adding site home' );
 			}
 
-			$site_url = SucomUtil::get_site_url( $wpsso->options, $mixed = 'current' );
-
+			$site_url  = SucomUtil::get_site_url( $wpsso->options, $mixed = 'current' );
 			$home_name = SucomUtil::get_key_value( $key = 'bc_home_name', $wpsso->options, $mixed = 'current' );
 
 			$item_count++;
@@ -124,10 +122,13 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$item_count++;
 
 					/**
-					 * Use $sep = false to avoid adding parent names in the term title.
+					 * Use $title_sep = false to avoid adding parent names in the term title.
 					 */
+					$title_keys = array( 'bc_title', 'schema_title', 'og_title' );
+					$title_sep  = false;	// Do not add a separator.
+
 					$item_name = $wpsso->page->get_title( $max_len = 0, $dots = '', $mod, $read_cache = true,
-						$add_hashtags = false, $do_encode = true, $md_key = 'schema_title', $sep = false );
+						$add_hashtags = false, $do_encode = true, $title_keys, $title_sep );
 
 					$item_url = $wpsso->util->get_canonical_url( $mod );
 

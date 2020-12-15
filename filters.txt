@@ -1,3 +1,0 @@
-
-'wpsso_bc_category_tax_slug' ( $tax_slug, $mod )
-
