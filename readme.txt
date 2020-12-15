@@ -68,6 +68,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.4.0-dev.3 (2020/12/15)**
+
+* **New Features**
+	* Added a new "Breadcrumb Title" option in the Document SSO metabox.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v5.6.
+	* WordPress v4.5.
+	* WPSSO Core v8.17.0.
+
 **Version 3.3.0 (2020/12/11)**
 
 * **New Features**
@@ -151,6 +166,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.4.1.
 
 == Upgrade Notice ==
+
+= 3.4.0-dev.3 =
+
+(2020/12/15) Added a new "Breadcrumb Title" option in the Document SSO metabox.
 
 = 3.3.0 =
 
