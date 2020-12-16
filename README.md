@@ -47,6 +47,10 @@
 
 <h2>Frequently Asked Questions</h2>
 
+<h3 class="top">Frequently Asked Questions</h3>
 
+<ul>
+<li><a href="https://wpsso.com/docs/plugins/wpsso-breadcrumbs/faqs/how-do-i-add-wpsso-breadcrumbs-to-my-theme/">How do I add WPSSO breadcrumbs to my theme?</a></li>
+</ul>
 
 

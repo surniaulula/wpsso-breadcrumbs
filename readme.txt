@@ -46,6 +46,10 @@ WPSSO Core and its add-ons make sure your content looks best on social sites and
 
 == Frequently Asked Questions ==
 
+<h3 class="top">Frequently Asked Questions</h3>
+
+* [How do I add WPSSO breadcrumbs to my theme?](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/faqs/how-do-i-add-wpsso-breadcrumbs-to-my-theme/)
+
 == Screenshots ==
 
 01. WPSSO BC settings page includes options to select the type of breadcrumbs for each post type (media, post, page, and custom post types).
