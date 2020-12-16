@@ -48,7 +48,7 @@ WPSSO Core and its add-ons make sure your content looks best on social sites and
 
 == Screenshots ==
 
-01. WPSSO BC settings page includes options to select the kind of breadcrumbs for each post type (media, post, page, and custom post types).
+01. WPSSO BC settings page includes options to select the type of breadcrumbs for each post type (media, post, page, and custom post types).
 
 == Changelog ==
 
