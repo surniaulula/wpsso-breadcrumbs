@@ -182,6 +182,8 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 		/**
 		 * Returns an array of link arrays.
+		 *
+		 * Use $list_max = 0 or false to include all breadcrumb lists.
 		 */
 		public static function get_mod_itemlist_links( array $mod, $list_max = 1 ) {
 
@@ -197,7 +199,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				return array();
 			}
 
-			if ( $list_max < count( $json_data ) ) {
+			if ( $list_max && $list_max < count( $json_data ) ) {
 
 				$json_data = array_slice( $json_data, 0, $list_max );
 			}

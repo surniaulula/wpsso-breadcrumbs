@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.3.0\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.4.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
-"POT-Creation-Date: 2020-12-10 10:30-0800\n"
-"PO-Revision-Date: 2020-12-10 10:30-0800\n"
+"POT-Creation-Date: 2020-12-16 10:13-0800\n"
+"PO-Revision-Date: 2020-12-16 10:14-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -36,29 +36,38 @@ msgctxt "plugin description"
 msgid "Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results."
 msgstr "Balisage de Schéma BreadcrumbList avec des données structurées JSON-LD pour de meilleurs résultats enrichis Google."
 
-#: lib/filters-messages.php:44
+#: lib/filters-edit.php:43
+msgctxt "option label"
+msgid "Breadcrumb Title"
+msgstr "Titre du fil d'Ariane"
+
+#: lib/filters-messages.php:45
 msgid "The site home page name in the breadcrumbs markup."
 msgstr "Le nom de la page d'accueil du site dans le balisage du fil d'Ariane."
 
-#: lib/filters-messages.php:50
+#: lib/filters-messages.php:51
 msgid "The WordPress home page (ie. the blog page) name in the breadcrumbs markup."
 msgstr "Le nom de la page d'accueil WordPress (la page blog) dans le balisage du fil d'Ariane."
 
-#: lib/filters-messages.php:56
+#: lib/filters-messages.php:57
 msgid "Select the source of breadcrumbs for user profile pages."
 msgstr "Sélectionnez la source du fil d'Ariane pour les pages de profil utilisateur."
 
-#: lib/filters-messages.php:62
+#: lib/filters-messages.php:63
 msgid "Select the source of breadcrumbs for each public post type (ie. posts, pages, products, and other custom post types)."
 msgstr "Sélectionnez la source du fil d'Ariane pour chaque type d'article public (c.-à-d. articles, pages, produits, et autres types d'articles personnalisés)."
 
-#: lib/filters-messages.php:64
+#: lib/filters-messages.php:65
 msgid "The post categories selection uses the 'category' taxonomy by default, and the 'product_cat' taxonomy for WooCommerce products."
 msgstr "La sélection des catégories d'articles utilise la taxonomie 'category' par défaut et la taxonomie 'product_cat' pour les produits WooCommerce."
 
-#: lib/filters-messages.php:70
+#: lib/filters-messages.php:71
 msgid "Select the source of breadcrumbs for each public taxonomy (ie. categories, tags, and other custom taxonomies)."
 msgstr "Sélectionnez la source du fil d'Ariane pour chaque taxonomie publique (c.-à-d. catégories, étiquettes, et autres taxonomies personnalisée)."
+
+#: lib/filters-messages.php:90
+msgid "A short title used for the Schema and HTML breadcrumb item name."
+msgstr "Un titre court utilisé pour le nom de l'élément du fil d'Ariane Schéma et HTML."
 
 #: lib/submenu/bc-general.php:40
 msgctxt "metabox title"
@@ -75,17 +84,17 @@ msgctxt "option label"
 msgid "WordPress Home Page Name"
 msgstr "Nom de page d'accueil WordPress"
 
-#: lib/submenu/bc-general.php:104 lib/submenu/bc-general.php:127
+#: lib/submenu/bc-general.php:109 lib/submenu/bc-general.php:140
 msgctxt "option comment"
 msgid "for %s"
 msgstr "pour %s"
 
-#: lib/submenu/bc-general.php:108
+#: lib/submenu/bc-general.php:115
 msgctxt "option label"
 msgid "Breadcrumbs by Post Type"
 msgstr "Fil d'Ariane par types d'article"
 
-#: lib/submenu/bc-general.php:132
+#: lib/submenu/bc-general.php:146
 msgctxt "option label"
 msgid "Breadcrumbs by Taxonomy"
 msgstr "Fil d'Ariane par taxonomie"

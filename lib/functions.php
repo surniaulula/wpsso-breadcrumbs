@@ -12,6 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'wpsso_bc_show_itemlist_html' ) ) {
 
+	/**
+	 * Use $list_max = 0 or false to include all WPSSO breadcrumb lists.
+	 *
+	 * $link_sep is automatically encoded for display in the HTML webpage.
+	 */
 	function wpsso_bc_show_itemlist_html( $list_max = 1, $link_sep = ' > ', $include_last = false ) {
 
 		echo wpsso_bc_get_itemlist_html( $list_max, $link_sep, $include_last );
