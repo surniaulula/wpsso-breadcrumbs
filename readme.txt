@@ -48,7 +48,7 @@ WPSSO Core and its add-ons make sure your content looks best on social sites and
 
 <h3 class="top">Frequently Asked Questions</h3>
 
-* [How do I add WPSSO breadcrumbs to my theme?](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/faqs/how-do-i-add-wpsso-breadcrumbs-to-my-theme/)
+* [How can I add WPSSO breadcrumbs to my theme?](https://wpsso.com/docs/plugins/wpsso-breadcrumbs/faqs/how-can-i-add-wpsso-breadcrumbs-to-my-theme/)
 
 == Screenshots ==
 
