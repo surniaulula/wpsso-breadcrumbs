@@ -8,7 +8,7 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-breadcrumbs/assets/
 Tags: schema, breadcrumbs, hierarchy, seo, google, categories, tags, search
 Contributors: jsmoriss
-Requires PHP: 5.6
+Requires PHP: 7.0
 Requires At Least: 4.5
 Tested Up To: 5.6
 Stable Tag: 3.3.0
@@ -87,7 +87,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added a new `WpssoBcBreadcrumb::get_mod_itemlist_html()` method.
 	* Added a new `WpssoBcBreadcrumb::get_mod_itemlist_links()` method.
 * **Requires At Least**
-	* PHP v5.6.
+	* PHP v7.0.
 	* WordPress v4.5.
 	* WPSSO Core v8.17.2-b.1.
 
