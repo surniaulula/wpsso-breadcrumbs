@@ -157,6 +157,13 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			return $item_count;
 		}
 
+		/**
+		 * Returns an HTML breadcrumbs string for the given $mod.
+		 *
+		 * Use $list_max = 0 or false to include all WPSSO breadcrumb lists.
+		 *
+		 * $link_sep is automatically encoded for display in the HTML webpage.
+		 */
 		public static function get_mod_itemlist_html( array $mod, $list_max = 1, $link_sep = ' > ', $include_last = false ) {
 
 			$itemlist_links = self::get_mod_itemlist_links( $mod, $list_max );
@@ -181,7 +188,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 		}
 
 		/**
-		 * Returns an array of link arrays.
+		 * Returns an array of HTML link arrays.
 		 *
 		 * Use $list_max = 0 or false to include all breadcrumb lists.
 		 */
@@ -199,7 +206,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				return array();
 			}
 
-			if ( $list_max && $list_max < count( $json_data ) ) {
+			if ( $list_max && count( $json_data ) > $list_max ) {
 
 				$json_data = array_slice( $json_data, 0, $list_max );
 			}
