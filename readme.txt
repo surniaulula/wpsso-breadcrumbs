@@ -68,7 +68,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.4.0-dev.3 (2020/12/15)**
+**Version 3.4.0-b.1 (2020/12/16)**
 
 * **New Features**
 	* Added a new "Breadcrumb Title" option in the Document SSO metabox.
@@ -77,11 +77,15 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Added support for `WpssoPost->get_primary_terms()` from WPSSO Core v8.17.2.
+	* Added a new `wpsso_bc_show_itemlist_html()` function.
+	* Added a new `wpsso_bc_get_itemlist_html()` function.
+	* Added a new `WpssoBcBreadcrumb::get_mod_itemlist_html()` method.
+	* Added a new `WpssoBcBreadcrumb::get_mod_itemlist_links()` method.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.5.
-	* WPSSO Core v8.17.0.
+	* WPSSO Core v8.17.2-b.1.
 
 **Version 3.3.0 (2020/12/11)**
 
@@ -167,9 +171,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.4.0-dev.3 =
+= 3.4.0-b.1 =
 
-(2020/12/15) Added a new "Breadcrumb Title" option in the Document SSO metabox.
+(2020/12/16) Added a new "Breadcrumb Title" option in the Document SSO metabox.
 
 = 3.3.0 =
 
