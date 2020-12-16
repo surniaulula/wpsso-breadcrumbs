@@ -158,14 +158,14 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				if ( $mod[ 'is_home_posts' ] ) {
 
-					$site_url = SucomUtil::get_site_url( $this->p->options, $mixed = 'current' );
+					$home_url = SucomUtil::get_home_url( $this->p->options, $mixed = 'current' );
 
 					$wp_url = SucomUtil::get_wp_url( $this->p->options, $mixed = 'current' );
 
 					/**
 					 * Add breadcrumbs if the blog page URL is different to the home page URL.
 					 */
-					if ( $wp_url !== $site_url ) {
+					if ( $wp_url !== $home_url ) {
 
 						$item_mods = array();	// Return only the home page and blog page breadcrumbs.
 					}
