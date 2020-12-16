@@ -11,7 +11,7 @@
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results.
- * Requires PHP: 5.6
+ * Requires PHP: 7.0
  * Requires At Least: 4.5
  * Tested Up To: 5.6
  * Version: 3.4.0-b.1

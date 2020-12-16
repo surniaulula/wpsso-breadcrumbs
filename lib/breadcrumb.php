@@ -188,7 +188,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 		}
 
 		/**
-		 * Returns an array of HTML link arrays.
+		 * Returns an array of arrays with HTML link elements.
 		 *
 		 * Use $list_max = 0 or false to include all breadcrumb lists.
 		 */
