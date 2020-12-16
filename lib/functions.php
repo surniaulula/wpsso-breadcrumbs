@@ -12,20 +12,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'wpsso_bc_show_itemlist_html' ) ) {
 
-	function wpsso_bc_show_itemlist_html( $itemlist_max = 1, $item_sep = ' > ', $include_last = false ) {
+	function wpsso_bc_show_itemlist_html( $list_max = 1, $link_sep = ' > ', $include_last = false ) {
 
-		echo wpsso_bc_get_itemlist_html( $itemlist_max, $item_sep, $include_last );
+		echo wpsso_bc_get_itemlist_html( $list_max, $link_sep, $include_last );
 	}
 }
 
 if ( ! function_exists( 'wpsso_bc_get_itemlist_html' ) ) {
 
-	function wpsso_bc_get_itemlist_html( $itemlist_max = 1, $item_sep = ' > ', $include_last = false ) {
+	function wpsso_bc_get_itemlist_html( $list_max = 1, $link_sep = ' > ', $include_last = false ) {
 
 		$wpsso =& Wpsso::get_instance();
 
-		$mod = $wpsso->page->get_mod( $use_post = false );	// Use the WP_Query, not the current $post global.
+		$use_post = apply_filters( 'wpsso_use_post', in_the_loop() ? true : false );
 
-		return WpssoBcBreadcrumb::get_mod_itemlist_html( $mod, $itemlist_max, $item_sep, $include_last );
+		$mod = $wpsso->page->get_mod( $use_post );
+
+		return WpssoBcBreadcrumb::get_mod_itemlist_html( $mod, $list_max, $link_sep, $include_last );
 	}
 }

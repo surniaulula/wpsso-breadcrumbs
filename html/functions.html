@@ -1,0 +1,53 @@
+
+<p>If your theme lacks a breadcrumb feature, or you wish to replace you theme's breadcrumb feature with WPSSO breadcrumbs, you can
+use the <code>wpsso_bc_show_itemlist_html()</code> function in your <a
+href="https://developer.wordpress.org/themes/advanced-topics/child-themes/">child theme</a> header template (or any other
+template). The <code>wpsso_bc_show_itemlist_html()</code> function can be called <a href="https://codex.wordpress.org/The_Loop">in
+the loop</a>, if you wish to add breadcrumbs to individual posts within an archive page.</p>
+
+<p>Using <a href="http://wptest.io/">WP Test data</a>, the default <code>wpsso_bc_show_itemlist_html()</code> header output for the
+Tiled Gallery post might look like this:</p>
+
+<pre>
+&lt;div class="wpsso-bc-breadcrumbs"&gt;
+    &lt;a href="http://example.com"&gt;Home&lt;/a&gt; &gt; &lt;a href="http://example.com/category/post-format-gallery/"&gt;Gallery&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+<p>The <code>wpsso_bc_show_itemlist_html()</code> function supports three arguments. The defaults are:</p>
+
+<pre>
+wpsso_bc_show_itemlist_html( $list_max = 1, $link_sep = ' &gt; ', $include_last = false );
+</pre>
+
+<p>The <code>$list_max</code> argument allows you to add more than one line of breadcrumbs (if your post is a member of several
+categories, for example), the <code>$link_sep</code> argument allows you to change the default link separator, and
+<code>$include_last</code> allows you to include the current item in the breadcrumbs.</p>
+
+<p>Using <code>wpsso_bc_show_itemlist_html( $list_max = 3, $link_sep = ' | ', $include_last = true )</code> for the Tiled Gallery
+post might look like this:</p>
+
+<pre>
+&lt;div class="wpsso-bc-breadcrumbs"&gt;
+    &lt;a href="http://example.com"&gt;Home&lt;/a&gt; | &lt;a href="http://example.com/category/post-format-gallery/"&gt;Gallery&lt;/a&gt; | Tiled Gallery
+&lt;/div&gt;
+
+&lt;div class="wpsso-bc-breadcrumbs"&gt;
+    &lt;a href="http://example.com"&gt;Home&lt;/a&gt; | &lt;a href="http://example.com/category/images/"&gt;Images&lt;/a&gt; | Tiled Gallery
+&lt;/div&gt;
+
+&lt;div class="wpsso-bc-breadcrumbs"&gt;
+    &lt;a href="http://example.com"&gt;Home&lt;/a&gt; | &lt;a href="http://example.com/category/jetpack/"&gt;Jetpack&lt;/a&gt; | Tiled Gallery
+&lt;/div&gt;
+</pre>
+
+When adding the <code>wpsso_bc_show_itemlist_html()</code> function to your theme template(s), do not forget to test for its
+existance, so you can deactivate the WPSSO BC add-on without causing a PHP fatal error.
+
+<pre>
+<?php if ( function_exists( 'wpsso_bc_show_itemlist_html' ) ) {
+
+	wpsso_bc_show_itemlist_html();
+} ?>
+</pre>
+

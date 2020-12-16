@@ -157,21 +157,33 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			return $item_count;
 		}
 
-		public static function get_mod_itemlist_html( array $mod, $itemlist_max = 1, $item_sep = ' > ', $include_last = false ) {
+		public static function get_mod_itemlist_html( array $mod, $list_max = 1, $link_sep = ' > ', $include_last = false ) {
 
-			$list_links = self::get_mod_itemlist_links( $mod, $itemlist_max );
-			
-			if ( ! $include_last ) {
+			$itemlist_links = self::get_mod_itemlist_links( $mod, $list_max );
 
-				array_pop( $list_links );
+			$link_sep_encoded = SucomUtil::encode_html_emoji( $link_sep );	// Does not double-encode.
+
+			$html = '';
+
+			foreach ( $itemlist_links as $single_list ) {
+
+				if ( ! $include_last ) {
+
+					array_pop( $single_list );
+				}
+
+				$html .= '<div class="wpsso-bc-breadcrumbs">' . "\n";
+				$html .= "\t" . implode( $link_sep_encoded, $single_list ) . "\n";
+				$html .= '</div>' . "\n\n";
 			}
-
-			$html = implode( htmlentities( $item_sep ), $list_links );
 
 			return $html;
 		}
 
-		public static function get_mod_itemlist_links( array $mod, $itemlist_max = 1 ) {
+		/**
+		 * Returns an array of link arrays.
+		 */
+		public static function get_mod_itemlist_links( array $mod, $list_max = 1 ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -185,14 +197,14 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				return array();
 			}
 
-			if ( $itemlist_max < count( $json_data ) ) {
+			if ( $list_max < count( $json_data ) ) {
 
-				$json_data = array_slice( $json_data, 0, $itemlist_max );
+				$json_data = array_slice( $json_data, 0, $list_max );
 			}
 
-			$list_links = array();
+			$itemlist_links = array();
 
-			foreach ( $json_data as $itemlist ) {
+			foreach ( $json_data as $list_idx => $itemlist ) {
 
 				if ( empty( $itemlist[ 'itemListElement' ] ) || ! is_array( $itemlist[ 'itemListElement' ] ) ) {	// Just in case.
 
@@ -201,20 +213,20 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 				$last_num = count( $itemlist[ 'itemListElement' ] ) - 1;
 
-				foreach ( $itemlist[ 'itemListElement' ] as $num => $list_item ) {
+				foreach ( $itemlist[ 'itemListElement' ] as $item_idx => $list_item ) {
 
-					if ( $num < $last_num ) {
+					if ( $item_idx < $last_num ) {
 
-						$list_links[] = '<a href="' . $list_item[ 'item' ] . '">' . $list_item[ 'name' ] . '</a>';
+						$itemlist_links[ $list_idx ][ $item_idx ] = '<a href="' . $list_item[ 'item' ] . '">' . $list_item[ 'name' ] . '</a>';
 
 					} else {
 
-						$list_links[] = $list_item[ 'name' ];
+						$itemlist_links[ $list_idx ][ $item_idx ] = $list_item[ 'name' ];
 					}
 				}
 			}
 
-			return $list_links;
+			return $itemlist_links;
 		}
 	}
 }
