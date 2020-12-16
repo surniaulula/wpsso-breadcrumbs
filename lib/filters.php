@@ -131,18 +131,13 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			if ( empty( $json_data[ 'url' ] ) ) {
 
-				if ( ! empty( $mt_og[ 'og:url' ] ) ) {
+				if ( empty( $mt_og[ 'og:url' ] ) ) {
 
-					$json_data = array( 'url' => $mt_og[ 'og:url' ] );
+					$json_data = array( 'url' => $this->p->util->get_sharing_url( $mod ) );
 
 				} else {
 
-					if ( $this->p->debug->enabled ) {
-
-						$this->p->debug->log( 'exiting early: url not found for json data' );
-					}
-
-					return array();	// Stop here.
+					$json_data = array( 'url' => $mt_og[ 'og:url' ] );
 				}
 			}
 

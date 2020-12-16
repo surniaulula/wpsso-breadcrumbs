@@ -32,7 +32,8 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 			$wpsso =& Wpsso::get_instance();
 
-			$prop_name  = 'itemListElement';
+			$prop_name = 'itemListElement';
+
 			$item_count = isset( $json_data[ $prop_name ] ) ? count( $json_data[ $prop_name ] ) : 0;
 
 			if ( empty( $page_type_id ) ) {
@@ -69,7 +70,8 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$wpsso->debug->log( 'adding site home' );
 			}
 
-			$site_url  = SucomUtil::get_site_url( $wpsso->options, $mixed = 'current' );
+			$site_url = SucomUtil::get_site_url( $wpsso->options, $mixed = 'current' );
+
 			$home_name = SucomUtil::get_key_value( $key = 'bc_home_name', $wpsso->options, $mixed = 'current' );
 
 			$item_count++;
@@ -153,6 +155,66 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			}
 
 			return $item_count;
+		}
+
+		public static function get_mod_itemlist_html( array $mod, $itemlist_max = 1, $item_sep = ' > ', $include_last = false ) {
+
+			$list_links = self::get_mod_itemlist_links( $mod, $itemlist_max );
+			
+			if ( ! $include_last ) {
+
+				array_pop( $list_links );
+			}
+
+			$html = implode( htmlentities( $item_sep ), $list_links );
+
+			return $html;
+		}
+
+		public static function get_mod_itemlist_links( array $mod, $itemlist_max = 1 ) {
+
+			$wpsso =& Wpsso::get_instance();
+
+			/**
+			 * WpssoSchema->get_json_data() returns a two dimensional array of json data unless $single is true.
+			 */
+			$json_data = $wpsso->schema->get_json_data( $mod, $mt_og = array(), $page_type_id = 'breadcrumb.list', $is_main = false, $single = false );
+
+			if ( empty( $json_data ) || ! is_array( $json_data ) ) {	// Just in case
+
+				return array();
+			}
+
+			if ( $itemlist_max < count( $json_data ) ) {
+
+				$json_data = array_slice( $json_data, 0, $itemlist_max );
+			}
+
+			$list_links = array();
+
+			foreach ( $json_data as $itemlist ) {
+
+				if ( empty( $itemlist[ 'itemListElement' ] ) || ! is_array( $itemlist[ 'itemListElement' ] ) ) {	// Just in case.
+
+					continue;
+				}
+
+				$last_num = count( $itemlist[ 'itemListElement' ] ) - 1;
+
+				foreach ( $itemlist[ 'itemListElement' ] as $num => $list_item ) {
+
+					if ( $num < $last_num ) {
+
+						$list_links[] = '<a href="' . $list_item[ 'item' ] . '">' . $list_item[ 'name' ] . '</a>';
+
+					} else {
+
+						$list_links[] = $list_item[ 'name' ];
+					}
+				}
+			}
+
+			return $list_links;
 		}
 	}
 }

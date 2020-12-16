@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '3.4.0-dev.3',	// Plugin version.
+					'version'     => '3.4.0-b.1',	// Plugin version.
 					'opt_version' => '7',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '8.17.2-dev.3',
+							'min_version'   => '8.17.2-b.1',
 						),
 					),
 
@@ -119,6 +119,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			require_once WPSSOBC_PLUGINDIR . 'lib/breadcrumb.php';
 			require_once WPSSOBC_PLUGINDIR . 'lib/compat.php';	// 3rd party plugin and theme compatibility actions and filters.
 			require_once WPSSOBC_PLUGINDIR . 'lib/filters.php';
+			require_once WPSSOBC_PLUGINDIR . 'lib/functions.php';
 			require_once WPSSOBC_PLUGINDIR . 'lib/register.php';
 
 			add_filter( 'wpssobc_load_lib', array( 'WpssoBcConfig', 'load_lib' ), 10, 3 );
