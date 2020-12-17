@@ -47,7 +47,14 @@ existance, so you can deactivate the WPSSO BC add-on without causing a PHP fatal
 <pre>
 <?php if ( function_exists( 'wpsso_bc_show_itemlist_html' ) ) {
 
+	/**
+	 * Align wide container for 2021 theme.
+	 */
+	echo '<div class="header-breadcrumbs alignwide">';
+
 	wpsso_bc_show_itemlist_html();
+
+	echo '</div><!-- .header-breadcrumbs.alignwide -->';
 } ?>
 </pre>
 
