@@ -63,7 +63,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			$added_page_type_ids[ $page_type_id ] = true;
 
 			/**
-			 * Add the site home page.
+			 * Add the website home page.
 			 */
 			if ( $wpsso->debug->enabled ) {
 
