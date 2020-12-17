@@ -81,7 +81,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* Added support for `WpssoPost->get_primary_terms()` from WPSSO Core v8.17.2.
+	* Added support for `WpssoPost->get_primary_terms()` from WPSSO Core v8.18.0.
 	* Added a new `wpsso_bc_show_itemlist_html()` function.
 	* Added a new `wpsso_bc_get_itemlist_html()` function.
 	* Added a new `WpssoBcBreadcrumb::get_mod_itemlist_html()` method.
@@ -89,7 +89,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v4.5.
-	* WPSSO Core v8.17.2-rc.3.
+	* WPSSO Core v8.18.0-rc.3.
 
 **Version 3.3.0 (2020/12/11)**
 
