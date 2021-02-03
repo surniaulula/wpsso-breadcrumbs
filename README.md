@@ -14,9 +14,7 @@
 
 <h2>Description</h2>
 
-<p style="margin:0;"><img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png"></p>
-
-<p><strong>Most comprehensive Schema BreadcrumbsList markup of any plugin!</strong></p>
+<p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png"> <strong>Most comprehensive Schema BreadcrumbsList markup of any plugin!</strong></p>
 
 <p>Add Schema BreadcrumbList markup in JSON-LD format to posts, pages, custom post types, categories, tags, custom taxonomies, search results, and date archive pages.</p>
 
