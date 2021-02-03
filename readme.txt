@@ -23,7 +23,7 @@ Uses [Google's preferred Schema JSON-LD format for its breadcrumbs markup](https
 
 <h3>WPSSO BC Add-on Features</h3>
 
-Extends the features of the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/).
+Extends the features of the [WPSSO Core plugin](https://wordpress.org/plugins/wpsso/) (required plugin).
 
 Adds Schema BreadcrumbList markup in JSON-LD format to posts, pages, custom post types, categories, tags, custom taxonomies, search results, and date archive pages.
 
