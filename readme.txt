@@ -72,6 +72,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.4.1 (2021/02/25)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* Updated the banners and icons of WPSSO Core and its add-ons.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* None.
+* **Requires At Least**
+	* PHP v7.0.
+	* WordPress v4.5.
+	* WPSSO Core v8.23.0.
+
 **Version 3.4.0 (2020/12/17)**
 
 * **New Features**
@@ -174,6 +189,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.4.1.
 
 == Upgrade Notice ==
+
+= 3.4.1 =
+
+(2021/02/25) Updated the banners and icons of WPSSO Core and its add-ons.
 
 = 3.4.0 =
 
