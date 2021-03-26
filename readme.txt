@@ -72,7 +72,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.5.0-rc.1 (2021/03/26)**
+**Version 3.5.0 (2021/03/26)**
 
 * **New Features**
 	* None.
@@ -205,7 +205,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.5.0-rc.1 =
+= 3.5.0 =
 
 (2021/02/26) Added new 'wpsso_bc_add_home_url' and 'wpsso_bc_add_wp_url' filters.
 
