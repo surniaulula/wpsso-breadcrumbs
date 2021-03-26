@@ -1,0 +1,5 @@
+
+'wpsso_bc_add_home_url' ( $bool = true )
+
+'wpsso_bc_add_wp_url' ( $bool = true )	// Only if different to the home url.
+

@@ -65,40 +65,64 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			/**
 			 * Add the website home page.
 			 */
-			if ( $wpsso->debug->enabled ) {
-
-				$wpsso->debug->log( 'adding site home' );
-			}
-
 			$home_url = SucomUtil::get_home_url( $wpsso->options, $mixed = 'current' );
 
-			$home_name = SucomUtil::get_key_value( $key = 'bc_home_name', $wpsso->options, $mixed = 'current' );
+			if ( ! apply_filters( 'wpsso_bc_add_home_url', true ) ) {
 
-			$item_count++;
+				if ( $wpsso->debug->enabled ) {
 
-			$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
-				'position' => $item_count,
-				'name'     => $home_name,
-				'item'     => $home_url,
-			) );
+					$wpsso->debug->log( 'adding site home listitem is disabled' );
+				}
 
-			$json_data[ $prop_name ][] = $list_item;
+			} else {
 
+				$item_count++;
+	
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'adding site home listitem #' . $item_count );
+				}
+
+				$home_name = SucomUtil::get_key_value( $key = 'bc_home_name', $wpsso->options, $mixed = 'current' );
+
+				$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
+					'position' => $item_count,
+					'name'     => $home_name,
+					'item'     => $home_url,
+				) );
+	
+				$json_data[ $prop_name ][] = $list_item;
+			}
+	
 			/**
 			 * Add the WordPress home page (ie. the blog page).
 			 */
 			$wp_url = SucomUtil::get_wp_url( $wpsso->options, $mixed = 'current' );
 
-			if ( $wp_url !== $home_url ) {
+			if ( $wp_url === $home_url ) {
+			
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'adding wp home listitem skipped - same as site home' );
+				}
+
+			} elseif ( ! apply_filters( 'wpsso_bc_add_wp_url', true ) ) {
 
 				if ( $wpsso->debug->enabled ) {
 
-					$wpsso->debug->log( 'adding wordpress home' );
+					$wpsso->debug->log( 'adding wp home listitem is disabled' );
+				}
+
+			} else {
+
+				$item_count++;
+
+				if ( $wpsso->debug->enabled ) {
+
+					$wpsso->debug->log( 'adding wp home listitem #' . $item_count);
 				}
 
 				$wp_home_name = SucomUtil::get_key_value( $key = 'bc_wp_home_name', $wpsso->options, $mixed = 'current' );
-
-				$item_count++;
 
 				$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 					'position' => $item_count,
