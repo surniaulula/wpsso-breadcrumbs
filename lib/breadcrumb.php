@@ -77,7 +77,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			} else {
 
 				$item_count++;
-	
+
 				if ( $wpsso->debug->enabled ) {
 
 					$wpsso->debug->log( 'adding site home listitem #' . $item_count );
@@ -90,17 +90,17 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					'name'     => $home_name,
 					'item'     => $home_url,
 				) );
-	
+
 				$json_data[ $prop_name ][] = $list_item;
 			}
-	
+
 			/**
 			 * Add the WordPress home page (ie. the blog page).
 			 */
 			$wp_url = SucomUtil::get_wp_url( $wpsso->options, $mixed = 'current' );
 
 			if ( $wp_url === $home_url ) {
-			
+
 				if ( $wpsso->debug->enabled ) {
 
 					$wpsso->debug->log( 'adding wp home listitem skipped - same as site home' );
