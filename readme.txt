@@ -72,6 +72,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 3.5.0-dev.1 (2021/03/26)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Added new 'wpsso_bc_add_home_url' and 'wpsso_bc_add_wp_url' filters.
+* **Requires At Least**
+	* PHP v7.0.
+	* WordPress v4.5.
+	* WPSSO Core v8.23.0.
+
 **Version 3.4.1 (2021/02/25)**
 
 * **New Features**
@@ -189,6 +204,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.4.1.
 
 == Upgrade Notice ==
+
+= 3.5.0-dev.1 =
+
+(2021/02/26) Added new 'wpsso_bc_add_home_url' and 'wpsso_bc_add_wp_url' filters.
 
 = 3.4.1 =
 
