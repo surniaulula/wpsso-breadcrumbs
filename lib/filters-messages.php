@@ -52,7 +52,7 @@ if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
 
 					break;
 
-				case 'tooltip-bc_list_for_user_page':	// Breadcrumbs for User Profile.
+				case 'tooltip-bc_list_for_user_page':	// Breadcrumbs for User Profiles.
 
 					$text = __( 'Select the source of breadcrumbs for user profile pages.', 'wpsso-breadcrumbs' );
 
