@@ -197,7 +197,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added a new lib/filters-messages.php library file.
 	* Added support for terms, users, search results, and date archive pages in `WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist()`.
 	* Updated the `WpssoBcBreadcrumb::add_itemlist_data()` method to add the WordPress Address URL (ie. the "WordPress Home Page") to the breadcrumbs list when different to the Site Address URL (ie. the "Site Home Page").
-	* Added a lib/compat.php library file for 3rd party plugin and theme compatibility actions and filters.
+	* Added a lib/compat.php library file for third-party plugin and theme compatibility actions and filters.
 * **Requires At Least**
 	* PHP v5.6.
 	* WordPress v4.2.
