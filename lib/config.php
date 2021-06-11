@@ -117,7 +117,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static function require_libs( $plugin_file ) {
 
 			require_once WPSSOBC_PLUGINDIR . 'lib/breadcrumb.php';
-			require_once WPSSOBC_PLUGINDIR . 'lib/compat.php';	// 3rd party plugin and theme compatibility actions and filters.
+			require_once WPSSOBC_PLUGINDIR . 'lib/compat.php';	// Third-party plugin and theme compatibility actions and filters.
 			require_once WPSSOBC_PLUGINDIR . 'lib/filters.php';
 			require_once WPSSOBC_PLUGINDIR . 'lib/functions.php';
 			require_once WPSSOBC_PLUGINDIR . 'lib/register.php';

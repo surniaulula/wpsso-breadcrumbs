@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'WpssoBcCompat' ) ) {
 
 	/**
-	 * 3rd party plugin and theme compatibility actions and filters.
+	 * Third-party plugin and theme compatibility actions and filters.
 	 */
 	class WpssoBcCompat {
 

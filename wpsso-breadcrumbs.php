@@ -86,7 +86,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 			}
 
 			$this->breadcrumb = new WpssoBcBreadcrumb( $this->p , $this);
-			$this->compat     = new WpssoBcCompat( $this->p, $this );	// 3rd party plugin and theme compatibility actions and filters.
+			$this->compat     = new WpssoBcCompat( $this->p, $this );	// Third-party plugin and theme compatibility actions and filters.
 			$this->filters    = new WpssoBcFilters( $this->p, $this );
 		}
 	}
