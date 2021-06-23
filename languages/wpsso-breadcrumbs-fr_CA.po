@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-06-11 11:49-0700\n"
+"PO-Revision-Date: 2021-06-23 07:49-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -33,8 +33,8 @@ msgstr "WPSSO balisage de Schéma fil d'Ariane"
 
 #: gettext/gettext-lib-config.php:8
 msgctxt "plugin description"
-msgid "Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results."
-msgstr "Balisage de Schéma BreadcrumbList avec des données structurées JSON-LD pour de meilleurs résultats enrichis Google."
+msgid "Schema BreadcrumbList markup in JSON-LD format for Google Rich Results."
+msgstr "Balisage de Schéma BreadcrumbList en format JSON-LD pour résultats enrichis Google."
 
 #: lib/filters-edit.php:43
 msgctxt "option label"
@@ -108,8 +108,8 @@ msgid "https://wpsso.com/extend/plugins/wpsso-breadcrumbs/"
 msgstr "https://wpsso.com/extend/plugins/wpsso-breadcrumbs/"
 
 #. Description of the plugin/theme
-msgid "Schema BreadcrumbList markup with JSON-LD structured data for better Google Rich Results."
-msgstr "Balisage de Schéma BreadcrumbList avec des données structurées JSON-LD pour de meilleurs résultats enrichis Google."
+msgid "Schema BreadcrumbList markup in JSON-LD format for Google Rich Results."
+msgstr "Balisage de Schéma BreadcrumbList en format JSON-LD pour résultats enrichis Google."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
