@@ -9,7 +9,7 @@
  * Author: JS Morisset
  * Author URI: https://wpsso.com/
  * License: GPLv3
- * License URI: http://www.gnu.org/licenses/gpl.txt
+ * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.
  * Requires PHP: 7.0
  * Requires At Least: 4.5
