@@ -9,7 +9,7 @@ Assets URI: https://surniaulula.github.io/wpsso-breadcrumbs/assets/
 Tags: schema, breadcrumbs, hierarchy, seo, google, categories, tags, search
 Contributors: jsmoriss
 Requires PHP: 7.0
-Requires At Least: 4.5
+Requires At Least: 5.0
 Tested Up To: 5.7.2
 Stable Tag: 3.5.0
 
@@ -84,8 +84,8 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added new 'wpsso_bc_add_home_url' and 'wpsso_bc_add_wp_url' filters.
 * **Requires At Least**
 	* PHP v7.0.
-	* WordPress v4.5.
-	* WPSSO Core v8.25.2.
+	* WordPress v5.0.
+	* WPSSO Core v8.34.0.
 
 **Version 3.4.1 (2021/02/25)**
 
