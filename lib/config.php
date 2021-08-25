@@ -43,10 +43,12 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 
 					/**
 					 * URLs or relative paths to plugin banners and icons.
-					 *
-					 * Icon image array keys are '1x' and '2x'.
 					 */
 					'assets' => array(
+
+						/**
+						 * Icon image array keys are '1x' and '2x'.
+						 */
 						'icons' => array(
 							'1x' => 'images/icon-128x128.png',
 							'2x' => 'images/icon-256x256.png',
