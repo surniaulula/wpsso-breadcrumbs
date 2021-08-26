@@ -154,9 +154,9 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			/**
 			 * Breacrumbs are not required for the home page.
 			 */
-			if ( $mod[ 'is_home' ] ) {
+			if ( $mod[ 'is_home' ] ) {	// Static front page (singular post).
 
-				if ( $mod[ 'is_home_posts' ] ) {
+				if ( $mod[ 'is_home_posts' ] ) {	// Static posts page or blog archive page.
 
 					$home_url = SucomUtil::get_home_url( $this->p->options, $mixed = 'current' );
 
