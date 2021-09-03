@@ -133,7 +133,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				if ( empty( $mt_og[ 'og:url' ] ) ) {
 
-					$json_data = array( 'url' => $this->p->util->get_sharing_url( $mod ) );
+					$json_data = array( 'url' => $this->p->util->get_canonical_url( $mod ) );
 
 				} else {
 
