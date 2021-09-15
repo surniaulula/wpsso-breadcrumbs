@@ -57,11 +57,11 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 		public function filter_option_type( $type, $base_key ) {
 
-			if ( ! empty( $type ) ) {
+			if ( ! empty( $type ) ) {	// Return early if we already have a type.
 
 				return $type;
 
-			} elseif ( strpos( $base_key, 'bc_' ) !== 0 ) {
+			} elseif ( 0 !== strpos( $base_key, 'bc_' ) ) {	// Nothing to do.
 
 				return $type;
 			}
@@ -70,7 +70,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				case 'bc_home_name':
 				case 'bc_wp_home_name':
-				case ( strpos( $base_key, 'bc_list_for_' ) === 0 ? true : false ):
+				case ( 0 === strpos( $base_key, 'bc_list_for_' ) ? true : false ):
 
 					return 'not_blank';
 			}
