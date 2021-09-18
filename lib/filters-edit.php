@@ -30,6 +30,9 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 			) );
 		}
 
+		/**
+		 * This filter can run at any priority since it inserts the breadcrumb title after the Open Graph title.
+		 */
 		public function filter_metabox_sso_edit_rows( $table_rows, $form, $head_info, $mod ) {
 
 			$dots         = '';
