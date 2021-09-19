@@ -72,7 +72,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.6.0-dev.3 (2021/09/19)**
+**Version 3.6.0-dev.4 (2021/09/19)**
 
 * **New Features**
 	* None.
@@ -222,7 +222,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.6.0-dev.3 =
+= 3.6.0-dev.4 =
 
 (2021/09/19) Renamed the Document SSO &gt; Customize &gt; Breadcrumb Title option to Breadcrumb Name and moved it under the Schema Altername Name option. 
 
