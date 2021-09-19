@@ -27,7 +27,6 @@ if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
 
 			$this->p->util->add_plugin_filters( $this, array( 
 				'messages_tooltip'      => 2,
-				'messages_tooltip_meta' => 2,
 			) );
 		}
 
@@ -69,25 +68,6 @@ if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
 				case 'tooltip-bc_list_for_ttn':	// Breadcrumbs by Taxonomy.
 
 					$text = __( 'Select the source of breadcrumbs for each public taxonomy (ie. categories, tags, and other custom taxonomies).', 'wpsso-breadcrumbs' );
-
-					break;
-			}
-
-			return $text;
-		}
-
-		public function filter_messages_tooltip_meta( $text, $msg_key ) {
-
-			if ( strpos( $msg_key, 'tooltip-meta-bc_' ) !== 0 ) {
-
-				return $text;
-			}
-
-			switch ( $msg_key ) {
-
-				case 'tooltip-meta-bc_title':	// Breadcrumb Title.
-
-					$text = __( 'A short title used for the Schema breadcrumb item name.', 'wpsso-breadcrumbs' );
 
 					break;
 			}

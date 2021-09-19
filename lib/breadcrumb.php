@@ -147,10 +147,11 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 					$item_count++;
 
+					$title_keys = array( 'schema_bc_title', 'schema_title', 'og_title' );
+
 					/**
 					 * Use $title_sep = false to avoid adding parent names in the term title.
 					 */
-					$title_keys = array( 'bc_title', 'schema_title', 'og_title' );
 					$title_sep  = false;	// Do not add a separator.
 
 					$item_name = $wpsso->page->get_title( $max_len = 0, $dots = '', $mod, $read_cache = true,

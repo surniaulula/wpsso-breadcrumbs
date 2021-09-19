@@ -18,7 +18,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
 					'version'     => '3.6.0-dev.3',	// Plugin version.
-					'opt_version' => '7',		// Increment when changing default option values.
+					'opt_version' => '8',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
 					'desc'        => 'Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.',

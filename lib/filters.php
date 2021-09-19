@@ -18,6 +18,8 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		private $a;	// WpssoBc class object.
 		private $edit;	// WpssoBcFiltersEdit class object.
 		private $msgs;	// WpssoBcFiltersMessages class object.
+		private $opts;	// WpssoBcFiltersOptions class object.
+		private $upg;	// WpssoBcFiltersUpgrade class object.
 
 		/**
 		 * Instantiated by WpssoBc->init_objects().
@@ -35,6 +37,14 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			$this->p =& $plugin;
 			$this->a =& $addon;
+
+			require_once WPSSOBC_PLUGINDIR . 'lib/filters-options.php';
+
+			$this->opts = new WpssoBcFiltersOptions( $plugin, $addon );
+
+			require_once WPSSOBC_PLUGINDIR . 'lib/filters-upgrade.php';
+
+			$this->upg = new WpssoBcFiltersUpgrade( $plugin, $addon );
 
 			$this->p->util->add_plugin_filters( $this, array( 
 				'option_type'                               => 2,

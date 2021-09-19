@@ -40,44 +40,40 @@ msgctxt "plugin description"
 msgid "Schema BreadcrumbList markup in JSON-LD format for Google Rich Results."
 msgstr ""
 
-#: lib/filters-edit.php:43
+#: lib/filters-edit.php:44
 msgctxt "option label"
-msgid "Breadcrumb Title"
+msgid "Breadcrumb Name"
 msgstr ""
 
-#: lib/filters-messages.php:45
+#: lib/filters-messages.php:44
 msgid "The site home page name in the breadcrumbs markup."
 msgstr ""
 
-#: lib/filters-messages.php:51
+#: lib/filters-messages.php:50
 msgid ""
 "The WordPress home page (ie. the blog page) name in the breadcrumbs markup."
 msgstr ""
 
-#: lib/filters-messages.php:57
+#: lib/filters-messages.php:56
 msgid "Select the source of breadcrumbs for user profile pages."
 msgstr ""
 
-#: lib/filters-messages.php:63
+#: lib/filters-messages.php:62
 msgid ""
 "Select the source of breadcrumbs for each public post type (ie. posts, "
 "pages, products, and other custom post types)."
 msgstr ""
 
-#: lib/filters-messages.php:65
+#: lib/filters-messages.php:64
 msgid ""
 "The post categories selection uses the 'category' taxonomy by default, and "
 "the 'product_cat' taxonomy for WooCommerce products."
 msgstr ""
 
-#: lib/filters-messages.php:71
+#: lib/filters-messages.php:70
 msgid ""
 "Select the source of breadcrumbs for each public taxonomy (ie. categories, "
 "tags, and other custom taxonomies)."
-msgstr ""
-
-#: lib/filters-messages.php:90
-msgid "A short title used for the Schema breadcrumb item name."
 msgstr ""
 
 #: lib/submenu/bc-general.php:40

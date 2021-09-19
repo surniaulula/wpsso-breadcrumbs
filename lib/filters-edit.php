@@ -36,12 +36,14 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 			$read_cache   = true;
 			$no_hashtags  = false;
 			$do_encode    = true;
-			$def_opt_key  = array( 'schema_title', 'schema_title_alt', 'og_title' );
-			$def_bc_title = $this->p->page->get_title( $max_len = 0, $dots, $mod, $read_cache, $no_hashtags, $do_encode, $def_opt_key );
+			$def_opt_keys = array( 'schema_title', 'og_title' );
+			$def_bc_title = $this->p->page->get_title( $max_len = 0, $dots, $mod, $read_cache, $no_hashtags, $do_encode, $def_opt_keys );
 
 			SucomUtil::add_after_key( $table_rows, 'schema_title_alt', array( 
-				'bc_title' => $form->get_th_html( _x( 'Breadcrumb Title', 'option label', 'wpsso-breadcrumbs' ), $css_class = 'medium', 'meta-bc_title' ) . 
-					'<td>' . $form->get_input( 'bc_title', $css_class = 'wide', $css_id = '', $max_len = 0, $def_bc_title ) . '</td>'
+				'schema_bc_title' => '' .
+					$form->get_th_html( _x( 'Breadcrumb Name', 'option label', 'wpsso-breadcrumbs' ),
+						$css_class = 'medium', $css_id = 'meta-schema_bc_title' ) . 
+					'<td>' . $form->get_input( 'schema_bc_title', $css_class = 'wide', $css_id = '', $max_len = 0, $def_bc_title ) . '</td>'
 			) );
 
 			return $table_rows;
