@@ -81,7 +81,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Added a new `WpssoBcFiltersOptions` class.
+	* Added a new `WpssoBcFiltersUpgrade` class.
+	* Renamed the 'bc_title' metadata options key to 'schema_bc_title'.
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
