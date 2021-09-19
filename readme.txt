@@ -77,7 +77,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Moved the Document SSO &gt; Customize &gt; Breadcrumb Title option under the Schema Altername Name option. 
+	* Renamed the Document SSO &gt; Customize &gt; Breadcrumb Title option to Breadcrumb Name and moved it under the Schema Altername Name option. 
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -224,7 +224,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.6.0-dev.3 =
 
-(2021/09/19) Moved the Document SSO &gt; Customize &gt; Breadcrumb Title option under the Schema Altername Name option. 
+(2021/09/19) Renamed the Document SSO &gt; Customize &gt; Breadcrumb Title option to Breadcrumb Name and moved it under the Schema Altername Name option. 
 
 = 3.5.0 =
 
