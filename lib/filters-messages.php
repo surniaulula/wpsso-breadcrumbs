@@ -85,9 +85,9 @@ if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
 
 			switch ( $msg_key ) {
 
-				case 'tooltip-meta-bc_title':	// Site Home Page Name.
+				case 'tooltip-meta-bc_title':	// Breadcrumb Title.
 
-					$text = __( 'A short title used for the Schema and HTML breadcrumb item name.', 'wpsso-breadcrumbs' );
+					$text = __( 'A short title used for the Schema breadcrumb item name.', 'wpsso-breadcrumbs' );
 
 					break;
 			}

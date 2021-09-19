@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.5.0\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.6.0-dev.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
@@ -40,7 +40,7 @@ msgctxt "plugin description"
 msgid "Schema BreadcrumbList markup in JSON-LD format for Google Rich Results."
 msgstr ""
 
-#: lib/filters-edit.php:46
+#: lib/filters-edit.php:43
 msgctxt "option label"
 msgid "Breadcrumb Title"
 msgstr ""
@@ -77,7 +77,7 @@ msgid ""
 msgstr ""
 
 #: lib/filters-messages.php:90
-msgid "A short title used for the Schema and HTML breadcrumb item name."
+msgid "A short title used for the Schema breadcrumb item name."
 msgstr ""
 
 #: lib/submenu/bc-general.php:40
