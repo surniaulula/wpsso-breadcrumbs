@@ -72,7 +72,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.6.0-dev.5 (2021/09/19)**
+**Version 3.6.0-dev.6 (2021/09/20)**
 
 * **New Features**
 	* None.
@@ -87,7 +87,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
-	* WPSSO Core v9.0.0-dev.5.
+	* WPSSO Core v9.0.0-dev.6.
 
 **Version 3.5.0 (2021/03/26)**
 
@@ -222,9 +222,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.6.0-dev.5 =
+= 3.6.0-dev.6 =
 
-(2021/09/19) Renamed the Document SSO &gt; Customize &gt; Breadcrumb Title option to Breadcrumb Name and moved it under the Schema Altername Name option. 
+(2021/09/20) Renamed the Document SSO &gt; Customize &gt; Breadcrumb Title option to Breadcrumb Name and moved it under the Schema Altername Name option. 
 
 = 3.5.0 =
 
