@@ -72,7 +72,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.6.0-b.2 (2021/09/21)**
+**Version 3.6.0-b.2 (2021/09/22)**
 
 * **New Features**
 	* None.
@@ -224,7 +224,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.6.0-b.2 =
 
-(2021/09/21) Renamed the Document SSO &gt; Customize &gt; Breadcrumb Title option to Breadcrumb Name and moved it under the Schema Altername Name option. 
+(2021/09/22) Renamed the Document SSO &gt; Customize &gt; Breadcrumb Title option to Breadcrumb Name and moved it under the Schema Altername Name option. 
 
 = 3.5.0 =
 
