@@ -130,7 +130,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				$id_delim  = WpssoSchema::get_id_delim();
 			}
 
-			if ( is_array( $json_data ) ) {
+			if ( is_array( $json_data ) ) {	// Just in case.
 
 				$json_data = SucomUtil::preg_grep_keys( '/^(@.*|url)$/', $json_data );
 			}
