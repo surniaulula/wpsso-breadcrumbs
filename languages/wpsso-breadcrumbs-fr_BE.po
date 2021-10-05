@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.6.0\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 3.6.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2021-09-23 11:29-0700\n"
+"PO-Revision-Date: 2021-10-05 08:54-0700\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -70,27 +70,27 @@ msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
 msgstr "Réglages du fil d'Ariane"
 
-#: lib/submenu/bc-general.php:83
+#: lib/submenu/bc-general.php:85
 msgctxt "option label"
 msgid "Site Home Page Name"
 msgstr "Nom de page d'accueil du site"
 
-#: lib/submenu/bc-general.php:88
+#: lib/submenu/bc-general.php:90
 msgctxt "option label"
 msgid "WordPress Home Page Name"
 msgstr "Nom de page d'accueil WordPress"
 
-#: lib/submenu/bc-general.php:109 lib/submenu/bc-general.php:140
+#: lib/submenu/bc-general.php:111 lib/submenu/bc-general.php:142
 msgctxt "option comment"
 msgid "for %s"
 msgstr "pour %s"
 
-#: lib/submenu/bc-general.php:115
+#: lib/submenu/bc-general.php:117
 msgctxt "option label"
 msgid "Breadcrumbs by Post Type"
 msgstr "Fil d'Ariane par types d'article"
 
-#: lib/submenu/bc-general.php:146
+#: lib/submenu/bc-general.php:148
 msgctxt "option label"
 msgid "Breadcrumbs by Taxonomy"
 msgstr "Fil d'Ariane par taxonomie"
