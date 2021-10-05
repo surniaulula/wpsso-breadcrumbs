@@ -65,7 +65,9 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 
 				$filter_name = SucomUtil::sanitize_hookname( 'wpsso_' . $metabox_id . '_' . $tab_key . '_rows' );
 
-				$table_rows = apply_filters( $filter_name, $this->get_table_rows( $metabox_id, $tab_key ), $this->form );
+				$table_rows = $this->get_table_rows( $metabox_id, $tab_key );
+
+				$table_rows = apply_filters( $filter_name, $table_rows, $this->form, $network = false );
 			}
 
 			$this->p->util->metabox->do_table( $table_rows, 'metabox-' . $metabox_id . '-' . $tab_key );
