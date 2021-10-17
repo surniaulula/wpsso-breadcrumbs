@@ -1,5 +1,5 @@
 
-wpsso_bc_show_itemlist_html( $list_max = 1, $link_sep = ' > ', $include_last = false );
+wpsso_bc_show_itemlist_html( $lines_max = 1, $link_sep = ' > ', $include_self = false );
 
-wpsso_bc_get_itemlist_html( $list_max = 1, $link_sep = ' > ', $include_last = false );
+wpsso_bc_get_itemlist_html( $lines_max = 1, $link_sep = ' > ', $include_self = false );
 

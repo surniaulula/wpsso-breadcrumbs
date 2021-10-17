@@ -187,9 +187,9 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 		 *
 		 * Use $list_max = 0 or false to include all WPSSO breadcrumb lists.
 		 *
-		 * $link_sep is automatically encoded for display in the HTML webpage.
+		 * Note that $link_sep is automatically encoded for display in the HTML webpage.
 		 */
-		public static function get_mod_itemlist_html( array $mod, $list_max = 1, $link_sep = ' > ', $include_last = false ) {
+		public static function get_mod_itemlist_html( array $mod, $list_max = 1, $link_sep = ' > ', $include_self = false ) {
 
 			$itemlist_links = self::get_mod_itemlist_links( $mod, $list_max );
 
@@ -199,7 +199,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 			foreach ( $itemlist_links as $single_list ) {
 
-				if ( ! $include_last ) {
+				if ( ! $include_self ) {
 
 					array_pop( $single_list );
 				}

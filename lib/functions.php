@@ -10,22 +10,43 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
+if ( ! function_exists( 'wpsso_breadcrumbs_html' ) ) {	// Aka wpsso_bc_show_itemlist_html().
+
+	function wpsso_breadcrumbs_html( $lines_max = 1, $link_sep = ' > ', $include_self = false ) {
+
+		echo wpsso_bc_get_itemlist_html( $lines_max, $link_sep, $include_self );
+	}
+}
+
+if ( ! function_exists( 'wpsso_get_breadcrumbs_html' ) ) {	// Aka wpsso_bc_get_itemlist_html().
+
+	function wpsso_get_breadcrumbs_html( $lines_max = 1, $link_sep = ' > ', $include_self = false ) {
+
+		return wpsso_bc_get_itemlist_html( $lines_max, $link_sep, $include_self );
+	}
+}
+
 if ( ! function_exists( 'wpsso_bc_show_itemlist_html' ) ) {
 
-	function wpsso_bc_show_itemlist_html( $list_max = 1, $link_sep = ' > ', $include_last = false ) {
+	/**
+	 * Use $lines_max = 0 or false to include all WPSSO breadcrumb lists.
+	 *
+	 * Note that $link_sep is automatically encoded for display in the HTML webpage.
+	 */
+	function wpsso_bc_show_itemlist_html( $lines_max = 1, $link_sep = ' > ', $include_self = false ) {
 
-		echo wpsso_bc_get_itemlist_html( $list_max, $link_sep, $include_last );
+		echo wpsso_bc_get_itemlist_html( $lines_max, $link_sep, $include_self );
 	}
 }
 
 if ( ! function_exists( 'wpsso_bc_get_itemlist_html' ) ) {
 
 	/**
-	 * Use $list_max = 0 or false to include all WPSSO breadcrumb lists.
+	 * Use $lines_max = 0 or false to include all WPSSO breadcrumb lists.
 	 *
 	 * Note that $link_sep is automatically encoded for display in the HTML webpage.
 	 */
-	function wpsso_bc_get_itemlist_html( $list_max = 1, $link_sep = ' > ', $include_last = false ) {
+	function wpsso_bc_get_itemlist_html( $lines_max = 1, $link_sep = ' > ', $include_self = false ) {
 
 		$wpsso =& Wpsso::get_instance();
 
@@ -33,7 +54,7 @@ if ( ! function_exists( 'wpsso_bc_get_itemlist_html' ) ) {
 
 		$mod = $wpsso->page->get_mod( $use_post );
 
-		$html = WpssoBcBreadcrumb::get_mod_itemlist_html( $mod, $list_max, $link_sep, $include_last );
+		$html = WpssoBcBreadcrumb::get_mod_itemlist_html( $mod, $lines_max, $link_sep, $include_self );
 
 		return $html;
 	}
