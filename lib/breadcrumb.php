@@ -185,13 +185,13 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 		/**
 		 * Returns an HTML breadcrumbs string for the given $mod.
 		 *
-		 * Use $list_max = 0 or false to include all WPSSO breadcrumb lists.
+		 * Use $lists_max = 0 or false to include all WPSSO breadcrumb lists.
 		 *
 		 * Note that $link_sep is automatically encoded for display in the HTML webpage.
 		 */
-		public static function get_mod_itemlist_html( array $mod, $list_max = 1, $link_sep = ' > ', $include_self = false ) {
+		public static function get_mod_itemlist_html( array $mod, $lists_max = 1, $link_sep = ' > ', $include_self = false ) {
 
-			$itemlist_links = self::get_mod_itemlist_links( $mod, $list_max );
+			$itemlist_links = self::get_mod_itemlist_links( $mod, $lists_max );
 
 			$link_sep_encoded = SucomUtil::encode_html_emoji( $link_sep );	// Does not double-encode.
 
@@ -215,9 +215,9 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 		/**
 		 * Returns an array of arrays with HTML link elements.
 		 *
-		 * Use $list_max = 0 or false to include all breadcrumb lists.
+		 * Use $lists_max = 0 or false to include all breadcrumb lists.
 		 */
-		public static function get_mod_itemlist_links( array $mod, $list_max = 1 ) {
+		public static function get_mod_itemlist_links( array $mod, $lists_max = 1 ) {
 
 			$wpsso =& Wpsso::get_instance();
 
@@ -231,9 +231,9 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				return array();
 			}
 
-			if ( $list_max && count( $json_data ) > $list_max ) {
+			if ( $lists_max && count( $json_data ) > $lists_max ) {
 
-				$json_data = array_slice( $json_data, 0, $list_max );
+				$json_data = array_slice( $json_data, 0, $lists_max );
 			}
 
 			$itemlist_links = array();
