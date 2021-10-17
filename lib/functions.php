@@ -12,11 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! function_exists( 'wpsso_bc_show_itemlist_html' ) ) {
 
-	/**
-	 * Use $list_max = 0 or false to include all WPSSO breadcrumb lists.
-	 *
-	 * $link_sep is automatically encoded for display in the HTML webpage.
-	 */
 	function wpsso_bc_show_itemlist_html( $list_max = 1, $link_sep = ' > ', $include_last = false ) {
 
 		echo wpsso_bc_get_itemlist_html( $list_max, $link_sep, $include_last );
@@ -25,6 +20,11 @@ if ( ! function_exists( 'wpsso_bc_show_itemlist_html' ) ) {
 
 if ( ! function_exists( 'wpsso_bc_get_itemlist_html' ) ) {
 
+	/**
+	 * Use $list_max = 0 or false to include all WPSSO breadcrumb lists.
+	 *
+	 * Note that $link_sep is automatically encoded for display in the HTML webpage.
+	 */
 	function wpsso_bc_get_itemlist_html( $list_max = 1, $link_sep = ' > ', $include_last = false ) {
 
 		$wpsso =& Wpsso::get_instance();
@@ -33,6 +33,8 @@ if ( ! function_exists( 'wpsso_bc_get_itemlist_html' ) ) {
 
 		$mod = $wpsso->page->get_mod( $use_post );
 
-		return WpssoBcBreadcrumb::get_mod_itemlist_html( $mod, $list_max, $link_sep, $include_last );
+		$html = WpssoBcBreadcrumb::get_mod_itemlist_html( $mod, $list_max, $link_sep, $include_last );
+
+		return $html;
 	}
 }
