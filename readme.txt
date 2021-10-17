@@ -87,7 +87,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Added more human friendly function names to include breadcrumbs in theme templates:
+		* wpsso_breadcrumbs_html()
+		* wpsso_get_breadcrumbs_html()
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
@@ -260,7 +262,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.7.0-dev.1 =
 
-(2021/10/17) None.
+(2021/10/17) Added more human friendly function names to include breadcrumbs in theme templates.
 
 = 3.6.1 =
 
