@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.7.0-dev.1 (2021/10/06)**
+**Version 3.7.0-dev.1 (2021/10/18)**
 
 * **New Features**
 	* None.
@@ -90,6 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Added more human friendly function names to include breadcrumbs in theme templates:
 		* wpsso_breadcrumbs_html()
 		* wpsso_get_breadcrumbs_html()
+	* Removed cache clearing on activation / deactivation.
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
@@ -262,7 +263,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.7.0-dev.1 =
 
-(2021/10/17) Added more human friendly function names to include breadcrumbs in theme templates.
+(2021/10/18) Added more human friendly function names to include breadcrumbs in theme templates. Removed cache clearing on activation / deactivation.
 
 = 3.6.1 =
 
