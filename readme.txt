@@ -74,7 +74,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.7.0-rc.1 (2021/10/18)**
+**Version 3.7.0 (2021/10/18)**
 
 * **New Features**
 	* None.
@@ -257,7 +257,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.7.0-rc.1 =
+= 3.7.0 =
 
 (2021/10/18) Added more human friendly function names to include breadcrumbs in theme templates. Removed cache clearing on activation / deactivation.
 
