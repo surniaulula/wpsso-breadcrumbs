@@ -17,7 +17,7 @@ Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.
 
 == Description ==
 
-<p><img class="readme-icon" src="https://surniaulula.github.io/wpsso-breadcrumbs/assets/icon-256x256.png"> <strong>The most comprehensive Schema BreadcrumbsList markup of any plugin!</strong></p>
+**The most comprehensive Schema BreadcrumbsList markup of any plugin!**
 
 Uses [Google's preferred Schema JSON-LD format for breadcrumbs markup](https://developers.google.com/search/docs/data-types/breadcrumb).
 
