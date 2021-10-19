@@ -27,11 +27,11 @@ Adds Schema BreadcrumbList markup for posts, pages, custom post types, categorie
 
 Select between using ancestors (aka parents), the primary category, or all categories for posts, pages, and custom post types.
 
-<!-- /about -->
-
 <h3>No Templates to Modify</h3>
 
 Simply activate or deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.
+
+<!-- /about -->
 
 <h3>WPSSO Core Required</h3>
 
