@@ -17,13 +17,17 @@ Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.
 
 == Description ==
 
+<!-- about -->
+
 **The most comprehensive Schema BreadcrumbsList markup of any plugin!**
 
 Uses [Google's preferred Schema JSON-LD format for breadcrumbs markup](https://developers.google.com/search/docs/data-types/breadcrumb).
 
 Adds Schema BreadcrumbList markup for posts, pages, custom post types, categories, tags, custom taxonomies, search results, and date archive pages.
 
-Select between using ancestors (aka parents) or categories for the breadcrumbs markup of posts, pages, and custom post types.
+Select between using ancestors (aka parents), the primary category, or all categories for posts, pages, and custom post types.
+
+<!-- /about -->
 
 <h3>No Templates to Modify</h3>
 
