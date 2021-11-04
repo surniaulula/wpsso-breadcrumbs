@@ -13,7 +13,7 @@
  * Description: Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.
  * Requires PHP: 7.0
  * Requires At Least: 5.0
- * Tested Up To: 5.8.1
+ * Tested Up To: 5.8.2
  * Version: 3.7.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
