@@ -154,11 +154,9 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				}
 			}
 
-			$bc_list_max = SucomUtil::get_const( 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX', 20 );
-
 			if ( $this->p->debug->enabled ) {
 
-				$this->p->debug->log( 'maximum breadcrumb scripts is ' . $bc_list_max );
+				$this->p->debug->log( 'maximum breadcrumb scripts is ' . WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX );
 			}
 
 			$item_mods  = false;	// Do not return breadcrumbs by default.
@@ -270,12 +268,9 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							} else {
 
-								/**
-								 * Add the ancestors in reverse order.
-								 */
-								$term_ids = array_reverse( $term_ids );
+								$term_ids = array_reverse( $term_ids );	// Add ancestors in reverse order.
 
-								$term_ids[] = $term_obj->term_id;		// Add parent term last.
+								$term_ids[] = $term_obj->term_id;	// Add parent term last.
 							}
 
 							foreach ( $term_ids as $mod_id ) {
@@ -301,7 +296,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							$bc_list_num++;
 
-							if ( $bc_list_num >= $bc_list_max ) {
+							if ( $bc_list_num >= WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX ) {
 
 								break;
 							}

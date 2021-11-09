@@ -231,7 +231,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				return array();
 			}
 
-			if ( $lists_max && count( $json_data ) > $lists_max ) {
+			if ( $lists_max ) {
 
 				$json_data = array_slice( $json_data, 0, $lists_max );
 			}

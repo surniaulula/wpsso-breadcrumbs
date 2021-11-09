@@ -12,5 +12,5 @@ WPSSOBC_VERSION
 /**
  * Define in your wp-config.php file to change the default value.
  */
-WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX = 20
+WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX = 10
 

@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '3.7.0',	// Plugin version.
+					'version'     => '3.8.0-dev.1',	// Plugin version.
 					'opt_version' => '8',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '9.2.0',
+							'min_version'   => '9.7.0-dev.1',
 						),
 					),
 
@@ -114,6 +114,50 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			define( 'WPSSOBC_PLUGINSLUG', $info[ 'slug' ] );	// Example: wpsso-breadcrumbs.
 			define( 'WPSSOBC_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
 			define( 'WPSSOBC_VERSION', $info[ 'version' ] );
+
+			/**
+			 * Define variable constants.
+			 */
+			self::set_variable_constants();
+		}
+
+		public static function set_variable_constants( $var_const = null ) {
+
+			if ( ! is_array( $var_const ) ) {
+
+				$var_const = (array) self::get_variable_constants();
+			}
+
+			/**
+			 * Define the variable constants, if not already defined.
+			 */
+			foreach ( $var_const as $name => $value ) {
+
+				if ( ! defined( $name ) ) {
+
+					define( $name, $value );
+				}
+			}
+		}
+
+		public static function get_variable_constants() {
+
+			$var_const = array();
+
+			$var_const[ 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX' ] = 10;
+
+			/**
+			 * Maybe override the default constant value with a pre-defined constant value.
+			 */
+			foreach ( $var_const as $name => $value ) {
+
+				if ( defined( $name ) ) {
+
+					$var_const[ $name ] = constant( $name );
+				}
+			}
+
+			return $var_const;
 		}
 
 		public static function require_libs( $plugin_file ) {
