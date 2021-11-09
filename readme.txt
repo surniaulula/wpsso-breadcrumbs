@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.8.0-dev.1 (TBD)**
+**Version 3.8.0-dev.1 (2021/11/09)**
 
 * **New Features**
 	* None.
@@ -87,7 +87,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Updated the default WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX value from 20 to 10.
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
@@ -278,7 +278,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.8.0-dev.1 =
 
-(TBD) None.
+(2021/11/09) Updated the default WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX value from 20 to 10.
 
 = 3.7.0 =
 
