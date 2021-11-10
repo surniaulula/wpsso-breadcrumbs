@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.8.0-dev.2 (2021/11/10)**
+**Version 3.8.0-b.1 (2021/11/10)**
 
 * **New Features**
 	* None.
@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
-	* WPSSO Core v9.7.0-dev.2.
+	* WPSSO Core v9.7.0-b.1.
 
 **Version 3.7.0 (2021/10/18)**
 
@@ -276,7 +276,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.8.0-dev.2 =
+= 3.8.0-b.1 =
 
 (2021/11/10) Updated the default WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX value from 20 to 10.
 
