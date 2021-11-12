@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.8.1-dev.1 (TBD)**
+**Version 3.8.1-dev.2 (2021/11/12)**
 
 * **New Features**
 	* None.
@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.0.
 	* WordPress v5.0.
-	* WPSSO Core v9.8.0-dev.1.
+	* WPSSO Core v9.8.0-dev.2.
 
 **Version 3.8.0 (2021/11/10)**
 
@@ -291,9 +291,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.8.1-dev.1 =
+= 3.8.1-dev.2 =
 
-(TBD) Removed duplicate 'wpsso_option_type' and 'wpsso_get_defaults' option filter hooks.
+(2021/11/12) Removed duplicate 'wpsso_option_type' and 'wpsso_get_defaults' option filter hooks.
 
 = 3.8.0 =
 
