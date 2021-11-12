@@ -59,9 +59,6 @@ if ( ! class_exists( 'WpssoBcFiltersOptions' ) ) {
 
 		public function filter_get_defaults( $defs ) {
 
-			/**
-			 * Add options using a key prefix array and post type names.
-			 */
 			$this->p->util->add_post_type_names( $defs, array(
 				'bc_list_for_ptn' => 'ancestors',
 			) );
