@@ -86,6 +86,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* None.
 * **Bugfixes**
 	* Removed duplicate 'wpsso_option_type' and 'wpsso_get_defaults' option filter hooks.
+	* Refactored the `SucomAddOn->get_missing_requirements()` method.
 * **Developer Notes**
 	* None.
 * **Requires At Least**
