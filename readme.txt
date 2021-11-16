@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.8.1 (2021/11/15)**
+**Version 3.8.1 (2021/11/16)**
 
 * **New Features**
 	* None.
@@ -294,7 +294,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.8.1 =
 
-(2021/11/15) Removed duplicate 'wpsso_option_type' and 'wpsso_get_defaults' option filter hooks.
+(2021/11/16) Removed duplicate 'wpsso_option_type' and 'wpsso_get_defaults' option filter hooks.
 
 = 3.8.0 =
 
