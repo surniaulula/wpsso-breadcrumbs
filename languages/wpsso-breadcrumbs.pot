@@ -94,17 +94,17 @@ msgctxt "option label"
 msgid "WordPress Home Page Name"
 msgstr ""
 
-#: lib/submenu/bc-general.php:111 lib/submenu/bc-general.php:142
+#: lib/submenu/bc-general.php:114 lib/submenu/bc-general.php:145
 msgctxt "option comment"
 msgid "for %s"
 msgstr ""
 
-#: lib/submenu/bc-general.php:117
+#: lib/submenu/bc-general.php:120
 msgctxt "option label"
 msgid "Breadcrumbs by Post Type"
 msgstr ""
 
-#: lib/submenu/bc-general.php:148
+#: lib/submenu/bc-general.php:151
 msgctxt "option label"
 msgid "Breadcrumbs by Taxonomy"
 msgstr ""

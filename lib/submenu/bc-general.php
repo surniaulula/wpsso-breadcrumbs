@@ -96,6 +96,9 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					 */
 					$bc_list_select = '';
 
+					/**
+					 * Returns post types registered as 'public' = 1 and 'show_ui' = 1.
+					 */
 					$post_types = SucomUtilWP::get_post_types( $output = 'objects' );
 
 					if ( is_array( $post_types ) ) {	// Just in case.
