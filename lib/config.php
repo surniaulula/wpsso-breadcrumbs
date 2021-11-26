@@ -168,12 +168,25 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			require_once WPSSOBC_PLUGINDIR . 'lib/functions.php';
 			require_once WPSSOBC_PLUGINDIR . 'lib/register.php';
 
-			add_filter( 'wpssobc_load_lib', array( 'WpssoBcConfig', 'load_lib' ), 10, 3 );
+			add_filter( 'wpssobc_load_lib', array( __CLASS__, 'load_lib' ), 10, 3 );
 		}
 
 		public static function load_lib( $success = false, $filespec = '', $classname = '' ) {
 
-			if ( false === $success && ! empty( $filespec ) ) {
+			if ( false !== $success ) {
+
+				return $success;
+			}
+
+			if ( ! empty( $classname ) ) {
+
+				if ( class_exists( $classname ) ) {
+
+					return $classname;
+				}
+			}
+
+			if ( ! empty( $filespec ) ) {
 
 				$file_path = WPSSOBC_PLUGINDIR . 'lib/' . $filespec . '.php';
 
@@ -184,7 +197,6 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					if ( empty( $classname ) ) {
 
 						return SucomUtil::sanitize_classname( 'wpssobc' . $filespec, $allow_underscore = false );
-
 					}
 
 					return $classname;
