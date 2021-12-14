@@ -26,14 +26,26 @@ if ( ! class_exists( 'WpssoBcFiltersOptions' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'option_type'                               => 2,
-				'get_defaults'                              => 1,
+				'add_custom_post_type_names' => 1,
+				'add_custom_taxonomy_names'  => 1,
+				'option_type'                => 2,
 			) );
 		}
 
-		/**
-		 * Return the sanitation type for a given option key.
-		 */
+		public function filter_add_custom_post_type_names( $post_type_names ) {
+
+			$post_type_names[ 'bc_list_for_ptn' ] = 'ancestors';
+
+			return $post_type_names;
+		}
+
+		public function filter_add_custom_taxonomy_names( $taxonomy_names ) {
+
+			$taxonomy_names[ 'bc_list_for_tax' ] = 'ancestors';
+
+			return $taxonomy_names;
+		}
+
 		public function filter_option_type( $type, $base_key ) {
 
 			if ( ! empty( $type ) ) {	// Return early if we already have a type.
@@ -55,19 +67,6 @@ if ( ! class_exists( 'WpssoBcFiltersOptions' ) ) {
 			}
 
 			return $type;
-		}
-
-		public function filter_get_defaults( $defs ) {
-
-			$this->p->util->add_post_type_names( $defs, array(
-				'bc_list_for_ptn' => 'ancestors',
-			) );
-
-			$this->p->util->add_taxonomy_names( $defs, array(
-				'bc_list_for_tax' => 'ancestors',
-			) );
-
-			return $defs;
 		}
 	}
 }
