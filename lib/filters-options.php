@@ -26,24 +26,24 @@ if ( ! class_exists( 'WpssoBcFiltersOptions' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'add_custom_post_type_names' => 1,
-				'add_custom_taxonomy_names'  => 1,
-				'option_type'                => 2,
+				'add_custom_post_type_options' => 1,
+				'add_custom_taxonomy_options'  => 1,
+				'option_type'                  => 2,
 			) );
 		}
 
-		public function filter_add_custom_post_type_names( $post_type_names ) {
+		public function filter_add_custom_post_type_options( $opt_prefixes ) {
 
-			$post_type_names[ 'bc_list_for_ptn' ] = 'ancestors';
+			$opt_prefixes[ 'bc_list_for_ptn' ] = 'ancestors';
 
-			return $post_type_names;
+			return $opt_prefixes;
 		}
 
-		public function filter_add_custom_taxonomy_names( $taxonomy_names ) {
+		public function filter_add_custom_taxonomy_options( $opt_prefixes ) {
 
-			$taxonomy_names[ 'bc_list_for_tax' ] = 'ancestors';
+			$opt_prefixes[ 'bc_list_for_tax' ] = 'ancestors';
 
-			return $taxonomy_names;
+			return $opt_prefixes;
 		}
 
 		public function filter_option_type( $type, $base_key ) {
