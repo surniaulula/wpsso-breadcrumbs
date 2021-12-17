@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.9.0-dev.6 (2021/12/15)**
+**Version 3.9.0-b.2 (2021/12/16)**
 
 * **New Features**
 	* None.
@@ -92,7 +92,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
-	* WPSSO Core v9.12.0-dev.6.
+	* WPSSO Core v9.12.0-b.2.
 
 **Version 3.8.1 (2021/11/16)**
 
@@ -308,9 +308,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.9.0-dev.6 =
+= 3.9.0-b.2 =
 
-(2021/12/15) Replaced method calls with filter hooks when completing the default options array.
+(2021/12/16) Replaced method calls with filter hooks when completing the default options array.
 
 = 3.8.1 =
 
