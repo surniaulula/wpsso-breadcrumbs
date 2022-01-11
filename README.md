@@ -34,7 +34,6 @@
 
 <p>WPSSO Schema Breadcrumbs Markup (WPSSO BC) is an add-on for the <a href="https://wordpress.org/plugins/wpsso/">WPSSO Core plugin</a>.</p>
 
-
 <h2>Installation</h2>
 
 <h3 class="top">Install and Uninstall</h3>
@@ -44,7 +43,6 @@
 <li><a href="https://wpsso.com/docs/plugins/wpsso-breadcrumbs/installation/uninstall-the-plugin/">Uninstall the Schema Breadcrumbs Markup add-on</a>.</li>
 </ul>
 
-
 <h2>Frequently Asked Questions</h2>
 
 <h3 class="top">Frequently Asked Questions</h3>
@@ -52,5 +50,4 @@
 <ul>
 <li><a href="https://wpsso.com/docs/plugins/wpsso-breadcrumbs/faqs/how-can-i-add-wpsso-breadcrumbs-to-my-theme/">How can I add WPSSO breadcrumbs to my theme?</a></li>
 </ul>
-
 
