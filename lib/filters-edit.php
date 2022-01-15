@@ -26,11 +26,11 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array( 
-				'metabox_sso_edit_schema_rows' => 4,	// Since WPSSO Core v9.0.0.
+				'metabox_sso_edit_general_schema_rows' => 4,	// Since WPSSO Core v9.0.0.
 			) );
 		}
 
-		public function filter_metabox_sso_edit_schema_rows( $table_rows, $form, $head_info, $mod ) {
+		public function filter_metabox_sso_edit_general_schema_rows( $table_rows, $form, $head_info, $mod ) {
 
 			$dots         = '';
 			$read_cache   = true;
