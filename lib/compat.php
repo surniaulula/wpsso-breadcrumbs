@@ -42,9 +42,9 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 				/**
 				 * Rank Math.
 				 */
-				if ( ! empty( $this->p->avail[ 'seo' ][ 'rank-math' ] ) ) {
+				if ( ! empty( $this->p->avail[ 'seo' ][ 'rankmath' ] ) ) {
 
-					add_filter( 'rank_math/json_ld', array( $this, 'cleanup_rank_math_json_ld' ), PHP_INT_MAX );
+					add_filter( 'rank_math/json_ld', array( $this, 'cleanup_rankmath_json_ld' ), PHP_INT_MAX );
 				}
 
 				/**
@@ -60,7 +60,7 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 			}
 		}
 
-		public function cleanup_rank_math_json_ld( $data ) {
+		public function cleanup_rankmath_json_ld( $data ) {
 
 			/**
 			 * Remove the Rank Math Schema BreadcrumbList markup.
