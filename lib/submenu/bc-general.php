@@ -96,10 +96,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					 */
 					$bc_list_select = '';
 
-					/**
-					 * Returns post types registered as 'public' = 1 and 'show_ui' = 1.
-					 */
-					$post_types = SucomUtilWP::get_post_types( $output = 'objects' );
+					$post_types = SucomUtilWP::get_post_types( $output = 'objects', $sort = true );
 
 					if ( is_array( $post_types ) ) {	// Just in case.
 
@@ -130,7 +127,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					 */
 					$bc_list_select = '';
 
-					$taxonomies = SucomUtilWP::get_taxonomies( $output = 'objects' );
+					$taxonomies = SucomUtilWP::get_taxonomies( $output = 'objects', $sort = true );
 
 					if ( is_array( $taxonomies ) ) {	// Just in case.
 
