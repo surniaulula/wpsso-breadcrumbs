@@ -36,6 +36,16 @@ if ( ! class_exists( 'WpssoBcFiltersUpgrade' ) ) {
 				7 => array(
 					'bc_title' => 'schema_bc_title',
 				),
+				8 => array(
+					'bc_list_for_ptn_attachment'   => 'bc_list_for_attachment',
+					'bc_list_for_ptn_download'     => 'bc_list_for_download',
+					'bc_type_for_ptn_tc_events'    => 'bc_type_for_tc_events',
+					'bc_type_for_ptn_tribe_events' => 'bc_type_for_tribe_events',
+					'bc_list_for_ptn_page'         => 'bc_list_for_page',
+					'bc_list_for_ptn_post'         => 'bc_list_for_post',
+					'bc_list_for_ptn_product'      => 'bc_list_for_product',
+					'bc_list_for_ptn_question'     => 'bc_list_for_question',
+				),
 			);
 
 			return $options_keys;

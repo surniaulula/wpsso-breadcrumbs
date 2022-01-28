@@ -82,74 +82,50 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 				case 'bc-general':
 
 					$table_rows[ 'bc_home_name' ] = '' . 
-					$this->form->get_th_html_locale( _x( 'Site Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
-						$css_class = '', $css_id = 'bc_home_name' ) . 
-					'<td>' . $this->form->get_input_locale( 'bc_home_name', $css_class = 'long_name' ) . '</td>';
+						$this->form->get_th_html_locale( _x( 'Site Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
+							$css_class = '', $css_id = 'bc_home_name' ) . 
+						'<td>' . $this->form->get_input_locale( 'bc_home_name', $css_class = 'long_name' ) . '</td>';
 
 					$table_rows[ 'bc_wp_home_name' ] = '' . 
-					$this->form->get_th_html_locale( _x( 'WordPress Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
-						$css_class = '', $css_id = 'bc_wp_home_name' ) . 
-					'<td>' . $this->form->get_input_locale( 'bc_wp_home_name', $css_class = 'long_name' ) . '</td>';
+						$this->form->get_th_html_locale( _x( 'WordPress Home Page Name', 'option label', 'wpsso-breadcrumbs' ),
+							$css_class = '', $css_id = 'bc_wp_home_name' ) . 
+						'<td>' . $this->form->get_input_locale( 'bc_wp_home_name', $css_class = 'long_name' ) . '</td>';
 
 					/**
 					 * Breadcrumbs List by Post Type.
 					 */
-					$bc_list_select = '';
+					$type_select = '';
+					$type_labels = SucomUtilWP::get_post_type_labels( $val_prefix = 'bc_list_for_' );
 
-					$post_types = SucomUtilWP::get_post_types( $output = 'objects', $sort = true );
+					foreach ( $type_labels as $opt_key => $obj_label ) {
 
-					if ( is_array( $post_types ) ) {	// Just in case.
-
-						foreach ( $post_types as $obj ) {
-
-							$opt_key = 'bc_list_for_ptn_' . $obj->name;
-
-							$obj_label = SucomUtilWP::get_object_label( $obj );
-
-							$bc_list_select .= '<p>' . $this->form->get_select( $opt_key,
-								$this->p->cf[ 'form' ][ 'breadcrumbs_for_posts' ], $css_class = 'long_name' ) . ' ' .
-									sprintf( _x( 'for %s', 'option comment', 'wpsso-breadcrumbs' ), $obj_label ) . '</p>';
-						}
+						$type_select .= '<p>' . $this->form->get_select( $opt_key, $this->p->cf[ 'form' ][ 'breadcrumbs_for_posts' ],
+							$css_class = 'long_name' ) . ' ' . sprintf( _x( 'for %s', 'option comment', 'wpsso-breadcrumbs' ),
+								$obj_label ) . '</p>';
 					}
 
-					$tr_key = 'bc_list_for_ptn';
-
-					$th_label = _x( 'Breadcrumbs by Post Type', 'option label', 'wpsso-breadcrumbs' );
-
-					$table_rows[ $tr_key ] = '' .
-						$this->form->get_th_html( $th_label, $css_class = '', $css_id = $tr_key ) .
-						'<td>' . $bc_list_select . '</td>';
-
-					unset( $bc_list_select, $post_types, $tr_key, $th_label );	// Just in case.
+					$table_rows[ 'bc_list_for_pt' ] = '' .
+						$this->form->get_th_html( _x( 'Breadcrumbs by Post Type', 'option label', 'wpsso-breadcrumbs' ),
+							$css_class = '', $css_id = 'bc_list_for_pt' ) .
+						'<td>' . $type_select . '</td>';
 
 					/**
 					 * Breadcrumbs List by Taxonomy.
 					 */
-					$bc_list_select = '';
+					$type_select = '';
+					$type_labels = SucomUtilWP::get_taxonomy_labels( $val_prefix = 'bc_list_for_tax_' );
 
-					$taxonomies = SucomUtilWP::get_taxonomies( $output = 'objects', $sort = true );
+					foreach ( $type_labels as $opt_key => $obj_label ) {
 
-					if ( is_array( $taxonomies ) ) {	// Just in case.
-
-						foreach ( $taxonomies as $obj ) {
-
-							$opt_key = 'bc_list_for_tax_' . $obj->name;
-
-							$obj_label = SucomUtilWP::get_object_label( $obj );
-
-							$bc_list_select .= '<p>' . $this->form->get_select( $opt_key,
-								$this->p->cf[ 'form' ][ 'breadcrumbs_for_terms' ], $css_class = 'long_name' ) . ' ' .
-									sprintf( _x( 'for %s', 'option comment', 'wpsso-breadcrumbs' ), $obj_label ) . '</p>' . "\n";
-						}
+						$type_select .= '<p>' . $this->form->get_select( $opt_key, $this->p->cf[ 'form' ][ 'breadcrumbs_for_terms' ],
+							$css_class = 'long_name' ) . ' ' . sprintf( _x( 'for %s', 'option comment', 'wpsso-breadcrumbs' ),
+								$obj_label ) . '</p>';
 					}
 
-					$tr_key = 'bc_list_for_ttn';
-
-					$th_label = _x( 'Breadcrumbs by Taxonomy', 'option label', 'wpsso-breadcrumbs' );
-
-					$table_rows[ $tr_key ] = $this->form->get_th_html( $th_label, '', $tr_key ) . '<td>' . $bc_list_select . '</td>';
-
-					unset( $bc_list_select, $taxonomies, $tr_key, $th_label );	// Just in case.
+					$table_rows[ 'bc_list_for_tax' ] = '' .
+						$this->form->get_th_html( _x( 'Breadcrumbs by Taxonomy', 'option label', 'wpsso-breadcrumbs' ),
+							$css_class = '', $css_id = 'bc_list_for_tax' ) .
+						'<td>' . $type_select . '</td>';
 
 					break;
 			}

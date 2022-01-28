@@ -17,8 +17,8 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'wpssobc' => array(			// Plugin acronym.
-					'version'     => '3.10.1-dev.3',	// Plugin version.
-					'opt_version' => '8',		// Increment when changing default option values.
+					'version'     => '3.10.1-dev.4',	// Plugin version.
+					'opt_version' => '9',		// Increment when changing default option values.
 					'short'       => 'WPSSO BC',	// Short plugin name.
 					'name'        => 'WPSSO Schema Breadcrumbs Markup',
 					'desc'        => 'Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.',
@@ -37,7 +37,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 							'home'          => 'https://wordpress.org/plugins/wpsso/',
 							'plugin_class'  => 'Wpsso',
 							'version_const' => 'WPSSO_VERSION',
-							'min_version'   => '9.16.0-dev.3',
+							'min_version'   => '9.16.0-dev.4',
 						),
 					),
 
@@ -73,12 +73,14 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 				'defaults' => array(
 					'bc_home_name'                      => 'Home',		// Site Home Page Name.
 					'bc_wp_home_name'                   => 'Blog',		// WordPress Home Page Name.
-					'bc_list_for_ptn_attachment'        => 'categories',
-					'bc_list_for_ptn_download'          => 'categories',	// For Easy Digital Downloads.
-					'bc_list_for_ptn_page'              => 'ancestors',
-					'bc_list_for_ptn_post'              => 'categories',
-					'bc_list_for_ptn_product'           => 'categories',	// For WooCommerce etc.
-					'bc_list_for_ptn_question'          => 'categories',	// For WPSSO FAQ.
+					'bc_list_for_attachment'            => 'categories',
+					'bc_list_for_download'              => 'categories',	// For Easy Digital Downloads.
+					'bc_type_for_tc_events'             => 'categories',	// For Tickera.
+					'bc_type_for_tribe_events'          => 'categories',	// For The Events Calendar.
+					'bc_list_for_page'                  => 'ancestors',
+					'bc_list_for_post'                  => 'categories',
+					'bc_list_for_product'               => 'categories',	// For WooCommerce etc.
+					'bc_list_for_question'              => 'categories',	// For WPSSO FAQ.
 					'bc_list_for_tax_category'          => 'ancestors',
 					'bc_list_for_tax_download_category' => 'ancestors',	// For Easy Digital Downloads.
 					'bc_list_for_tax_faq_category'      => 'ancestors',	// For WPSSO FAQ.

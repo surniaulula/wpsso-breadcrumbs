@@ -51,23 +51,15 @@ if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
 
 					break;
 
-				case 'tooltip-bc_list_for_user_page':	// Breadcrumbs for User Profiles.
+				case 'tooltip-bc_list_for_pt':	// Breadcrumbs by Post Type.
 
-					$text = __( 'Select the source of breadcrumbs for user profile pages.', 'wpsso-breadcrumbs' );
-
-					break;
-
-				case 'tooltip-bc_list_for_ptn':	// Breadcrumbs by Post Type.
-
-					$text = __( 'Select the source of breadcrumbs for each public post type (ie. posts, pages, products, and other custom post types).', 'wpsso-breadcrumbs' ) . ' ';
-
-					$text .= __( 'The post categories selection uses the \'category\' taxonomy by default, and the \'product_cat\' taxonomy for WooCommerce products.', 'wpsso-breadcrumbs' );
+					$text = __( 'Select the source of breadcrumbs for each public post type (ie. posts, pages, and custom post types).', 'wpsso-breadcrumbs' ) . ' ';
 
 					break;
 
-				case 'tooltip-bc_list_for_ttn':	// Breadcrumbs by Taxonomy.
+				case 'tooltip-bc_list_for_tax':	// Breadcrumbs by Taxonomy.
 
-					$text = __( 'Select the source of breadcrumbs for each public taxonomy (ie. categories, tags, and other custom taxonomies).', 'wpsso-breadcrumbs' );
+					$text = __( 'Select the source of breadcrumbs for each public taxonomy (ie. categories, tags, and custom taxonomies).', 'wpsso-breadcrumbs' );
 
 					break;
 			}

@@ -34,7 +34,7 @@ if ( ! class_exists( 'WpssoBcFiltersOptions' ) ) {
 
 		public function filter_add_custom_post_type_options( $opt_prefixes ) {
 
-			$opt_prefixes[ 'bc_list_for_ptn' ] = 'ancestors';
+			$opt_prefixes[ 'bc_list_for' ] = 'categories';
 
 			return $opt_prefixes;
 		}

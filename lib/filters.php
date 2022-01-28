@@ -140,8 +140,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			} elseif ( $mod[ 'is_post' ] ) {
 
-				$opt_key = 'bc_list_for_ptn_' . $mod[ 'post_type' ];
-
+				$opt_key     = 'bc_list_for_' . $mod[ 'post_type' ];
 				$parent_type = empty( $this->p->options[ $opt_key ] ) ? 'categories' : $this->p->options[ $opt_key ];
 
 				switch ( $parent_type ) {
