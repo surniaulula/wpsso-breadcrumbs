@@ -126,8 +126,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				if ( $mod[ 'is_home_posts' ] ) {	// Static posts page or blog archive page.
 
 					$home_url = SucomUtil::get_home_url( $this->p->options, $mixed = 'current' );
-
-					$wp_url = SucomUtil::get_wp_url( $this->p->options, $mixed = 'current' );
+					$wp_url   = SucomUtil::get_wp_url( $this->p->options, $mixed = 'current' );
 
 					/**
 					 * Add breadcrumbs if the blog page URL is different to the home page URL.
@@ -138,7 +137,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 					}
 				}
 
-			} elseif ( $mod[ 'is_post' ] ) {
+			} elseif ( $mod[ 'is_post' ] && $mod[ 'id' ] ) {
 
 				$opt_key     = 'bc_list_for_' . $mod[ 'post_type' ];
 				$parent_type = empty( $this->p->options[ $opt_key ] ) ? 'categories' : $this->p->options[ $opt_key ];
@@ -262,8 +261,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			} elseif ( $mod[ 'is_term' ] ) {
 
-				$opt_key = 'bc_list_for_tax_' . $mod[ 'tax_slug' ];
-
+				$opt_key     = 'bc_list_for_tax_' . $mod[ 'tax_slug' ];
 				$parent_type = empty( $this->p->options[ $opt_key ] ) ? 'ancestors' : $this->p->options[ $opt_key ];
 
 				switch ( $parent_type ) {
