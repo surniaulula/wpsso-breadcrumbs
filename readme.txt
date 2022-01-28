@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.10.1-dev.2 (2022/01/27)**
+**Version 3.10.1-dev.3 (2022/01/27)**
 
 * **New Features**
 	* None.
@@ -341,7 +341,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.10.1-dev.2 =
+= 3.10.1-dev.3 =
 
 (2022/01/27) Updated `SucomUtilWP::get_post_types()` and `SucomUtilWP::get_taxonomies()` method arguments.
 
