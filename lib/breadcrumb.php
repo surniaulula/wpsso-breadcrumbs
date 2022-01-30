@@ -152,7 +152,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					/**
 					 * Use $title_sep = false to avoid adding parent names in the term title.
 					 */
-					$title_sep  = false;	// Do not add a separator.
+					$title_sep = false;	// Do not add a separator.
 
 					$item_name = $wpsso->page->get_title( $max_len = 0, $dots = '', $mod, $read_cache = true,
 						$add_hashtags = false, $do_encode = true, $title_keys, $title_sep );
