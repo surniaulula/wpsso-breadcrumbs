@@ -78,20 +78,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.10.1-dev.8 (2022/01/29)**
+**Version 4.0.0-a.1 (2022/01/30)**
 
 * **New Features**
 	* None.
 * **Improvements**
-	* None.
+	* Updated methods and add-on config array keys for WPSSO Core v10.0.0.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
+	* Renamed 'bc_list_for_ptn_*' option keys to 'bc_list_for_*'.
 	* Updated `SucomUtilWP::get_post_types()` and `SucomUtilWP::get_taxonomies()` method arguments.
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
-	* WPSSO Core v10.0.0-dev.8.
+	* WPSSO Core v10.0.0-a.1.
 
 **Version 3.10.0 (2022/01/19)**
 
@@ -341,9 +342,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.10.1-dev.8 =
+= 4.0.0-a.1 =
 
-(2022/01/29) Updated `SucomUtilWP::get_post_types()` and `SucomUtilWP::get_taxonomies()` method arguments.
+(2022/01/30) Updated methods and add-on config array keys for WPSSO Core v10.0.0.
 
 = 3.10.0 =
 
