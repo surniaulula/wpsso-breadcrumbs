@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.2
 Requires At Least: 5.2
 Tested Up To: 5.9.0
-Stable Tag: 3.10.0
+Stable Tag: 4.0.0
 
 Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.
 
@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.0.0 (2022/02/01)**
+**Version 4.0.0 (2022/02/02)**
 
 * **New Features**
 	* None.
@@ -344,7 +344,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 4.0.0 =
 
-(2022/02/01) Updated methods and add-on config array keys for WPSSO Core v10.0.0.
+(2022/02/02) Updated methods and add-on config array keys for WPSSO Core v10.0.0.
 
 = 3.10.0 =
 
