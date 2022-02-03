@@ -43,7 +43,7 @@ msgctxt "plugin name"
 msgid "WPSSO Core"
 msgstr ""
 
-#: lib/filters-edit.php:44
+#: lib/filters-edit.php:43
 msgctxt "option label"
 msgid "Breadcrumb Name"
 msgstr ""

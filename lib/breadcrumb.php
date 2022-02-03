@@ -154,8 +154,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					 */
 					$title_sep = false;	// Do not add a separator.
 
-					$item_name = $wpsso->page->get_title( $max_len = 0, $dots = '', $mod, $read_cache = true,
-						$add_hashtags = false, $do_encode = true, $title_keys, $title_sep );
+					$item_name = $wpsso->page->get_title( $max_len = 0, $dots = '', $mod, $add_hashtags = false, $do_encode = true, $title_keys, $title_sep );
 
 					$item_url = $wpsso->util->get_canonical_url( $mod );
 
