@@ -78,6 +78,22 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 4.1.0-dev.2 (2022/02/14)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Updated the `WpssoPage` class `get_title()`, `get_description()`, and `get_caption()` method arguments for WPSSO Core v10.4.0.
+	* Renamed the 'schema_bc_title' option key to 'schema_title_bc'.
+* **Requires At Least**
+	* PHP v7.2.
+	* WordPress v5.2.
+	* WPSSO Core v10.4.0-dev.2.
+
 **Version 4.0.0 (2022/02/02)**
 
 * **New Features**
@@ -341,6 +357,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WPSSO Core v8.4.1.
 
 == Upgrade Notice ==
+
+= 4.1.0-dev.2 =
+
+(2022/02/14) Updated `WpssoPage` class method arguments for WPSSO Core v10.4.0.
 
 = 4.0.0 =
 
