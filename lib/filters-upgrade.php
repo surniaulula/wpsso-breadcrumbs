@@ -34,7 +34,7 @@ if ( ! class_exists( 'WpssoBcFiltersUpgrade' ) ) {
 
 			$options_keys[ 'wpssobc' ] = array(
 				7 => array(
-					'bc_title' => 'schema_bc_title',
+					'bc_title' => 'schema_title_bc',
 				),
 				8 => array(
 					'bc_list_for_ptn_attachment'   => 'bc_list_for_attachment',
@@ -45,6 +45,9 @@ if ( ! class_exists( 'WpssoBcFiltersUpgrade' ) ) {
 					'bc_list_for_ptn_post'         => 'bc_list_for_post',
 					'bc_list_for_ptn_product'      => 'bc_list_for_product',
 					'bc_list_for_ptn_question'     => 'bc_list_for_question',
+				),
+				9 => array(
+					'schema_bc_title' => 'schema_title_bc',
 				),
 			);
 

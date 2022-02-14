@@ -147,14 +147,10 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 					$item_count++;
 
-					$title_keys = array( 'schema_bc_title', 'schema_title', 'og_title' );
-
 					/**
 					 * Use $title_sep = false to avoid adding term parent names in the term title.
 					 */
-					$title_sep = false;	// Do not add a separator.
-
-					$item_name = $wpsso->page->get_title( $max_len = 0, $dots = '', $mod, $add_hashtags = false, $do_encode = true, $title_keys, $title_sep );
+					$item_name = $wpsso->page->get_title( $mod, $md_key = 'schema_title_bc', $max_len = 'schema_title_bc', $title_sep = false );
 
 					$item_url = $wpsso->util->get_canonical_url( $mod );
 

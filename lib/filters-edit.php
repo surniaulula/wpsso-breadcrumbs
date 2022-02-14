@@ -32,14 +32,19 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 
 		public function filter_metabox_sso_edit_schema_rows( $table_rows, $form, $head_info, $mod ) {
 
-			$def_bc_title = $this->p->page->get_title( $max_len = 0, $dots = '', $mod, $add_hashtags = false, $do_encode = true,
-				$md_keys = array( 'schema_title', 'og_title' ));
+			$limits = $this->p->cf[ 'form' ][ 'input_limits' ];
+
+			/**
+			 * Use $title_sep = false to avoid adding term parent names in the term title.
+			 */
+			$def_title_bc = $this->p->page->get_title( $mod, $md_key = 'schema_title_alt', $max_len = 'schema_title_bc', $title_sep = false );
 
 			SucomUtil::add_after_key( $table_rows, 'schema_title_alt', array( 
-				'schema_bc_title' => '' .
+				'schema_title_bc' => '' .
 					$form->get_th_html( _x( 'Breadcrumb Name', 'option label', 'wpsso-breadcrumbs' ),
-						$css_class = 'medium', $css_id = 'meta-schema_bc_title' ) . 
-					'<td>' . $form->get_input( 'schema_bc_title', $css_class = 'wide', $css_id = '', $max_len = 0, $def_bc_title ) . '</td>'
+						$css_class = 'medium', $css_id = 'meta-schema_title_bc' ) . 
+					'<td>' . $form->get_input( 'schema_title_bc', $css_class = 'wide', $css_id = '',
+						$limits[ 'schema_title_bc' ], $def_title_bc ) . '</td>'
 			) );
 
 			return $table_rows;
