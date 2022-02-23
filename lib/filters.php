@@ -171,7 +171,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 						if ( $this->p->debug->enabled ) {
 
-							$this->p->debug->log_arr( '$post_ids', $post_ids );
+							$this->p->debug->log_arr( 'post_ids', $post_ids );
 						}
 
 						$item_mods = array();	// False by default.
