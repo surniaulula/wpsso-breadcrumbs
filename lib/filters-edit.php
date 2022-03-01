@@ -36,6 +36,8 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 
 			/**
 			 * Use $title_sep = false to avoid adding term parent names in the term title.
+			 *
+			 * $md_key = 'schema_title_alt' will use array( 'schema_title_alt', 'schema_title', 'seo_title' ).
 			 */
 			$def_title_bc = $this->p->page->get_title( $mod, $md_key = 'schema_title_alt', $max_len = 'schema_title_bc', $title_sep = false );
 
