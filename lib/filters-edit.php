@@ -32,7 +32,7 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 
 		public function filter_metabox_sso_edit_schema_rows( $table_rows, $form, $head_info, $mod ) {
 
-			$limits = $this->p->cf[ 'form' ][ 'input_limits' ];
+			$limits = WpssoConfig::get_input_limits();	// Uses a local static cache.
 
 			/**
 			 * Use $title_sep = false to avoid adding term parent names in the term title.
