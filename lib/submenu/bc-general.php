@@ -95,7 +95,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					 * Breadcrumbs List by Post Type.
 					 */
 					$type_select = '';
-					$type_labels = SucomUtilWP::get_post_type_labels( $val_prefix = 'bc_list_for_' );
+					$type_labels = SucomUtil::get_post_type_labels( $val_prefix = 'bc_list_for_' );
 
 					foreach ( $type_labels as $opt_key => $obj_label ) {
 
@@ -113,7 +113,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 					 * Breadcrumbs List by Taxonomy.
 					 */
 					$type_select = '';
-					$type_labels = SucomUtilWP::get_taxonomy_labels( $val_prefix = 'bc_list_for_tax_' );
+					$type_labels = SucomUtil::get_taxonomy_labels( $val_prefix = 'bc_list_for_tax_' );
 
 					foreach ( $type_labels as $opt_key => $obj_label ) {
 
