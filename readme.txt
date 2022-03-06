@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.1.1-b.1 (2022/03/04)**
+**Version 4.1.1-b.1 (2022/03/06)**
 
 * **New Features**
 	* None.
@@ -375,7 +375,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 4.1.1-b.1 =
 
-(2022/03/04) Updated `SucomUtilWP` method calls to `SucomUtil` for WPSSO Core v11.5.0.
+(2022/03/06) Updated `SucomUtilWP` method calls to `SucomUtil` for WPSSO Core v11.5.0.
 
 = 4.1.0 =
 
