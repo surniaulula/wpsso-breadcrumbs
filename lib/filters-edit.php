@@ -36,8 +36,6 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 
 			/**
 			 * Use $title_sep = false to avoid adding term parent names in the term title.
-			 *
-			 * $md_key = 'schema_title_alt' will use array( 'schema_title_alt', 'schema_title', 'seo_title' ).
 			 */
 			$def_title_bc = $this->p->page->get_title( $mod, $md_key = 'schema_title_alt', $max_len = 'schema_title_bc', $title_sep = false );
 
@@ -45,8 +43,8 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 				'schema_title_bc' => '' .
 					$form->get_th_html( _x( 'Breadcrumb Name', 'option label', 'wpsso-breadcrumbs' ),
 						$css_class = 'medium', $css_id = 'meta-schema_title_bc' ) . 
-					'<td>' . $form->get_input( 'schema_title_bc', $css_class = 'wide', $css_id = '',
-						$limits[ 'schema_title_bc' ], $def_title_bc ) . '</td>'
+					'<td>' . $form->get_input_dep( 'schema_title_bc', $css_class = 'wide', $css_id = '',
+						$limits[ 'schema_title_bc' ], $def_title_bc, $is_disabled = false, $dep_id = 'schema_title_alt' ) . '</td>'
 			) );
 
 			return $table_rows;
