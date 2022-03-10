@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.2.0-rc.1 (2022/03/10)**
+**Version 4.2.0 (2022/03/10)**
 
 * **New Features**
 	* None.
@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
-	* WPSSO Core v11.6.0-rc.1.
+	* WPSSO Core v11.6.0.
 
 **Version 4.1.1 (2022/03/07)**
 
@@ -388,7 +388,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.2.0-rc.1 =
+= 4.2.0 =
 
 (2022/03/10) Added dynamic placeholders to Document SSO metabox title options.
 
