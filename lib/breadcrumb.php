@@ -149,8 +149,6 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 					/**
 					 * Use $title_sep = false to avoid adding term parent names in the term title.
-					 *
-					 * $md_key = 'schema_title_bc' will use array( 'schema_title_bc', 'schema_title_alt', 'schema_title', 'seo_title' ).
 					 */
 					$item_name = $wpsso->page->get_title( $mod, $md_key = 'schema_title_bc', $max_len = 'schema_title_bc', $title_sep = false );
 
