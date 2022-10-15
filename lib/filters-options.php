@@ -25,7 +25,7 @@ if ( ! class_exists( 'WpssoBcFiltersOptions' ) ) {
 			$this->p =& $plugin;
 			$this->a =& $addon;
 
-			$this->p->util->add_plugin_filters( $this, array( 
+			$this->p->util->add_plugin_filters( $this, array(
 				'add_custom_post_type_options' => 1,
 				'add_custom_taxonomy_options'  => 1,
 				'option_type'                  => 2,

@@ -25,7 +25,7 @@ if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
 			$this->p =& $plugin;
 			$this->a =& $addon;
 
-			$this->p->util->add_plugin_filters( $this, array( 
+			$this->p->util->add_plugin_filters( $this, array(
 				'messages_tooltip'      => 2,
 			) );
 		}

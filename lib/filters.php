@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			$this->upg = new WpssoBcFiltersUpgrade( $plugin, $addon );
 
-			$this->p->util->add_plugin_filters( $this, array( 
+			$this->p->util->add_plugin_filters( $this, array(
 				'json_array_schema_page_type_ids'           => 2,
 				'json_data_https_schema_org_breadcrumblist' => 5,
 			) );
