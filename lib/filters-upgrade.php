@@ -26,13 +26,13 @@ if ( ! class_exists( 'WpssoBcFiltersUpgrade' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'rename_md_options_keys'    => 1,
+				'rename_md_options_keys' => 1,
 			) );
 		}
 
-		public function filter_rename_md_options_keys( $options_keys ) {
+		public function filter_rename_md_options_keys( $rename_keys_by_ext ) {
 
-			$options_keys[ 'wpssobc' ] = array(
+			$rename_keys_by_ext[ 'wpssobc' ] = array(
 				7 => array(
 					'bc_title' => 'schema_title_bc',
 				),
@@ -51,7 +51,7 @@ if ( ! class_exists( 'WpssoBcFiltersUpgrade' ) ) {
 				),
 			);
 
-			return $options_keys;
+			return $rename_keys_by_ext;
 		}
 	}
 }
