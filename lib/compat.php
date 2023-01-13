@@ -57,6 +57,14 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 					 */
 					add_filter( 'woocommerce_structured_data_breadcrumblist', '__return_empty_array' );
 				}
+
+				/**
+				 * Yoast SEO.
+				 */
+				if ( ! empty( $this->p->avail[ 'seo' ][ 'wpseo' ] ) ) {
+				
+					add_filter( 'wpseo_schema_graph', array( $this, 'cleanup_wpseo_schema_graph' ), 1000, 2 );
+				}
 			}
 		}
 
@@ -71,6 +79,27 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 			}
 
 			return $data;
+		}
+
+		public function cleanup_wpseo_schema_graph( $graph, $context ) {
+
+			/**
+			 * Remove the Yoast SEO Schema BreadcrumbList markup.
+			 */
+			foreach ( $graph as $num => $piece ) {
+
+				if ( ! empty( $piece[ '@type' ] ) ) {
+
+					if ( 'BreadcrumbList' === $piece[ '@type' ] ) {
+
+						unset( $graph[ $num ] );
+
+						break;
+					}
+				}
+			}
+
+			return array_values( $graph );
 		}
 	}
 }
