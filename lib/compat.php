@@ -62,7 +62,7 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 				 * Yoast SEO.
 				 */
 				if ( ! empty( $this->p->avail[ 'seo' ][ 'wpseo' ] ) ) {
-				
+
 					add_filter( 'wpseo_schema_graph', array( $this, 'cleanup_wpseo_schema_graph' ), 1000, 2 );
 				}
 			}
