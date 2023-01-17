@@ -16,15 +16,13 @@
 
 <!-- about -->
 
-<p><strong>The most comprehensive Schema BreadcrumbsList markup of any plugin!</strong></p>
-
-<p>Uses <a href="https://developers.google.com/search/docs/data-types/breadcrumb">Google's preferred Schema JSON-LD format for breadcrumbs markup</a>.</p>
+<p><strong>The Most Comprehensive Schema BreadcrumbsList Markup of Any Plugin.</strong></p>
 
 <p>Adds Schema BreadcrumbList markup for posts, pages, custom post types, categories, tags, custom taxonomies, search results, and date archive pages.</p>
 
 <p>Select between using ancestors (aka parents), the primary category, or all categories for posts, pages, and custom post types.</p>
 
-<h3>No Templates to Modify</h3>
+<p><strong>No Templates to Modify:</strong></p>
 
 <p>Simply activate or deactivate the plugin to enable / disable the addition of Schema BreadcrumbList markup.</p>
 
