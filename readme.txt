@@ -77,7 +77,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.3.0-rc.1 (2023/01/18)**
+**Version 4.3.0-rc.2 (2023/01/19)**
 
 * **New Features**
 	* None.
@@ -90,7 +90,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.
 	* WordPress v5.2.
-	* WPSSO Core v14.5.0-rc.1.
+	* WPSSO Core v14.5.0-rc.2.
 
 **Version 4.2.0 (2022/03/10)**
 
@@ -402,9 +402,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.3.0-rc.1 =
+= 4.3.0-rc.2 =
 
-(2023/01/18) Added a Yoast SEO compatibility filter to remove its breadcrumbs markup.
+(2023/01/19) Added a Yoast SEO compatibility filter to remove its breadcrumbs markup.
 
 = 4.2.0 =
 
