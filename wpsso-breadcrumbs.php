@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * Plugin Name: WPSSO Schema Breadcrumbs Markup
  * Plugin Slug: wpsso-breadcrumbs
  * Text Domain: wpsso-breadcrumbs
@@ -15,7 +15,7 @@
  * Requires PHP: 7.2
  * Requires At Least: 5.2
  * Tested Up To: 6.1.1
- * Version: 4.3.0-rc.1
+ * Version: 4.3.0-rc.2
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
