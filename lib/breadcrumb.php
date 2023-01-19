@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoBc class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoBc->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -46,7 +46,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				return $item_count;
 			}
 
-			/**
+			/*
 			 * Prevent recursion - i.e. breadcrumb.list in breadcrumb.list, etc.
 			 */
 			if ( isset( $added_page_type_ids[ $page_type_id ] ) ) {
@@ -62,7 +62,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 			$added_page_type_ids[ $page_type_id ] = true;
 
-			/**
+			/*
 			 * Add the website home page.
 			 */
 			$home_url = SucomUtil::get_home_url( $wpsso->options, $mixed = 'current' );
@@ -94,7 +94,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				$json_data[ $prop_name ][] = $list_item;
 			}
 
-			/**
+			/*
 			 * Add the WordPress home page (ie. the blog page).
 			 */
 			$wp_url = SucomUtil::get_wp_url( $wpsso->options, $mixed = 'current' );
@@ -135,7 +135,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 			if ( ! empty( $mods ) ) {
 
-				/**
+				/*
 				 * Begin timer.
 				 */
 				if ( $wpsso->debug->enabled ) {
@@ -147,7 +147,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 					$item_count++;
 
-					/**
+					/*
 					 * Use $title_sep = false to avoid adding term parent names in the term title.
 					 */
 					$item_name = $wpsso->page->get_title( $mod, $md_key = 'schema_title_bc', $max_len = 'schema_title_bc', $title_sep = false );
@@ -165,7 +165,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 				unset( $added_page_type_ids[ $page_type_id ] );
 
-				/**
+				/*
 				 * End timer.
 				 */
 				if ( $wpsso->debug->enabled ) {
@@ -177,7 +177,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			return $item_count;
 		}
 
-		/**
+		/*
 		 * Returns an HTML breadcrumbs string for the given $mod.
 		 *
 		 * Use $lists_max = 0 or false to include all WPSSO breadcrumb lists.
@@ -207,7 +207,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			return $html;
 		}
 
-		/**
+		/*
 		 * Returns an array of arrays with HTML link elements.
 		 *
 		 * Use $lists_max = 0 or false to include all breadcrumb lists.
@@ -216,7 +216,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 			$wpsso =& Wpsso::get_instance();
 
-			/**
+			/*
 			 * WpssoSchema->get_json_data() returns a two dimensional array of json data unless $single is true.
 			 */
 			$json_data = $wpsso->schema->get_json_data( $mod, $mt_og = array(), $page_type_id = 'breadcrumb.list', $is_main = false, $single = false );

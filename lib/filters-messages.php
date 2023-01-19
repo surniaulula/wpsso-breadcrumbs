@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoBcFiltersMessages' ) ) {
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoBc class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoBcFilters->__construct().
 		 */
 		public function __construct( &$plugin, &$addon ) {

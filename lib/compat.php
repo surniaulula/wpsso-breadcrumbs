@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! class_exists( 'WpssoBcCompat' ) ) {
 
-	/**
+	/*
 	 * Third-party plugin and theme compatibility actions and filters.
 	 */
 	class WpssoBcCompat {
@@ -20,7 +20,7 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoBc class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoBc->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -39,7 +39,7 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 
 			if ( ! is_admin() ) {
 
-				/**
+				/*
 				 * Rank Math.
 				 */
 				if ( ! empty( $this->p->avail[ 'seo' ][ 'rankmath' ] ) ) {
@@ -47,18 +47,18 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 					add_filter( 'rank_math/json_ld', array( $this, 'cleanup_rankmath_json_ld' ), PHP_INT_MAX );
 				}
 
-				/**
+				/*
 				 * WooCommerce.
 				 */
 				if ( ! empty( $this->p->avail[ 'ecom' ][ 'woocommerce' ] ) ) {
 
-					/**
+					/*
 					 * Disable Schema BreadcrumbList JSON-LD markup from the WooCommerce WC_Structured_Data class (since v3.0.0).
 					 */
 					add_filter( 'woocommerce_structured_data_breadcrumblist', '__return_empty_array' );
 				}
 
-				/**
+				/*
 				 * Yoast SEO.
 				 */
 				if ( ! empty( $this->p->avail[ 'seo' ][ 'wpseo' ] ) ) {
@@ -70,7 +70,7 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 
 		public function cleanup_rankmath_json_ld( $data ) {
 
-			/**
+			/*
 			 * Remove the Rank Math Schema BreadcrumbList markup.
 			 */
 			if ( isset( $data[ 'BreadcrumbList' ] ) ) {
@@ -83,7 +83,7 @@ if ( ! class_exists( 'WpssoBcCompat' ) ) {
 
 		public function cleanup_wpseo_schema_graph( $graph, $context ) {
 
-			/**
+			/*
 			 * Remove the Yoast SEO Schema BreadcrumbList markup.
 			 */
 			foreach ( $graph as $num => $piece ) {

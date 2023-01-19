@@ -29,7 +29,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 			$this->menu_ext  = $ext;
 		}
 
-		/**
+		/*
 		 * Called by the extended WpssoAdmin class.
 		 */
 		protected function add_meta_boxes() {
@@ -91,7 +91,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 							$css_class = '', $css_id = 'bc_wp_home_name' ) .
 						'<td>' . $this->form->get_input_locale( 'bc_wp_home_name', $css_class = 'long_name' ) . '</td>';
 
-					/**
+					/*
 					 * Breadcrumbs List by Post Type.
 					 */
 					$type_select = '';
@@ -109,7 +109,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBcGeneral' ) && class_exists( 'WpssoAdmin' )
 							$css_class = '', $css_id = 'bc_list_for_pt' ) .
 						'<td>' . $type_select . '</td>';
 
-					/**
+					/*
 					 * Breadcrumbs List by Taxonomy.
 					 */
 					$type_select = '';

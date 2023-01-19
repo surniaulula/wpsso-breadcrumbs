@@ -21,7 +21,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 		private $opts;	// WpssoBcFiltersOptions class object.
 		private $upg;	// WpssoBcFiltersUpgrade class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoBc->init_objects().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -118,7 +118,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			$item_mods  = false;	// Do not return breadcrumbs by default.
 			$item_count = 0;
 
-			/**
+			/*
 			 * Breacrumbs are not required for the home page.
 			 */
 			if ( $mod[ 'is_home' ] ) {	// Static front page (singular post).
@@ -128,7 +128,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 					$home_url = SucomUtil::get_home_url( $this->p->options, $mixed = 'current' );
 					$wp_url   = SucomUtil::get_wp_url( $this->p->options, $mixed = 'current' );
 
-					/**
+					/*
 					 * Add breadcrumbs if the blog page URL is different to the home page URL.
 					 */
 					if ( $wp_url !== $home_url ) {
@@ -185,7 +185,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 					case 'categories':	// Get post categories (ie. primary taxonomy terms).
 
-						/**
+						/*
 						 * Returns an associative array of term IDs and their names or objects.
 						 *
 						 * If the custom primary or default term ID exists in the post terms array, it will be moved to the top.
@@ -199,12 +199,12 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							break;	// Stop here.
 						}
 
-						/**
+						/*
 						 * The 'wpsso_primary_tax_slug' filter is hooked by the EDD and WooCommerce integration modules.
 						 */
 						$primary_tax_slug = apply_filters( 'wpsso_primary_tax_slug', $tax_slug = 'category', $mod );
 
-						/**
+						/*
 						 * Create a Schema BreadcrumbList item list for each category.
 						 */
 						$bc_list_num  = 0;
@@ -234,7 +234,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							$bc_list_mods[] = $this->p->post->get_mod( $mod[ 'id' ] );	// Add the current page last.
 
-							/**
+							/*
 							 * Create a unique @id for the breadcrumbs of each top-level post term.
 							 *
 							 * Example "@id": "/2013/03/15/tiled-gallery/#sso/breadcrumb.list/post-format-gallery".
@@ -243,7 +243,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							$term_data  = array( '@id' => $data_id );
 							$item_count = WpssoBcBreadcrumb::add_itemlist_data( $term_data, $bc_list_mods, $page_type_id );
 
-							/**
+							/*
 							 * Multiple breadcrumbs list - merge $json_data and save to $bc_list_data array.
 							 */
 							$bc_list_data[] = WpssoSchema::return_data_from_filter( $json_data, $term_data, $is_main );
@@ -307,7 +307,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				if ( $mod[ 'is_month' ] ) {
 
-					/**
+					/*
 					 * Add year and month.
 					 */
 					$item_mods = array (
@@ -317,7 +317,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				} elseif ( $mod[ 'is_day' ] ) {
 
-					/**
+					/*
 					 * Add year, month, and day.
 					 */
 					$item_mods = array (
@@ -332,7 +332,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 				}
 			}
 
-			/**
+			/*
 			 * Passing an empty $item_mods array will only add the home page and the blog page URL(s).
 			 *
 			 * The returned $item_count will be at least 1 for the home page.

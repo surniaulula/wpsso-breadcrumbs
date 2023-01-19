@@ -28,7 +28,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 					'text_domain' => 'wpsso-breadcrumbs',
 					'domain_path' => '/languages',
 
-					/**
+					/*
 					 * Required plugin and its version.
 					 */
 					'req' => array(
@@ -41,12 +41,12 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 						),
 					),
 
-					/**
+					/*
 					 * URLs or relative paths to plugin banners and icons.
 					 */
 					'assets' => array(
 
-						/**
+						/*
 						 * Icon image array keys are '1x' and '2x'.
 						 */
 						'icons' => array(
@@ -55,7 +55,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 						),
 					),
 
-					/**
+					/*
 					 * Library files loaded and instantiated by WPSSO.
 					 */
 					'lib' => array(
@@ -66,7 +66,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 				),
 			),
 
-			/**
+			/*
 			 * Additional add-on setting options.
 			 */
 			'opt' => array(
@@ -107,7 +107,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 
 			$info =& self::$cf[ 'plugin' ][ 'wpssobc' ];
 
-			/**
+			/*
 			 * Define fixed constants.
 			 */
 			define( 'WPSSOBC_FILEPATH', $plugin_file );
@@ -117,7 +117,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 			define( 'WPSSOBC_URLPATH', trailingslashit( plugins_url( '', $plugin_file ) ) );
 			define( 'WPSSOBC_VERSION', $info[ 'version' ] );
 
-			/**
+			/*
 			 * Define variable constants.
 			 */
 			self::set_variable_constants();
@@ -130,7 +130,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 				$var_const = (array) self::get_variable_constants();
 			}
 
-			/**
+			/*
 			 * Define the variable constants, if not already defined.
 			 */
 			foreach ( $var_const as $name => $value ) {
@@ -148,7 +148,7 @@ if ( ! class_exists( 'WpssoBcConfig' ) ) {
 
 			$var_const[ 'WPSSOBC_SCHEMA_BREADCRUMB_SCRIPTS_MAX' ] = 10;
 
-			/**
+			/*
 			 * Maybe override the default constant value with a pre-defined constant value.
 			 */
 			foreach ( $var_const as $name => $value ) {

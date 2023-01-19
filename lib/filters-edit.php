@@ -17,7 +17,7 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 		private $p;	// Wpsso class object.
 		private $a;	// WpssoBc class object.
 
-		/**
+		/*
 		 * Instantiated by WpssoBcFilters->__construct().
 		 */
 		public function __construct( &$plugin, &$addon ) {
@@ -34,7 +34,7 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 
 			$limits = WpssoConfig::get_input_limits();	// Uses a local cache.
 
-			/**
+			/*
 			 * Use $title_sep = false to avoid adding term parent names in the term title.
 			 */
 			$def_title_bc = $this->p->page->get_title( $mod, $md_key = 'schema_title_alt', $max_len = 'schema_title_bc', $title_sep = false );
