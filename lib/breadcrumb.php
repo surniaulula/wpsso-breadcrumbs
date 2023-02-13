@@ -136,7 +136,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			if ( ! empty( $mods ) ) {
 
 				if ( $wpsso->debug->enabled ) {
-					
+
 					$wpsso->debug->mark( 'adding mods data' );	// Begin timer.
 				}
 
@@ -163,7 +163,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 				unset( $added_page_type_ids[ $page_type_id ] );
 
 				if ( $wpsso->debug->enabled ) {
-				
+
 					$wpsso->debug->mark( 'adding mods data' );	// End timer.
 				}
 			}
