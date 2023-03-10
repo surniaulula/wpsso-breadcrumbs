@@ -200,7 +200,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						}
 
 						/*
-						 * The 'wpsso_primary_tax_slug' filter is hooked by the EDD and WooCommerce integration modules.
+						 * The 'wpsso_primary_tax_slug' filter is hooked by the WooCommerce integration module.
 						 */
 						$primary_tax_slug = apply_filters( 'wpsso_primary_tax_slug', $tax_slug = 'category', $mod );
 
