@@ -139,7 +139,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			} elseif ( $mod[ 'is_post' ] && $mod[ 'id' ] ) {
 
-				$opt_key     = 'bc_list_for_' . $mod[ 'post_type' ];
+				$opt_key     = SucomUtil::sanitize_key( 'bc_list_for_' . $mod[ 'post_type' ] );
 				$parent_type = empty( $this->p->options[ $opt_key ] ) ? 'categories' : $this->p->options[ $opt_key ];
 
 				switch ( $parent_type ) {
@@ -261,7 +261,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			} elseif ( $mod[ 'is_term' ] ) {
 
-				$opt_key     = 'bc_list_for_tax_' . $mod[ 'tax_slug' ];
+				$opt_key     = SucomUtil::sanitize_key( 'bc_list_for_tax_' . $mod[ 'tax_slug' ] );
 				$parent_type = empty( $this->p->options[ $opt_key ] ) ? 'ancestors' : $this->p->options[ $opt_key ];
 
 				switch ( $parent_type ) {
