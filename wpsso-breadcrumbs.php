@@ -12,7 +12,7 @@
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.
  * Requires Plugins: wpsso
- * Requires PHP: 7.2.5
+ * Requires PHP: 7.2.34
  * Requires At Least: 5.5
  * Tested Up To: 6.2.2
  * Version: 4.3.1
