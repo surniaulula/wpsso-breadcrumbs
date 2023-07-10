@@ -26,14 +26,16 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			$this->a =& $addon;
 		}
 
-		public static function add_itemlist_data( array &$json_data, array $mods, $page_type_id ) {	// Pass by reference is OK.
+		/*
+		 * See WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist().
+		 */
+		public static function add_breadcrumblist_data( array &$json_data, array $mods, $page_type_id ) {	// Pass by reference is OK.
 
 			static $added_page_type_ids = array();
 
 			$wpsso =& Wpsso::get_instance();
 
-			$prop_name = 'itemListElement';
-
+			$prop_name  = 'itemListElement';
 			$item_count = isset( $json_data[ $prop_name ] ) ? count( $json_data[ $prop_name ] ) : 0;
 
 			if ( empty( $page_type_id ) ) {

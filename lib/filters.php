@@ -94,8 +94,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			if ( empty( $json_data ) ) {
 
 				$page_type_url = $this->p->schema->get_schema_type_url( $page_type_id );
-
-				$json_data = WpssoSchema::get_schema_type_context( $page_type_url );
+				$json_data     = WpssoSchema::get_schema_type_context( $page_type_url );
 			}
 
 			if ( empty( $json_data[ 'url' ] ) ) {
@@ -241,7 +240,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 							 */
 							$data_id    = $json_data[ 'url' ] . $id_anchor . $page_type_id . $id_delim . $term_obj->slug;
 							$term_data  = array( '@id' => $data_id );
-							$item_count = WpssoBcBreadcrumb::add_itemlist_data( $term_data, $bc_list_mods, $page_type_id );
+							$item_count = WpssoBcBreadcrumb::add_breadcrumblist_data( $term_data, $bc_list_mods, $page_type_id );
 
 							/*
 							 * Multiple breadcrumbs list - merge $json_data and save to $bc_list_data array.
@@ -339,7 +338,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 			 */
 			if ( is_array( $item_mods ) ) {	// False by default.
 
-				$item_count = WpssoBcBreadcrumb::add_itemlist_data( $json_data, $item_mods, $page_type_id );
+				$item_count = WpssoBcBreadcrumb::add_breadcrumblist_data( $json_data, $item_mods, $page_type_id );
 			}
 
 			return $item_count ? $json_data : array();	// Stop here.
