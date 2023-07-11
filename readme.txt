@@ -79,7 +79,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.3.2-b.1 (2023/07/11)**
+**Version 4.3.2-b.2 (2023/07/11)**
 
 * **New Features**
 	* None.
@@ -92,7 +92,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v15.15.2-b.1.
+	* WPSSO Core v15.16.0-b.2.
 
 **Version 4.3.1 (2023/01/26)**
 
@@ -188,7 +188,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.3.2-b.1 =
+= 4.3.2-b.2 =
 
 (2023/07/11) Renamed the `WpssoBcBreadcrumb->add_itemlist_data()` method to `WpssoBcBreadcrumb->add_breadcrumblist_data()`.
 
