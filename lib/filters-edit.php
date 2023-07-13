@@ -32,7 +32,7 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 
 		public function filter_metabox_sso_edit_schema_rows( $table_rows, $form, $head_info, $mod ) {
 
-			$limits = WpssoConfig::get_input_limits();	// Uses a local cache.
+			$input_limits = WpssoConfig::get_input_limits();	// Uses a local cache.
 
 			/*
 			 * Use $title_sep = false to avoid adding term parent names in the term title.
@@ -44,7 +44,7 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 					$form->get_th_html( _x( 'Breadcrumb Name', 'option label', 'wpsso-breadcrumbs' ),
 						$css_class = 'medium', $css_id = 'meta-schema_title_bc' ) .
 					'<td>' . $form->get_input_dep( 'schema_title_bc', $css_class = 'wide', $css_id = '',
-						$limits[ 'schema_title_bc' ], $def_title_bc, $is_disabled = false, $dep_id = 'schema_title_alt' ) . '</td>'
+						$input_limits[ 'schema_title_bc' ], $def_title_bc, $is_disabled = false, $dep_id = 'schema_title_alt' ) . '</td>'
 			) );
 
 			return $table_rows;
