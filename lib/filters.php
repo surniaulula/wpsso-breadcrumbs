@@ -138,7 +138,8 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 			} elseif ( $mod[ 'is_post' ] && $mod[ 'id' ] ) {
 
-				$opt_key     = SucomUtil::sanitize_key( 'bc_list_for_' . $mod[ 'post_type' ] );
+				$opt_key = SucomUtil::sanitize_key( 'bc_list_for_' . $mod[ 'post_type' ] );
+
 				$parent_type = empty( $this->p->options[ $opt_key ] ) ? 'categories' : $this->p->options[ $opt_key ];
 
 				switch ( $parent_type ) {
@@ -149,33 +150,33 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 					case 'ancestors':	// Get page parents, grand-parents, etc.
 
-						$post_ids = get_post_ancestors( $mod[ 'id' ] );
+						$ancestor_ids = get_ancestors( $mod[ 'id' ], $mod[ 'post_type' ], $resource_type = 'post_type' );
 
-						if ( empty( $post_ids ) || ! is_array( $post_ids ) ) {
+						if ( empty( $ancestor_ids ) || ! is_array( $ancestor_ids ) ) {
 
 							if ( $this->p->debug->enabled ) {
 
-								$this->p->debug->log( 'no ancestors found for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
+								$this->p->debug->log( 'no ancestors for ' . $mod[ 'name' ] . ' id ' . $mod[ 'id' ] );
 							}
 
-							$post_ids = array( $mod[ 'id' ] );	// Just do the current page.
+							$ancestor_ids = array( $mod[ 'id' ] );	// Just do the current page.
 
 						} else {
 
-							$post_ids = array_reverse( $post_ids );
+							$ancestor_ids = array_reverse( $ancestor_ids );
 
-							$post_ids[] = $mod[ 'id' ];	// Add the current page last.
+							$ancestor_ids[] = $mod[ 'id' ];	// Add the current page last.
 						}
 
 
 						if ( $this->p->debug->enabled ) {
 
-							$this->p->debug->log_arr( 'post_ids', $post_ids );
+							$this->p->debug->log_arr( 'post_ids', $ancestor_ids );
 						}
 
 						$item_mods = array();	// False by default.
 
-						foreach ( $post_ids as $mod_id ) {
+						foreach ( $ancestor_ids as $mod_id ) {
 
 							$item_mods[] = $this->p->post->get_mod( $mod_id );
 						}
@@ -213,7 +214,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							$bc_list_mods = array();
 
-							$term_ids = get_ancestors( $term_obj->term_id, $primary_tax_slug, 'taxonomy' );
+							$term_ids = get_ancestors( $term_obj->term_id, $primary_tax_slug, $resource_type = 'taxonomy' );
 
 							if ( empty( $term_ids ) || ! is_array( $term_ids ) ) {
 
@@ -271,7 +272,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 					case 'ancestors':	// Get term parents, grand-parents, etc.
 
-						$term_ids = get_ancestors( $mod[ 'id' ], $mod[ 'tax_slug' ], 'taxonomy' );
+						$term_ids = get_ancestors( $mod[ 'id' ], $mod[ 'tax_slug' ], $resource_type = 'taxonomy' );
 
 						if ( empty( $term_ids ) || ! is_array( $term_ids ) ) {
 
