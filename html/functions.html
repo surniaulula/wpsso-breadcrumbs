@@ -6,15 +6,15 @@
 <p>When adding the <code>wpsso_breadcrumbs_html()</code> function to your theme template(s) <strong>do not forget to test for its existance</strong> so you can deactivate the WPSSO BC add-on without causing a PHP fatal error.</p>
 
 <pre>
-<?php if ( function_exists( 'wpsso_breadcrumbs_html' ) ) {
+&lt;?php if ( function_exists( 'wpsso_breadcrumbs_html' ) ) {
 
 	// Wide container for 2021 theme.
-	echo '<div class="header-breadcrumbs alignwide">';
+	echo '&lt;div class="header-breadcrumbs alignwide"&gt;';
 
 	wpsso_breadcrumbs_html();
 
-	echo '</div><!-- .header-breadcrumbs.alignwide -->';
-} ?>
+	echo '&lt;/div&gt;&lt;!-- .header-breadcrumbs.alignwide --&gt;';
+} ?&gt;
 </pre>
 
 <h3>Breadcrumbs Output Examples</h3>

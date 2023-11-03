@@ -150,8 +150,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					 * Use $title_sep = false to avoid adding term parent names in the term title.
 					 */
 					$item_name = $wpsso->page->get_title( $mod, $md_key = 'schema_title_bc', $max_len = 'schema_title_bc', $title_sep = false );
-
-					$item_url = $wpsso->util->get_canonical_url( $mod );
+					$item_url  = $wpsso->util->get_canonical_url( $mod );
 
 					$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 						'position' => $item_count,

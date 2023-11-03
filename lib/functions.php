@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'wpsso_breadcrumbs_html' ) ) {
 
 	/*
-	 * The wpsso_breadcrumbs_html() function is a human friendly name for the wpsso_bc_show_itemlist_html() function.
+	 * The wpsso_breadcrumbs_html() function is a human friendlier name for the wpsso_bc_show_itemlist_html() function.
 	 *
 	 * Use $lists_max = 0 or false to include all WPSSO breadcrumb lists.
 	 *
@@ -28,7 +28,7 @@ if ( ! function_exists( 'wpsso_breadcrumbs_html' ) ) {
 if ( ! function_exists( 'wpsso_get_breadcrumbs_html' ) ) {
 
 	/*
-	 * The wpsso_get_breadcrumbs_html() function is a human friendly name for the wpsso_bc_get_itemlist_html() function.
+	 * The wpsso_get_breadcrumbs_html() function is a human friendlier name for the wpsso_bc_get_itemlist_html() function.
 	 *
 	 * Use $lists_max = 0 or false to include all WPSSO breadcrumb lists.
 	 *
