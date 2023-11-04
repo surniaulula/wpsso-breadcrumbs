@@ -54,7 +54,7 @@ if ( ! class_exists( 'WpssoBcSubmenuBreadcrumbs' ) && class_exists( 'WpssoAdmin'
 			} else $this->show_metabox_table( $obj, $mb );
 		}
 
-		protected function get_table_rows( $page_id, $metabox_id ) {
+		protected function get_table_rows( $page_id, $metabox_id, $tab_key = '', $args = array() ) {
 
 			$table_rows = array();
 
