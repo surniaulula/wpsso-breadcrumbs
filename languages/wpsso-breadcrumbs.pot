@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WPSSO Schema Breadcrumbs Markup package.
 msgid ""
 msgstr ""
-"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 4.4.0-dev.9\n"
+"Project-Id-Version: WPSSO Schema Breadcrumbs Markup 4.4.0-dev.10\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
 "breadcrumbs\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -74,27 +74,27 @@ msgctxt "metabox title"
 msgid "Breadcrumbs Settings"
 msgstr ""
 
-#: lib/submenu/breadcrumbs.php:62
+#: lib/submenu/breadcrumbs.php:72
 msgctxt "option label"
 msgid "Site Home Page Name"
 msgstr ""
 
-#: lib/submenu/breadcrumbs.php:67
+#: lib/submenu/breadcrumbs.php:77
 msgctxt "option label"
 msgid "WordPress Home Page Name"
 msgstr ""
 
-#: lib/submenu/breadcrumbs.php:80 lib/submenu/breadcrumbs.php:98
+#: lib/submenu/breadcrumbs.php:90 lib/submenu/breadcrumbs.php:108
 msgctxt "option comment"
 msgid "for %s"
 msgstr ""
 
-#: lib/submenu/breadcrumbs.php:85
+#: lib/submenu/breadcrumbs.php:95
 msgctxt "option label"
 msgid "Breadcrumbs by Post Type"
 msgstr ""
 
-#: lib/submenu/breadcrumbs.php:103
+#: lib/submenu/breadcrumbs.php:113
 msgctxt "option label"
 msgid "Breadcrumbs by Taxonomy"
 msgstr ""

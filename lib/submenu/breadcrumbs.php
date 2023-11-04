@@ -33,11 +33,21 @@ if ( ! class_exists( 'WpssoBcSubmenuBreadcrumbs' ) && class_exists( 'WpssoAdmin'
 			);
 		}
 
-		protected function add_meta_boxes( $callback_args = array() ) {
+		/*
+		 * Add metaboxes for this settings page.
+		 *
+		 * See WpssoAdmin->load_settings_page().
+		 */
+		protected function add_settings_page_metaboxes( $callback_args = array() ) {
+
+			if ( $this->p->debug->enabled ) {
+
+				$this->p->debug->mark();
+			}
 
 			$this->maybe_show_language_notice();
 
-			parent::add_meta_boxes( $callback_args );
+			parent::add_settings_page_metaboxes( $callback_args );
 		}
 
 		public function show_metabox_settings( $obj, $mb ) {
