@@ -26,11 +26,11 @@ if ( ! class_exists( 'WpssoBcFiltersEdit' ) ) {
 			$this->a =& $addon;
 
 			$this->p->util->add_plugin_filters( $this, array(
-				'metabox_sso_edit_schema_rows' => 4,	// Since WPSSO Core v9.0.0.
+				'mb_sso_edit_schema_rows' => 4,	// Since WPSSO Core v9.0.0.
 			) );
 		}
 
-		public function filter_metabox_sso_edit_schema_rows( $table_rows, $form, $head_info, $mod ) {
+		public function filter_mb_sso_edit_schema_rows( $table_rows, $form, $head_info, $mod ) {
 
 			$input_limits = WpssoConfig::get_input_limits();	// Uses a local cache.
 
