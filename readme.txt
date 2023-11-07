@@ -79,7 +79,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 5.0.0-dev.14 (2021/11/06)**
+**Version 5.0.0-b.1 (2021/11/07)**
 
 * **New Features**
 	* None.
@@ -92,7 +92,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.2.34.
 	* WordPress v5.5.
-	* WPSSO Core v17.0.0-dev.14.
+	* WPSSO Core v17.0.0-b.1.
 
 **Version 4.3.2 (2023/07/13)**
 
@@ -111,9 +111,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 5.0.0-dev.14 =
+= 5.0.0-b.1 =
 
-(2021/11/06) Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
+(2021/11/07) Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
 
 = 4.3.2 =
 
