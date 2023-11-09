@@ -30,9 +30,9 @@ if ( ! class_exists( 'WpssoBcFiltersUpgrade' ) ) {
 			) );
 		}
 
-		public function filter_rename_md_options_keys( $rename_keys_by_ext ) {
+		public function filter_rename_md_options_keys( $rename_md_options ) {
 
-			$rename_keys_by_ext[ 'wpssobc' ] = array(
+			$rename_md_options[ 'wpssobc' ] = array(
 				7 => array(
 					'bc_title' => 'schema_title_bc',
 				),
@@ -51,7 +51,7 @@ if ( ! class_exists( 'WpssoBcFiltersUpgrade' ) ) {
 				),
 			);
 
-			return $rename_keys_by_ext;
+			return $rename_md_options;
 		}
 	}
 }
