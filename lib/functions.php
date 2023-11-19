@@ -64,6 +64,9 @@ if ( ! function_exists( 'wpsso_bc_get_itemlist_html' ) ) {
 
 		$wpsso =& Wpsso::get_instance();
 
+		/*
+		 * Note that in_the_loop() can be true in both archive and singular pages.
+		 */
 		$use_post = apply_filters( 'wpsso_use_post', in_the_loop() ? true : false );
 
 		$mod = $wpsso->page->get_mod( $use_post );
