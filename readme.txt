@@ -12,7 +12,7 @@ Requires Plugins: wpsso
 Requires PHP: 7.2.34
 Requires At Least: 5.8
 Tested Up To: 6.4.2
-Stable Tag: 5.0.0
+Stable Tag: 5.1.0
 
 Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.
 
@@ -79,6 +79,21 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
+**Version 5.1.0 (2024/01/12)**
+
+* **New Features**
+	* None.
+* **Improvements**
+	* None.
+* **Bugfixes**
+	* None.
+* **Developer Notes**
+	* Update for `SucomUtil` and `SucomUtilWP` changes in WPSSO Core v17.8.0.
+* **Requires At Least**
+	* PHP v7.2.34.
+	* WordPress v5.8.
+	* WPSSO Core v17.8.0.
+
 **Version 5.0.0 (2021/11/08)**
 
 * **New Features**
@@ -94,28 +109,13 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* WordPress v5.8.
 	* WPSSO Core v17.0.0.
 
-**Version 4.3.2 (2023/07/13)**
-
-* **New Features**
-	* None.
-* **Improvements**
-	* None.
-* **Bugfixes**
-	* None.
-* **Developer Notes**
-	* Renamed the `WpssoBcBreadcrumb->add_itemlist_data()` method to `WpssoBcBreadcrumb->add_breadcrumblist_data()`.
-* **Requires At Least**
-	* PHP v7.2.34.
-	* WordPress v5.5.
-	* WPSSO Core v15.16.0.
-
 == Upgrade Notice ==
+
+= 5.1.0 =
+
+(2024/01/12) Update for `SucomUtil` and `SucomUtilWP` changes in WPSSO Core v17.8.0.
 
 = 5.0.0 =
 
 (2021/11/08) Refactored the settings page and metabox load process for WPSSO Core v17.0.0.
-
-= 4.3.2 =
-
-(2023/07/13) Renamed the `WpssoBcBreadcrumb->add_itemlist_data()` method to `WpssoBcBreadcrumb->add_breadcrumblist_data()`.
 
