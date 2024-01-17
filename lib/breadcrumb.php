@@ -67,7 +67,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			/*
 			 * Add the website home page.
 			 */
-			$home_url = SucomUtil::get_home_url( $wpsso->options, $mixed = 'current' );
+			$home_url = SucomUtilWP::get_home_url( $wpsso->options, $mixed = 'current' );
 
 			if ( ! apply_filters( 'wpsso_bc_add_home_url', true ) ) {
 
@@ -99,7 +99,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 			/*
 			 * Add the WordPress home page (ie. the blog page).
 			 */
-			$wp_url = SucomUtil::get_wp_url( $wpsso->options, $mixed = 'current' );
+			$wp_url = SucomUtilWP::get_wp_url( $wpsso->options, $mixed = 'current' );
 
 			if ( $wp_url === $home_url ) {
 

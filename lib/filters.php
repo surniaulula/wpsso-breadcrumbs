@@ -124,8 +124,8 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 				if ( $mod[ 'is_home_posts' ] ) {	// Static posts page or blog archive page.
 
-					$home_url = SucomUtil::get_home_url( $this->p->options, $mixed = 'current' );
-					$wp_url   = SucomUtil::get_wp_url( $this->p->options, $mixed = 'current' );
+					$home_url = SucomUtilWP::get_home_url( $this->p->options, $mixed = 'current' );
+					$wp_url   = SucomUtilWP::get_wp_url( $this->p->options, $mixed = 'current' );
 
 					/*
 					 * Add breadcrumbs if the blog page URL is different to the home page URL.
