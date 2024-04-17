@@ -85,7 +85,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$wpsso->debug->log( 'adding site home listitem #' . $item_count );
 				}
 
-				$home_name = SucomUtil::get_key_value( $key = 'bc_home_name', $wpsso->options, $mixed = 'current' );
+				$home_name = SucomUtilOptions::get_key_value( $key = 'bc_home_name', $wpsso->options, $mixed = 'current' );
 
 				$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 					'position' => $item_count,
@@ -124,7 +124,7 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 					$wpsso->debug->log( 'adding wp home listitem #' . $item_count);
 				}
 
-				$wp_home_name = SucomUtil::get_key_value( $key = 'bc_wp_home_name', $wpsso->options, $mixed = 'current' );
+				$wp_home_name = SucomUtilOptions::get_key_value( $key = 'bc_wp_home_name', $wpsso->options, $mixed = 'current' );
 
 				$list_item = WpssoSchema::get_schema_type_context( 'https://schema.org/ListItem', array(
 					'position' => $item_count,
