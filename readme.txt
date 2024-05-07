@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://surniaulula.github.io/wpsso-breadcrumbs/assets/
-Tags: schema, breadcrumbs, hierarchy, seo, google, categories, tags, search
+Tags: schema, breadcrumbs, seo, google, rich results
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.2.34
