@@ -15,7 +15,7 @@
  * Requires PHP: 7.2.34
  * Requires At Least: 5.8
  * Tested Up To: 6.6.1
- * Version: 5.2.0
+ * Version: 5.3.0-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -40,10 +40,6 @@ if ( ! class_exists( 'WpssoAbstractAddOn' ) ) {
 if ( ! class_exists( 'WpssoBc' ) ) {
 
 	class WpssoBc extends WpssoAbstractAddOn {
-
-		public $breadcrumb;	// WpssoBcBreadcrumb class object.
-		public $compat;		// WpssoBcCompat class object.
-		public $filters;	// WpssoBcFilters class object.
 
 		protected $p;	// Wpsso class object.
 
@@ -72,7 +68,7 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 		/*
 		 * Called by Wpsso->set_objects() which runs at init priority 10.
 		 */
-		public function init_objects() {
+		public function init_objects_preloader() {
 
 			$this->p =& Wpsso::get_instance();
 
@@ -86,9 +82,8 @@ if ( ! class_exists( 'WpssoBc' ) ) {
 				return;	// Stop here.
 			}
 
-			$this->breadcrumb = new WpssoBcBreadcrumb( $this->p , $this);
-			$this->compat     = new WpssoBcCompat( $this->p, $this );	// Third-party plugin and theme compatibility actions and filters.
-			$this->filters    = new WpssoBcFilters( $this->p, $this );
+			new WpssoBcCompat( $this->p, $this );	// Third-party plugin and theme compatibility actions and filters.
+			new WpssoBcFilters( $this->p, $this );
 		}
 	}
 

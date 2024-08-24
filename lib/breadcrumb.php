@@ -14,18 +14,6 @@ if ( ! class_exists( 'WpssoBcBreadcrumb' ) ) {
 
 	class WpssoBcBreadcrumb {
 
-		private $p;	// Wpsso class object.
-		private $a;	// WpssoBc class object.
-
-		/*
-		 * Instantiated by WpssoBc->init_objects().
-		 */
-		public function __construct( &$plugin, &$addon ) {
-
-			$this->p =& $plugin;
-			$this->a =& $addon;
-		}
-
 		/*
 		 * See WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist().
 		 */
