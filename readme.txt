@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.4.33
 Requires At Least: 5.9
-Tested Up To: 6.7.2
+Tested Up To: 6.8.0
 Stable Tag: 5.3.0
 
 Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.
