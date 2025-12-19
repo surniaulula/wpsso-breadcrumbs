@@ -79,7 +79,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 5.4.0-dev.2 (2025/12/19)**
+**Version 5.4.0-b.1 (2025/12/19)**
 
 * **New Features**
 	* None.
@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
-	* WPSSO Core v21.11.0-dev.2.
+	* WPSSO Core v21.11.0-b.1.
 
 **Version 5.3.0 (2024/08/25)**
 
@@ -112,7 +112,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 5.4.0-dev.2 =
+= 5.4.0-b.1 =
 
 (2025/12/19) Renamed the 'wpsso_add_custom_post_type_options' and 'wpsso_add_custom_taxonomy_options' filters hooks.
 
