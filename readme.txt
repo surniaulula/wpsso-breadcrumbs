@@ -79,7 +79,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 5.5.0-dev.3 (2025/12/22)**
+**Version 5.5.0-b.1 (2025/12/22)**
 
 * **New Features**
 	* None.
@@ -92,7 +92,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
-	* WPSSO Core v21.11.1-dev.3.
+	* WPSSO Core v21.11.1-b.1.
 
 **Version 5.4.0 (2025/12/20)**
 
@@ -112,7 +112,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 5.5.0-dev.3 =
+= 5.5.0-b.1 =
 
 (2025/12/22) None.
 
