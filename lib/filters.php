@@ -187,7 +187,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 						 *
 						 * If the custom primary or default term ID exists in the post terms array, it will be moved to the top.
 						 */
-						$post_terms = $this->p->post->get_primary_terms( $mod, $tax_slug = 'category', $output = 'objects' );
+						$post_terms = $this->p->post->get_primary_terms( $mod, $mod[ 'post_primary_tax_slug' ], $output = 'objects' );
 
 						if ( empty( $post_terms ) || ! is_array( $post_terms ) ) {	// No terms or taxonomy does not exist.
 
@@ -195,11 +195,6 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							break;	// Stop here.
 						}
-
-						/*
-						 * The 'wpsso_primary_tax_slug' filter is hooked by the WooCommerce integration module.
-						 */
-						$primary_tax_slug = apply_filters( 'wpsso_primary_tax_slug', $tax_slug = 'category', $mod );
 
 						/*
 						 * Create a Schema BreadcrumbList item list for each category.
@@ -211,7 +206,7 @@ if ( ! class_exists( 'WpssoBcFilters' ) ) {
 
 							$bc_list_mods = array();
 
-							$term_ids = get_ancestors( $term_obj->term_id, $primary_tax_slug, $resource_type = 'taxonomy' );
+							$term_ids = get_ancestors( $term_obj->term_id, $mod[ 'post_primary_tax_slug' ], $resource_type = 'taxonomy' );
 
 							if ( empty( $term_ids ) || ! is_array( $term_ids ) ) {
 
