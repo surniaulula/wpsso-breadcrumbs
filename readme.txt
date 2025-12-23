@@ -79,7 +79,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 5.5.0-b.3 (2025/12.23)**
+**Version 5.5.0-rc.1 (2025/12.23)**
 
 * **New Features**
 	* None.
@@ -88,11 +88,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **Bugfixes**
 	* None.
 * **Developer Notes**
-	* None.
+	* Updated `WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist()` to use the new `$mod` array 'post_primary_tax_slug' element.
 * **Requires At Least**
 	* PHP v7.4.33.
 	* WordPress v5.9.
-	* WPSSO Core v21.11.1-b.3.
+	* WPSSO Core v21.11.1-rc.1.
 
 **Version 5.4.0 (2025/12/20)**
 
@@ -112,9 +112,9 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 5.5.0-b.3 =
+= 5.5.0-rc.1 =
 
-(2025/12.23) None.
+(2025/12.23) Updated `WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist()` to use the new `$mod` array 'post_primary_tax_slug' element.
 
 = 5.4.0 =
 
