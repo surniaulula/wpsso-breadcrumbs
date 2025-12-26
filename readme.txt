@@ -10,7 +10,7 @@ Tags: schema, breadcrumbs, seo, google, rich results
 Contributors: jsmoriss
 Requires Plugins: wpsso
 Requires PHP: 7.4.33
-Requires At Least: 5.9
+Requires At Least: 6.0
 Tested Up To: 6.9
 Stable Tag: 5.5.0
 
@@ -91,7 +91,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Updated `WpssoBcFilters->filter_json_data_https_schema_org_breadcrumblist()` to use the new `$mod` array 'post_primary_tax_slug' element.
 * **Requires At Least**
 	* PHP v7.4.33.
-	* WordPress v5.9.
+	* WordPress v6.0.
 	* WPSSO Core v21.11.1.
 
 **Version 5.4.0 (2025/12/20)**
