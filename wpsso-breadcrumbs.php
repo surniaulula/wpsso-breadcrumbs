@@ -13,7 +13,7 @@
  * Description: Schema BreadcrumbList markup in JSON-LD format for Google Rich Results.
  * Requires Plugins: wpsso
  * Requires PHP: 7.4.33
- * Requires At Least: 5.9
+ * Requires At Least: 6.0
  * Tested Up To: 6.9
  * Version: 5.5.0
  *
