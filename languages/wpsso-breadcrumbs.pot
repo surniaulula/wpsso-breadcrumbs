@@ -3,8 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WPSSO Schema Breadcrumbs Markup 5.5.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-"
-"breadcrumbs\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-breadcrumbs\n"
 "POT-Creation-Date: 2026-MO-DA HO:MI+ZONE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,9 +17,7 @@ msgid "The %1$s add-on requires the %2$s plugin."
 msgstr ""
 
 #: gettext/gettext-lib-abstract-com.php:6 lib/abstract/com/add-on.php:254
-msgid ""
-"The %1$s add-on requires %2$s version %3$s or newer (version %4$s is "
-"currently installed)."
+msgid "The %1$s add-on requires %2$s version %3$s or newer (version %4$s is currently installed)."
 msgstr ""
 
 #: gettext/gettext-lib-config.php:5
@@ -53,20 +50,15 @@ msgid "The site home page name in the breadcrumbs markup."
 msgstr ""
 
 #: lib/filters-messages.php:50
-msgid ""
-"The WordPress home page (ie. the blog page) name in the breadcrumbs markup."
+msgid "The WordPress home page (ie. the blog page) name in the breadcrumbs markup."
 msgstr ""
 
 #: lib/filters-messages.php:56
-msgid ""
-"Select the source of breadcrumbs for each public post type (ie. posts, "
-"pages, and custom post types)."
+msgid "Select the source of breadcrumbs for each public post type (ie. posts, pages, and custom post types)."
 msgstr ""
 
 #: lib/filters-messages.php:62
-msgid ""
-"Select the source of breadcrumbs for each public taxonomy (ie. categories, "
-"tags, and custom taxonomies)."
+msgid "Select the source of breadcrumbs for each public taxonomy (ie. categories, tags, and custom taxonomies)."
 msgstr ""
 
 #: lib/submenu/breadcrumbs.php:32
@@ -98,7 +90,6 @@ msgstr ""
 msgctxt "option label"
 msgid "Breadcrumbs by Taxonomy"
 msgstr ""
-
 #. Plugin Name of the plugin/theme
 msgid "WPSSO Schema Breadcrumbs Markup"
 msgstr ""
